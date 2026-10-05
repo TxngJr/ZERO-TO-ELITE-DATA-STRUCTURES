@@ -220,3 +220,12 @@
 - Counting Bloom Filter — Bloom variant replacing bits with counters to support controlled decrement/deletion
 - Counter Saturation — counter reaching its maximum representable value so another increment cannot be represented safely
 - Valid-Delete Contract — requirement that Counting Bloom deletion be applied only to an occurrence known to have been inserted and not already fully removed
+
+- Cuckoo Filter — probabilistic fingerprint table with two candidate buckets and relocation-based insertion
+- Fingerprint — compact hash-derived representation stored instead of the full key in a probabilistic filter
+- Alternate Bucket — second legal bucket for a cuckoo fingerprint/key, reachable from the first through a deterministic relation
+- Kick / Relocation — evicting an occupied entry and moving it to its alternate location during cuckoo insertion
+- Cuckoo Hashing — exact-key hashing scheme where each key has two candidate table locations and insertion may displace residents
+- Perfect Hashing — static hashing arrangement with no collisions among the stored key set
+- FKS Perfect Hashing — two-level static perfect hashing using top buckets and quadratic-size secondary tables
+- Minimal Perfect Hashing — perfect hashing that maps n stored keys to exactly n distinct outputs; not the same as this chapter's FKS-style layout

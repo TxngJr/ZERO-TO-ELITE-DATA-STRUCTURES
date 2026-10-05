@@ -4,10 +4,10 @@ Legend: ✅ complete, ➡ planned, N/A not meaningful.
 
 | Chapter | Topic | Theory | Code | Complexity | Invariant | Tests | Benchmark | Exercises | Status |
 |---:|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 001–066 | Foundations through Bit Vector | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 067 | Bit Trie / XOR Trie | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 068 | Bloom Filter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 069 | Counting Bloom Filter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 070 | Cuckoo Filter | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 071 | Cuckoo Hashing | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 072 | Perfect Hashing | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 001–069 | Foundations through Counting Bloom Filter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 070 | Cuckoo Filter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 071 | Cuckoo Hashing | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 072 | Perfect Hashing | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 073 | Consistent Hashing | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 074 | Probabilistic Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 075 | HyperLogLog | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |

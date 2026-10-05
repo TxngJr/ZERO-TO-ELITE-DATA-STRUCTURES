@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 23 — Chapters 067–069 complete**
+**Batch 24 — Chapters 070–072 complete**
 
 ล่าสุด:
-- [067 Bit Trie / XOR Trie](./067-bit-trie-xor-trie/)
-- [068 Bloom Filter](./068-bloom-filter/)
-- [069 Counting Bloom Filter](./069-counting-bloom-filter/)
+- [070 Cuckoo Filter](./070-cuckoo-filter/)
+- [071 Cuckoo Hashing](./071-cuckoo-hashing/)
+- [072 Perfect Hashing](./072-perfect-hashing/)
 
-สถานะ: **69 / 170 chapters**
+สถานะ: **72 / 170 chapters**
 
 Next:
 
-**070 Cuckoo Filter → 071 Cuckoo Hashing → 072 Perfect Hashing**
+**073 Consistent Hashing → 074 Probabilistic Data Structures → 075 HyperLogLog**
 
 ## Build
 

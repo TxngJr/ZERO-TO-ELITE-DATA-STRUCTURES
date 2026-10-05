@@ -1147,3 +1147,55 @@ add_test(NAME ch069_counting_bloom_tests COMMAND ch069_counting_bloom_tests)
 
 add_executable(ch069_counting_bloom_benchmark 069-counting-bloom-filter/benchmarks/counting_bloom_benchmark.c)
 target_link_libraries(ch069_counting_bloom_benchmark PRIVATE ch069_counting_bloom)
+
+
+# Chapter 070
+add_library(ch070_cuckoo_filter
+    070-cuckoo-filter/src/byte_cuckoo_filter.c
+)
+target_include_directories(ch070_cuckoo_filter PUBLIC 070-cuckoo-filter/src)
+
+add_executable(ch070_cuckoo_filter_demo 070-cuckoo-filter/examples/cuckoo_filter_demo.c)
+target_link_libraries(ch070_cuckoo_filter_demo PRIVATE ch070_cuckoo_filter)
+add_test(NAME ch070_cuckoo_filter_demo_smoke COMMAND ch070_cuckoo_filter_demo)
+
+add_executable(ch070_cuckoo_filter_tests 070-cuckoo-filter/tests/test_cuckoo_filter.c)
+target_link_libraries(ch070_cuckoo_filter_tests PRIVATE ch070_cuckoo_filter)
+add_test(NAME ch070_cuckoo_filter_tests COMMAND ch070_cuckoo_filter_tests)
+
+add_executable(ch070_cuckoo_filter_benchmark 070-cuckoo-filter/benchmarks/cuckoo_filter_benchmark.c)
+target_link_libraries(ch070_cuckoo_filter_benchmark PRIVATE ch070_cuckoo_filter)
+
+# Chapter 071
+add_library(ch071_cuckoo_hashing
+    071-cuckoo-hashing/src/u64_cuckoo_set.c
+)
+target_include_directories(ch071_cuckoo_hashing PUBLIC 071-cuckoo-hashing/src)
+
+add_executable(ch071_cuckoo_hashing_demo 071-cuckoo-hashing/examples/cuckoo_hashing_demo.c)
+target_link_libraries(ch071_cuckoo_hashing_demo PRIVATE ch071_cuckoo_hashing)
+add_test(NAME ch071_cuckoo_hashing_demo_smoke COMMAND ch071_cuckoo_hashing_demo)
+
+add_executable(ch071_cuckoo_hashing_tests 071-cuckoo-hashing/tests/test_cuckoo_hashing.c)
+target_link_libraries(ch071_cuckoo_hashing_tests PRIVATE ch071_cuckoo_hashing)
+add_test(NAME ch071_cuckoo_hashing_tests COMMAND ch071_cuckoo_hashing_tests)
+
+add_executable(ch071_cuckoo_hashing_benchmark 071-cuckoo-hashing/benchmarks/cuckoo_hashing_benchmark.c)
+target_link_libraries(ch071_cuckoo_hashing_benchmark PRIVATE ch071_cuckoo_hashing)
+
+# Chapter 072
+add_library(ch072_perfect_hashing
+    072-perfect-hashing/src/u64_perfect_set.c
+)
+target_include_directories(ch072_perfect_hashing PUBLIC 072-perfect-hashing/src)
+
+add_executable(ch072_perfect_hashing_demo 072-perfect-hashing/examples/perfect_hashing_demo.c)
+target_link_libraries(ch072_perfect_hashing_demo PRIVATE ch072_perfect_hashing)
+add_test(NAME ch072_perfect_hashing_demo_smoke COMMAND ch072_perfect_hashing_demo)
+
+add_executable(ch072_perfect_hashing_tests 072-perfect-hashing/tests/test_perfect_hashing.c)
+target_link_libraries(ch072_perfect_hashing_tests PRIVATE ch072_perfect_hashing)
+add_test(NAME ch072_perfect_hashing_tests COMMAND ch072_perfect_hashing_tests)
+
+add_executable(ch072_perfect_hashing_benchmark 072-perfect-hashing/benchmarks/perfect_hashing_benchmark.c)
+target_link_libraries(ch072_perfect_hashing_benchmark PRIVATE ch072_perfect_hashing)

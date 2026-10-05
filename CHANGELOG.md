@@ -1,5 +1,25 @@
 # Changelog
 
+## Batch 24 — Chapters 070–072
+
+Added:
+- 16-bit fingerprint Cuckoo Filter with four slots per bucket
+- two candidate buckets linked by XOR-based alternate-index relation
+- bounded relocation/kick chain with full table + RNG snapshot rollback on failed insertion
+- probabilistic membership and valid-delete caveat documentation
+- exact-key uint64 Cuckoo Hashing using two tables
+- exact O(1) two-probe lookup/removal
+- kick-chain rollback before automatic seed refresh and capacity growth
+- partial-allocation cleanup and overflow-safe capacity validation
+- static two-level FKS-inspired Perfect Hash Set
+- input sort/deduplication before static construction
+- top-level retry until sum of squared bucket sizes is <= 4n
+- per-bucket s^2 secondary tables with seed retry until collision-free placement
+- exact-key O(1) lookup after successful build
+- explicit note that the deterministic mixer used here follows FKS structure but is not claimed as the textbook universal-hashing proof
+- overflow-safe quadratic-space bounds and validators
+- Batch 24 negative review
+
 ## Batch 23 — Chapters 067–069
 
 Added:

@@ -24,10 +24,11 @@
 - Batch 20: 058–060
 - Batch 21: 061–063
 - Batch 22: 064–066
-- Batch 23: 067 Bit Trie / XOR Trie, 068 Bloom Filter, 069 Counting Bloom Filter
+- Batch 23: 067–069
+- Batch 24: 070 Cuckoo Filter, 071 Cuckoo Hashing, 072 Perfect Hashing
 
-## Batch 24 — Next
+## Batch 25 — Next
 
-070 Cuckoo Filter
-071 Cuckoo Hashing
-072 Perfect Hashing
+073 Consistent Hashing
+074 Probabilistic Data Structures
+075 HyperLogLog

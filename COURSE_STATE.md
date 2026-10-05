@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 23
+Current Batch: 24
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -72,49 +72,48 @@ Completed Chapters:
 - 067 Bit Trie / XOR Trie
 - 068 Bloom Filter
 - 069 Counting Bloom Filter
+- 070 Cuckoo Filter
+- 071 Cuckoo Hashing
+- 072 Perfect Hashing
 
-Current Chapter: 069
+Current Chapter: 072
 
-Next Chapter: 070 Cuckoo Filter
+Next Chapter: 073 Consistent Hashing
 
 Concepts Covered:
-- all prior Chapters 001–066
-- fixed-width integer binary tries
-- MSB-first XOR greedy optimization
-- duplicate-aware subtree counts
-- XOR threshold counting
-- probabilistic membership semantics
-- false positives vs false negatives
-- packed Bloom bit arrays
-- double hashing and multiple probe positions
-- Bloom sizing/hash-count trade-offs
-- counting counters for controlled deletion
-- counter saturation and transactional rollback
-- deletion safety contract under probabilistic membership
+- all prior Chapters 001–069
+- fingerprint-based cuckoo membership
+- alternate-bucket involution
+- bounded relocation and transactional rollback
+- exact-key two-table cuckoo hashing
+- rehash/resize after insertion cycles
+- static collision-free hashing
+- FKS-style top/secondary decomposition
+- quadratic secondary sizing by bucket cardinality
+- exact O(1) perfect-hash lookup after construction
 
 Structures Implemented:
 - all previous structures
-- IntXorTrie
-- ByteBloomFilter
-- ByteCountingBloom
+- ByteCuckooFilter
+- U64CuckooSet
+- U64PerfectSet
 
 Tests Added:
-- XOR Trie randomized differential operations: 50,000
-- Bloom no-false-negative verification over 5,000 inserted keys + 10,000 negative probes
-- Counting Bloom duplicate/saturation tests
-- Counting Bloom randomized valid-delete workload: 20,000 operations
+- Cuckoo Filter insertion/query/delete coverage over 8,000 keys
+- Cuckoo Hashing exact-key build/removal and randomized mutation validation
+- Perfect Hashing build over 12,000 unique keys plus duplicate inputs and 10,000 absent probes
 
 Benchmarks Added:
-- XOR Trie 200k inserts + 500k max-XOR queries
-- Bloom Filter 200k inserts + 1M negative probes
-- Counting Bloom 150k inserts + valid removal of half
+- Cuckoo Filter load/insertion benchmark
+- Cuckoo Hashing 300k-key build benchmark
+- Perfect Hashing 100k-key static build/lookup benchmark
 
 Known Dependencies:
-- 070 introduces fingerprint-based Cuckoo Filter membership with deletion
-- 071 implements exact-key Cuckoo Hashing
-- 072 studies static Perfect Hashing
+- 073 introduces Consistent Hashing and virtual-node rings
+- 074 surveys probabilistic data-structure design principles
+- 075 implements HyperLogLog cardinality estimation
 
 Open Problems:
-- none if Batch 23 CI passes
+- none if Batch 24 CI passes
 
-Coverage: 69 / 170 chapters
+Coverage: 72 / 170 chapters
