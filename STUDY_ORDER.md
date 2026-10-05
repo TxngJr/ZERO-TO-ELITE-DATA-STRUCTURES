@@ -22,10 +22,11 @@
 - Batch 18: 052–054
 - Batch 19: 055–057
 - Batch 20: 058–060
-- Batch 21: 061 Suffix Automaton, 062 Aho-Corasick Automaton, 063 Rolling Hash Structures
+- Batch 21: 061–063
+- Batch 22: 064 Bitset, 065 Bitmap, 066 Bit Vector
 
-## Batch 22 — Next
+## Batch 23 — Next
 
-064 Bitset
-065 Bitmap
-066 Bit Vector
+067 Bit Trie / XOR Trie
+068 Bloom Filter
+069 Counting Bloom Filter

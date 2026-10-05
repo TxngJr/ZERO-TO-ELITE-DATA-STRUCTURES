@@ -1,5 +1,26 @@
 # Changelog
 
+## Batch 22 — Chapters 064–066
+
+Added:
+- fixed-length packed uint64_t Bitset
+- O(1) single-bit set/clear/flip/test
+- word-level AND/OR/XOR/NOT
+- popcount-based count and ctz-based next-set search
+- strict final-word padding mask invariant
+- 50,000-operation randomized Bitset differential test across 63/64/65 boundaries
+- dense bounded-universe Bitmap with cached cardinality
+- add/remove membership with idempotent cardinality updates
+- half-open range set/clear using word masks and popcount deltas
+- union/intersection/difference and ascending member iteration
+- 40,000-operation randomized Bitmap range/membership differential test
+- immutable packed Bit Vector with per-word prefix-one directory
+- O(1) access/rank1/rank0
+- O(log W) select1/select0 with <=64 local word operations
+- final-word zero masking so select0 cannot return padding
+- randomized/boundary rank-select validation for sizes 0,1,63,64,65,127,128,129,130 and beyond
+- Batch 22 negative review
+
 ## Batch 21 — Chapters 061–063
 
 Added:

@@ -200,3 +200,13 @@
 - Rolling Hash — fingerprint ของ sequence/substrings ที่ update/extract ได้ด้วย polynomial prefix arithmetic
 - Rabin-Karp — string-search method ที่ใช้ rolling hash กรอง candidate windows ก่อน exact verification
 - Hash Collision — กรณีข้อมูลต่างกันให้ hash เท่ากัน จึงห้ามถือ hash equality เป็น proof ของ equality
+
+- Bitset — packed finite sequence/set of boolean positions stored as machine-word bits
+- Padding Bits — unused bits in the final storage word beyond the logical bit length; must be masked out
+- Bitmap — dense characteristic representation of membership in a bounded integer universe
+- Cardinality — number of members/set bits in a set or bitmap
+- Bit Vector — ordered sequence of bits often augmented with access/rank/select indexes
+- Rank — number of target bits in a prefix, e.g. rank1(end) counts ones in [0,end)
+- Select — position of the kth target bit, e.g. select1(k) returns the 0-based kth one position
+- Popcount — number of one bits in a machine word
+- CTZ (Count Trailing Zeros) — operation used to locate the least-significant set bit of a nonzero word

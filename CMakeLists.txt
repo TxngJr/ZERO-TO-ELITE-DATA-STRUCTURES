@@ -1043,3 +1043,55 @@ add_test(NAME ch063_rolling_hash_tests COMMAND ch063_rolling_hash_tests)
 
 add_executable(ch063_rolling_hash_benchmark 063-rolling-hash-structures/benchmarks/rolling_hash_benchmark.c)
 target_link_libraries(ch063_rolling_hash_benchmark PRIVATE ch063_rolling_hash)
+
+
+# Chapter 064
+add_library(ch064_bitset
+    064-bitset/src/int_bitset.c
+)
+target_include_directories(ch064_bitset PUBLIC 064-bitset/src)
+
+add_executable(ch064_bitset_demo 064-bitset/examples/bitset_demo.c)
+target_link_libraries(ch064_bitset_demo PRIVATE ch064_bitset)
+add_test(NAME ch064_bitset_demo_smoke COMMAND ch064_bitset_demo)
+
+add_executable(ch064_bitset_tests 064-bitset/tests/test_bitset.c)
+target_link_libraries(ch064_bitset_tests PRIVATE ch064_bitset)
+add_test(NAME ch064_bitset_tests COMMAND ch064_bitset_tests)
+
+add_executable(ch064_bitset_benchmark 064-bitset/benchmarks/bitset_benchmark.c)
+target_link_libraries(ch064_bitset_benchmark PRIVATE ch064_bitset)
+
+# Chapter 065
+add_library(ch065_bitmap
+    065-bitmap/src/int_bitmap.c
+)
+target_include_directories(ch065_bitmap PUBLIC 065-bitmap/src)
+
+add_executable(ch065_bitmap_demo 065-bitmap/examples/bitmap_demo.c)
+target_link_libraries(ch065_bitmap_demo PRIVATE ch065_bitmap)
+add_test(NAME ch065_bitmap_demo_smoke COMMAND ch065_bitmap_demo)
+
+add_executable(ch065_bitmap_tests 065-bitmap/tests/test_bitmap.c)
+target_link_libraries(ch065_bitmap_tests PRIVATE ch065_bitmap)
+add_test(NAME ch065_bitmap_tests COMMAND ch065_bitmap_tests)
+
+add_executable(ch065_bitmap_benchmark 065-bitmap/benchmarks/bitmap_benchmark.c)
+target_link_libraries(ch065_bitmap_benchmark PRIVATE ch065_bitmap)
+
+# Chapter 066
+add_library(ch066_bit_vector
+    066-bit-vector/src/int_bit_vector.c
+)
+target_include_directories(ch066_bit_vector PUBLIC 066-bit-vector/src)
+
+add_executable(ch066_bit_vector_demo 066-bit-vector/examples/bit_vector_demo.c)
+target_link_libraries(ch066_bit_vector_demo PRIVATE ch066_bit_vector)
+add_test(NAME ch066_bit_vector_demo_smoke COMMAND ch066_bit_vector_demo)
+
+add_executable(ch066_bit_vector_tests 066-bit-vector/tests/test_bit_vector.c)
+target_link_libraries(ch066_bit_vector_tests PRIVATE ch066_bit_vector)
+add_test(NAME ch066_bit_vector_tests COMMAND ch066_bit_vector_tests)
+
+add_executable(ch066_bit_vector_benchmark 066-bit-vector/benchmarks/bit_vector_benchmark.c)
+target_link_libraries(ch066_bit_vector_benchmark PRIVATE ch066_bit_vector)

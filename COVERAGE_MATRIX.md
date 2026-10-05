@@ -4,10 +4,10 @@ Legend: ✅ complete, ➡ planned, N/A not meaningful.
 
 | Chapter | Topic | Theory | Code | Complexity | Invariant | Tests | Benchmark | Exercises | Status |
 |---:|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 001–060 | Foundations through Suffix Tree | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 061 | Suffix Automaton | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 062 | Aho-Corasick Automaton | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 063 | Rolling Hash Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 064 | Bitset | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 065 | Bitmap | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 066 | Bit Vector | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 001–063 | Foundations through Rolling Hash Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 064 | Bitset | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 065 | Bitmap | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 066 | Bit Vector | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 067 | Bit Trie / XOR Trie | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 068 | Bloom Filter | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 069 | Counting Bloom Filter | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |

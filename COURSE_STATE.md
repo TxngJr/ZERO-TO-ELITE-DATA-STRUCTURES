@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 21
+Current Batch: 22
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -66,49 +66,53 @@ Completed Chapters:
 - 061 Suffix Automaton
 - 062 Aho-Corasick Automaton
 - 063 Rolling Hash Structures
+- 064 Bitset
+- 065 Bitmap
+- 066 Bit Vector
 
-Current Chapter: 063
+Current Chapter: 066
 
-Next Chapter: 064 Bitset
+Next Chapter: 067 Bit Trie / XOR Trie
 
 Concepts Covered:
-- all prior Chapters 001–060
-- substring language represented by suffix automaton states
-- end-position equivalence and suffix links
-- clone-state online SAM construction
-- occurrence propagation and distinct-substring formula
-- multi-pattern trie matching
-- Aho-Corasick failure/output links
-- duplicate pattern IDs and binary-safe match reporting
-- polynomial prefix hashing
-- double hash pairs and collision risk
-- O(1) raw substring-hash extraction
-- verified Rabin-Karp matching
-- exact substring equality with hash rejection + byte verification
-- hash-assisted LCP
+- all prior Chapters 001–063
+- packed machine-word bit representation
+- logical bit to word/offset mapping
+- final-word padding-bit invariants
+- word-level boolean algebra
+- popcount and count-trailing-zero operations
+- dense bounded integer-universe bitmaps
+- cached cardinality and range mutation
+- bitmap set algebra and ordered iteration
+- immutable ordered bit sequences
+- rank1/rank0 semantics over half-open prefixes
+- 0-based select1/select0
+- per-word prefix-popcount directories
+- binary-search select and padding-safe zero selection
+- representation vs abstraction differences among Bitset, Bitmap and Bit Vector
 
 Structures Implemented:
 - all previous structures
-- ByteSuffixAutomaton
-- ByteAhoCorasick
-- ByteRollingHash
+- IntBitset
+- IntBitmap
+- IntBitVector
 
 Tests Added:
-- SAM randomized pattern-count comparisons and naive distinct/repetition checks
-- Aho-Corasick randomized multi-pattern matching against naive scans
-- Rolling Hash randomized equality/LCP/pattern-search comparisons
+- Bitset randomized differential workload: 50,000 operations
+- Bitmap randomized differential workload: 40,000 operations
+- Bit Vector randomized rank/select/access comparisons plus word-boundary sizes
 
 Benchmarks Added:
-- Suffix Automaton build/state-count scaling
-- Aho-Corasick dictionary build + million-byte scan
-- Rolling Hash million-byte build + 500,000 range-hash probes
+- 10M-bit repeated Bitset AND benchmark
+- 10M-universe Bitmap intersection benchmark
+- 10M-bit Bit Vector build + 1M rank-query benchmark
 
 Known Dependencies:
-- 064 begins compact bit containers with Bitset
-- 065 distinguishes bitmap use cases/representations
-- 066 develops rank/select-capable Bit Vector foundations
+- 067 applies bitwise trie paths to integer XOR queries
+- 068 introduces probabilistic Bloom Filter membership
+- 069 extends Bloom Filter counters to support deletion semantics
 
 Open Problems:
-- none if Batch 21 CI passes
+- none if Batch 22 CI passes
 
-Coverage: 63 / 170 chapters
+Coverage: 66 / 170 chapters

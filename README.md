@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 21 — Chapters 061–063 complete**
+**Batch 22 — Chapters 064–066 complete**
 
 ล่าสุด:
-- [061 Suffix Automaton](./061-suffix-automaton/)
-- [062 Aho-Corasick Automaton](./062-aho-corasick-automaton/)
-- [063 Rolling Hash Structures](./063-rolling-hash-structures/)
+- [064 Bitset](./064-bitset/)
+- [065 Bitmap](./065-bitmap/)
+- [066 Bit Vector](./066-bit-vector/)
 
-สถานะ: **63 / 170 chapters**
+สถานะ: **66 / 170 chapters**
 
 Next:
 
-**064 Bitset → 065 Bitmap → 066 Bit Vector**
+**067 Bit Trie / XOR Trie → 068 Bloom Filter → 069 Counting Bloom Filter**
 
 ## Build
 
