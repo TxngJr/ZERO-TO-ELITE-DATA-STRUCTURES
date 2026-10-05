@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 22
+Current Batch: 23
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -69,50 +69,52 @@ Completed Chapters:
 - 064 Bitset
 - 065 Bitmap
 - 066 Bit Vector
+- 067 Bit Trie / XOR Trie
+- 068 Bloom Filter
+- 069 Counting Bloom Filter
 
-Current Chapter: 066
+Current Chapter: 069
 
-Next Chapter: 067 Bit Trie / XOR Trie
+Next Chapter: 070 Cuckoo Filter
 
 Concepts Covered:
-- all prior Chapters 001–063
-- packed machine-word bit representation
-- logical bit to word/offset mapping
-- final-word padding-bit invariants
-- word-level boolean algebra
-- popcount and count-trailing-zero operations
-- dense bounded integer-universe bitmaps
-- cached cardinality and range mutation
-- bitmap set algebra and ordered iteration
-- immutable ordered bit sequences
-- rank1/rank0 semantics over half-open prefixes
-- 0-based select1/select0
-- per-word prefix-popcount directories
-- binary-search select and padding-safe zero selection
-- representation vs abstraction differences among Bitset, Bitmap and Bit Vector
+- all prior Chapters 001–066
+- fixed-width integer binary tries
+- MSB-first XOR greedy optimization
+- duplicate-aware subtree counts
+- XOR threshold counting
+- probabilistic membership semantics
+- false positives vs false negatives
+- packed Bloom bit arrays
+- double hashing and multiple probe positions
+- Bloom sizing/hash-count trade-offs
+- counting counters for controlled deletion
+- counter saturation and transactional rollback
+- deletion safety contract under probabilistic membership
 
 Structures Implemented:
 - all previous structures
-- IntBitset
-- IntBitmap
-- IntBitVector
+- IntXorTrie
+- ByteBloomFilter
+- ByteCountingBloom
 
 Tests Added:
-- Bitset randomized differential workload: 50,000 operations
-- Bitmap randomized differential workload: 40,000 operations
-- Bit Vector randomized rank/select/access comparisons plus word-boundary sizes
+- XOR Trie randomized differential operations: 50,000
+- Bloom no-false-negative verification over 5,000 inserted keys + 10,000 negative probes
+- Counting Bloom duplicate/saturation tests
+- Counting Bloom randomized valid-delete workload: 20,000 operations
 
 Benchmarks Added:
-- 10M-bit repeated Bitset AND benchmark
-- 10M-universe Bitmap intersection benchmark
-- 10M-bit Bit Vector build + 1M rank-query benchmark
+- XOR Trie 200k inserts + 500k max-XOR queries
+- Bloom Filter 200k inserts + 1M negative probes
+- Counting Bloom 150k inserts + valid removal of half
 
 Known Dependencies:
-- 067 applies bitwise trie paths to integer XOR queries
-- 068 introduces probabilistic Bloom Filter membership
-- 069 extends Bloom Filter counters to support deletion semantics
+- 070 introduces fingerprint-based Cuckoo Filter membership with deletion
+- 071 implements exact-key Cuckoo Hashing
+- 072 studies static Perfect Hashing
 
 Open Problems:
-- none if Batch 22 CI passes
+- none if Batch 23 CI passes
 
-Coverage: 66 / 170 chapters
+Coverage: 69 / 170 chapters

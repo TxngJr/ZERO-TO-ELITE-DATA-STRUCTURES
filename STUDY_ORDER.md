@@ -23,10 +23,11 @@
 - Batch 19: 055–057
 - Batch 20: 058–060
 - Batch 21: 061–063
-- Batch 22: 064 Bitset, 065 Bitmap, 066 Bit Vector
+- Batch 22: 064–066
+- Batch 23: 067 Bit Trie / XOR Trie, 068 Bloom Filter, 069 Counting Bloom Filter
 
-## Batch 23 — Next
+## Batch 24 — Next
 
-067 Bit Trie / XOR Trie
-068 Bloom Filter
-069 Counting Bloom Filter
+070 Cuckoo Filter
+071 Cuckoo Hashing
+072 Perfect Hashing

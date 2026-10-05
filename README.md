@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 22 — Chapters 064–066 complete**
+**Batch 23 — Chapters 067–069 complete**
 
 ล่าสุด:
-- [064 Bitset](./064-bitset/)
-- [065 Bitmap](./065-bitmap/)
-- [066 Bit Vector](./066-bit-vector/)
+- [067 Bit Trie / XOR Trie](./067-bit-trie-xor-trie/)
+- [068 Bloom Filter](./068-bloom-filter/)
+- [069 Counting Bloom Filter](./069-counting-bloom-filter/)
 
-สถานะ: **66 / 170 chapters**
+สถานะ: **69 / 170 chapters**
 
 Next:
 
-**067 Bit Trie / XOR Trie → 068 Bloom Filter → 069 Counting Bloom Filter**
+**070 Cuckoo Filter → 071 Cuckoo Hashing → 072 Perfect Hashing**
 
 ## Build
 

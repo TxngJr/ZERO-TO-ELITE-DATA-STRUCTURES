@@ -1095,3 +1095,55 @@ add_test(NAME ch066_bit_vector_tests COMMAND ch066_bit_vector_tests)
 
 add_executable(ch066_bit_vector_benchmark 066-bit-vector/benchmarks/bit_vector_benchmark.c)
 target_link_libraries(ch066_bit_vector_benchmark PRIVATE ch066_bit_vector)
+
+
+# Chapter 067
+add_library(ch067_xor_trie
+    067-bit-trie-xor-trie/src/int_xor_trie.c
+)
+target_include_directories(ch067_xor_trie PUBLIC 067-bit-trie-xor-trie/src)
+
+add_executable(ch067_xor_trie_demo 067-bit-trie-xor-trie/examples/xor_trie_demo.c)
+target_link_libraries(ch067_xor_trie_demo PRIVATE ch067_xor_trie)
+add_test(NAME ch067_xor_trie_demo_smoke COMMAND ch067_xor_trie_demo)
+
+add_executable(ch067_xor_trie_tests 067-bit-trie-xor-trie/tests/test_xor_trie.c)
+target_link_libraries(ch067_xor_trie_tests PRIVATE ch067_xor_trie)
+add_test(NAME ch067_xor_trie_tests COMMAND ch067_xor_trie_tests)
+
+add_executable(ch067_xor_trie_benchmark 067-bit-trie-xor-trie/benchmarks/xor_trie_benchmark.c)
+target_link_libraries(ch067_xor_trie_benchmark PRIVATE ch067_xor_trie)
+
+# Chapter 068
+add_library(ch068_bloom_filter
+    068-bloom-filter/src/byte_bloom_filter.c
+)
+target_include_directories(ch068_bloom_filter PUBLIC 068-bloom-filter/src)
+
+add_executable(ch068_bloom_filter_demo 068-bloom-filter/examples/bloom_filter_demo.c)
+target_link_libraries(ch068_bloom_filter_demo PRIVATE ch068_bloom_filter)
+add_test(NAME ch068_bloom_filter_demo_smoke COMMAND ch068_bloom_filter_demo)
+
+add_executable(ch068_bloom_filter_tests 068-bloom-filter/tests/test_bloom_filter.c)
+target_link_libraries(ch068_bloom_filter_tests PRIVATE ch068_bloom_filter)
+add_test(NAME ch068_bloom_filter_tests COMMAND ch068_bloom_filter_tests)
+
+add_executable(ch068_bloom_filter_benchmark 068-bloom-filter/benchmarks/bloom_filter_benchmark.c)
+target_link_libraries(ch068_bloom_filter_benchmark PRIVATE ch068_bloom_filter)
+
+# Chapter 069
+add_library(ch069_counting_bloom
+    069-counting-bloom-filter/src/byte_counting_bloom.c
+)
+target_include_directories(ch069_counting_bloom PUBLIC 069-counting-bloom-filter/src)
+
+add_executable(ch069_counting_bloom_demo 069-counting-bloom-filter/examples/counting_bloom_demo.c)
+target_link_libraries(ch069_counting_bloom_demo PRIVATE ch069_counting_bloom)
+add_test(NAME ch069_counting_bloom_demo_smoke COMMAND ch069_counting_bloom_demo)
+
+add_executable(ch069_counting_bloom_tests 069-counting-bloom-filter/tests/test_counting_bloom.c)
+target_link_libraries(ch069_counting_bloom_tests PRIVATE ch069_counting_bloom)
+add_test(NAME ch069_counting_bloom_tests COMMAND ch069_counting_bloom_tests)
+
+add_executable(ch069_counting_bloom_benchmark 069-counting-bloom-filter/benchmarks/counting_bloom_benchmark.c)
+target_link_libraries(ch069_counting_bloom_benchmark PRIVATE ch069_counting_bloom)

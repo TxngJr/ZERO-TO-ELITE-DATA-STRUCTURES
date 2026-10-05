@@ -210,3 +210,13 @@
 - Select — position of the kth target bit, e.g. select1(k) returns the 0-based kth one position
 - Popcount — number of one bits in a machine word
 - CTZ (Count Trailing Zeros) — operation used to locate the least-significant set bit of a nonzero word
+
+- Bit Trie / XOR Trie — binary trie over fixed-width integer bits used for XOR optimization/counting queries
+- Subtree Multiplicity — count of live values, including duplicates, stored under a trie prefix
+- Bloom Filter — probabilistic membership structure where negative means definitely absent and positive means maybe present
+- False Positive — query reports maybe-present for an item not actually inserted
+- False Negative — query reports absent for an item that should be represented; plain insert-only Bloom Filters are designed to avoid these
+- Double Hashing — deriving multiple probe positions from two base hashes, commonly h1 + i*h2
+- Counting Bloom Filter — Bloom variant replacing bits with counters to support controlled decrement/deletion
+- Counter Saturation — counter reaching its maximum representable value so another increment cannot be represented safely
+- Valid-Delete Contract — requirement that Counting Bloom deletion be applied only to an occurrence known to have been inserted and not already fully removed

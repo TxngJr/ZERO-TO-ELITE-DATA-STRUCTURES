@@ -1,5 +1,28 @@
 # Changelog
 
+## Batch 23 — Chapters 067–069
+
+Added:
+- uint64_t multiset XOR Trie with MSB-first binary paths
+- subtree/terminal multiplicity metadata for duplicates
+- min-XOR and max-XOR greedy partner queries
+- count of values satisfying (value XOR query) < limit
+- insertion pre-reservation of worst-case 64 new nodes before structural mutation
+- deletion that verifies exact path before decrementing counts
+- 50,000-operation randomized XOR Trie differential workload
+- packed byte-key Bloom Filter with double hashing
+- arbitrary binary and empty-key support
+- insertion-call and set-bit metadata
+- explicit no-false-negative tests for inserted keys plus observed false-positive checks
+- uint16 Counting Bloom Filter
+- transactional add rollback on counter saturation
+- transactional remove rollback on detected underflow
+- duplicate-key and duplicate-hash-position-safe increment/decrement sequencing
+- cached nonzero-counter metadata with validator recomputation
+- valid-delete contract documented to avoid false-negative corruption from deleting false positives
+- saturation stress at UINT16_MAX and 20,000-operation randomized valid-delete workload
+- Batch 23 negative review
+
 ## Batch 22 — Chapters 064–066
 
 Added:
