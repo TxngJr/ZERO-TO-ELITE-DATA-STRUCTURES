@@ -109,3 +109,13 @@
 - Leaf Chain — linked sequence ของ B+ Tree leaves ตาม key order
 - Separator Key — internal routing key ที่แบ่ง key ranges ระหว่าง children
 - Ternary Search Tree (TST) — string-search tree ที่แต่ละ symbol node มี low/equal/high links
+
+- B* Tree — high-occupancy B-Tree variant ที่ redistribute กับ sibling ก่อนและใช้ 2-to-3 split เมื่อจำเป็น
+- Compaction — การรวม immutable sorted runs/levels ใน LSM เพื่อลด obsolete versions และ read amplification โดยแลกกับ rewrite work
+- LSM Tree — Log-Structured Merge Tree; write-optimized structure ที่ buffer mutations แล้ว flush เป็น immutable sorted runs
+- LSM Tombstone — version marker ที่หมายถึง key ถูกลบและใช้ shadow older versions ใน immutable runs
+- MemTable — mutable in-memory ordered structure ที่รับ writes ก่อน flush ใน LSM
+- Read Amplification — จำนวน structures/blocks/runs ที่ read ต้อง probe มากกว่าหนึ่งจุดเพื่อหาคำตอบ
+- Skip List — randomized layered ordered linked structure ที่ให้ expected logarithmic search/update
+- SSTable — immutable sorted table/run commonly used by LSM storage engines
+- Write Amplification — ปริมาณข้อมูลที่ถูก rewrite จริงมากกว่าปริมาณ logical writes เช่นจาก compaction

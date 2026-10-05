@@ -12,10 +12,11 @@
 - Batch 08: 022–024
 - Batch 09: 025–027
 - Batch 10: 028–030
-- Batch 11: 031 Ternary Search Tree, 032 B-Tree, 033 B+ Tree
+- Batch 11: 031–033
+- Batch 12: 034 B* Tree, 035 LSM Tree, 036 Skip List
 
-## Batch 12 — Next
+## Batch 13 — Next
 
-034 B* Tree
-035 LSM Tree
-036 Skip List
+037 Disjoint Set / Union-Find
+038 Graph Fundamentals
+039 Graph Representations

@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 11
+Current Batch: 12
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -36,53 +36,58 @@ Completed Chapters:
 - 031 Ternary Search Tree
 - 032 B-Tree
 - 033 B+ Tree
+- 034 B* Tree
+- 035 LSM Tree
+- 036 Skip List
 
-Current Chapter: 033
+Current Chapter: 036
 
-Next Chapter: 034 B* Tree
+Next Chapter: 037 Disjoint Set / Union-Find
 
 Concepts Covered:
-- all prior Chapters 001–030
-- TST low/equal/high character branching
-- TST prefix lookup and lexicographic traversal
-- B-Tree minimum degree / occupancy / fanout
-- split-before-descent insertion
-- B-Tree predecessor/successor deletion
-- sibling borrow, merge and root shrink
-- equal leaf-depth invariant
-- page/block-oriented tree motivation
-- B+ leaf-only logical records
-- copied internal separator keys
-- equality routing to right child
-- linked leaf chain
-- range scanning without repeated root descent
-- separator recomputation after borrow/merge
+- all prior Chapters 001–033
+- B* high-occupancy motivation
+- sibling redistribution before split
+- 2-to-3 split
+- B* root occupancy exceptions
+- transactional rebuild deletion vs production multi-sibling delete repair
+- LSM mutable MemTable / immutable run architecture
+- sequence numbers and newest-write-wins visibility
+- tombstones
+- flush and full compaction
+- read/write/space amplification
+- leveled vs size-tiered compaction preview
+- Skip List layered ordered links
+- geometric random height distribution
+- expected vs worst-case complexity
+- range scan and LSM MemTable connection
 
 Structures Implemented:
 - all previous structures
-- ByteTST
-- IntBTree
-- IntBPlusTree
+- IntBStarTree
+- IntLSMTree
+- IntSkipList
 
 Tests Added:
-- TST basic/prefix/delete/binary/empty/lexicographic tests
-- TST randomized set workload: 20,000 operations
-- B-Tree sequential split/delete tests
-- B-Tree randomized differential: 30,000 operations each for t=2,3,8
-- B+ sequential range/delete tests
-- B+ randomized set/range tests: 25,000 operations each for t=2,3,8
+- B* order/occupancy/root split tests
+- B* rebuild-deletion tests
+- B* randomized differential workload: 12,000 operations
+- LSM tombstone/version/compaction tests
+- LSM randomized workload: 25,000 operations
+- Skip List basic/range tests
+- Skip List randomized differential workload: 40,000 operations
 
 Benchmarks Added:
-- TST vs Trie vs Radix lookup
-- B-Tree fanout t=2/4/16/64
-- B+ range scan vs B-Tree inorder filtering
+- B* occupancy/fanout vs B-Tree
+- LSM read amplification before/after full compaction
+- Skip List vs B-Tree lookup
 
 Known Dependencies:
-- 034 B* Tree increases occupancy through sibling redistribution before split
-- 035 LSM Tree changes from in-place page trees to buffered sorted runs
-- 036 Skip List introduces randomized layered ordered lists
+- 037 Union-Find introduces set partitions and near-constant amortized operations
+- 038 Graph Fundamentals starts graph terminology/invariants
+- 039 Graph Representations compares adjacency list/matrix/edge list
 
 Open Problems:
-- none if Batch 11 CI passes
+- none if Batch 12 CI passes
 
-Coverage: 33 / 170 chapters
+Coverage: 36 / 170 chapters

@@ -521,3 +521,55 @@ add_test(NAME ch033_bplus_tests COMMAND ch033_bplus_tests)
 
 add_executable(ch033_range_scan_benchmark 033-b-plus-tree/benchmarks/range_scan_benchmark.c)
 target_link_libraries(ch033_range_scan_benchmark PRIVATE ch033_bplus_tree ch032_btree)
+
+
+# Chapter 034
+add_library(ch034_bstar_tree
+    034-b-star-tree/src/int_bstar_tree.c
+)
+target_include_directories(ch034_bstar_tree PUBLIC 034-b-star-tree/src)
+
+add_executable(ch034_bstar_demo 034-b-star-tree/examples/bstar_demo.c)
+target_link_libraries(ch034_bstar_demo PRIVATE ch034_bstar_tree)
+add_test(NAME ch034_bstar_demo_smoke COMMAND ch034_bstar_demo)
+
+add_executable(ch034_bstar_tests 034-b-star-tree/tests/test_bstar_tree.c)
+target_link_libraries(ch034_bstar_tests PRIVATE ch034_bstar_tree)
+add_test(NAME ch034_bstar_tests COMMAND ch034_bstar_tests)
+
+add_executable(ch034_occupancy_benchmark 034-b-star-tree/benchmarks/occupancy_benchmark.c)
+target_link_libraries(ch034_occupancy_benchmark PRIVATE ch034_bstar_tree ch032_btree)
+
+# Chapter 035
+add_library(ch035_lsm_tree
+    035-lsm-tree/src/int_lsm_tree.c
+)
+target_include_directories(ch035_lsm_tree PUBLIC 035-lsm-tree/src)
+
+add_executable(ch035_lsm_demo 035-lsm-tree/examples/lsm_demo.c)
+target_link_libraries(ch035_lsm_demo PRIVATE ch035_lsm_tree)
+add_test(NAME ch035_lsm_demo_smoke COMMAND ch035_lsm_demo)
+
+add_executable(ch035_lsm_tests 035-lsm-tree/tests/test_lsm_tree.c)
+target_link_libraries(ch035_lsm_tests PRIVATE ch035_lsm_tree)
+add_test(NAME ch035_lsm_tests COMMAND ch035_lsm_tests)
+
+add_executable(ch035_read_amplification_benchmark 035-lsm-tree/benchmarks/read_amplification_benchmark.c)
+target_link_libraries(ch035_read_amplification_benchmark PRIVATE ch035_lsm_tree)
+
+# Chapter 036
+add_library(ch036_skip_list
+    036-skip-list/src/int_skip_list.c
+)
+target_include_directories(ch036_skip_list PUBLIC 036-skip-list/src)
+
+add_executable(ch036_skip_list_demo 036-skip-list/examples/skip_list_demo.c)
+target_link_libraries(ch036_skip_list_demo PRIVATE ch036_skip_list)
+add_test(NAME ch036_skip_list_demo_smoke COMMAND ch036_skip_list_demo)
+
+add_executable(ch036_skip_list_tests 036-skip-list/tests/test_skip_list.c)
+target_link_libraries(ch036_skip_list_tests PRIVATE ch036_skip_list)
+add_test(NAME ch036_skip_list_tests COMMAND ch036_skip_list_tests)
+
+add_executable(ch036_skip_list_benchmark 036-skip-list/benchmarks/skip_list_benchmark.c)
+target_link_libraries(ch036_skip_list_benchmark PRIVATE ch036_skip_list ch032_btree)

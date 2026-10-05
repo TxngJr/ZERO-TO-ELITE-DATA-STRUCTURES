@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 11 — Chapters 031–033 complete**
+**Batch 12 — Chapters 034–036 complete**
 
 ล่าสุด:
-- [031 Ternary Search Tree](./031-ternary-search-tree/)
-- [032 B-Tree](./032-b-tree/)
-- [033 B+ Tree](./033-b-plus-tree/)
+- [034 B* Tree](./034-b-star-tree/)
+- [035 LSM Tree](./035-lsm-tree/)
+- [036 Skip List](./036-skip-list/)
 
-สถานะ: **33 / 170 chapters**
+สถานะ: **36 / 170 chapters**
 
 Next:
 
-**034 B* Tree → 035 LSM Tree → 036 Skip List**
+**037 Disjoint Set / Union-Find → 038 Graph Fundamentals → 039 Graph Representations**
 
 ## Build
 

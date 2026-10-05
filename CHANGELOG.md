@@ -1,5 +1,25 @@
 # Changelog
 
+## Batch 12 — Chapters 034–036
+
+Added:
+- B* Tree with sibling redistribution before split
+- 2-to-3 B* split and high-occupancy validation
+- root-split occupancy exception handling
+- transactional rebuild deletion with explicit O(n log n) teaching complexity
+- 12,000-operation randomized B* differential test
+- B* occupancy/fanout benchmark against B-Tree
+- Mini in-memory LSM Tree with sorted MemTable and immutable runs
+- sequence-number newest-wins visibility
+- tombstones, flush, full compaction and materialized range scan
+- 25,000-operation randomized LSM workload
+- read-amplification benchmark before/after compaction
+- integer Skip List with flexible-array forward pointers
+- expected O(log n) search/insert/remove and O(log n + k) range
+- 40,000-operation randomized Skip List differential test
+- Skip List vs high-fanout B-Tree lookup benchmark
+- Batch 12 negative review
+
 ## Batch 11 — Chapters 031–033
 
 Added:
