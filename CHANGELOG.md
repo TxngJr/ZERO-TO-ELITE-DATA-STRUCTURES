@@ -1,5 +1,27 @@
 # Changelog
 
+## Batch 08 — Chapters 022–024
+
+Added:
+- Red-Black Tree with color/black-height invariants
+- insertion recolor/rotation fix-up
+- deletion fix-up with NULL-as-black handling
+- 40,000-operation randomized Red-Black differential test
+- sorted-input height test and Red-Black vs AVL benchmark
+- Splay Tree with Zig / Zig-Zig / Zig-Zag
+- representation-mutating access and subtree join deletion
+- 30,000-operation randomized Splay differential test
+- hot-key locality benchmark
+- Treap with BST order + min-heap priority
+- deterministic (priority,key) tie-break
+- pseudo-random default priorities plus explicit-priority API
+- merge-based deletion
+- 35,000-operation randomized Treap differential test
+- Treap vs plain BST sorted-input benchmark
+- Batch 08 negative review
+
+# Changelog
+
 ## Batch 07 — Chapters 019–021
 
 Added:

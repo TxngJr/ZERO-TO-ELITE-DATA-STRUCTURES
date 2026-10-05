@@ -79,3 +79,11 @@
 - Inorder Successor — key ถัดไปตาม sorted inorder order
 - Rotation — local pointer transformation ที่เปลี่ยน tree shape แต่รักษา inorder/BST ordering
 - Transplant — BST helper ที่แทน subtree หนึ่งด้วยอีก subtree ณ ตำแหน่งเดิม
+
+- Black-Height — จำนวน BLACK nodes ตาม path ใน Red-Black Tree ภายใต้ convention ที่กำหนด โดยทุก path จาก node เดียวกันต้องสอดคล้องกัน
+- Red-Black Tree — self-balancing BST ที่ใช้ color และ black-height invariants เพื่อควบคุม height
+- Splay Tree — self-adjusting BST ที่ splay node ที่เข้าถึงขึ้น root และให้ amortized logarithmic operations
+- Treap — randomized BST ที่รักษา BST order ตาม key และ heap order ตาม priority พร้อมกัน
+- Zig — single splay rotation เมื่อ node มี parent แต่ไม่มี grandparent
+- Zig-Zig — splay case ที่ node และ parent อยู่ด้านเดียวกันของ grandparent
+- Zig-Zag — splay case ที่ node และ parent อยู่คนละทิศเมื่อเทียบกับ grandparent

@@ -312,3 +312,55 @@ add_test(NAME ch021_avl_tests COMMAND ch021_avl_tests)
 
 add_executable(ch021_avl_vs_bst 021-avl-tree/benchmarks/avl_vs_bst.c)
 target_link_libraries(ch021_avl_vs_bst PRIVATE ch021_avl ch019_bst)
+
+
+# Chapter 022
+add_library(ch022_red_black_tree
+    022-red-black-tree/src/int_red_black_tree.c
+)
+target_include_directories(ch022_red_black_tree PUBLIC 022-red-black-tree/src)
+
+add_executable(ch022_red_black_demo 022-red-black-tree/examples/red_black_demo.c)
+target_link_libraries(ch022_red_black_demo PRIVATE ch022_red_black_tree)
+add_test(NAME ch022_red_black_demo_smoke COMMAND ch022_red_black_demo)
+
+add_executable(ch022_red_black_tests 022-red-black-tree/tests/test_red_black_tree.c)
+target_link_libraries(ch022_red_black_tests PRIVATE ch022_red_black_tree)
+add_test(NAME ch022_red_black_tests COMMAND ch022_red_black_tests)
+
+add_executable(ch022_red_black_vs_avl 022-red-black-tree/benchmarks/red_black_vs_avl.c)
+target_link_libraries(ch022_red_black_vs_avl PRIVATE ch022_red_black_tree ch021_avl ch019_bst)
+
+# Chapter 023
+add_library(ch023_splay_tree
+    023-splay-tree/src/int_splay_tree.c
+)
+target_include_directories(ch023_splay_tree PUBLIC 023-splay-tree/src)
+
+add_executable(ch023_splay_demo 023-splay-tree/examples/splay_demo.c)
+target_link_libraries(ch023_splay_demo PRIVATE ch023_splay_tree)
+add_test(NAME ch023_splay_demo_smoke COMMAND ch023_splay_demo)
+
+add_executable(ch023_splay_tests 023-splay-tree/tests/test_splay_tree.c)
+target_link_libraries(ch023_splay_tests PRIVATE ch023_splay_tree)
+add_test(NAME ch023_splay_tests COMMAND ch023_splay_tests)
+
+add_executable(ch023_splay_hot_access 023-splay-tree/benchmarks/splay_hot_access.c)
+target_link_libraries(ch023_splay_hot_access PRIVATE ch023_splay_tree ch019_bst)
+
+# Chapter 024
+add_library(ch024_treap
+    024-treap/src/int_treap.c
+)
+target_include_directories(ch024_treap PUBLIC 024-treap/src)
+
+add_executable(ch024_treap_demo 024-treap/examples/treap_demo.c)
+target_link_libraries(ch024_treap_demo PRIVATE ch024_treap)
+add_test(NAME ch024_treap_demo_smoke COMMAND ch024_treap_demo)
+
+add_executable(ch024_treap_tests 024-treap/tests/test_treap.c)
+target_link_libraries(ch024_treap_tests PRIVATE ch024_treap)
+add_test(NAME ch024_treap_tests COMMAND ch024_treap_tests)
+
+add_executable(ch024_treap_vs_bst 024-treap/benchmarks/treap_vs_bst.c)
+target_link_libraries(ch024_treap_vs_bst PRIVATE ch024_treap ch019_bst)

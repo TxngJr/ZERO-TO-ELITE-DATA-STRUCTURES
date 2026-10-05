@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 07
+Current Batch: 08
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -24,64 +24,64 @@ Completed Chapters:
 - 019 Binary Search Tree
 - 020 Balanced BST
 - 021 AVL Tree
+- 022 Red-Black Tree
+- 023 Splay Tree
+- 024 Treap
 
-Current Chapter: 021
+Current Chapter: 024
 
-Next Chapter: 022 Red-Black Tree
+Next Chapter: 025 Heap
 
 Concepts Covered:
-- previous Chapters 001–018
-- strict BST ordering and duplicate policy
-- search/insert/delete in O(h)
-- transplant
-- min/max and successor/predecessor
-- inorder sortedness proof
-- sorted-insertion degeneration
-- left/right rotations
-- LL/RR/LR/RL restructuring
-- ordering invariant vs balance invariant
-- balance factor
-- stored height metadata
-- AVL insert rebalancing
-- AVL delete rebalancing
-- Fibonacci-like AVL height bound
+- previous Chapters 001–021
+- Red-Black color and black-height invariants
+- insert recoloring and rotations
+- delete extra-black/sibling-case fix-up
+- deterministic logarithmic Red-Black height
+- self-adjusting Splay Trees
+- Zig / Zig-Zig / Zig-Zag
+- representation-mutating search
+- worst-case vs amortized complexity
+- Treap dual BST/heap invariants
+- random-priority expected balance
+- deterministic priority tie-breaking
+- merge-based Treap deletion
+- deterministic invariants vs probabilistic complexity assumptions
 
 Structures Implemented:
 - all previous structures
-- IntBST
-- RotBST teaching rotation structure
-- IntAVL self-balancing BST
+- IntRedBlackTree
+- IntSplayTree
+- IntTreap
 
 Tests Added:
-- 30,000-step randomized BST differential test
-- BST delete-case tests
-- successor/predecessor tests
-- sorted BST height degeneration
-- rotation inorder-preservation tests
-- LR/RL rotation tests
-- AVL LL/RR/LR/RL tests
-- AVL sorted-insert height test
-- AVL deletion rebalancing tests
-- 40,000-step randomized AVL differential test
+- Red-Black deterministic insert/delete sequences
+- 40,000-step randomized Red-Black differential test
+- Red-Black sorted-input height test
+- Splay root-after-access behavior
+- 30,000-step randomized Splay differential test
+- Treap explicit-priority/tie-break tests
+- Treap sorted-random-priority height test
+- 35,000-step randomized Treap differential test
 
 Benchmarks Added:
-- sorted vs shuffled plain-BST shape
-- manual rotation height demonstration
-- AVL vs plain BST on sorted insertions
+- Red-Black vs AVL vs plain BST
+- Splay hot-key access workload
+- Treap vs plain BST on sorted keys
 
 Known Dependencies:
-- Chapter 022 introduces Red-Black color/black-height invariants
-- Chapter 023 Splay Tree uses access-driven rotations
-- Chapter 024 Treap combines BST order with heap priorities
+- Chapter 025 revisits heap as a full structure rather than only Priority Queue
+- Chapter 026 generalizes to D-ary Heap
+- Chapter 027 introduces meldable Binomial Heap
 
 Open Problems:
-- none if Batch 07 CI passes
+- none if Batch 08 CI passes
 
 Cross References:
-- 018 inorder traversal → BST sorted order
-- 019 O(h) operations → motivation for balance
-- 020 rotations → AVL repair primitive
-- 021 AVL metadata → future augmented/order-statistic trees
-- 012 Heap → Treap priority invariant later
+- 020 rotations → Red-Black and Splay mechanics
+- 021 AVL → deterministic balance comparison
+- 004 amortized analysis → Splay guarantees
+- 012 heap invariant → Treap priority order
+- 132 Randomized Structures later formalizes randomized guarantees
 
-Coverage: 21 / 170 chapters
+Coverage: 24 / 170 chapters
