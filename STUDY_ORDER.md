@@ -1,33 +1,18 @@
 # Study Order
 
-## Batch 01 — Complete
-001 Programming Foundations
-002 Memory Fundamentals
-003 ADT
+## Complete Batches
 
-## Batch 02 — Complete
-004 Complexity Analysis
-005 Recursion & Iteration
-006 Arrays
+- Batch 01: 001–003
+- Batch 02: 004–006
+- Batch 03: 007–009
+- Batch 04: 010–012
+- Batch 05: 013–015
+- Batch 06: 016 Trees Fundamentals, 017 Binary Tree, 018 Tree Traversal
 
-## Batch 03 — Complete
-007 Strings
-008 Linked Lists
-009 Stack
+## Batch 07 — Next
 
-## Batch 04 — Complete
-010 Queue
-011 Deque
-012 Priority Queue
+019 Binary Search Tree
+020 Balanced BST
+021 AVL Tree
 
-## Batch 05 — Complete
-013 Hashing Fundamentals
-014 Hash Table
-015 Hash Set / Hash Map
-
-## Batch 06 — Next
-016 Trees Fundamentals
-017 Binary Tree
-018 Tree Traversal
-
-จากนั้นเดินหน้าครั้งละ 3 chapters ตาม ROADMAP.md.
+เดินหน้าครั้งละ 3 chapters ตาม ROADMAP.md.

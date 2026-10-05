@@ -207,3 +207,56 @@ add_test(NAME ch015_hash_set_map_tests COMMAND ch015_hash_set_map_tests)
 
 add_executable(ch015_set_lookup_benchmark 015-hash-set-hash-map/benchmarks/set_lookup_benchmark.c)
 target_link_libraries(ch015_set_lookup_benchmark PRIVATE ch015_hash_set_map)
+
+
+# Chapter 016
+add_library(ch016_tree_math
+    016-trees-fundamentals/src/tree_math.c
+)
+target_include_directories(ch016_tree_math PUBLIC 016-trees-fundamentals/src)
+
+add_executable(ch016_tree_math_demo 016-trees-fundamentals/examples/tree_math_demo.c)
+target_link_libraries(ch016_tree_math_demo PRIVATE ch016_tree_math)
+add_test(NAME ch016_tree_math_demo_smoke COMMAND ch016_tree_math_demo)
+
+add_executable(ch016_tree_math_tests 016-trees-fundamentals/tests/test_tree_math.c)
+target_link_libraries(ch016_tree_math_tests PRIVATE ch016_tree_math)
+add_test(NAME ch016_tree_math_tests COMMAND ch016_tree_math_tests)
+
+add_executable(ch016_tree_shape_cost 016-trees-fundamentals/benchmarks/tree_shape_cost.c)
+target_link_libraries(ch016_tree_shape_cost PRIVATE ch016_tree_math)
+
+# Chapter 017
+add_library(ch017_binary_tree
+    017-binary-tree/src/int_binary_tree.c
+)
+target_include_directories(ch017_binary_tree PUBLIC 017-binary-tree/src)
+
+add_executable(ch017_binary_tree_demo 017-binary-tree/examples/binary_tree_demo.c)
+target_link_libraries(ch017_binary_tree_demo PRIVATE ch017_binary_tree)
+add_test(NAME ch017_binary_tree_demo_smoke COMMAND ch017_binary_tree_demo)
+
+add_executable(ch017_binary_tree_tests 017-binary-tree/tests/test_binary_tree.c)
+target_link_libraries(ch017_binary_tree_tests PRIVATE ch017_binary_tree)
+add_test(NAME ch017_binary_tree_tests COMMAND ch017_binary_tree_tests)
+
+add_executable(ch017_tree_shape_benchmark 017-binary-tree/benchmarks/tree_shape_benchmark.c)
+target_link_libraries(ch017_tree_shape_benchmark PRIVATE ch017_binary_tree)
+
+# Chapter 018
+add_library(ch018_tree_traversal
+    018-tree-traversal/src/tree_traversal.c
+)
+target_include_directories(ch018_tree_traversal PUBLIC 018-tree-traversal/src)
+target_link_libraries(ch018_tree_traversal PUBLIC ch017_binary_tree)
+
+add_executable(ch018_traversal_demo 018-tree-traversal/examples/traversal_demo.c)
+target_link_libraries(ch018_traversal_demo PRIVATE ch018_tree_traversal)
+add_test(NAME ch018_traversal_demo_smoke COMMAND ch018_traversal_demo)
+
+add_executable(ch018_tree_traversal_tests 018-tree-traversal/tests/test_tree_traversal.c)
+target_link_libraries(ch018_tree_traversal_tests PRIVATE ch018_tree_traversal)
+add_test(NAME ch018_tree_traversal_tests COMMAND ch018_tree_traversal_tests)
+
+add_executable(ch018_traversal_benchmark 018-tree-traversal/benchmarks/traversal_benchmark.c)
+target_link_libraries(ch018_traversal_benchmark PRIVATE ch018_tree_traversal)

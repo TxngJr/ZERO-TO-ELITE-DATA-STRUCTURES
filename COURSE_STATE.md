@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 05
+Current Batch: 06
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -18,61 +18,63 @@ Completed Chapters:
 - 013 Hashing Fundamentals
 - 014 Hash Table
 - 015 Hash Set / Hash Map
+- 016 Trees Fundamentals
+- 017 Binary Tree
+- 018 Tree Traversal
 
-Current Chapter: 015
+Current Chapter: 018
 
-Next Chapter: 016 Trees Fundamentals
+Next Chapter: 019 Binary Search Tree
 
 Concepts Covered:
-- previous Chapters 001–012
-- hash value vs bucket index vs equality
-- collisions and load factor
-- integer/byte/string hashing
-- adversarial/seeded hashing motivation
-- separate chaining
-- rehashing and geometric bucket growth
-- expected vs worst-case hash-table complexity
-- Set vs Map ADT
-- open addressing and linear probing
-- tombstones and probe continuity
-- clustering
-- owned vs borrowed string keys
-- cached string hashes
+- previous Chapters 001–015
+- rooted-tree terminology and edge-count theorem
+- depth/height/width
+- full/perfect/complete/skewed/balanced shape vocabulary
+- structural induction
+- pointer-based Binary Tree ownership
+- parent/left/right invariants
+- foreign-node rejection and subtree deletion
+- recursive height
+- preorder/inorder/postorder
+- recursive vs explicit-stack DFS
+- level-order BFS with queue
+- height-vs-width auxiliary-space analysis
 
 Structures Implemented:
 - all previous structures
-- hash_u64_mix / FNV-1a byte hashing utilities
-- IntIntHashTable using separate chaining
-- IntHashSet wrapper
-- StringIntHashMap using open addressing + linear probing + tombstones
+- overflow-aware tree-math helpers
+- IntBinaryTree with parent links
+- recursive and iterative DFS traversals
+- level-order traversal
 
 Tests Added:
-- hash/equality/bucket tests
-- distribution experiments
-- 30,000-step chaining Hash Table differential test
-- 20,000-step IntHashSet randomized test
-- 25,000-step StringIntHashMap differential test
-- tombstone/owned-key tests
+- perfect-tree math/height-bound tests
+- binary-tree ownership/invariant tests
+- 1023-node complete-tree structural test
+- foreign-node mutation rejection
+- recursive-vs-iterative traversal differential tests
+- complete, irregular, skewed and empty traversal cases
 
 Benchmarks Added:
-- hash distribution
-- Hash Table vs linear lookup
-- Hash Set vs linear membership
+- tree shape structural bounds
+- skewed-tree height scan
+- recursive vs iterative preorder benchmark
 
 Known Dependencies:
-- Chapter 016 introduces tree vocabulary/invariants
-- Chapter 017 implements binary-tree representation
-- Chapter 018 covers recursive/iterative traversals
+- Chapter 019 adds BST ordering and search/insert/delete
+- Chapter 020 introduces balancing concepts/rotations
+- Chapter 021 implements AVL balance invariant
 
 Open Problems:
-- none if Batch 05 CI passes
+- none if Batch 06 CI passes
 
 Cross References:
-- 013 hashing fundamentals → 014 collision resolution
-- 014 Map representation → 015 Set wrapper
-- 014 chaining ↔ 015 open addressing trade-offs
-- 002 locality → open-addressing slot locality
-- 004 expected/amortized analysis → hash operation claims
-- 071–073 later revisit advanced hashing strategies
+- 005 recursion → recursive traversals
+- 009 Stack → iterative DFS
+- 010 Queue → level-order BFS
+- 012 complete binary heap shape → tree-shape terminology
+- 017 structural invariants → 019 BST ordering invariant
+- 018 inorder → sorted traversal once BST invariant exists
 
-Coverage: 15 / 170 chapters
+Coverage: 18 / 170 chapters

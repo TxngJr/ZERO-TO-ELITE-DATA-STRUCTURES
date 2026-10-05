@@ -4,11 +4,11 @@
 
 ## Current Progress
 
-**Batch 05 — Chapters 013–015 complete**
+**Batch 06 — Chapters 016–018 complete**
 
 1. [001 Programming Foundations](./001-programming-foundations/)
 2. [002 Memory Fundamentals](./002-memory-fundamentals/)
-3. [003 Abstract Data Type (ADT)](./003-abstract-data-type/)
+3. [003 Abstract Data Type](./003-abstract-data-type/)
 4. [004 Complexity Analysis](./004-complexity-analysis/)
 5. [005 Recursion & Iteration](./005-recursion-iteration/)
 6. [006 Arrays](./006-arrays/)
@@ -21,20 +21,13 @@
 13. [013 Hashing Fundamentals](./013-hashing-fundamentals/)
 14. [014 Hash Table](./014-hash-table/)
 15. [015 Hash Set / Hash Map](./015-hash-set-hash-map/)
+16. [016 Trees Fundamentals](./016-trees-fundamentals/)
+17. [017 Binary Tree](./017-binary-tree/)
+18. [018 Tree Traversal](./018-tree-traversal/)
 
-สถานะ: **15 / 170 chapters**
+สถานะ: **18 / 170 chapters**
 
-Next: **016 Trees Fundamentals → 017 Binary Tree → 018 Tree Traversal**
-
-## Repository Guide
-
-- [COURSE_GUIDE.md](./COURSE_GUIDE.md)
-- [ROADMAP.md](./ROADMAP.md)
-- [STUDY_ORDER.md](./STUDY_ORDER.md)
-- [COURSE_STATE.md](./COURSE_STATE.md)
-- [COVERAGE_MATRIX.md](./COVERAGE_MATRIX.md)
-- [GLOSSARY.md](./GLOSSARY.md)
-- [CHANGELOG.md](./CHANGELOG.md)
+Next: **019 Binary Search Tree → 020 Balanced BST → 021 AVL Tree**
 
 ## Build
 
@@ -48,4 +41,4 @@ Sanitizers:
     cmake --build build-asan
     ctest --test-dir build-asan --output-on-failure
 
-ทุกบทเน้น abstraction, representation, invariants, correctness, complexity, implementation, testing, benchmarking และ trade-offs.
+ดู [ROADMAP.md](./ROADMAP.md), [COURSE_STATE.md](./COURSE_STATE.md), [COVERAGE_MATRIX.md](./COVERAGE_MATRIX.md) และ [GLOSSARY.md](./GLOSSARY.md) สำหรับภาพรวมหลักสูตร.

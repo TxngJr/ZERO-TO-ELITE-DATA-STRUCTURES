@@ -1,29 +1,30 @@
 # Changelog
 
-## Batch 05 — Chapters 013–015
+## Batch 06 — Chapters 016–018
 
 Added:
-- Hashing Fundamentals: hash/equality contract, collisions, load factor, integer/byte hashing and distribution experiments
-- Separate-chaining IntIntHashTable with rehashing, load policy and randomized differential tests
-- IntHashSet implemented over Map representation
-- StringIntHashMap using open addressing, linear probing and tombstones
-- owned string-key semantics and cached hashes
-- 30k / 20k / 25k randomized test sequences
-- hashing/table/set benchmarks
-- Batch 05 negative review and overflow-safe threshold fixes
+- Trees Fundamentals vocabulary, height/shape mathematics and structural induction
+- overflow-aware perfect-tree/min-max-height helpers
+- pointer-owned IntBinaryTree with parent links and subtree deletion
+- structural validator and foreign-node rejection
+- recursive preorder/inorder/postorder
+- iterative preorder/inorder/postorder
+- level-order BFS
+- recursive-vs-iterative differential tests
+- shape/traversal benchmarks
+- Batch 06 negative review
+
+## Batch 05 — Chapters 013–015
+Added hashing fundamentals, separate-chaining Hash Table, Hash Set and open-addressing String Hash Map.
 
 ## Batch 04 — Chapters 010–012
-
-Added Queue, Deque and Priority Queue with circular/linked queues, monotonic queue, binary heap, randomized tests and benchmarks.
+Added Queue, Deque and Priority Queue.
 
 ## Batch 03 — Chapters 007–009
-
-Added Strings, Linked Lists and Stack with dynamic ByteString, list variants, monotonic stack and randomized tests.
+Added Strings, Linked Lists and Stack.
 
 ## Batch 02 — Chapters 004–006
-
-Added Complexity Analysis, Recursion & Iteration and Arrays with formal analysis and IntVector.
+Added Complexity, Recursion/Iteration and Arrays.
 
 ## Batch 01 — Chapters 001–003
-
-Added course foundations, memory, ADT, IntStack, tests, sanitizer-capable CMake and Fedora CI.
+Added course foundations, memory, ADT, tests and Fedora CI.

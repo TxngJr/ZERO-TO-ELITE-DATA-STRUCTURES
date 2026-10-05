@@ -52,3 +52,23 @@
 - Open Addressing — collision strategy ที่เก็บ entries ใน slot array โดย probe หาตำแหน่งอื่น
 - Separate Chaining — collision strategy ที่แต่ละ bucket เก็บ chain/collection ของ entries
 - Tombstone — marker ของ slot ที่เคย occupied แล้วถูกลบ เพื่อรักษา probe continuity ใน open addressing
+
+- Ancestor — node ที่อยู่บนเส้นทางจาก root มายัง node เป้าหมายก่อนถึงเป้าหมาย
+- Binary Tree — rooted ordered tree ที่แต่ละ node มี left/right child ได้อย่างละไม่เกินหนึ่ง
+- Breadth-First Search (BFS) — traversal ที่ประมวลผลตามระดับ/depth โดยทั่วไปใช้ Queue
+- Complete Binary Tree — binary tree ที่ทุก level ก่อนสุดท้ายเต็มและ level สุดท้ายเติมจากซ้าย
+- Depth — จำนวน edges จาก root ถึง node ภายใต้ convention ของ course นี้
+- Descendant — node ที่อยู่ภายใต้ node หนึ่งใน subtree ของมัน
+- Full Binary Tree — binary tree ที่ internal node ทุกตัวมีสอง children
+- Height — maximum downward edge distance จาก node ถึง leaf ภายใต้ convention ของ course นี้
+- Inorder Traversal — Left → Node → Right
+- Leaf — node ที่ไม่มี children
+- Level-order Traversal — BFS traversal ตาม depth
+- Perfect Binary Tree — full binary tree ที่ leaves ทั้งหมดอยู่ depth เดียวกัน
+- Postorder Traversal — Left → Right → Node
+- Preorder Traversal — Node → Left → Right
+- Root — node สูงสุดของ rooted tree ที่ไม่มี parent
+- Skewed Tree — tree ที่ shape ใกล้ chain และ height อาจโตเป็น Theta(n)
+- Structural Induction — proof technique ที่พิสูจน์ base tree และ combine จาก subtrees
+- Subtree — node หนึ่งพร้อม descendants ทั้งหมด
+- Tree Width — จำนวน nodes ใน level หนึ่ง; maximum width คือค่าสูงสุดทุก level

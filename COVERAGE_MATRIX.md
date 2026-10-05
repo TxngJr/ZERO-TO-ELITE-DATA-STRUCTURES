@@ -1,6 +1,6 @@
 # Coverage Matrix
 
-Legend: ✅ complete, ➡ planned, N/A not meaningful in this chapter.
+Legend: ✅ complete, ➡ planned, N/A not meaningful.
 
 | Chapter | Topic | Theory | Code | Complexity | Invariant | Tests | Benchmark | Exercises | Status |
 |---:|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -19,6 +19,9 @@ Legend: ✅ complete, ➡ planned, N/A not meaningful in this chapter.
 | 013 | Hashing Fundamentals | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 014 | Hash Table | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 015 | Hash Set / Hash Map | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 016 | Trees Fundamentals | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 017 | Binary Tree | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 018 | Tree Traversal | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 016 | Trees Fundamentals | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 017 | Binary Tree | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 018 | Tree Traversal | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 019 | Binary Search Tree | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 020 | Balanced BST | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 021 | AVL Tree | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
