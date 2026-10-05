@@ -573,3 +573,55 @@ add_test(NAME ch036_skip_list_tests COMMAND ch036_skip_list_tests)
 
 add_executable(ch036_skip_list_benchmark 036-skip-list/benchmarks/skip_list_benchmark.c)
 target_link_libraries(ch036_skip_list_benchmark PRIVATE ch036_skip_list ch032_btree)
+
+
+# Chapter 037
+add_library(ch037_dsu
+    037-disjoint-set-union-find/src/int_dsu.c
+)
+target_include_directories(ch037_dsu PUBLIC 037-disjoint-set-union-find/src)
+
+add_executable(ch037_dsu_demo 037-disjoint-set-union-find/examples/dsu_demo.c)
+target_link_libraries(ch037_dsu_demo PRIVATE ch037_dsu)
+add_test(NAME ch037_dsu_demo_smoke COMMAND ch037_dsu_demo)
+
+add_executable(ch037_dsu_tests 037-disjoint-set-union-find/tests/test_dsu.c)
+target_link_libraries(ch037_dsu_tests PRIVATE ch037_dsu)
+add_test(NAME ch037_dsu_tests COMMAND ch037_dsu_tests)
+
+add_executable(ch037_dsu_benchmark 037-disjoint-set-union-find/benchmarks/dsu_benchmark.c)
+target_link_libraries(ch037_dsu_benchmark PRIVATE ch037_dsu)
+
+# Chapter 038
+add_library(ch038_graph
+    038-graphs-fundamentals/src/int_graph.c
+)
+target_include_directories(ch038_graph PUBLIC 038-graphs-fundamentals/src)
+
+add_executable(ch038_graph_demo 038-graphs-fundamentals/examples/graph_demo.c)
+target_link_libraries(ch038_graph_demo PRIVATE ch038_graph)
+add_test(NAME ch038_graph_demo_smoke COMMAND ch038_graph_demo)
+
+add_executable(ch038_graph_tests 038-graphs-fundamentals/tests/test_graph.c)
+target_link_libraries(ch038_graph_tests PRIVATE ch038_graph)
+add_test(NAME ch038_graph_tests COMMAND ch038_graph_tests)
+
+add_executable(ch038_edge_lookup_benchmark 038-graphs-fundamentals/benchmarks/edge_lookup_benchmark.c)
+target_link_libraries(ch038_edge_lookup_benchmark PRIVATE ch038_graph)
+
+# Chapter 039
+add_library(ch039_graph_repr
+    039-graph-representations/src/graph_repr.c
+)
+target_include_directories(ch039_graph_repr PUBLIC 039-graph-representations/src)
+
+add_executable(ch039_graph_repr_demo 039-graph-representations/examples/representations_demo.c)
+target_link_libraries(ch039_graph_repr_demo PRIVATE ch039_graph_repr)
+add_test(NAME ch039_graph_repr_demo_smoke COMMAND ch039_graph_repr_demo)
+
+add_executable(ch039_graph_repr_tests 039-graph-representations/tests/test_graph_repr.c)
+target_link_libraries(ch039_graph_repr_tests PRIVATE ch039_graph_repr)
+add_test(NAME ch039_graph_repr_tests COMMAND ch039_graph_repr_tests)
+
+add_executable(ch039_sparse_dense_benchmark 039-graph-representations/benchmarks/sparse_dense_benchmark.c)
+target_link_libraries(ch039_sparse_dense_benchmark PRIVATE ch039_graph_repr)

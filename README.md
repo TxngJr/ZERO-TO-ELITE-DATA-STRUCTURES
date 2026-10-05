@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 12 — Chapters 034–036 complete**
+**Batch 13 — Chapters 037–039 complete**
 
 ล่าสุด:
-- [034 B* Tree](./034-b-star-tree/)
-- [035 LSM Tree](./035-lsm-tree/)
-- [036 Skip List](./036-skip-list/)
+- [037 Disjoint Set / Union-Find](./037-disjoint-set-union-find/)
+- [038 Graphs Fundamentals](./038-graphs-fundamentals/)
+- [039 Graph Representations](./039-graph-representations/)
 
-สถานะ: **36 / 170 chapters**
+สถานะ: **39 / 170 chapters**
 
 Next:
 
-**037 Disjoint Set / Union-Find → 038 Graph Fundamentals → 039 Graph Representations**
+**040 Graph Traversal Structures → 041 DAG Data Structures → 042 Sparse vs Dense Graph Representation**
 
 ## Build
 

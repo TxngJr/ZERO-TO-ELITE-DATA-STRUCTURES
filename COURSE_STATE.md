@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 12
+Current Batch: 13
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -39,55 +39,61 @@ Completed Chapters:
 - 034 B* Tree
 - 035 LSM Tree
 - 036 Skip List
+- 037 Disjoint Set / Union-Find
+- 038 Graphs Fundamentals
+- 039 Graph Representations
 
-Current Chapter: 036
+Current Chapter: 039
 
-Next Chapter: 037 Disjoint Set / Union-Find
+Next Chapter: 040 Graph Traversal Structures
 
 Concepts Covered:
-- all prior Chapters 001–033
-- B* high-occupancy motivation
-- sibling redistribution before split
-- 2-to-3 split
-- B* root occupancy exceptions
-- transactional rebuild deletion vs production multi-sibling delete repair
-- LSM mutable MemTable / immutable run architecture
-- sequence numbers and newest-write-wins visibility
-- tombstones
-- flush and full compaction
-- read/write/space amplification
-- leveled vs size-tiered compaction preview
-- Skip List layered ordered links
-- geometric random height distribution
-- expected vs worst-case complexity
-- range scan and LSM MemTable connection
+- all prior Chapters 001–036
+- partition/equivalence-class model
+- disjoint-set forest
+- union by size
+- path compression
+- inverse-Ackermann amortized complexity
+- component count and component size
+- graph G=(V,E)
+- directed vs undirected graphs
+- weights, degree, in-degree, out-degree
+- walk/trail/path/cycle/connectivity terminology
+- Handshaking Lemma
+- sparse vs dense graph bounds
+- Edge List baseline
+- Adjacency Matrix
+- sorted Adjacency List
+- logical edges vs physical arcs/cells
+- representation-independent graph semantics
+- workload/density/memory trade-offs
 
 Structures Implemented:
 - all previous structures
-- IntBStarTree
-- IntLSMTree
-- IntSkipList
+- IntDSU
+- IntGraph edge-list baseline
+- GraphRepr Edge List / Matrix / Adjacency List
 
 Tests Added:
-- B* order/occupancy/root split tests
-- B* rebuild-deletion tests
-- B* randomized differential workload: 12,000 operations
-- LSM tombstone/version/compaction tests
-- LSM randomized workload: 25,000 operations
-- Skip List basic/range tests
-- Skip List randomized differential workload: 40,000 operations
+- DSU deterministic component tests
+- DSU randomized differential workload: 50,000 operations
+- undirected degree-sum tests
+- directed in/out-degree sum tests
+- cross-representation randomized replay: 12,000 operations for directed and undirected modes
+- neighbor-set equivalence checks
+- representation validators after mutations
 
 Benchmarks Added:
-- B* occupancy/fanout vs B-Tree
-- LSM read amplification before/after full compaction
-- Skip List vs B-Tree lookup
+- DSU repeated-find/depth benchmark
+- edge-list lookup scaling with E
+- sparse/dense representation lookup and allocated-byte comparison
 
 Known Dependencies:
-- 037 Union-Find introduces set partitions and near-constant amortized operations
-- 038 Graph Fundamentals starts graph terminology/invariants
-- 039 Graph Representations compares adjacency list/matrix/edge list
+- 040 introduces BFS/DFS traversal workspaces and frontier/visited structures
+- 041 specializes structures for DAGs and topological dependencies
+- 042 returns to sparse/dense representation trade-offs with broader workload analysis
 
 Open Problems:
-- none if Batch 12 CI passes
+- none if Batch 13 CI passes
 
-Coverage: 36 / 170 chapters
+Coverage: 39 / 170 chapters

@@ -1,5 +1,22 @@
 # Changelog
 
+## Batch 13 — Chapters 037–039
+
+Added:
+- Disjoint Set / Union-Find with union-by-size and path compression
+- component count/size queries and structural validator
+- 50,000-operation randomized DSU differential test against a naive partition model
+- DSU depth/find benchmark
+- Graph Fundamentals with explicit simple directed/undirected weighted graph contract
+- edge-list baseline, degree/in-degree/out-degree APIs and handshaking-law tests
+- edge-list lookup scaling benchmark
+- unified GraphRepr API for Edge List, Adjacency Matrix and sorted Adjacency List
+- undirected logical-edge vs physical-entry invariants
+- memory-byte estimates and neighbor visitor API
+- 12,000-operation randomized cross-representation replay for directed and undirected graphs
+- sparse vs dense lookup/memory benchmark
+- Batch 13 negative review
+
 ## Batch 12 — Chapters 034–036
 
 Added:

@@ -119,3 +119,13 @@
 - Skip List — randomized layered ordered linked structure ที่ให้ expected logarithmic search/update
 - SSTable — immutable sorted table/run commonly used by LSM storage engines
 - Write Amplification — ปริมาณข้อมูลที่ถูก rewrite จริงมากกว่าปริมาณ logical writes เช่นจาก compaction
+
+- Adjacency List — graph representation ที่เก็บ neighbors แยกต่อ vertex และใช้พื้นที่ตาม V+E สำหรับ sparse graphs
+- Adjacency Matrix — V×V graph representation ที่ให้ edge lookup คงที่แต่ใช้พื้นที่ Theta(V^2)
+- Connected Component — maximal subset ของ vertices ที่ทุกคู่เชื่อมถึงกันใน undirected graph
+- Disjoint Set Union (DSU) — structure สำหรับ partition ที่รองรับ find representative และ union components
+- Edge List — graph representation ที่เก็บ logical edges เป็นรายการโดยตรง
+- Graph — abstraction G=(V,E) ที่ประกอบด้วย vertices และ edges
+- Handshaking Lemma — ใน undirected graph ผลรวม degrees เท่ากับ 2|E|
+- Path Compression — DSU optimization ที่ย่อ parent chains ระหว่าง find
+- Union by Size — DSU heuristic ที่ attach component เล็กกว่าใต้ root ของ component ใหญ่กว่า

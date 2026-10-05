@@ -13,10 +13,11 @@
 - Batch 09: 025–027
 - Batch 10: 028–030
 - Batch 11: 031–033
-- Batch 12: 034 B* Tree, 035 LSM Tree, 036 Skip List
+- Batch 12: 034–036
+- Batch 13: 037 Disjoint Set / Union-Find, 038 Graphs Fundamentals, 039 Graph Representations
 
-## Batch 13 — Next
+## Batch 14 — Next
 
-037 Disjoint Set / Union-Find
-038 Graph Fundamentals
-039 Graph Representations
+040 Graph Traversal Structures
+041 DAG Data Structures
+042 Sparse vs Dense Graph Representation
