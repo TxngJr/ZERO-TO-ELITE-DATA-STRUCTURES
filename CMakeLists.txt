@@ -417,3 +417,55 @@ add_test(NAME ch027_binomial_heap_tests COMMAND ch027_binomial_heap_tests)
 
 add_executable(ch027_meld_benchmark 027-binomial-heap/benchmarks/meld_benchmark.c)
 target_link_libraries(ch027_meld_benchmark PRIVATE ch027_binomial_heap ch025_heap)
+
+
+# Chapter 028
+add_library(ch028_fibonacci_heap
+    028-fibonacci-heap/src/int_fibonacci_heap.c
+)
+target_include_directories(ch028_fibonacci_heap PUBLIC 028-fibonacci-heap/src)
+
+add_executable(ch028_fibonacci_heap_demo 028-fibonacci-heap/examples/fibonacci_heap_demo.c)
+target_link_libraries(ch028_fibonacci_heap_demo PRIVATE ch028_fibonacci_heap)
+add_test(NAME ch028_fibonacci_heap_demo_smoke COMMAND ch028_fibonacci_heap_demo)
+
+add_executable(ch028_fibonacci_heap_tests 028-fibonacci-heap/tests/test_fibonacci_heap.c)
+target_link_libraries(ch028_fibonacci_heap_tests PRIVATE ch028_fibonacci_heap)
+add_test(NAME ch028_fibonacci_heap_tests COMMAND ch028_fibonacci_heap_tests)
+
+add_executable(ch028_decrease_key_benchmark 028-fibonacci-heap/benchmarks/decrease_key_benchmark.c)
+target_link_libraries(ch028_decrease_key_benchmark PRIVATE ch028_fibonacci_heap ch027_binomial_heap)
+
+# Chapter 029
+add_library(ch029_byte_trie
+    029-trie-prefix-tree/src/byte_trie.c
+)
+target_include_directories(ch029_byte_trie PUBLIC 029-trie-prefix-tree/src)
+
+add_executable(ch029_trie_demo 029-trie-prefix-tree/examples/trie_demo.c)
+target_link_libraries(ch029_trie_demo PRIVATE ch029_byte_trie)
+add_test(NAME ch029_trie_demo_smoke COMMAND ch029_trie_demo)
+
+add_executable(ch029_trie_tests 029-trie-prefix-tree/tests/test_byte_trie.c)
+target_link_libraries(ch029_trie_tests PRIVATE ch029_byte_trie)
+add_test(NAME ch029_trie_tests COMMAND ch029_trie_tests)
+
+add_executable(ch029_prefix_benchmark 029-trie-prefix-tree/benchmarks/prefix_benchmark.c)
+target_link_libraries(ch029_prefix_benchmark PRIVATE ch029_byte_trie)
+
+# Chapter 030
+add_library(ch030_radix_tree
+    030-radix-patricia-trie/src/byte_radix_tree.c
+)
+target_include_directories(ch030_radix_tree PUBLIC 030-radix-patricia-trie/src)
+
+add_executable(ch030_radix_demo 030-radix-patricia-trie/examples/radix_demo.c)
+target_link_libraries(ch030_radix_demo PRIVATE ch030_radix_tree)
+add_test(NAME ch030_radix_demo_smoke COMMAND ch030_radix_demo)
+
+add_executable(ch030_radix_tests 030-radix-patricia-trie/tests/test_radix_tree.c)
+target_link_libraries(ch030_radix_tests PRIVATE ch030_radix_tree)
+add_test(NAME ch030_radix_tests COMMAND ch030_radix_tests)
+
+add_executable(ch030_compression_benchmark 030-radix-patricia-trie/benchmarks/compression_benchmark.c)
+target_link_libraries(ch030_compression_benchmark PRIVATE ch030_radix_tree ch029_byte_trie)

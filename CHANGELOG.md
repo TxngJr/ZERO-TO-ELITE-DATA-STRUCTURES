@@ -1,5 +1,24 @@
 # Changelog
 
+## Batch 10 — Chapters 028–030
+
+Added:
+- Fibonacci Heap with circular doubly linked root/child lists
+- O(1) actual insert and destructive meld
+- lazy consolidation on extract-min
+- decrease-key with cut, mark and cascading cut
+- delete-by-live-handle without sentinel-key tricks
+- 25,000-operation randomized Fibonacci Heap test
+- Binomial vs Fibonacci decrease-key benchmark
+- sparse byte Trie with explicit-length binary keys
+- exact/prefix lookup, prefix count, deletion pruning and lexicographic visitor
+- empty-key and embedded-zero-byte tests
+- Radix/Patricia compressed byte trie
+- edge splitting, mid-edge prefix queries and unary-path recompression
+- 20,000-operation randomized Radix Tree set test
+- Trie/Radix prefix and lookup benchmarks
+- Batch 10 negative review
+
 ## Batch 09 — Chapters 025–027
 
 Added:
@@ -21,8 +40,6 @@ Added:
 - Binomial meld vs incremental Binary Heap merge benchmark
 - Batch 09 negative review
 
-# Changelog
-
 ## Batch 08 — Chapters 022–024
 
 Added:
@@ -42,8 +59,6 @@ Added:
 - 35,000-operation randomized Treap differential test
 - Treap vs plain BST sorted-input benchmark
 - Batch 08 negative review
-
-# Changelog
 
 ## Batch 07 — Chapters 019–021
 

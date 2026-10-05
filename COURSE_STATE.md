@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 09
+Current Batch: 10
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -30,63 +30,59 @@ Completed Chapters:
 - 025 Heap
 - 026 D-ary Heap
 - 027 Binomial Heap
+- 028 Fibonacci Heap
+- 029 Trie / Prefix Tree
+- 030 Radix Tree / Patricia Trie
 
-Current Chapter: 027
+Current Chapter: 030
 
-Next Chapter: 028 Fibonacci Heap
+Next Chapter: 031 Ternary Search Tree
 
 Concepts Covered:
-- all prior Chapters 001–024
-- complete-tree heap representation
-- Min-Heap implementation
-- bottom-up BUILD-HEAP Theta(n)
-- in-place Heap Sort
-- arbitrary heap replacement
-- D-ary index formulas and branching-factor trade-offs
-- O(log_d n) upward paths
-- O(d log_d n) downward extraction
-- Binomial Tree B_k structure
-- binary-counter analogy for root degrees
-- root-list merge and consolidation
-- destructive meld
-- extract-min child reversal
-- handle-based decrease-key/delete semantics
-- pointer-forest vs array-heap trade-offs
+- all prior Chapters 001–027
+- Fibonacci Heap lazy consolidation
+- circular doubly linked root/child lists
+- min pointer
+- marks, cut and cascading cut
+- actual vs amortized heap costs
+- live-handle preconditions
+- byte-oriented Trie keys with explicit lengths
+- terminal nodes vs prefix paths
+- sparse sorted child edges
+- prefix counting and lexicographic traversal
+- binary keys including embedded zero bytes
+- Radix path compression
+- edge splitting on partial match
+- prefixes ending inside compressed edges
+- deletion recompression and OOM-safe semantic fallback
 
 Structures Implemented:
 - all previous structures
-- IntMinHeap
-- in-place integer Heap Sort
-- IntDaryHeap
-- IntBinomialHeap
+- IntFibonacciHeap
+- ByteTrie
+- ByteRadixTree
 
 Tests Added:
-- Heap randomized test: 30,000 operations
-- Heap Sort differential check against qsort
-- D-ary randomized tests: 20,000 operations each for d=2,3,4,8,16
-- Binomial meld/decrease/delete deterministic tests
-- duplicate-key Binomial Heap tests
-- foreign-handle deletion rejection
-- Binomial randomized test: 25,000 operations
+- Fibonacci deterministic meld/decrease/delete tests
+- Fibonacci randomized insert/extract: 25,000 operations
+- repeated decrease-key/cut validation
+- Trie exact/prefix/delete/empty/binary-key tests
+- Trie generated 1,000-key workload
+- Radix split/mid-edge prefix/delete tests
+- Radix binary/empty and lexicographic tests
+- Radix randomized set workload: 20,000 operations
 
 Benchmarks Added:
-- bottom-up BUILD-HEAP vs repeated push
-- d=2/4/8/16 mixed push/pop benchmark
-- Binomial meld vs Binary Heap incremental pop/push merge
+- Fibonacci vs Binomial decrease-key
+- Trie prefix query vs linear scan
+- Radix vs Trie lookup on long shared paths
 
 Known Dependencies:
-- 028 Fibonacci Heap builds on meldable-heap concepts and lazy consolidation
-- 029 Trie begins prefix/string indexing structures
-- 030 Radix/Patricia Trie compresses unary paths
+- 031 Ternary Search Tree combines character-wise search with BST-style branching
+- 032 B-Tree begins external-memory/page-oriented balanced trees
+- 033 B+ Tree moves records to leaves and supports leaf-level range scans
 
 Open Problems:
-- none if Batch 09 CI passes
+- none if Batch 10 CI passes
 
-Cross References:
-- 012 Priority Queue → heap as implementation
-- 016 Complete Binary Tree → array heap shape
-- 025 Heap → 026 branching generalization
-- 025 array heap → 027 pointer/meld trade-off
-- 027 Binomial Heap → 028 Fibonacci Heap
-
-Coverage: 27 / 170 chapters
+Coverage: 30 / 170 chapters

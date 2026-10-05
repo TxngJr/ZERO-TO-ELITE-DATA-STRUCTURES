@@ -94,3 +94,11 @@
 - D-ary Heap — complete heap ที่แต่ละ node มีได้สูงสุด d children
 - Heapify — กระบวนการคืน heap-order invariant ให้ subtree/array
 - Meld — การรวม heap สองก้อนให้เป็น heap เดียวโดยรักษา invariants
+
+- Cascading Cut — Fibonacci Heap repair ที่อาจตัด marked ancestors ต่อเนื่องขึ้น root list
+- Fibonacci Heap — lazy meldable heap ที่ให้ O(1) amortized insert/meld/decrease-key และ O(log n) amortized extract-min
+- Mark Bit — metadata ใน Fibonacci Heap ที่บันทึกว่า non-root node เคยเสีย child แล้วหนึ่งครั้งภายใต้ parent ปัจจุบัน
+- Prefix Tree / Trie — tree ที่ path labels ประกอบกันเป็น key และ share common prefixes
+- Radix Tree — compressed Trie ที่ edge หนึ่งเก็บหลาย symbols เพื่อลด unary paths
+- Patricia Trie — family ของ compressed radix/prefix tries; exact representation varies by implementation
+- Terminal Node — Trie/Radix node ที่ทำเครื่องหมายว่ารากถึง node นี้เป็น key ที่ถูกเก็บจริง
