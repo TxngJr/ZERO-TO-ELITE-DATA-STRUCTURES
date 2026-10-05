@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 26
+Current Batch: 27
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -81,46 +81,49 @@ Completed Chapters:
 - 076 Count-Min Sketch
 - 077 Count Sketch
 - 078 Reservoir Sampling Structures
+- 079 Linked Hash Map
+- 080 Ordered Map / Ordered Set
+- 081 Multiset / Multimap
 
-Current Chapter: 078
+Current Chapter: 081
 
-Next Chapter: 079 Linked Hash Map
+Next Chapter: 082 Circular Buffer / Ring Buffer
 
 Concepts Covered:
-- all prior Chapters 001–075
-- one-sided nonnegative frequency estimation
-- Count-Min width/depth error trade-offs
-- signed turnstile frequency estimation
-- random-sign collision cancellation
-- median row estimator
-- exact-vs-approximate frequency model comparison
-- bounded-memory uniform streaming samples
-- Algorithm R inclusion probability
-- RNG reproducibility vs randomness quality
-- rejection-based bounded random integers and modulo bias
+- all prior Chapters 001–078
+- hash lookup combined with independent iteration order
+- insertion-order linked maps and order-preserving rehash
+- sorted associative container semantics
+- lower-bound binary search
+- contiguous sorted-array trade-offs
+- multiset multiplicity vs distinct cardinality
+- multimap equal-key ranges and stable-within-key insertion
 
 Structures Implemented:
 - all previous structures
-- U64CountMinSketch
-- U64CountSketch
-- U64Reservoir
+- U64LinkedHashMap
+- U64OrderedMap
+- U64OrderedSet
+- U64Multiset
+- U64Multimap
 
 Tests Added:
-- Count-Min: 50,000 weighted updates against exact frequencies; no-underestimate assertion
-- Count Sketch: 50,000 signed updates against exact signed frequencies
-- Reservoir: state/reproducibility tests and 30,000-trial k=1 uniformity experiment
+- Linked Hash Map 1,000 inserts, overwrite-order preservation, alternating removals and structural validation
+- Ordered Map/Set 1,000 descending inserts with ascending-order verification and removals
+- Multiset multiplicity and transactional over-removal checks
+- Multimap repeated-key stable order, remove-one and remove-all checks
 
 Benchmarks Added:
-- Count-Min 1M updates at width=4096/depth=5
-- Count Sketch 1M signed updates at width=4096/depth=5
-- Reservoir 10M stream updates with k=1024
+- Linked Hash Map 200k inserts
+- Ordered Map 50k descending inserts
+- Multiset 100k updates over 1,000 distinct keys
 
 Known Dependencies:
-- 079 combines hash lookup with linked iteration order
-- 080 studies ordered maps/sets with sorted-key semantics
-- 081 introduces multiplicity and multiple-values-per-key abstractions
+- 082 introduces Circular/Ring Buffer bounded FIFO storage
+- 083 introduces Gap Buffer editing locality
+- 084 introduces Rope tree-based large-text editing
 
 Open Problems:
-- none if Batch 26 CI passes
+- none if Batch 27 CI passes
 
-Coverage: 78 / 170 chapters
+Coverage: 81 / 170 chapters

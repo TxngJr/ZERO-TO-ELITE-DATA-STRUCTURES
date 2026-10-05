@@ -1304,3 +1304,55 @@ add_test(NAME ch078_reservoir_sampling_tests COMMAND ch078_reservoir_sampling_te
 
 add_executable(ch078_reservoir_benchmark 078-reservoir-sampling-structures/benchmarks/reservoir_benchmark.c)
 target_link_libraries(ch078_reservoir_benchmark PRIVATE ch078_reservoir)
+
+
+# Chapter 079
+add_library(ch079_linked_hash_map
+    079-linked-hash-map/src/u64_linked_hash_map.c
+)
+target_include_directories(ch079_linked_hash_map PUBLIC 079-linked-hash-map/src)
+
+add_executable(ch079_linked_hash_map_demo 079-linked-hash-map/examples/linked_hash_map_demo.c)
+target_link_libraries(ch079_linked_hash_map_demo PRIVATE ch079_linked_hash_map)
+add_test(NAME ch079_linked_hash_map_demo_smoke COMMAND ch079_linked_hash_map_demo)
+
+add_executable(ch079_linked_hash_map_tests 079-linked-hash-map/tests/test_linked_hash_map.c)
+target_link_libraries(ch079_linked_hash_map_tests PRIVATE ch079_linked_hash_map)
+add_test(NAME ch079_linked_hash_map_tests COMMAND ch079_linked_hash_map_tests)
+
+add_executable(ch079_linked_hash_map_benchmark 079-linked-hash-map/benchmarks/linked_hash_map_benchmark.c)
+target_link_libraries(ch079_linked_hash_map_benchmark PRIVATE ch079_linked_hash_map)
+
+# Chapter 080
+add_library(ch080_ordered
+    080-ordered-map-ordered-set/src/u64_ordered.c
+)
+target_include_directories(ch080_ordered PUBLIC 080-ordered-map-ordered-set/src)
+
+add_executable(ch080_ordered_demo 080-ordered-map-ordered-set/examples/ordered_demo.c)
+target_link_libraries(ch080_ordered_demo PRIVATE ch080_ordered)
+add_test(NAME ch080_ordered_demo_smoke COMMAND ch080_ordered_demo)
+
+add_executable(ch080_ordered_tests 080-ordered-map-ordered-set/tests/test_ordered.c)
+target_link_libraries(ch080_ordered_tests PRIVATE ch080_ordered)
+add_test(NAME ch080_ordered_tests COMMAND ch080_ordered_tests)
+
+add_executable(ch080_ordered_benchmark 080-ordered-map-ordered-set/benchmarks/ordered_benchmark.c)
+target_link_libraries(ch080_ordered_benchmark PRIVATE ch080_ordered)
+
+# Chapter 081
+add_library(ch081_multi
+    081-multiset-multimap/src/u64_multi.c
+)
+target_include_directories(ch081_multi PUBLIC 081-multiset-multimap/src)
+
+add_executable(ch081_multi_demo 081-multiset-multimap/examples/multi_demo.c)
+target_link_libraries(ch081_multi_demo PRIVATE ch081_multi)
+add_test(NAME ch081_multi_demo_smoke COMMAND ch081_multi_demo)
+
+add_executable(ch081_multi_tests 081-multiset-multimap/tests/test_multi.c)
+target_link_libraries(ch081_multi_tests PRIVATE ch081_multi)
+add_test(NAME ch081_multi_tests COMMAND ch081_multi_tests)
+
+add_executable(ch081_multi_benchmark 081-multiset-multimap/benchmarks/multi_benchmark.c)
+target_link_libraries(ch081_multi_benchmark PRIVATE ch081_multi)

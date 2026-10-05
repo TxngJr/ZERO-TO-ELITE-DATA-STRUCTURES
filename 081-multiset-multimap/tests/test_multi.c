@@ -1,0 +1,5 @@
+#include "u64_multi.h"
+#include <assert.h>
+#include <stdio.h>
+int main(void){U64Multiset*s=u64_multiset_create();assert(s);assert(u64_multiset_add(s,5,3));assert(u64_multiset_add(s,2,4));assert(u64_multiset_add(s,5,2));assert(u64_multiset_size(s)==9&&u64_multiset_distinct(s)==2&&u64_multiset_count(s,5)==5);assert(u64_multiset_remove(s,5,4));assert(u64_multiset_count(s,5)==1);assert(!u64_multiset_remove(s,5,2));assert(u64_multiset_validate(s));u64_multiset_free(s);
+U64Multimap*m=u64_multimap_create();assert(m);assert(u64_multimap_add(m,7,10));assert(u64_multimap_add(m,2,20));assert(u64_multimap_add(m,7,30));assert(u64_multimap_add(m,7,40));assert(u64_multimap_count(m,7)==3);int64_t v=0;assert(u64_multimap_get_nth(m,7,0,&v)&&v==10);assert(u64_multimap_get_nth(m,7,1,&v)&&v==30);assert(u64_multimap_remove_one(m,7,30));assert(u64_multimap_count(m,7)==2);assert(u64_multimap_remove_all(m,7)==2);assert(u64_multimap_count(m,7)==0);assert(u64_multimap_validate(m));u64_multimap_free(m);puts("Multiset/Multimap tests passed");return 0;}

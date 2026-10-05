@@ -250,3 +250,13 @@
 - Algorithm R — classic reservoir sampling algorithm that fills k items then randomly replaces slots with decreasing probability
 - Modulo Bias — nonuniformity caused by directly reducing a finite RNG range with modulo when the bound does not divide the RNG range evenly
 - Rejection Sampling for Bounded RNG — discarding part of RNG output space before modulo to obtain an unbiased bounded integer
+
+- Linked Hash Map — hash map augmented with linked iteration order independent of bucket layout
+- Insertion Order — order in which distinct keys first entered a container
+- Ordered Map — key/value associative container whose iteration follows key order
+- Ordered Set — unique-key container whose iteration follows key order
+- Lower Bound — first position whose key is not less than the query key
+- Multiset — collection allowing repeated occurrences of the same key
+- Multiplicity — number of occurrences of one key in a multiset
+- Multimap — associative container allowing multiple values for one key
+- Equal-Key Range — contiguous range of multimap entries sharing the same key

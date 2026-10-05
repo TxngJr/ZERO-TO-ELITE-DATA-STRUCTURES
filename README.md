@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 26 — Chapters 076–078 complete**
+**Batch 27 — Chapters 079–081 complete**
 
 ล่าสุด:
-- [076 Count-Min Sketch](./076-count-min-sketch/)
-- [077 Count Sketch](./077-count-sketch/)
-- [078 Reservoir Sampling Structures](./078-reservoir-sampling-structures/)
+- [079 Linked Hash Map](./079-linked-hash-map/)
+- [080 Ordered Map / Ordered Set](./080-ordered-map-ordered-set/)
+- [081 Multiset / Multimap](./081-multiset-multimap/)
 
-สถานะ: **78 / 170 chapters**
+สถานะ: **81 / 170 chapters**
 
 Next:
 
-**079 Linked Hash Map → 080 Ordered Map / Ordered Set → 081 Multiset / Multimap**
+**082 Circular Buffer / Ring Buffer → 083 Gap Buffer → 084 Rope**
 
 ## Build
 

@@ -1,5 +1,22 @@
 # Changelog
 
+## Batch 27 — Chapters 079–081
+
+Added:
+- insertion-order Linked Hash Map with separate chaining
+- stable heap nodes carrying independent bucket-chain and doubly-linked order pointers
+- expected O(1) lookup/update/remove with order-preserving rehash
+- overwrite semantics that retain original insertion position
+- Ordered Map and Ordered Set using sorted contiguous dynamic arrays
+- lower-bound binary search and ascending iteration
+- O(log n) lookup with O(n) insertion/removal trade-off
+- compressed sorted Multiset with distinct-count and total-multiplicity metadata
+- sorted Multimap with contiguous equal-key ranges
+- stable-within-key insertion using upper_bound placement
+- partial multiset removal, multimap remove-one and remove-all APIs
+- structural validators for all three chapters
+- Batch 27 negative review
+
 ## Batch 26 — Chapters 076–078
 
 Added:

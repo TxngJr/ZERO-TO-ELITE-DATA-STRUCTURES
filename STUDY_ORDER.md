@@ -27,10 +27,11 @@
 - Batch 23: 067–069
 - Batch 24: 070–072
 - Batch 25: 073–075
-- Batch 26: 076 Count-Min Sketch, 077 Count Sketch, 078 Reservoir Sampling Structures
+- Batch 26: 076–078
+- Batch 27: 079 Linked Hash Map, 080 Ordered Map / Ordered Set, 081 Multiset / Multimap
 
-## Batch 27 — Next
+## Batch 28 — Next
 
-079 Linked Hash Map
-080 Ordered Map / Ordered Set
-081 Multiset / Multimap
+082 Circular Buffer / Ring Buffer
+083 Gap Buffer
+084 Rope
