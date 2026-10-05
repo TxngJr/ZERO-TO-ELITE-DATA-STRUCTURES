@@ -42,3 +42,13 @@
 - Struct/Class — การรวมหลาย fields ให้เป็นชนิดข้อมูลเดียว
 - Template/Generic — กลไกเขียน algorithm/type ให้ทำงานกับหลายชนิดข้อมูลอย่าง type-safe
 - Undefined Behavior — พฤติกรรมที่มาตรฐานภาษาไม่กำหนดผลลัพธ์
+
+- Collision — เหตุการณ์ที่ keys ต่างกัน map ไป hash/bucket/probe region เดียวกัน
+- Hash Function — ฟังก์ชันที่แปลง key เป็นค่า hash เพื่อช่วยเลือกตำแหน่งค้นหา
+- Hash Map — Map ADT ที่ใช้ hashing เป็น representation หลัก
+- Hash Set — Set ADT ที่ใช้ hashing เพื่อ membership ของ unique values
+- Hash Table — โครงสร้างที่รวม hash function, buckets/slots และ collision-resolution policy
+- Load Factor — อัตราส่วนจำนวน entries ต่อจำนวน buckets/slots โดยความหมายละเอียดขึ้นกับ collision strategy
+- Open Addressing — collision strategy ที่เก็บ entries ใน slot array โดย probe หาตำแหน่งอื่น
+- Separate Chaining — collision strategy ที่แต่ละ bucket เก็บ chain/collection ของ entries
+- Tombstone — marker ของ slot ที่เคย occupied แล้วถูกลบ เพื่อรักษา probe continuity ใน open addressing

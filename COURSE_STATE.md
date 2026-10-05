@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 04
+Current Batch: 05
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -15,66 +15,64 @@ Completed Chapters:
 - 010 Queue
 - 011 Deque
 - 012 Priority Queue
+- 013 Hashing Fundamentals
+- 014 Hash Table
+- 015 Hash Set / Hash Map
 
-Current Chapter: 012
+Current Chapter: 015
 
-Next Chapter: 013 Hashing Fundamentals
+Next Chapter: 016 Trees Fundamentals
 
 Concepts Covered:
-- programming, memory, ADT and asymptotic foundations
-- recursion/iteration and correctness invariants
-- arrays, strings and linked lists
-- Stack ADT + monotonic stack
-- Queue FIFO semantics
-- linked queue and growing circular queue
-- ring-buffer wrap-around and logical-vs-physical order
-- Deque two-ended operations
-- monotonic queue / sliding-window maximum
-- Priority Queue ADT
-- complete binary-tree array layout
-- max-heap invariant
-- sift-up / sift-down
-- priority ties and stability contract
-- scheduler/fairness/decrease-key previews
+- previous Chapters 001–012
+- hash value vs bucket index vs equality
+- collisions and load factor
+- integer/byte/string hashing
+- adversarial/seeded hashing motivation
+- separate chaining
+- rehashing and geometric bucket growth
+- expected vs worst-case hash-table complexity
+- Set vs Map ADT
+- open addressing and linear probing
+- tombstones and probe continuity
+- clustering
+- owned vs borrowed string keys
+- cached string hashes
 
 Structures Implemented:
-- previous Batch 01–03 structures
-- CircularQueue
-- LinkedQueue
-- IntDeque
-- Sliding Window Maximum monotonic index deque
-- MaxPriorityQueue backed by binary max-heap
+- all previous structures
+- hash_u64_mix / FNV-1a byte hashing utilities
+- IntIntHashTable using separate chaining
+- IntHashSet wrapper
+- StringIntHashMap using open addressing + linear probing + tombstones
 
 Tests Added:
-- all previous tests
-- 12,000-step Queue randomized differential test
-- circular wrap/growth FIFO tests
-- 12,000-step Deque randomized differential test
-- monotonic sliding-window tests including duplicates
-- 15,000-step Priority Queue randomized differential test
-- equal-priority non-stability-safe tests
-- heap invariant validation
+- hash/equality/bucket tests
+- distribution experiments
+- 30,000-step chaining Hash Table differential test
+- 20,000-step IntHashSet randomized test
+- 25,000-step StringIntHashMap differential test
+- tombstone/owned-key tests
 
 Benchmarks Added:
-- previous benchmarks
-- circular queue vs linked queue roundtrip
-- ring deque vs intentionally shifting reference
-- binary heap priority queue vs unsorted linear-pop-max reference
+- hash distribution
+- Hash Table vs linear lookup
+- Hash Set vs linear membership
 
 Known Dependencies:
-- Chapter 013 formalizes hash functions, collisions and load factor
-- Chapter 014 implements hash tables
-- Chapter 015 builds Hash Set / Hash Map abstractions
+- Chapter 016 introduces tree vocabulary/invariants
+- Chapter 017 implements binary-tree representation
+- Chapter 018 covers recursive/iterative traversals
 
 Open Problems:
-- none if Batch 04 CI passes
+- none if Batch 05 CI passes
 
 Cross References:
-- 006 dynamic arrays → 010 circular queue growth
-- 008 linked lists → 010 linked queue
-- 009 monotonic stack → 011 monotonic queue
-- 004 aggregate analysis → 011 sliding-window Θ(n)
-- 006 array layout → 012 binary heap representation
-- 012 Priority Queue → 025 Heap and graph algorithms later
+- 013 hashing fundamentals → 014 collision resolution
+- 014 Map representation → 015 Set wrapper
+- 014 chaining ↔ 015 open addressing trade-offs
+- 002 locality → open-addressing slot locality
+- 004 expected/amortized analysis → hash operation claims
+- 071–073 later revisit advanced hashing strategies
 
-Coverage: 12 / 170 chapters
+Coverage: 15 / 170 chapters

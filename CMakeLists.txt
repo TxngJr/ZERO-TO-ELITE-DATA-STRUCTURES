@@ -152,3 +152,58 @@ target_link_libraries(ch012_priority_queue_tests PRIVATE ch012_priority_queue)
 add_test(NAME ch012_priority_queue_tests COMMAND ch012_priority_queue_tests)
 add_executable(ch012_priority_queue_benchmark 012-priority-queue/benchmarks/priority_queue_benchmark.c)
 target_link_libraries(ch012_priority_queue_benchmark PRIVATE ch012_priority_queue)
+
+
+# Chapter 013
+add_library(ch013_hashing
+    013-hashing-fundamentals/src/hash_functions.c
+)
+target_include_directories(ch013_hashing PUBLIC 013-hashing-fundamentals/src)
+
+add_executable(ch013_hash_demo 013-hashing-fundamentals/examples/hash_demo.c)
+target_link_libraries(ch013_hash_demo PRIVATE ch013_hashing)
+add_test(NAME ch013_hash_demo_smoke COMMAND ch013_hash_demo)
+
+add_executable(ch013_hash_tests 013-hashing-fundamentals/tests/test_hash_functions.c)
+target_link_libraries(ch013_hash_tests PRIVATE ch013_hashing)
+add_test(NAME ch013_hash_tests COMMAND ch013_hash_tests)
+
+add_executable(ch013_hash_distribution 013-hashing-fundamentals/benchmarks/distribution.c)
+target_link_libraries(ch013_hash_distribution PRIVATE ch013_hashing)
+
+# Chapter 014
+add_library(ch014_hash_table
+    014-hash-table/src/int_int_hash_table.c
+)
+target_include_directories(ch014_hash_table PUBLIC 014-hash-table/src)
+target_link_libraries(ch014_hash_table PUBLIC ch013_hashing)
+
+add_executable(ch014_hash_table_demo 014-hash-table/examples/hash_table_demo.c)
+target_link_libraries(ch014_hash_table_demo PRIVATE ch014_hash_table)
+add_test(NAME ch014_hash_table_demo_smoke COMMAND ch014_hash_table_demo)
+
+add_executable(ch014_hash_table_tests 014-hash-table/tests/test_hash_table.c)
+target_link_libraries(ch014_hash_table_tests PRIVATE ch014_hash_table)
+add_test(NAME ch014_hash_table_tests COMMAND ch014_hash_table_tests)
+
+add_executable(ch014_hash_table_benchmark 014-hash-table/benchmarks/hash_table_benchmark.c)
+target_link_libraries(ch014_hash_table_benchmark PRIVATE ch014_hash_table)
+
+# Chapter 015
+add_library(ch015_hash_set_map
+    015-hash-set-hash-map/src/int_hash_set.c
+    015-hash-set-hash-map/src/string_int_hash_map.c
+)
+target_include_directories(ch015_hash_set_map PUBLIC 015-hash-set-hash-map/src)
+target_link_libraries(ch015_hash_set_map PUBLIC ch014_hash_table ch013_hashing)
+
+add_executable(ch015_hash_set_map_demo 015-hash-set-hash-map/examples/hash_set_map_demo.c)
+target_link_libraries(ch015_hash_set_map_demo PRIVATE ch015_hash_set_map)
+add_test(NAME ch015_hash_set_map_demo_smoke COMMAND ch015_hash_set_map_demo)
+
+add_executable(ch015_hash_set_map_tests 015-hash-set-hash-map/tests/test_hash_set_map.c)
+target_link_libraries(ch015_hash_set_map_tests PRIVATE ch015_hash_set_map)
+add_test(NAME ch015_hash_set_map_tests COMMAND ch015_hash_set_map_tests)
+
+add_executable(ch015_set_lookup_benchmark 015-hash-set-hash-map/benchmarks/set_lookup_benchmark.c)
+target_link_libraries(ch015_set_lookup_benchmark PRIVATE ch015_hash_set_map)

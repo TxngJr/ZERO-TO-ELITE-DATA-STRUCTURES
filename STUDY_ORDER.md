@@ -1,34 +1,33 @@
 # Study Order
 
-หลักสูตรมี 170 chapters และเรียนตามลำดับเป็นหลัก เพราะบทหลังอาศัย mental model จากบทก่อน
-
 ## Batch 01 — Complete
-1. Programming Foundations
-2. Memory Fundamentals
-3. Abstract Data Type (ADT)
+001 Programming Foundations
+002 Memory Fundamentals
+003 ADT
 
 ## Batch 02 — Complete
-4. Complexity Analysis
-5. Recursion & Iteration
-6. Arrays
+004 Complexity Analysis
+005 Recursion & Iteration
+006 Arrays
 
 ## Batch 03 — Complete
-7. Strings
-8. Linked Lists
-9. Stack
+007 Strings
+008 Linked Lists
+009 Stack
 
 ## Batch 04 — Complete
-10. Queue
-11. Deque
-12. Priority Queue
+010 Queue
+011 Deque
+012 Priority Queue
 
-## Batch 05 — Next
-13. Hashing Fundamentals
-14. Hash Table
-15. Hash Set / Hash Map
+## Batch 05 — Complete
+013 Hashing Fundamentals
+014 Hash Table
+015 Hash Set / Hash Map
 
-จากนั้นเดินหน้าครั้งละ 3 chapters ตาม ROADMAP.md
+## Batch 06 — Next
+016 Trees Fundamentals
+017 Binary Tree
+018 Tree Traversal
 
-## Rule
-
-ถ้าบทปัจจุบันยังอธิบาย learning objectives ด้วยคำของตัวเองไม่ได้, lab/tests ยังไม่ผ่าน หรือยังอธิบาย invariant/complexity/trade-off ไม่ได้ อย่ารีบข้ามบท
+จากนั้นเดินหน้าครั้งละ 3 chapters ตาม ROADMAP.md.
