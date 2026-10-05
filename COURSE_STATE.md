@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 25
+Current Batch: 26
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -78,49 +78,49 @@ Completed Chapters:
 - 073 Consistent Hashing
 - 074 Probabilistic Data Structures
 - 075 HyperLogLog
+- 076 Count-Min Sketch
+- 077 Count Sketch
+- 078 Reservoir Sampling Structures
 
-Current Chapter: 075
+Current Chapter: 078
 
-Next Chapter: 076 Count-Min Sketch
+Next Chapter: 079 Linked Hash Map
 
 Concepts Covered:
-- all prior Chapters 001–072
-- circular token spaces and clockwise ownership
-- virtual-node consistent hashing
-- limited remapping under node membership changes
-- probabilistic error contracts
-- one-sided vs two-sided error categories
-- memory/accuracy trade-offs
-- KMV cardinality order-statistic estimation
-- duplicate-insensitive sketch updates
-- mergeable sketch state
-- HyperLogLog registers and leading-zero ranks
-- precision/register trade-offs
-- HLL raw estimator and small-range correction
-- register-wise-max distributed merge
+- all prior Chapters 001–075
+- one-sided nonnegative frequency estimation
+- Count-Min width/depth error trade-offs
+- signed turnstile frequency estimation
+- random-sign collision cancellation
+- median row estimator
+- exact-vs-approximate frequency model comparison
+- bounded-memory uniform streaming samples
+- Algorithm R inclusion probability
+- RNG reproducibility vs randomness quality
+- rejection-based bounded random integers and modulo bias
 
 Structures Implemented:
 - all previous structures
-- ConsistentHashRing
-- U64KmvSketch
-- U64HyperLogLog
+- U64CountMinSketch
+- U64CountSketch
+- U64Reservoir
 
 Tests Added:
-- Consistent Hashing 50,000-key distribution/remapping/restoration checks
-- KMV exact duplicate handling and 50,000-cardinality accuracy/merge checks
-- HLL empty/small/100,000-cardinality accuracy and exact merge-state equivalence
+- Count-Min: 50,000 weighted updates against exact frequencies; no-underestimate assertion
+- Count Sketch: 50,000 signed updates against exact signed frequencies
+- Reservoir: state/reproducibility tests and 30,000-trial k=1 uniformity experiment
 
 Benchmarks Added:
-- Consistent Hashing 100 nodes / 12,800 ring points / 1M lookups
-- KMV 1M updates at k=2048
-- HLL 1M updates at p=14
+- Count-Min 1M updates at width=4096/depth=5
+- Count Sketch 1M signed updates at width=4096/depth=5
+- Reservoir 10M stream updates with k=1024
 
 Known Dependencies:
-- 076 implements Count-Min Sketch for one-sided frequency estimates
-- 077 implements Count Sketch for signed/unbiased-style frequency estimation
-- 078 introduces Reservoir Sampling structures for bounded-memory streaming samples
+- 079 combines hash lookup with linked iteration order
+- 080 studies ordered maps/sets with sorted-key semantics
+- 081 introduces multiplicity and multiple-values-per-key abstractions
 
 Open Problems:
-- none if Batch 25 CI passes
+- none if Batch 26 CI passes
 
-Coverage: 75 / 170 chapters
+Coverage: 78 / 170 chapters

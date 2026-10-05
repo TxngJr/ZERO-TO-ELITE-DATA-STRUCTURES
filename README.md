@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 25 — Chapters 073–075 complete**
+**Batch 26 — Chapters 076–078 complete**
 
 ล่าสุด:
-- [073 Consistent Hashing](./073-consistent-hashing/)
-- [074 Probabilistic Data Structures](./074-probabilistic-data-structures/)
-- [075 HyperLogLog](./075-hyperloglog/)
+- [076 Count-Min Sketch](./076-count-min-sketch/)
+- [077 Count Sketch](./077-count-sketch/)
+- [078 Reservoir Sampling Structures](./078-reservoir-sampling-structures/)
 
-สถานะ: **75 / 170 chapters**
+สถานะ: **78 / 170 chapters**
 
 Next:
 
-**076 Count-Min Sketch → 077 Count Sketch → 078 Reservoir Sampling Structures**
+**079 Linked Hash Map → 080 Ordered Map / Ordered Set → 081 Multiset / Multimap**
 
 ## Build
 

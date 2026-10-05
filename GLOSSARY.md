@@ -241,3 +241,12 @@
 - HLL Precision — parameter p defining m=2^p registers
 - Linear Counting Correction — small-cardinality correction using the number of zero HLL registers
 - Relative Standard Error (RSE) — standard deviation relative to true magnitude; classical HLL is approximately 1.04/sqrt(m)
+
+- Count-Min Sketch (CMS) — nonnegative frequency sketch whose estimate is the minimum across hashed counter rows and therefore is one-sided upward under its standard model
+- Collision Noise — frequency mass from other keys sharing sketch counters
+- Count Sketch — signed frequency sketch using both bucket and random-sign hashes, with a median query estimator
+- Turnstile Stream — stream model allowing positive and negative frequency updates
+- Reservoir Sampling — fixed-memory streaming algorithm that maintains a uniform sample without knowing final stream length
+- Algorithm R — classic reservoir sampling algorithm that fills k items then randomly replaces slots with decreasing probability
+- Modulo Bias — nonuniformity caused by directly reducing a finite RNG range with modulo when the bound does not divide the RNG range evenly
+- Rejection Sampling for Bounded RNG — discarding part of RNG output space before modulo to obtain an unbiased bounded integer

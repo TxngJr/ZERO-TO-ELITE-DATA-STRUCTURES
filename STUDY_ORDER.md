@@ -26,10 +26,11 @@
 - Batch 22: 064–066
 - Batch 23: 067–069
 - Batch 24: 070–072
-- Batch 25: 073 Consistent Hashing, 074 Probabilistic Data Structures, 075 HyperLogLog
+- Batch 25: 073–075
+- Batch 26: 076 Count-Min Sketch, 077 Count Sketch, 078 Reservoir Sampling Structures
 
-## Batch 26 — Next
+## Batch 27 — Next
 
-076 Count-Min Sketch
-077 Count Sketch
-078 Reservoir Sampling Structures
+079 Linked Hash Map
+080 Ordered Map / Ordered Set
+081 Multiset / Multimap

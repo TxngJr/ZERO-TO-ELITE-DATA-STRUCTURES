@@ -1,5 +1,28 @@
 # Changelog
 
+## Batch 26 — Chapters 076–078
+
+Added:
+- uint64 Count-Min Sketch with configurable width/depth
+- deterministic row hash seeds and one counter update per row
+- transactional precheck for counter/total-weight overflow
+- minimum-row one-sided frequency estimate
+- merge for compatible CMS shapes
+- validator proving each row sum equals total stream weight
+- 50,000-update CMS differential test against exact frequencies
+- signed int64 Count Sketch with independent bucket/sign hashes
+- odd-depth median estimator
+- positive and negative turnstile updates
+- transactional signed-overflow precheck
+- compatible Count Sketch merge
+- 50,000 signed-update differential test
+- Algorithm R uint64 Reservoir Sampling
+- deterministic xorshift64* RNG state for reproducible experiments
+- rejection-based unbiased bounded integer generation
+- seen/sample-count invariants and overflow rejection
+- deterministic reproducibility test and 30,000-trial k=1 uniformity experiment
+- Batch 26 negative review
+
 ## Batch 25 — Chapters 073–075
 
 Added:

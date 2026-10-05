@@ -1252,3 +1252,55 @@ add_test(NAME ch075_hyperloglog_tests COMMAND ch075_hyperloglog_tests)
 
 add_executable(ch075_hyperloglog_benchmark 075-hyperloglog/benchmarks/hyperloglog_benchmark.c)
 target_link_libraries(ch075_hyperloglog_benchmark PRIVATE ch075_hyperloglog)
+
+
+# Chapter 076
+add_library(ch076_count_min
+    076-count-min-sketch/src/u64_count_min_sketch.c
+)
+target_include_directories(ch076_count_min PUBLIC 076-count-min-sketch/src)
+
+add_executable(ch076_count_min_demo 076-count-min-sketch/examples/count_min_demo.c)
+target_link_libraries(ch076_count_min_demo PRIVATE ch076_count_min)
+add_test(NAME ch076_count_min_demo_smoke COMMAND ch076_count_min_demo)
+
+add_executable(ch076_count_min_sketch_tests 076-count-min-sketch/tests/test_count_min_sketch.c)
+target_link_libraries(ch076_count_min_sketch_tests PRIVATE ch076_count_min)
+add_test(NAME ch076_count_min_sketch_tests COMMAND ch076_count_min_sketch_tests)
+
+add_executable(ch076_count_min_benchmark 076-count-min-sketch/benchmarks/count_min_benchmark.c)
+target_link_libraries(ch076_count_min_benchmark PRIVATE ch076_count_min)
+
+# Chapter 077
+add_library(ch077_count_sketch
+    077-count-sketch/src/u64_count_sketch.c
+)
+target_include_directories(ch077_count_sketch PUBLIC 077-count-sketch/src)
+
+add_executable(ch077_count_sketch_demo 077-count-sketch/examples/count_sketch_demo.c)
+target_link_libraries(ch077_count_sketch_demo PRIVATE ch077_count_sketch)
+add_test(NAME ch077_count_sketch_demo_smoke COMMAND ch077_count_sketch_demo)
+
+add_executable(ch077_count_sketch_tests 077-count-sketch/tests/test_count_sketch.c)
+target_link_libraries(ch077_count_sketch_tests PRIVATE ch077_count_sketch)
+add_test(NAME ch077_count_sketch_tests COMMAND ch077_count_sketch_tests)
+
+add_executable(ch077_count_sketch_benchmark 077-count-sketch/benchmarks/count_sketch_benchmark.c)
+target_link_libraries(ch077_count_sketch_benchmark PRIVATE ch077_count_sketch)
+
+# Chapter 078
+add_library(ch078_reservoir
+    078-reservoir-sampling-structures/src/u64_reservoir.c
+)
+target_include_directories(ch078_reservoir PUBLIC 078-reservoir-sampling-structures/src)
+
+add_executable(ch078_reservoir_demo 078-reservoir-sampling-structures/examples/reservoir_demo.c)
+target_link_libraries(ch078_reservoir_demo PRIVATE ch078_reservoir)
+add_test(NAME ch078_reservoir_demo_smoke COMMAND ch078_reservoir_demo)
+
+add_executable(ch078_reservoir_sampling_tests 078-reservoir-sampling-structures/tests/test_reservoir_sampling.c)
+target_link_libraries(ch078_reservoir_sampling_tests PRIVATE ch078_reservoir)
+add_test(NAME ch078_reservoir_sampling_tests COMMAND ch078_reservoir_sampling_tests)
+
+add_executable(ch078_reservoir_benchmark 078-reservoir-sampling-structures/benchmarks/reservoir_benchmark.c)
+target_link_libraries(ch078_reservoir_benchmark PRIVATE ch078_reservoir)
