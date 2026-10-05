@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 19 — Chapters 055–057 complete**
+**Batch 20 — Chapters 058–060 complete**
 
 ล่าสุด:
-- [055 Quadtree](./055-quadtree/)
-- [056 Octree](./056-octree/)
-- [057 R-Tree](./057-r-tree/)
+- [058 Spatial Hashing](./058-spatial-hashing/)
+- [059 Suffix Array](./059-suffix-array/)
+- [060 Suffix Tree](./060-suffix-tree/)
 
-สถานะ: **57 / 170 chapters**
+สถานะ: **60 / 170 chapters**
 
 Next:
 
-**058 Spatial Hashing → 059 Suffix Array → 060 Suffix Tree**
+**061 Suffix Automaton → 062 Aho-Corasick Automaton → 063 Rolling Hash Structures**
 
 ## Build
 

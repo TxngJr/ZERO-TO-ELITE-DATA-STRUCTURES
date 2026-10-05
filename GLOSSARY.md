@@ -180,3 +180,13 @@
 - Minimum Bounding Rectangle (MBR) — rectangle เล็กที่สุดที่ครอบ entries หรือ child subtree ทั้งหมด
 - Area Enlargement — พื้นที่ MBR ที่เพิ่มขึ้นเมื่อรวม rectangle ใหม่ ใช้เป็น choose-subtree heuristic ใน R-Tree
 - Quadratic Split — R-Tree split heuristic ที่เลือก seed pair จาก dead-space สูง แล้วกระจาย entries ด้วย enlargement preference
+
+- Spatial Hashing — การ map spatial grid-cell coordinates ไปยัง hash-table buckets เพื่อค้น candidate objects แบบ sparse
+- Floor Division — integer division ที่ปัดลงทางลบ; สำคัญต่อ grid mapping ของ negative coordinates
+- Suffix Array — permutation ของ suffix start positions ที่เรียง suffixes ตาม lexicographic order
+- Inverse Suffix Rank — array ที่ map suffix start position กลับไปยัง rank ใน Suffix Array
+- LCP Array — array ของ longest common prefix lengths ระหว่าง suffixes ที่อยู่ติดกันใน Suffix Array order
+- Kasai Algorithm — O(n) algorithm สำหรับสร้าง LCP จาก text, suffix array และ inverse rank
+- Suffix Tree — compressed trie ของ suffix ทั้งหมดใน text
+- Unique Sentinel — symbol พิเศษที่ไม่อยู่ใน alphabet ใช้บังคับให้ทุก suffix จบเป็น explicit leaf
+- Pattern Locus — จุดบน node หรือกลาง edge ที่ pattern traversal จบใน suffix tree

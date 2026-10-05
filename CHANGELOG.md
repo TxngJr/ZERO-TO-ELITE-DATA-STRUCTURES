@@ -1,5 +1,29 @@
 # Changelog
 
+## Batch 20 — Chapters 058–060
+
+Added:
+- sparse 2D Spatial Hash with power-of-two separate-chaining table
+- mathematical floor division for negative coordinates
+- stable cell-arena indices across realloc
+- transactional rollback of newly published empty cell when point-bucket allocation fails
+- half-open rectangle query by touched-cell enumeration and exact boundary filtering
+- 15,000 randomized spatial-hash queries over 6,000 points
+- prefix-doubling byte Suffix Array
+- explicit O(n log^2 n) qsort-based build complexity
+- singleton-text suffix-array initialization guard
+- inverse ranks and O(n) Kasai LCP construction
+- binary-safe substring binary search/count/report
+- randomized suffix ordering and pattern-count comparisons against naive implementations
+- compressed byte Suffix Tree with symbol 256 unique sentinel
+- range-based edge labels without substring copies
+- explicit suffix leaves and cached descendant leaf counts
+- transactional edge split publication after node/edge capacity is secured
+- substring contains/count/report from pattern locus
+- explicit O(n^2) naive suffix insertion complexity, with Ukkonen discussed but not misattributed
+- randomized suffix-tree occurrence checks, repeated-character stress and binary-byte coverage
+- Batch 20 negative review
+
 ## Batch 19 — Chapters 055–057
 
 Added:

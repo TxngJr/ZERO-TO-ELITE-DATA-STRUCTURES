@@ -939,3 +939,55 @@ add_test(NAME ch057_r_tree_tests COMMAND ch057_r_tree_tests)
 
 add_executable(ch057_r_tree_benchmark 057-r-tree/benchmarks/r_tree_benchmark.c)
 target_link_libraries(ch057_r_tree_benchmark PRIVATE ch057_r_tree)
+
+
+# Chapter 058
+add_library(ch058_spatial_hash
+    058-spatial-hashing/src/int_spatial_hash.c
+)
+target_include_directories(ch058_spatial_hash PUBLIC 058-spatial-hashing/src)
+
+add_executable(ch058_spatial_hash_demo 058-spatial-hashing/examples/spatial_hash_demo.c)
+target_link_libraries(ch058_spatial_hash_demo PRIVATE ch058_spatial_hash)
+add_test(NAME ch058_spatial_hash_demo_smoke COMMAND ch058_spatial_hash_demo)
+
+add_executable(ch058_spatial_hash_tests 058-spatial-hashing/tests/test_spatial_hash.c)
+target_link_libraries(ch058_spatial_hash_tests PRIVATE ch058_spatial_hash)
+add_test(NAME ch058_spatial_hash_tests COMMAND ch058_spatial_hash_tests)
+
+add_executable(ch058_spatial_hash_benchmark 058-spatial-hashing/benchmarks/spatial_hash_benchmark.c)
+target_link_libraries(ch058_spatial_hash_benchmark PRIVATE ch058_spatial_hash)
+
+# Chapter 059
+add_library(ch059_suffix_array
+    059-suffix-array/src/byte_suffix_array.c
+)
+target_include_directories(ch059_suffix_array PUBLIC 059-suffix-array/src)
+
+add_executable(ch059_suffix_array_demo 059-suffix-array/examples/suffix_array_demo.c)
+target_link_libraries(ch059_suffix_array_demo PRIVATE ch059_suffix_array)
+add_test(NAME ch059_suffix_array_demo_smoke COMMAND ch059_suffix_array_demo)
+
+add_executable(ch059_suffix_array_tests 059-suffix-array/tests/test_suffix_array.c)
+target_link_libraries(ch059_suffix_array_tests PRIVATE ch059_suffix_array)
+add_test(NAME ch059_suffix_array_tests COMMAND ch059_suffix_array_tests)
+
+add_executable(ch059_suffix_array_benchmark 059-suffix-array/benchmarks/suffix_array_benchmark.c)
+target_link_libraries(ch059_suffix_array_benchmark PRIVATE ch059_suffix_array)
+
+# Chapter 060
+add_library(ch060_suffix_tree
+    060-suffix-tree/src/byte_suffix_tree.c
+)
+target_include_directories(ch060_suffix_tree PUBLIC 060-suffix-tree/src)
+
+add_executable(ch060_suffix_tree_demo 060-suffix-tree/examples/suffix_tree_demo.c)
+target_link_libraries(ch060_suffix_tree_demo PRIVATE ch060_suffix_tree)
+add_test(NAME ch060_suffix_tree_demo_smoke COMMAND ch060_suffix_tree_demo)
+
+add_executable(ch060_suffix_tree_tests 060-suffix-tree/tests/test_suffix_tree.c)
+target_link_libraries(ch060_suffix_tree_tests PRIVATE ch060_suffix_tree)
+add_test(NAME ch060_suffix_tree_tests COMMAND ch060_suffix_tree_tests)
+
+add_executable(ch060_suffix_tree_benchmark 060-suffix-tree/benchmarks/suffix_tree_benchmark.c)
+target_link_libraries(ch060_suffix_tree_benchmark PRIVATE ch060_suffix_tree)

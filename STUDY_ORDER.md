@@ -20,10 +20,11 @@
 - Batch 16: 046–048
 - Batch 17: 049–051
 - Batch 18: 052–054
-- Batch 19: 055 Quadtree, 056 Octree, 057 R-Tree
+- Batch 19: 055–057
+- Batch 20: 058 Spatial Hashing, 059 Suffix Array, 060 Suffix Tree
 
-## Batch 20 — Next
+## Batch 21 — Next
 
-058 Spatial Hashing
-059 Suffix Array
-060 Suffix Tree
+061 Suffix Automaton
+062 Aho-Corasick Automaton
+063 Rolling Hash Structures

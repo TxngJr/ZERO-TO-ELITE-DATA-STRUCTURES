@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 19
+Current Batch: 20
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -60,52 +60,54 @@ Completed Chapters:
 - 055 Quadtree
 - 056 Octree
 - 057 R-Tree
+- 058 Spatial Hashing
+- 059 Suffix Array
+- 060 Suffix Tree
 
-Current Chapter: 057
+Current Chapter: 060
 
-Next Chapter: 058 Spatial Hashing
+Next Chapter: 061 Suffix Automaton
 
 Concepts Covered:
-- all prior Chapters 001–054
-- fixed 2D quadrant subdivision
-- bucketed Quadtree leaves
-- max-depth and unsplittable-cell termination
-- 3D octant subdivision and 2^d branching intuition
-- subtree spatial bounds and full-cover count pruning
-- dynamic R-Tree bounding hierarchy
-- Minimum Bounding Rectangles
-- least-area-enlargement subtree selection
-- quadratic split seed/distribution heuristics
-- minimum node occupancy
-- split propagation and root height growth
-- balanced leaf-depth invariant
-- spatial overlap vs fixed-partition trade-offs
+- all prior Chapters 001–057
+- sparse uniform-grid spatial hashing
+- correct floor division for negative grid coordinates
+- separate-chaining cell hashing and rehashing
+- cell-size trade-offs and candidate filtering
+- suffix lexicographic indexing
+- prefix-doubling suffix-array construction
+- inverse suffix ranks
+- Kasai LCP construction
+- binary-search pattern ranges over suffix arrays
+- compressed suffix tries
+- unique terminator/sentinel outside byte alphabet
+- compressed edge labels as source ranges
+- pattern locus and descendant suffix leaves
+- explicit distinction between naive O(n^2) suffix-tree build and Ukkonen O(n)
 
 Structures Implemented:
 - all previous structures
-- IntQuadtree
-- IntOctree
-- IntRTree
+- IntSpatialHash
+- ByteSuffixArray
+- ByteSuffixTree
 
 Tests Added:
-- Quadtree randomized range queries: 12,000 over 5,000 points
-- Quadtree coincident-coordinate stress test
-- Octree randomized box queries: 8,000 over 3,000 points
-- Octree coincident-coordinate stress test
-- R-Tree randomized overlap queries: 12,000 over 5,000 rectangles
-- R-Tree validation after repeated early splits
+- Spatial Hash randomized differential queries: 15,000 over 6,000 points
+- negative-grid boundary tests
+- Suffix Array banana/binary/randomized naive-order comparison
+- Suffix Tree banana/binary/repeated/randomized occurrence comparisons
 
 Benchmarks Added:
-- Quadtree spatial count benchmark
-- Octree 3D box count benchmark
-- R-Tree dynamic insert/query benchmark
+- Spatial Hash cell-size comparison benchmark
+- Suffix Array build scaling benchmark
+- naive compressed Suffix Tree build scaling benchmark
 
 Known Dependencies:
-- 058 introduces grid-based spatial hashing
-- 059 starts suffix indexing with Suffix Array
-- 060 introduces explicit Suffix Tree structure
+- 061 introduces Suffix Automaton states, suffix links and substring language
+- 062 introduces Aho-Corasick failure links for multi-pattern matching
+- 063 studies polynomial/rolling hash substring structures
 
 Open Problems:
-- none if Batch 19 CI passes
+- none if Batch 20 CI passes
 
-Coverage: 57 / 170 chapters
+Coverage: 60 / 170 chapters
