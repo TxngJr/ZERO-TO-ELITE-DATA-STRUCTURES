@@ -102,3 +102,10 @@
 - Radix Tree — compressed Trie ที่ edge หนึ่งเก็บหลาย symbols เพื่อลด unary paths
 - Patricia Trie — family ของ compressed radix/prefix tries; exact representation varies by implementation
 - Terminal Node — Trie/Radix node ที่ทำเครื่องหมายว่ารากถึง node นี้เป็น key ที่ถูกเก็บจริง
+
+- B-Tree — multiway balanced search tree ที่เก็บหลาย keys ต่อ node และรักษา occupancy bounds เพื่อให้ height ต่ำ
+- B+ Tree — B-Tree family ที่ logical records อยู่ใน leaves, internal keys เป็น separators และ leaves เชื่อมกันสำหรับ range scan
+- Fanout — จำนวน children ที่ node สามารถชี้ไปได้; fanout สูงช่วยลด tree height
+- Leaf Chain — linked sequence ของ B+ Tree leaves ตาม key order
+- Separator Key — internal routing key ที่แบ่ง key ranges ระหว่าง children
+- Ternary Search Tree (TST) — string-search tree ที่แต่ละ symbol node มี low/equal/high links

@@ -4,10 +4,10 @@ Legend: ✅ complete, ➡ planned, N/A not meaningful.
 
 | Chapter | Topic | Theory | Code | Complexity | Invariant | Tests | Benchmark | Exercises | Status |
 |---:|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 001–027 | Foundations through Binomial Heap | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 028 | Fibonacci Heap | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 029 | Trie / Prefix Tree | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 030 | Radix Tree / Patricia Trie | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 031 | Ternary Search Tree | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 032 | B-Tree | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 033 | B+ Tree | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 001–030 | Foundations through Radix / Patricia Trie | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 031 | Ternary Search Tree | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 032 | B-Tree | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 033 | B+ Tree | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 034 | B* Tree | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 035 | LSM Tree | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 036 | Skip List | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |

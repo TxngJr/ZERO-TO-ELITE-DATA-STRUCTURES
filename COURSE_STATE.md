@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 10
+Current Batch: 11
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -33,56 +33,56 @@ Completed Chapters:
 - 028 Fibonacci Heap
 - 029 Trie / Prefix Tree
 - 030 Radix Tree / Patricia Trie
+- 031 Ternary Search Tree
+- 032 B-Tree
+- 033 B+ Tree
 
-Current Chapter: 030
+Current Chapter: 033
 
-Next Chapter: 031 Ternary Search Tree
+Next Chapter: 034 B* Tree
 
 Concepts Covered:
-- all prior Chapters 001–027
-- Fibonacci Heap lazy consolidation
-- circular doubly linked root/child lists
-- min pointer
-- marks, cut and cascading cut
-- actual vs amortized heap costs
-- live-handle preconditions
-- byte-oriented Trie keys with explicit lengths
-- terminal nodes vs prefix paths
-- sparse sorted child edges
-- prefix counting and lexicographic traversal
-- binary keys including embedded zero bytes
-- Radix path compression
-- edge splitting on partial match
-- prefixes ending inside compressed edges
-- deletion recompression and OOM-safe semantic fallback
+- all prior Chapters 001–030
+- TST low/equal/high character branching
+- TST prefix lookup and lexicographic traversal
+- B-Tree minimum degree / occupancy / fanout
+- split-before-descent insertion
+- B-Tree predecessor/successor deletion
+- sibling borrow, merge and root shrink
+- equal leaf-depth invariant
+- page/block-oriented tree motivation
+- B+ leaf-only logical records
+- copied internal separator keys
+- equality routing to right child
+- linked leaf chain
+- range scanning without repeated root descent
+- separator recomputation after borrow/merge
 
 Structures Implemented:
 - all previous structures
-- IntFibonacciHeap
-- ByteTrie
-- ByteRadixTree
+- ByteTST
+- IntBTree
+- IntBPlusTree
 
 Tests Added:
-- Fibonacci deterministic meld/decrease/delete tests
-- Fibonacci randomized insert/extract: 25,000 operations
-- repeated decrease-key/cut validation
-- Trie exact/prefix/delete/empty/binary-key tests
-- Trie generated 1,000-key workload
-- Radix split/mid-edge prefix/delete tests
-- Radix binary/empty and lexicographic tests
-- Radix randomized set workload: 20,000 operations
+- TST basic/prefix/delete/binary/empty/lexicographic tests
+- TST randomized set workload: 20,000 operations
+- B-Tree sequential split/delete tests
+- B-Tree randomized differential: 30,000 operations each for t=2,3,8
+- B+ sequential range/delete tests
+- B+ randomized set/range tests: 25,000 operations each for t=2,3,8
 
 Benchmarks Added:
-- Fibonacci vs Binomial decrease-key
-- Trie prefix query vs linear scan
-- Radix vs Trie lookup on long shared paths
+- TST vs Trie vs Radix lookup
+- B-Tree fanout t=2/4/16/64
+- B+ range scan vs B-Tree inorder filtering
 
 Known Dependencies:
-- 031 Ternary Search Tree combines character-wise search with BST-style branching
-- 032 B-Tree begins external-memory/page-oriented balanced trees
-- 033 B+ Tree moves records to leaves and supports leaf-level range scans
+- 034 B* Tree increases occupancy through sibling redistribution before split
+- 035 LSM Tree changes from in-place page trees to buffered sorted runs
+- 036 Skip List introduces randomized layered ordered lists
 
 Open Problems:
-- none if Batch 10 CI passes
+- none if Batch 11 CI passes
 
-Coverage: 30 / 170 chapters
+Coverage: 33 / 170 chapters

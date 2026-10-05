@@ -1,5 +1,24 @@
 # Changelog
 
+## Batch 11 — Chapters 031–033
+
+Added:
+- byte-oriented Ternary Search Tree with low/equal/high branching
+- empty/binary-key support, prefix count, deletion pruning and lexicographic traversal
+- 20,000-operation randomized TST set test
+- TST vs Trie vs Radix lookup benchmark
+- configurable minimum-degree B-Tree
+- CLRS-style split-child and insert-nonfull
+- full B-Tree deletion with predecessor/successor, borrow, merge and root shrink
+- B-Tree global-range / occupancy / equal-leaf-depth validator
+- 30,000-operation randomized B-Tree differential tests for t=2,3,8
+- B+ Tree with leaf-only logical keys and copied internal separators
+- linked leaves and O(height + output) range scan
+- B+ split, borrow, merge, separator recomputation and root shrink
+- 25,000-operation randomized B+ Tree tests for t=2,3,8
+- B+ range scan vs B-Tree full inorder/filter benchmark
+- Batch 11 negative review
+
 ## Batch 10 — Chapters 028–030
 
 Added:

@@ -469,3 +469,55 @@ add_test(NAME ch030_radix_tests COMMAND ch030_radix_tests)
 
 add_executable(ch030_compression_benchmark 030-radix-patricia-trie/benchmarks/compression_benchmark.c)
 target_link_libraries(ch030_compression_benchmark PRIVATE ch030_radix_tree ch029_byte_trie)
+
+
+# Chapter 031
+add_library(ch031_tst
+    031-ternary-search-tree/src/byte_tst.c
+)
+target_include_directories(ch031_tst PUBLIC 031-ternary-search-tree/src)
+
+add_executable(ch031_tst_demo 031-ternary-search-tree/examples/tst_demo.c)
+target_link_libraries(ch031_tst_demo PRIVATE ch031_tst)
+add_test(NAME ch031_tst_demo_smoke COMMAND ch031_tst_demo)
+
+add_executable(ch031_tst_tests 031-ternary-search-tree/tests/test_tst.c)
+target_link_libraries(ch031_tst_tests PRIVATE ch031_tst)
+add_test(NAME ch031_tst_tests COMMAND ch031_tst_tests)
+
+add_executable(ch031_tst_lookup_benchmark 031-ternary-search-tree/benchmarks/tst_lookup_benchmark.c)
+target_link_libraries(ch031_tst_lookup_benchmark PRIVATE ch031_tst ch029_byte_trie ch030_radix_tree)
+
+# Chapter 032
+add_library(ch032_btree
+    032-b-tree/src/int_btree.c
+)
+target_include_directories(ch032_btree PUBLIC 032-b-tree/src)
+
+add_executable(ch032_btree_demo 032-b-tree/examples/btree_demo.c)
+target_link_libraries(ch032_btree_demo PRIVATE ch032_btree)
+add_test(NAME ch032_btree_demo_smoke COMMAND ch032_btree_demo)
+
+add_executable(ch032_btree_tests 032-b-tree/tests/test_btree.c)
+target_link_libraries(ch032_btree_tests PRIVATE ch032_btree)
+add_test(NAME ch032_btree_tests COMMAND ch032_btree_tests)
+
+add_executable(ch032_fanout_benchmark 032-b-tree/benchmarks/fanout_benchmark.c)
+target_link_libraries(ch032_fanout_benchmark PRIVATE ch032_btree)
+
+# Chapter 033
+add_library(ch033_bplus_tree
+    033-b-plus-tree/src/int_bplus_tree.c
+)
+target_include_directories(ch033_bplus_tree PUBLIC 033-b-plus-tree/src)
+
+add_executable(ch033_bplus_demo 033-b-plus-tree/examples/bplus_demo.c)
+target_link_libraries(ch033_bplus_demo PRIVATE ch033_bplus_tree)
+add_test(NAME ch033_bplus_demo_smoke COMMAND ch033_bplus_demo)
+
+add_executable(ch033_bplus_tests 033-b-plus-tree/tests/test_bplus_tree.c)
+target_link_libraries(ch033_bplus_tests PRIVATE ch033_bplus_tree)
+add_test(NAME ch033_bplus_tests COMMAND ch033_bplus_tests)
+
+add_executable(ch033_range_scan_benchmark 033-b-plus-tree/benchmarks/range_scan_benchmark.c)
+target_link_libraries(ch033_range_scan_benchmark PRIVATE ch033_bplus_tree ch032_btree)
