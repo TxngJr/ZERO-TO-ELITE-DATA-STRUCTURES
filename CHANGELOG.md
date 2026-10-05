@@ -1,5 +1,24 @@
 # Changelog
 
+## Batch 02 — Chapters 004–006
+
+Added:
+- Chapter 004 Complexity Analysis
+- O / Ω / Θ / little-o / little-ω
+- best/average/worst/amortized analysis
+- operation counting and scaling benchmark
+- Chapter 005 Recursion & Iteration
+- recursive/iterative factorial, sum, GCD, binary search
+- differential tests and call-stack lab
+- Chapter 006 Arrays
+- static and multidimensional layout examples
+- from-scratch IntVector
+- reserve/push/pop/get/set/insert/erase/clear/shrink
+- overflow-safe growth
+- randomized differential tests
+- vector operation benchmark
+- Batch 02 negative review/audit
+
 ## Batch 01 — Chapters 001–003
 
 Added:

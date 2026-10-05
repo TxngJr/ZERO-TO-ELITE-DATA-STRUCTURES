@@ -6,13 +6,18 @@
 
 ## Current Progress
 
-**Batch 01 — Chapters 001–003**
+**Batch 02 — Chapters 004–006 complete**
 
 1. [Chapter 001 — Programming Foundations](./001-programming-foundations/)
 2. [Chapter 002 — Memory Fundamentals](./002-memory-fundamentals/)
 3. [Chapter 003 — Abstract Data Type (ADT)](./003-abstract-data-type/)
+4. [Chapter 004 — Complexity Analysis](./004-complexity-analysis/)
+5. [Chapter 005 — Recursion & Iteration](./005-recursion-iteration/)
+6. [Chapter 006 — Arrays](./006-arrays/)
 
-สถานะหลักสูตร: **3 / 170 chapters**
+สถานะหลักสูตร: **6 / 170 chapters**
+
+Next: **007 Strings → 008 Linked Lists → 009 Stack**
 
 ## Repository Guide
 
@@ -27,36 +32,38 @@
 
 หลักสูตรออกแบบให้ใช้ได้ดีบน Fedora Linux / x86-64 และเหมาะกับเครื่องอย่าง Acer Aspire 7 A715-43G.
 
-ภาษาหลักใน Batch 01:
+Batch 01–02 ใช้ C/C++ เป็นแกนหลักเพื่อให้เห็น memory, pointers, templates, call stack, arrays และ dynamic allocation จริง ก่อนขยายไป Python/Rust/Java/Go ใน chapters ภาษาเฉพาะ
 
-- C — pointer, stack/heap, manual memory
-- C++ — references, class, template/generics
-- Python — high-level comparison
-- Rust / Java / Go — cross-language mental model
+## Build
 
-## Build Batch 01 Examples
-
-```bash
+~~~bash
 sudo dnf install gcc gcc-c++ cmake make gdb valgrind
 
 cmake -S . -B build
 cmake --build build
 ctest --test-dir build --output-on-failure
-```
+~~~
+
+Sanitizer build:
+
+~~~bash
+cmake -S . -B build-asan -DDS_ENABLE_SANITIZERS=ON
+cmake --build build-asan
+ctest --test-dir build-asan --output-on-failure
+~~~
 
 ## Learning Contract
 
-ทุกบทพยายามตอบคำถาม 8 ข้อนี้:
-
-1. Structure / concept นี้แก้ปัญหาอะไร?
-2. Interface หรือ abstraction คืออะไร?
-3. Representation ใน memory เป็นอย่างไร?
-4. Operations ทำงานอย่างไร?
-5. Invariants คืออะไร?
-6. Complexity มาจากไหน?
-7. จะพิสูจน์และทดสอบ correctness อย่างไร?
-8. ใน production ควรใช้เมื่อไร และไม่ควรใช้เมื่อไร?
+ทุกบทพยายามตอบ:
+1. concept/structure นี้แก้ปัญหาอะไร
+2. abstraction/interface คืออะไร
+3. representation ใน memory เป็นอย่างไร
+4. operations ทำงานอย่างไร
+5. invariants คืออะไร
+6. complexity มาจากไหน
+7. correctness/test อย่างไร
+8. production trade-offs คืออะไร
 
 ## License / References
 
-เนื้อหาใน repository เขียนขึ้นเพื่อการเรียนรู้ โดยอ้างอิงแนวคิดจากตำราและเอกสารมาตรฐาน แต่ไม่คัดลอกข้อความยาวจากแหล่งลิขสิทธิ์
+เนื้อหาเขียนเพื่อการเรียนรู้และ paraphrase จากแนวคิดมาตรฐาน ไม่คัดลอกข้อความยาวจากแหล่งลิขสิทธิ์
