@@ -3,31 +3,41 @@
 - Address — ตำแหน่งเชิงตรรกะที่โปรแกรมใช้อ้างถึง byte/object ใน virtual address space
 - Allocation — การจองพื้นที่ memory ให้ object/data
 - ADT (Abstract Data Type) — แบบจำลองที่กำหนด values และ operations โดยไม่ผูกกับ representation
-- Amortized Analysis — การกระจาย cost ของ operations แพงเหนือ sequence ของ operations โดยไม่ต้องสมมติ probability distribution
-- Byte String — sequence ของ bytes ที่อาจใช้แทน text หรือ binary data ตาม contract
+- Amortized Analysis — การกระจาย cost ของ operations แพงเหนือ sequence โดยไม่ต้องสมมติ probability distribution
+- Binary Heap — complete binary tree ที่รักษา heap-order invariant และมักเก็บใน array
+- Byte String — sequence ของ bytes ที่อาจใช้แทน text หรือ binary dataตาม contract
 - Cache — หน่วยความจำขนาดเล็กและเร็วที่เก็บข้อมูลที่ CPU มีแนวโน้มจะใช้
-- Call stack — โครงสร้างของ active function calls
-- Capacity — จำนวน elements/bytes ที่ backing storage รองรับก่อนต้อง grow
+- Call Stack — โครงสร้างของ active function calls
+- Capacity — จำนวน elements/bytes ที่ backing storage รองรับก่อน grow
+- Circular Buffer / Ring Buffer — contiguous buffer ที่ logical endpoints wrap รอบ physical array
 - Circular List — linked list ที่ปลายเชื่อมกลับจุดเริ่มแทน NULL
 - Deallocation — การคืนพื้นที่ที่เคย allocate
-- Doubly Linked List — list ที่แต่ละ node มีทั้ง prev และ next links
-- Heap memory — พื้นที่สำหรับ dynamic allocation ที่อายุไม่ผูกตรงกับ lexical scope
+- Deque — Double-ended Queue; เพิ่ม/ลบได้ทั้ง front และ back
+- Doubly Linked List — list ที่ node มีทั้ง prev และ next
+- FIFO — First In, First Out; semantics หลักของ Queue
+- Heap Invariant — ใน max-heap parent priority ต้องไม่น้อยกว่า child; min-heap กลับทิศ
+- Heap Memory — พื้นที่สำหรับ dynamic allocation ที่อายุไม่ผูกตรงกับ lexical scope
 - Implementation — วิธีจริงที่ใช้สร้าง behavior ตาม interface/ADT
 - Interface — ชุด operations/contract ที่ผู้ใช้ component มองเห็น
 - Invariant — เงื่อนไขที่ representation ต้องรักษาไว้ ณ boundary ที่กำหนด
 - LIFO — Last In, First Out; semantics หลักของ Stack
-- Linked List — sequence ที่ elements เชื่อมผ่าน links/pointers แทน contiguous index arithmetic
+- Linked List — sequence ที่ elements เชื่อมผ่าน pointers แทน contiguous index arithmetic
 - Locality — แนวโน้มการเข้าถึงข้อมูลเดิมหรือข้อมูลใกล้กัน
-- Monotonic Stack — การใช้ stack โดยรักษาลำดับ monotonic ของ values/indices เพื่อแก้ pattern บางชนิดใน linear time
+- Monotonic Queue — deque-based algorithmic pattern ที่รักษาค่า candidates เป็น monotonic order
+- Monotonic Stack — stack-based pattern ที่รักษาลำดับ monotonic ของ values/indices
 - Null Terminator — zero byte ที่ใช้บอกจุดสิ้นสุดของ ordinary C string
 - Pointer — ค่าที่ใช้ระบุตำแหน่ง memory
-- Pointer Chasing — การต้องอ่าน pointer จาก object ปัจจุบันก่อนรู้ address ของ object ถัดไป
+- Pointer Chasing — การต้องอ่าน pointer ปัจจุบันก่อนรู้ address ถัดไป
+- Priority Queue — ADT ที่เลือก item ถัดไปตาม priority ไม่ใช่อายุ insertion
+- Queue — FIFO ADT
 - Reference — alias ไปยัง object ตาม semantics ของภาษา
 - Representation — วิธีจัดเก็บ state จริง
-- Sentinel Node — dummy node ที่ใช้ลด special cases ใน linked structures
-- Singly Linked List — list ที่ node มี link ไป node ถัดไป
+- Sentinel Node — dummy node ที่ช่วยลด special cases
+- Singly Linked List — list ที่ node มี next link
+- Sift Down — การเลื่อน heap item ลงเพื่อคืน heap invariant
+- Sift Up — การเลื่อน heap item ขึ้นเพื่อคืน heap invariant
 - Stack ADT — LIFO abstract data type; ไม่ใช่สิ่งเดียวกับ runtime call stack
-- Stack memory — พื้นที่ที่มักสัมพันธ์กับ activation records/local state ของ function
+- Stack Memory — พื้นที่ที่มักสัมพันธ์กับ activation records/local state
 - String — sequence abstraction สำหรับ characters/bytes ตาม encoding และ API contract
 - Struct/Class — การรวมหลาย fields ให้เป็นชนิดข้อมูลเดียว
 - Template/Generic — กลไกเขียน algorithm/type ให้ทำงานกับหลายชนิดข้อมูลอย่าง type-safe

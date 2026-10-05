@@ -17,10 +17,15 @@
 8. Linked Lists
 9. Stack
 
-## Batch 04 — Next
+## Batch 04 — Complete
 10. Queue
 11. Deque
 12. Priority Queue
+
+## Batch 05 — Next
+13. Hashing Fundamentals
+14. Hash Table
+15. Hash Set / Hash Map
 
 จากนั้นเดินหน้าครั้งละ 3 chapters ตาม ROADMAP.md
 

@@ -13,8 +13,11 @@ Legend: ✅ complete in current scope, ➡ planned, N/A not meaningful for this 
 | 007 | Strings | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 008 | Linked Lists | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 009 | Stack | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 010 | Queue | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 011 | Deque | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 012 | Priority Queue | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 010 | Queue | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 011 | Deque | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 012 | Priority Queue | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 013 | Hashing Fundamentals | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 014 | Hash Table | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 015 | Hash Set / Hash Map | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
 
 The remaining chapters are tracked in ROADMAP.md and are promoted here as each batch is implemented.

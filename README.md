@@ -6,7 +6,7 @@
 
 ## Current Progress
 
-**Batch 03 — Chapters 007–009 complete**
+**Batch 04 — Chapters 010–012 complete**
 
 1. [Chapter 001 — Programming Foundations](./001-programming-foundations/)
 2. [Chapter 002 — Memory Fundamentals](./002-memory-fundamentals/)
@@ -17,28 +17,25 @@
 7. [Chapter 007 — Strings](./007-strings/)
 8. [Chapter 008 — Linked Lists](./008-linked-lists/)
 9. [Chapter 009 — Stack](./009-stack/)
+10. [Chapter 010 — Queue](./010-queue/)
+11. [Chapter 011 — Deque](./011-deque/)
+12. [Chapter 012 — Priority Queue](./012-priority-queue/)
 
-สถานะหลักสูตร: **9 / 170 chapters**
+สถานะหลักสูตร: **12 / 170 chapters**
 
-Next: **010 Queue → 011 Deque → 012 Priority Queue**
+Next: **013 Hashing Fundamentals → 014 Hash Table → 015 Hash Set / Hash Map**
 
 ## Repository Guide
 
-- [COURSE_GUIDE.md](./COURSE_GUIDE.md) — วิธีเรียนและ environment
-- [ROADMAP.md](./ROADMAP.md) — แผน 170 chapters
-- [STUDY_ORDER.md](./STUDY_ORDER.md) — ลำดับการเรียน
-- [COURSE_STATE.md](./COURSE_STATE.md) — สถานะล่าสุด
-- [COVERAGE_MATRIX.md](./COVERAGE_MATRIX.md) — coverage ของแต่ละบท
-- [GLOSSARY.md](./GLOSSARY.md) — ศัพท์สำคัญ
-- [CHANGELOG.md](./CHANGELOG.md) — สิ่งที่เพิ่มในแต่ละ Batch
+- [COURSE_GUIDE.md](./COURSE_GUIDE.md)
+- [ROADMAP.md](./ROADMAP.md)
+- [STUDY_ORDER.md](./STUDY_ORDER.md)
+- [COURSE_STATE.md](./COURSE_STATE.md)
+- [COVERAGE_MATRIX.md](./COVERAGE_MATRIX.md)
+- [GLOSSARY.md](./GLOSSARY.md)
+- [CHANGELOG.md](./CHANGELOG.md)
 
-## Environment
-
-หลักสูตรออกแบบให้ใช้ได้ดีบน Fedora Linux / x86-64 และเหมาะกับเครื่องอย่าง Acer Aspire 7 A715-43G.
-
-ช่วงต้นใช้ C/C++ เป็นแกนเพื่อให้เห็น memory, ownership, pointer, allocation และ representation จริง ก่อนขยายไปภาษาอื่นใน chapters เฉพาะภาษา
-
-## Build
+## Build on Fedora
 
     sudo dnf install gcc gcc-c++ cmake make gdb valgrind
 
@@ -55,7 +52,7 @@ Sanitizer build:
 ## Learning Contract
 
 ทุกบทพยายามตอบ:
-1. concept/structure นี้แก้ปัญหาอะไร
+1. structure/concept นี้แก้ปัญหาอะไร
 2. abstraction/interface คืออะไร
 3. representation ใน memory เป็นอย่างไร
 4. operations ทำงานอย่างไร
