@@ -154,13 +154,19 @@ gives the longest repeated substring length.
 
 ## State Bound
 
-For text length n > 0:
+For text length n >= 2:
 
     states <= 2n - 1
 
 including root.
 
-This implementation reserves capacity dynamically but validator also checks the theoretical linear-state bound.
+Special case:
+
+    n = 1 -> 2 states
+
+(root + one character state).
+
+This implementation reserves capacity dynamically and validator checks this exact linear-state bound including the singleton exception.
 
 ## Complexity
 

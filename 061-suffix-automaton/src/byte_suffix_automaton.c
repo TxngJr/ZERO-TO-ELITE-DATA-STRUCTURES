@@ -514,7 +514,9 @@ bool byte_suffix_automaton_validate(
     }
 
     const size_t bound=
-        1+2*(automaton->text_length-1);
+        automaton->text_length==1
+            ?2
+            :1+2*(automaton->text_length-1);
 
     if(automaton->state_count>bound)return false;
 

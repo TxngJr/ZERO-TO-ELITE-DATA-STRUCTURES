@@ -19,7 +19,7 @@ Checked:
 - substring count reads propagated end-position count
 - distinct-substring formula uses max_len[v]-max_len[link[v]]
 - longest repeated substring requires occurrence count >=2
-- theoretical state bound uses overflow-safe 1+2*(n-1), not 2*n arithmetic before checking
+- theoretical state bound handles the n=1 two-state exception, then uses overflow-safe 1+2*(n-1) for n>=2
 - sparse transition lookup is documented with degree factor d<=256 instead of being falsely called O(1)
 
 ## Chapter 062 Review
