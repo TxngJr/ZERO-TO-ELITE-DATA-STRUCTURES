@@ -129,3 +129,11 @@
 - Handshaking Lemma — ใน undirected graph ผลรวม degrees เท่ากับ 2|E|
 - Path Compression — DSU optimization ที่ย่อ parent chains ระหว่าง find
 - Union by Size — DSU heuristic ที่ attach component เล็กกว่าใต้ root ของ component ใหญ่กว่า
+
+- Adaptive Graph — graph wrapper ที่เปลี่ยน physical representation ตาม workload/density policy โดยรักษา logical graph เดิม
+- Breadth-First Search (Graph) — traversal ที่ใช้ FIFO frontier และให้ shortest unweighted edge-count distances
+- DAG — Directed Acyclic Graph; directed graph ที่ไม่มี directed cycle
+- Depth-First Search (Graph) — traversal ที่ลงลึกตาม branch โดยใช้ recursion หรือ explicit LIFO stack
+- Hysteresis — การใช้ threshold ขึ้น/ลงคนละค่าเพื่อลดการสลับ state ถี่ ๆ ใกล้ boundary
+- Topological Order — ลำดับ vertices ของ DAG ที่ทุก edge u→v มี u อยู่ก่อน v
+- Traversal Parent — vertex ที่ค้นพบ child เป็นครั้งแรกและสร้าง traversal-tree edge

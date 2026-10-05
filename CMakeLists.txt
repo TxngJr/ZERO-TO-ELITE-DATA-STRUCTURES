@@ -625,3 +625,57 @@ add_test(NAME ch039_graph_repr_tests COMMAND ch039_graph_repr_tests)
 
 add_executable(ch039_sparse_dense_benchmark 039-graph-representations/benchmarks/sparse_dense_benchmark.c)
 target_link_libraries(ch039_sparse_dense_benchmark PRIVATE ch039_graph_repr)
+
+
+# Chapter 040
+add_library(ch040_graph_traversal
+    040-graph-traversal-structures/src/graph_traversal.c
+)
+target_include_directories(ch040_graph_traversal PUBLIC 040-graph-traversal-structures/src)
+target_link_libraries(ch040_graph_traversal PUBLIC ch039_graph_repr)
+
+add_executable(ch040_graph_traversal_demo 040-graph-traversal-structures/examples/traversal_demo.c)
+target_link_libraries(ch040_graph_traversal_demo PRIVATE ch040_graph_traversal)
+add_test(NAME ch040_graph_traversal_demo_smoke COMMAND ch040_graph_traversal_demo)
+
+add_executable(ch040_graph_traversal_tests 040-graph-traversal-structures/tests/test_graph_traversal.c)
+target_link_libraries(ch040_graph_traversal_tests PRIVATE ch040_graph_traversal)
+add_test(NAME ch040_graph_traversal_tests COMMAND ch040_graph_traversal_tests)
+
+add_executable(ch040_traversal_repr_benchmark 040-graph-traversal-structures/benchmarks/traversal_repr_benchmark.c)
+target_link_libraries(ch040_traversal_repr_benchmark PRIVATE ch040_graph_traversal)
+
+# Chapter 041
+add_library(ch041_dag
+    041-dag-data-structures/src/int_dag.c
+)
+target_include_directories(ch041_dag PUBLIC 041-dag-data-structures/src)
+
+add_executable(ch041_dag_demo 041-dag-data-structures/examples/dag_demo.c)
+target_link_libraries(ch041_dag_demo PRIVATE ch041_dag)
+add_test(NAME ch041_dag_demo_smoke COMMAND ch041_dag_demo)
+
+add_executable(ch041_dag_tests 041-dag-data-structures/tests/test_dag.c)
+target_link_libraries(ch041_dag_tests PRIVATE ch041_dag)
+add_test(NAME ch041_dag_tests COMMAND ch041_dag_tests)
+
+add_executable(ch041_topological_benchmark 041-dag-data-structures/benchmarks/topological_benchmark.c)
+target_link_libraries(ch041_topological_benchmark PRIVATE ch041_dag)
+
+# Chapter 042
+add_library(ch042_adaptive_graph
+    042-sparse-vs-dense-graph-representation/src/adaptive_graph.c
+)
+target_include_directories(ch042_adaptive_graph PUBLIC 042-sparse-vs-dense-graph-representation/src)
+target_link_libraries(ch042_adaptive_graph PUBLIC ch039_graph_repr)
+
+add_executable(ch042_adaptive_demo 042-sparse-vs-dense-graph-representation/examples/adaptive_demo.c)
+target_link_libraries(ch042_adaptive_demo PRIVATE ch042_adaptive_graph)
+add_test(NAME ch042_adaptive_demo_smoke COMMAND ch042_adaptive_demo)
+
+add_executable(ch042_adaptive_graph_tests 042-sparse-vs-dense-graph-representation/tests/test_adaptive_graph.c)
+target_link_libraries(ch042_adaptive_graph_tests PRIVATE ch042_adaptive_graph)
+add_test(NAME ch042_adaptive_graph_tests COMMAND ch042_adaptive_graph_tests)
+
+add_executable(ch042_adaptive_density_benchmark 042-sparse-vs-dense-graph-representation/benchmarks/adaptive_density_benchmark.c)
+target_link_libraries(ch042_adaptive_density_benchmark PRIVATE ch042_adaptive_graph)

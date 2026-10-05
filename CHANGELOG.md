@@ -1,5 +1,27 @@
 # Changelog
 
+## Batch 14 — Chapters 040–042
+
+Added:
+- reusable GraphTraversal workspace separated from graph storage
+- iterative BFS with FIFO frontier, parent/depth/order and shortest unweighted distances
+- iterative DFS with explicit stack
+- path reconstruction and traversal-state validator
+- randomized cross-representation BFS/DFS equivalence tests
+- traversal benchmark across Edge List, Matrix and Adjacency List
+- IntDAG with sorted outgoing vectors and cached indegrees
+- cycle-safe dynamic edge insertion via reverse reachability check
+- source/sink queries and Kahn topological sorting
+- 15,000-operation randomized DAG differential test with reference reachability matrix
+- topological-sort scaling benchmark
+- AdaptiveGraph with density-driven Adj List <-> Matrix switching
+- separate promote/demote thresholds for hysteresis
+- transactional representation conversion and logical-edge replay
+- deterministic threshold/switch preservation tests
+- 20,000-operation randomized adaptive-graph differential tests in directed and undirected modes
+- sparse/dense phase benchmark with switch count, memory and lookup timing
+- Batch 14 negative review
+
 ## Batch 13 — Chapters 037–039
 
 Added:

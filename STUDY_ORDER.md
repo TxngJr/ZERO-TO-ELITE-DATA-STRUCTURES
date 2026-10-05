@@ -14,10 +14,11 @@
 - Batch 10: 028–030
 - Batch 11: 031–033
 - Batch 12: 034–036
-- Batch 13: 037 Disjoint Set / Union-Find, 038 Graphs Fundamentals, 039 Graph Representations
+- Batch 13: 037–039
+- Batch 14: 040 Graph Traversal Structures, 041 DAG Data Structures, 042 Sparse vs Dense Graph Representation
 
-## Batch 14 — Next
+## Batch 15 — Next
 
-040 Graph Traversal Structures
-041 DAG Data Structures
-042 Sparse vs Dense Graph Representation
+043 Segment Tree
+044 Lazy Propagation Segment Tree
+045 Dynamic Segment Tree
