@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 02
+Current Batch: 03
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -9,55 +9,67 @@ Completed Chapters:
 - 004 Complexity Analysis
 - 005 Recursion & Iteration
 - 006 Arrays
+- 007 Strings
+- 008 Linked Lists
+- 009 Stack
 
-Current Chapter: 006
+Current Chapter: 009
 
-Next Chapter: 007 Strings
+Next Chapter: 010 Queue
 
 Concepts Covered:
-- variables/functions/loops/pointers/references/generics
-- stack/heap/address/allocation/locality
-- ADT/interface/representation/invariant
-- O, Ω, Θ, little-o, little-ω
-- best/average/worst/amortized analysis
-- aggregate/accounting/potential method preview
-- recursion/call stack/base case/progress
-- induction and loop invariant correspondence
-- recursion vs iteration / binary search
-- static arrays / dynamic arrays / multidimensional arrays
-- size vs capacity / geometric growth
-- array-to-pointer decay / one-past ranges
-- pointer invalidation / row-major layout
+- programming/memory/ADT foundations
+- asymptotic and amortized analysis
+- recursion, iteration and correctness invariants
+- static/dynamic/multidimensional arrays
+- byte strings, C strings, mutable/immutable strings
+- null termination, length/capacity, encoding caveats
+- singly/doubly/circular linked lists
+- pointer chasing, stable-node addresses, sentinels/intrusive-list preview
+- Stack ADT with array-backed and linked-backed representations
+- monotonic stack and Next Greater Element
+- aggregate proof that monotonic-stack processing is Θ(n)
 
 Structures Implemented:
-- opaque C IntStack
-- opaque C IntVector with reserve, push/pop, get/set, insert/erase, clear, shrink-to-fit
+- opaque IntStack
+- IntVector
+- ByteString
+- IntSList
+- IntDList
+- IntCList
+- ArrayStack
+- LinkedStack
+- monotonic Next Greater index stack
 
 Tests Added:
-- Batch 01 smoke/unit tests
-- complexity operation-count tests
-- recursive/iterative differential tests
-- IntVector unit tests
-- deterministic 10,000-step randomized differential vector test
+- all Batch 01–02 tests
+- ByteString deterministic and randomized mutation tests
+- self-alias append/insert tests
+- linked-list invariant validation
+- 5,000-step randomized list differential tests
+- circular-list rotation tests
+- 10,000-step ArrayStack vs LinkedStack differential tests
+- monotonic-stack correctness tests
 
 Benchmarks Added:
-- row-major vs column-major locality
-- linear vs quadratic scaling
-- recursion vs iteration teaching benchmark
-- vector push-back vs front-insert scaling
+- previous locality/scaling/vector benchmarks
+- dynamic string builder vs repeated-copy construction
+- direct vector vs direct singly-list Θ(n) traversal
+- array stack vs linked stack push/pop roundtrip
 
 Known Dependencies:
-- Chapter 007 Strings builds on contiguous character arrays and dynamic storage
-- Chapter 008 Linked Lists contrasts pointer chasing with arrays
-- Chapter 009 Stack revisits ADT Stack using array and linked representations
+- Chapter 010 Queue builds on linked/array endpoint reasoning
+- Chapter 011 Deque extends two-ended operations
+- Chapter 012 Priority Queue separates FIFO/LIFO from priority ordering
 
 Open Problems:
-- none if CI passes for Batch 02
+- none if Batch 03 CI passes
 
 Cross References:
-- 004 amortized analysis → 006 vector growth → 131 amortized structures
-- 005 call stack → 009 Stack ADT distinction → tree traversals later
-- 002 locality → 006 contiguous arrays → 008 linked-list contrast
-- 003 ADT → 006 IntVector API/invariants
+- 006 Arrays → 007 dynamic strings
+- 002 locality + 006 arrays → 008 pointer-chasing contrast
+- 003 ADT + 004 amortization + 006 vector → 009 Stack representations
+- 005 recursion → 009 explicit Stack ADT
+- 009 monotonic stack → future interview/competitive-programming patterns
 
-Coverage: 6 / 170 chapters
+Coverage: 9 / 170 chapters

@@ -1,5 +1,29 @@
 # Changelog
 
+## Batch 03 — Chapters 007–009
+
+Added:
+- Chapter 007 Strings
+- C string/null-terminator mental model
+- mutable vs immutable string discussion
+- byte vs Unicode-code-point distinction
+- from-scratch ByteString with reserve/append/insert/erase/find
+- embedded-zero support
+- self-alias-safe append/insert tests
+- string-building benchmark
+- Chapter 008 Linked Lists
+- Singly, Doubly and Circular linked-list implementations
+- invariant validators
+- randomized differential list tests
+- fair direct Θ(n) array-vs-list traversal benchmark
+- Chapter 009 Stack
+- ArrayStack and LinkedStack
+- 10,000-step differential tests
+- monotonic Next Greater implementation
+- aggregate Θ(n) analysis
+- stack representation benchmark
+- Batch 03 negative review/audit
+
 ## Batch 02 — Chapters 004–006
 
 Added:

@@ -29,13 +29,10 @@ add_test(NAME ch001_generics_smoke COMMAND ch001_generics)
 # Chapter 002
 add_executable(ch002_memory_walk 002-memory-fundamentals/examples/memory_walk.c)
 add_test(NAME ch002_memory_walk_smoke COMMAND ch002_memory_walk)
-
 add_executable(ch002_locality_benchmark 002-memory-fundamentals/benchmarks/locality.c)
 
 # Chapter 003
-add_library(ch003_int_stack
-    003-abstract-data-type/src/int_stack.c
-)
+add_library(ch003_int_stack 003-abstract-data-type/src/int_stack.c)
 target_include_directories(ch003_int_stack PUBLIC 003-abstract-data-type/src)
 
 add_executable(ch003_stack_tests 003-abstract-data-type/tests/test_int_stack.c)
@@ -49,9 +46,7 @@ add_test(NAME ch004_complexity_tests COMMAND ch004_complexity_tests)
 add_executable(ch004_scaling_benchmark 004-complexity-analysis/benchmarks/scaling.c)
 
 # Chapter 005
-add_library(ch005_recursion
-    005-recursion-iteration/src/recursion_iteration.c
-)
+add_library(ch005_recursion 005-recursion-iteration/src/recursion_iteration.c)
 target_include_directories(ch005_recursion PUBLIC 005-recursion-iteration/src)
 
 add_executable(ch005_demo 005-recursion-iteration/examples/demo.c)
@@ -66,9 +61,7 @@ add_executable(ch005_recursion_benchmark 005-recursion-iteration/benchmarks/recu
 target_link_libraries(ch005_recursion_benchmark PRIVATE ch005_recursion)
 
 # Chapter 006
-add_library(ch006_int_vector
-    006-arrays/src/int_vector.c
-)
+add_library(ch006_int_vector 006-arrays/src/int_vector.c)
 target_include_directories(ch006_int_vector PUBLIC 006-arrays/src)
 
 add_executable(ch006_array_layout 006-arrays/examples/array_layout.c)
@@ -80,3 +73,55 @@ add_test(NAME ch006_vector_tests COMMAND ch006_vector_tests)
 
 add_executable(ch006_vector_benchmark 006-arrays/benchmarks/vector_operations.c)
 target_link_libraries(ch006_vector_benchmark PRIVATE ch006_int_vector)
+
+# Chapter 007
+add_library(ch007_byte_string 007-strings/src/byte_string.c)
+target_include_directories(ch007_byte_string PUBLIC 007-strings/src)
+
+add_executable(ch007_c_string_layout 007-strings/examples/c_string_layout.c)
+add_test(NAME ch007_c_string_layout_smoke COMMAND ch007_c_string_layout)
+
+add_executable(ch007_string_tests 007-strings/tests/test_byte_string.c)
+target_link_libraries(ch007_string_tests PRIVATE ch007_byte_string)
+add_test(NAME ch007_string_tests COMMAND ch007_string_tests)
+
+add_executable(ch007_string_benchmark 007-strings/benchmarks/string_building.c)
+target_link_libraries(ch007_string_benchmark PRIVATE ch007_byte_string)
+
+# Chapter 008
+add_library(ch008_lists
+    008-linked-lists/src/int_slist.c
+    008-linked-lists/src/int_dlist.c
+    008-linked-lists/src/int_clist.c
+)
+target_include_directories(ch008_lists PUBLIC 008-linked-lists/src)
+
+add_executable(ch008_list_demo 008-linked-lists/examples/list_demo.c)
+target_link_libraries(ch008_list_demo PRIVATE ch008_lists)
+add_test(NAME ch008_list_demo_smoke COMMAND ch008_list_demo)
+
+add_executable(ch008_list_tests 008-linked-lists/tests/test_linked_lists.c)
+target_link_libraries(ch008_list_tests PRIVATE ch008_lists)
+add_test(NAME ch008_list_tests COMMAND ch008_list_tests)
+
+add_executable(ch008_list_vector_benchmark 008-linked-lists/benchmarks/list_vs_vector.c)
+target_link_libraries(ch008_list_vector_benchmark PRIVATE ch008_lists ch006_int_vector)
+
+# Chapter 009
+add_library(ch009_stacks
+    009-stack/src/array_stack.c
+    009-stack/src/linked_stack.c
+    009-stack/src/monotonic_stack.c
+)
+target_include_directories(ch009_stacks PUBLIC 009-stack/src)
+
+add_executable(ch009_stack_demo 009-stack/examples/stack_demo.c)
+target_link_libraries(ch009_stack_demo PRIVATE ch009_stacks)
+add_test(NAME ch009_stack_demo_smoke COMMAND ch009_stack_demo)
+
+add_executable(ch009_stack_tests 009-stack/tests/test_stacks.c)
+target_link_libraries(ch009_stack_tests PRIVATE ch009_stacks)
+add_test(NAME ch009_stack_tests COMMAND ch009_stack_tests)
+
+add_executable(ch009_stack_benchmark 009-stack/benchmarks/stack_benchmark.c)
+target_link_libraries(ch009_stack_benchmark PRIVATE ch009_stacks)

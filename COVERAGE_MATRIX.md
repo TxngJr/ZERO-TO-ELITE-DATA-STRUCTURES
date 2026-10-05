@@ -10,8 +10,11 @@ Legend: ✅ complete in current scope, ➡ planned, N/A not meaningful for this 
 | 004 | Complexity Analysis | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 005 | Recursion & Iteration | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 006 | Arrays | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 007 | Strings | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 008 | Linked Lists | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 009 | Stack | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 007 | Strings | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 008 | Linked Lists | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 009 | Stack | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 010 | Queue | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 011 | Deque | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 012 | Priority Queue | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
 
-The remaining chapters are tracked in ROADMAP.md and will be promoted into this matrix as each batch is implemented.
+The remaining chapters are tracked in ROADMAP.md and are promoted here as each batch is implemented.

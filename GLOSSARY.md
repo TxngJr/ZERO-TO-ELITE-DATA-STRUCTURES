@@ -3,18 +3,32 @@
 - Address — ตำแหน่งเชิงตรรกะที่โปรแกรมใช้อ้างถึง byte/object ใน virtual address space
 - Allocation — การจองพื้นที่ memory ให้ object/data
 - ADT (Abstract Data Type) — แบบจำลองที่กำหนด values และ operations โดยไม่ผูกกับ representation
+- Amortized Analysis — การกระจาย cost ของ operations แพงเหนือ sequence ของ operations โดยไม่ต้องสมมติ probability distribution
+- Byte String — sequence ของ bytes ที่อาจใช้แทน text หรือ binary data ตาม contract
 - Cache — หน่วยความจำขนาดเล็กและเร็วที่เก็บข้อมูลที่ CPU มีแนวโน้มจะใช้
 - Call stack — โครงสร้างของ active function calls
+- Capacity — จำนวน elements/bytes ที่ backing storage รองรับก่อนต้อง grow
+- Circular List — linked list ที่ปลายเชื่อมกลับจุดเริ่มแทน NULL
 - Deallocation — การคืนพื้นที่ที่เคย allocate
-- Heap memory — พื้นที่สำหรับ allocation ที่อายุไม่ผูกตรงกับ lexical scope
+- Doubly Linked List — list ที่แต่ละ node มีทั้ง prev และ next links
+- Heap memory — พื้นที่สำหรับ dynamic allocation ที่อายุไม่ผูกตรงกับ lexical scope
 - Implementation — วิธีจริงที่ใช้สร้าง behavior ตาม interface/ADT
 - Interface — ชุด operations/contract ที่ผู้ใช้ component มองเห็น
-- Invariant — เงื่อนไขที่ representation ต้องรักษาไว้ตลอดจุดที่กำหนด
+- Invariant — เงื่อนไขที่ representation ต้องรักษาไว้ ณ boundary ที่กำหนด
+- LIFO — Last In, First Out; semantics หลักของ Stack
+- Linked List — sequence ที่ elements เชื่อมผ่าน links/pointers แทน contiguous index arithmetic
 - Locality — แนวโน้มการเข้าถึงข้อมูลเดิมหรือข้อมูลใกล้กัน
+- Monotonic Stack — การใช้ stack โดยรักษาลำดับ monotonic ของ values/indices เพื่อแก้ pattern บางชนิดใน linear time
+- Null Terminator — zero byte ที่ใช้บอกจุดสิ้นสุดของ ordinary C string
 - Pointer — ค่าที่ใช้ระบุตำแหน่ง memory
+- Pointer Chasing — การต้องอ่าน pointer จาก object ปัจจุบันก่อนรู้ address ของ object ถัดไป
 - Reference — alias ไปยัง object ตาม semantics ของภาษา
 - Representation — วิธีจัดเก็บ state จริง
-- Stack memory — พื้นที่ที่มักสัมพันธ์กับ activation record/local variables ของ function
+- Sentinel Node — dummy node ที่ใช้ลด special cases ใน linked structures
+- Singly Linked List — list ที่ node มี link ไป node ถัดไป
+- Stack ADT — LIFO abstract data type; ไม่ใช่สิ่งเดียวกับ runtime call stack
+- Stack memory — พื้นที่ที่มักสัมพันธ์กับ activation records/local state ของ function
+- String — sequence abstraction สำหรับ characters/bytes ตาม encoding และ API contract
 - Struct/Class — การรวมหลาย fields ให้เป็นชนิดข้อมูลเดียว
 - Template/Generic — กลไกเขียน algorithm/type ให้ทำงานกับหลายชนิดข้อมูลอย่าง type-safe
 - Undefined Behavior — พฤติกรรมที่มาตรฐานภาษาไม่กำหนดผลลัพธ์
