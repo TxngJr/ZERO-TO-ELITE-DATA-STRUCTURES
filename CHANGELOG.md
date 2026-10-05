@@ -1,5 +1,27 @@
 # Changelog
 
+## Batch 17 — Chapters 049–051
+
+Added:
+- AVL-based half-open Interval Tree keyed by (low,high)
+- subtree max_high augmentation with rotation/deletion repair
+- exact insert/remove/contains plus any-overlap and overlap-count queries
+- 30,000-operation randomized Interval Tree differential test
+- overlap-search scaling benchmark
+- array-backed Interval Heap / double-ended priority queue
+- embedded min-heap low endpoints and max-heap high endpoints
+- singleton final-node handling and min/max deletion interval repair
+- duplicate-preserving randomized DEPQ workload: 40,000 operations
+- mixed double-ended priority queue benchmark
+- static 2D Range Tree over (x,y,id) points
+- median-balanced x primary tree with per-node y-sorted associated arrays
+- linear associated-list merging per subtree
+- half-open rectangle count/report APIs
+- 30,000 randomized rectangle queries against naive scan
+- duplicate-coordinate and non-power-of-two-size validation
+- range-query scaling benchmark
+- Batch 17 negative review
+
 ## Batch 16 — Chapters 046–048
 
 Added:

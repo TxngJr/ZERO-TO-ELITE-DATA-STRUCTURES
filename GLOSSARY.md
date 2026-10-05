@@ -153,3 +153,11 @@
 - Sparse Table — static range-query structure ที่ preprocess power-of-two blocks เพื่อ query idempotent operations ได้เร็วมาก
 - Idempotent Operation — operation f ที่มี f(x,x)=x เช่น min/max/gcd ทำให้ overlapping Sparse Table blocks ปลอดภัย
 - Range Minimum Query (RMQ) — การหาค่าต่ำสุดในช่วง index ที่กำหนด
+
+- Interval Tree — balanced search tree augmented with subtree endpoint metadata เพื่อ prune interval-overlap searches
+- max_high — ค่าสูงสุดของ interval high endpoint ใน subtree ใช้เป็น pruning summary ของ Interval Tree
+- Interval Heap — double-ended priority queue ที่แต่ละ complete-tree node เก็บ [low,high] และฝัง min-heap/max-heap ไว้พร้อมกัน
+- Double-Ended Priority Queue (DEPQ) — priority queue ที่เข้าถึง/ลบได้ทั้ง minimum และ maximum อย่างมีประสิทธิภาพ
+- Range Tree — multidimensional orthogonal range-search structure ที่ใช้ primary search tree ร่วมกับ associated structures ของมิติถัดไป
+- Orthogonal Range Query — query ที่ขอบเขตขนานกับแกน เช่น rectangle [x1,x2) × [y1,y2)
+- Canonical Subtree — subtree ที่ถูกเลือกทั้งก้อนเพราะช่วง coordinate ของมันอยู่ภายใน query อย่างสมบูรณ์

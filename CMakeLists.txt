@@ -783,3 +783,55 @@ add_test(NAME ch048_sparse_table_tests COMMAND ch048_sparse_table_tests)
 
 add_executable(ch048_sparse_table_benchmark 048-sparse-table/benchmarks/sparse_table_benchmark.c)
 target_link_libraries(ch048_sparse_table_benchmark PRIVATE ch048_sparse_table)
+
+
+# Chapter 049
+add_library(ch049_interval_tree
+    049-interval-tree/src/int_interval_tree.c
+)
+target_include_directories(ch049_interval_tree PUBLIC 049-interval-tree/src)
+
+add_executable(ch049_interval_tree_demo 049-interval-tree/examples/interval_tree_demo.c)
+target_link_libraries(ch049_interval_tree_demo PRIVATE ch049_interval_tree)
+add_test(NAME ch049_interval_tree_demo_smoke COMMAND ch049_interval_tree_demo)
+
+add_executable(ch049_interval_tree_tests 049-interval-tree/tests/test_interval_tree.c)
+target_link_libraries(ch049_interval_tree_tests PRIVATE ch049_interval_tree)
+add_test(NAME ch049_interval_tree_tests COMMAND ch049_interval_tree_tests)
+
+add_executable(ch049_overlap_benchmark 049-interval-tree/benchmarks/overlap_benchmark.c)
+target_link_libraries(ch049_overlap_benchmark PRIVATE ch049_interval_tree)
+
+# Chapter 050
+add_library(ch050_interval_heap
+    050-interval-heap/src/int_interval_heap.c
+)
+target_include_directories(ch050_interval_heap PUBLIC 050-interval-heap/src)
+
+add_executable(ch050_interval_heap_demo 050-interval-heap/examples/interval_heap_demo.c)
+target_link_libraries(ch050_interval_heap_demo PRIVATE ch050_interval_heap)
+add_test(NAME ch050_interval_heap_demo_smoke COMMAND ch050_interval_heap_demo)
+
+add_executable(ch050_interval_heap_tests 050-interval-heap/tests/test_interval_heap.c)
+target_link_libraries(ch050_interval_heap_tests PRIVATE ch050_interval_heap)
+add_test(NAME ch050_interval_heap_tests COMMAND ch050_interval_heap_tests)
+
+add_executable(ch050_depq_benchmark 050-interval-heap/benchmarks/depq_benchmark.c)
+target_link_libraries(ch050_depq_benchmark PRIVATE ch050_interval_heap)
+
+# Chapter 051
+add_library(ch051_range_tree
+    051-range-tree/src/int_range_tree.c
+)
+target_include_directories(ch051_range_tree PUBLIC 051-range-tree/src)
+
+add_executable(ch051_range_tree_demo 051-range-tree/examples/range_tree_demo.c)
+target_link_libraries(ch051_range_tree_demo PRIVATE ch051_range_tree)
+add_test(NAME ch051_range_tree_demo_smoke COMMAND ch051_range_tree_demo)
+
+add_executable(ch051_range_tree_tests 051-range-tree/tests/test_range_tree.c)
+target_link_libraries(ch051_range_tree_tests PRIVATE ch051_range_tree)
+add_test(NAME ch051_range_tree_tests COMMAND ch051_range_tree_tests)
+
+add_executable(ch051_range_query_benchmark 051-range-tree/benchmarks/range_query_benchmark.c)
+target_link_libraries(ch051_range_query_benchmark PRIVATE ch051_range_tree)

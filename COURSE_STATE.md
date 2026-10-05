@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 16
+Current Batch: 17
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -51,54 +51,55 @@ Completed Chapters:
 - 046 Persistent Segment Tree
 - 047 Fenwick Tree / Binary Indexed Tree
 - 048 Sparse Table
+- 049 Interval Tree
+- 050 Interval Heap
+- 051 Range Tree
 
-Current Chapter: 048
+Current Chapter: 051
 
-Next Chapter: 049 Interval Tree
+Next Chapter: 052 Order Statistic Tree
 
 Concepts Covered:
-- all prior Chapters 001–045
-- persistence and immutable historical versions
-- full persistence with branching updates from any prior version
-- path copying and structural sharing
-- arena indices instead of realloc-invalidated raw pointers
-- O(log n) new nodes per persistent point update
-- Fenwick/Binary Indexed Tree lowbit block geometry
-- 0-based public vs 1-based internal indexing
-- Theta(n) Fenwick linear construction
-- prefix sums and range subtraction
-- distinction between general associative Segment Tree aggregates and invertible prefix aggregates
-- static Sparse Table preprocessing
-- power-of-two interval blocks
-- floor(log2) lookup tables
-- idempotence and overlapping O(1) RMQ
-- static-vs-dynamic range-query trade-offs
+- all prior Chapters 001–048
+- half-open interval overlap semantics
+- AVL interval ordering by (low,high)
+- subtree max_high augmentation and pruning
+- exact interval mutation plus any/all overlap search
+- double-ended priority queues
+- interval-heap containment invariant
+- embedded min heap on low endpoints
+- embedded max heap on high endpoints
+- singleton final interval node and two-sided deletion repair
+- 2D orthogonal range searching
+- median-balanced x primary search tree
+- y-sorted associated arrays at every Range Tree node
+- canonical x-subtrees and y binary search
+- O(log^2 n) static rectangle counting
+- O(log^2 n + k) reporting and Theta(n log n) storage trade-off
 
 Structures Implemented:
 - all previous structures
-- PersistentSegmentTree
-- IntFenwickTree
-- IntSparseTable
+- IntIntervalTree
+- IntIntervalHeap
+- IntRangeTree
 
 Tests Added:
-- persistent branching-version deterministic tests
-- persistent randomized workload: 6,000 steps with naive version snapshots
-- post-workload historical immutability re-checks
-- Fenwick randomized differential workload: 30,000 operations
-- Sparse Table randomized RMQ: 50,000 queries
-- Sparse Table non-power-of-two sizes 1..129
+- Interval Tree randomized differential workload: 30,000 operations
+- Interval Heap randomized multiset/DEPQ workload: 40,000 operations
+- Range Tree randomized rectangle queries: 30,000
+- Range Tree duplicate-coordinate and sizes 1..129 validation
 
 Benchmarks Added:
-- persistent path-copying nodes-per-update benchmark
-- Fenwick mixed update/range-query scaling
-- Sparse Table static O(1) RMQ query benchmark
+- Interval Tree any-overlap lookup scaling
+- Interval Heap mixed insert/pop-min/pop-max benchmark
+- Range Tree static rectangle-count scaling
 
 Known Dependencies:
-- 049 Interval Tree adds interval-overlap search metadata
-- 050 Interval Heap adds double-ended priority-queue interval nodes
-- 051 Range Tree introduces multidimensional orthogonal range searching
+- 052 augments a balanced BST with subtree sizes for rank/select
+- 053 studies Cartesian Tree ordering by sequence position and heap priority
+- 054 begins spatial partitioning with KD-Tree
 
 Open Problems:
-- none if Batch 16 CI passes
+- none if Batch 17 CI passes
 
-Coverage: 48 / 170 chapters
+Coverage: 51 / 170 chapters

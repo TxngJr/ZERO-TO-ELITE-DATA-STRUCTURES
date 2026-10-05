@@ -17,10 +17,11 @@
 - Batch 13: 037–039
 - Batch 14: 040–042
 - Batch 15: 043–045
-- Batch 16: 046 Persistent Segment Tree, 047 Fenwick Tree / Binary Indexed Tree, 048 Sparse Table
+- Batch 16: 046–048
+- Batch 17: 049 Interval Tree, 050 Interval Heap, 051 Range Tree
 
-## Batch 17 — Next
+## Batch 18 — Next
 
-049 Interval Tree
-050 Interval Heap
-051 Range Tree
+052 Order Statistic Tree
+053 Cartesian Tree
+054 KD-Tree
