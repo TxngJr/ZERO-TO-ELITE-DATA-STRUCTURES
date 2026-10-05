@@ -731,3 +731,55 @@ add_test(NAME ch045_dynamic_segment_tree_tests COMMAND ch045_dynamic_segment_tre
 
 add_executable(ch045_sparse_universe_benchmark 045-dynamic-segment-tree/benchmarks/sparse_universe_benchmark.c)
 target_link_libraries(ch045_sparse_universe_benchmark PRIVATE ch045_dynamic_segment_tree)
+
+
+# Chapter 046
+add_library(ch046_persistent_segment_tree
+    046-persistent-segment-tree/src/persistent_segment_tree.c
+)
+target_include_directories(ch046_persistent_segment_tree PUBLIC 046-persistent-segment-tree/src)
+
+add_executable(ch046_persistent_demo 046-persistent-segment-tree/examples/persistent_demo.c)
+target_link_libraries(ch046_persistent_demo PRIVATE ch046_persistent_segment_tree)
+add_test(NAME ch046_persistent_demo_smoke COMMAND ch046_persistent_demo)
+
+add_executable(ch046_persistent_segment_tree_tests 046-persistent-segment-tree/tests/test_persistent_segment_tree.c)
+target_link_libraries(ch046_persistent_segment_tree_tests PRIVATE ch046_persistent_segment_tree)
+add_test(NAME ch046_persistent_segment_tree_tests COMMAND ch046_persistent_segment_tree_tests)
+
+add_executable(ch046_version_memory_benchmark 046-persistent-segment-tree/benchmarks/version_memory_benchmark.c)
+target_link_libraries(ch046_version_memory_benchmark PRIVATE ch046_persistent_segment_tree)
+
+# Chapter 047
+add_library(ch047_fenwick_tree
+    047-fenwick-tree/src/int_fenwick_tree.c
+)
+target_include_directories(ch047_fenwick_tree PUBLIC 047-fenwick-tree/src)
+
+add_executable(ch047_fenwick_demo 047-fenwick-tree/examples/fenwick_demo.c)
+target_link_libraries(ch047_fenwick_demo PRIVATE ch047_fenwick_tree)
+add_test(NAME ch047_fenwick_demo_smoke COMMAND ch047_fenwick_demo)
+
+add_executable(ch047_fenwick_tree_tests 047-fenwick-tree/tests/test_fenwick_tree.c)
+target_link_libraries(ch047_fenwick_tree_tests PRIVATE ch047_fenwick_tree)
+add_test(NAME ch047_fenwick_tree_tests COMMAND ch047_fenwick_tree_tests)
+
+add_executable(ch047_fenwick_benchmark 047-fenwick-tree/benchmarks/fenwick_benchmark.c)
+target_link_libraries(ch047_fenwick_benchmark PRIVATE ch047_fenwick_tree)
+
+# Chapter 048
+add_library(ch048_sparse_table
+    048-sparse-table/src/int_sparse_table.c
+)
+target_include_directories(ch048_sparse_table PUBLIC 048-sparse-table/src)
+
+add_executable(ch048_sparse_table_demo 048-sparse-table/examples/sparse_table_demo.c)
+target_link_libraries(ch048_sparse_table_demo PRIVATE ch048_sparse_table)
+add_test(NAME ch048_sparse_table_demo_smoke COMMAND ch048_sparse_table_demo)
+
+add_executable(ch048_sparse_table_tests 048-sparse-table/tests/test_sparse_table.c)
+target_link_libraries(ch048_sparse_table_tests PRIVATE ch048_sparse_table)
+add_test(NAME ch048_sparse_table_tests COMMAND ch048_sparse_table_tests)
+
+add_executable(ch048_sparse_table_benchmark 048-sparse-table/benchmarks/sparse_table_benchmark.c)
+target_link_libraries(ch048_sparse_table_benchmark PRIVATE ch048_sparse_table)

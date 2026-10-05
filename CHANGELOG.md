@@ -1,5 +1,25 @@
 # Changelog
 
+## Batch 16 — Chapters 046–048
+
+Added:
+- fully persistent Segment Tree with historical branching versions
+- immutable path copying and structural sharing via arena node indices
+- transactional unpublished-node rollback on update failure
+- range sum/min and point queries on any historical version
+- 6,000-step randomized branching persistence test with naive snapshots
+- historical re-checks after all updates and path-copying node-growth benchmark
+- Fenwick Tree / Binary Indexed Tree with 0-based public API and 1-based internal storage
+- Theta(n) Fenwick linear build
+- point add/set/get, prefix sum and half-open range sum
+- 30,000-operation randomized Fenwick differential test
+- Fenwick mixed update/query scaling benchmark
+- static RMQ Sparse Table with precomputed floor-log table
+- power-of-two block preprocessing and O(1) overlapping range-min queries
+- 50,000 randomized Sparse Table RMQ checks plus non-power-of-two size coverage
+- static query benchmark excluding preprocessing time
+- Batch 16 negative review
+
 ## Batch 15 — Chapters 043–045
 
 Added:

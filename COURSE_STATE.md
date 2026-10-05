@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 15
+Current Batch: 16
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -48,54 +48,57 @@ Completed Chapters:
 - 043 Segment Tree
 - 044 Lazy Propagation Segment Tree
 - 045 Dynamic Segment Tree
+- 046 Persistent Segment Tree
+- 047 Fenwick Tree / Binary Indexed Tree
+- 048 Sparse Table
 
-Current Chapter: 045
+Current Chapter: 048
 
-Next Chapter: 046 Persistent Segment Tree
+Next Chapter: 049 Interval Tree
 
 Concepts Covered:
-- all prior Chapters 001–042
-- interval hierarchy and half-open range contract
-- canonical interval decomposition
-- associative aggregate / monoid viewpoint
-- simultaneous sum and minimum caching
-- Theta(n) Segment Tree construction
-- O(log n) point updates and range queries
-- lazy range-add tags
-- push, pull and deferred-update invariants
-- const query via accumulated lazy carry
-- sparse coordinate universes
-- dynamic pointer-based interval materialization
-- NULL subtree as all-zero interval
-- overflow-safe uint64 midpoint
-- path sharing, zero-path pruning and sparse node counts
-- allocation-failure rollback for dynamic update paths
+- all prior Chapters 001–045
+- persistence and immutable historical versions
+- full persistence with branching updates from any prior version
+- path copying and structural sharing
+- arena indices instead of realloc-invalidated raw pointers
+- O(log n) new nodes per persistent point update
+- Fenwick/Binary Indexed Tree lowbit block geometry
+- 0-based public vs 1-based internal indexing
+- Theta(n) Fenwick linear construction
+- prefix sums and range subtraction
+- distinction between general associative Segment Tree aggregates and invertible prefix aggregates
+- static Sparse Table preprocessing
+- power-of-two interval blocks
+- floor(log2) lookup tables
+- idempotence and overlapping O(1) RMQ
+- static-vs-dynamic range-query trade-offs
 
 Structures Implemented:
 - all previous structures
-- IntSegmentTree
-- LazySegmentTree
-- DynamicSegmentTree
+- PersistentSegmentTree
+- IntFenwickTree
+- IntSparseTable
 
 Tests Added:
-- Segment Tree deterministic sum/min/update tests
-- Segment Tree randomized differential workload: 30,000 operations
-- Lazy Segment Tree overlapping range-add/query tests
-- Lazy randomized differential workload: 15,000 operations
-- Dynamic Segment Tree huge-domain/pruning tests
-- Dynamic randomized differential workload: 20,000 operations
+- persistent branching-version deterministic tests
+- persistent randomized workload: 6,000 steps with naive version snapshots
+- post-workload historical immutability re-checks
+- Fenwick randomized differential workload: 30,000 operations
+- Sparse Table randomized RMQ: 50,000 queries
+- Sparse Table non-power-of-two sizes 1..129
 
 Benchmarks Added:
-- mixed Segment Tree point-update/range-query scaling
-- Lazy Segment Tree range updates vs naive array
-- Dynamic Segment Tree on sparse [0,10^18) coordinate universe
+- persistent path-copying nodes-per-update benchmark
+- Fenwick mixed update/range-query scaling
+- Sparse Table static O(1) RMQ query benchmark
 
 Known Dependencies:
-- 046 introduces structural sharing and immutable historical Segment Tree versions
-- 047 introduces Fenwick Tree for compact prefix-aggregate workloads
-- 048 introduces Sparse Table for static idempotent range queries
+- 049 Interval Tree adds interval-overlap search metadata
+- 050 Interval Heap adds double-ended priority-queue interval nodes
+- 051 Range Tree introduces multidimensional orthogonal range searching
 
 Open Problems:
-- none if Batch 15 CI passes
+- none if Batch 16 CI passes
 
-Coverage: 45 / 170 chapters
+Coverage: 48 / 170 chapters

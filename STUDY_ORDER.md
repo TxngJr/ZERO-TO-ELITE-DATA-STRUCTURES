@@ -16,10 +16,11 @@
 - Batch 12: 034–036
 - Batch 13: 037–039
 - Batch 14: 040–042
-- Batch 15: 043 Segment Tree, 044 Lazy Propagation Segment Tree, 045 Dynamic Segment Tree
+- Batch 15: 043–045
+- Batch 16: 046 Persistent Segment Tree, 047 Fenwick Tree / Binary Indexed Tree, 048 Sparse Table
 
-## Batch 16 — Next
+## Batch 17 — Next
 
-046 Persistent Segment Tree
-047 Fenwick Tree / Binary Indexed Tree
-048 Sparse Table
+049 Interval Tree
+050 Interval Heap
+051 Range Tree

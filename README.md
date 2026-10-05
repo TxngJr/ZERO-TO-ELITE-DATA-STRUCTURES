@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 15 — Chapters 043–045 complete**
+**Batch 16 — Chapters 046–048 complete**
 
 ล่าสุด:
-- [043 Segment Tree](./043-segment-tree/)
-- [044 Lazy Propagation Segment Tree](./044-lazy-propagation-segment-tree/)
-- [045 Dynamic Segment Tree](./045-dynamic-segment-tree/)
+- [046 Persistent Segment Tree](./046-persistent-segment-tree/)
+- [047 Fenwick Tree / Binary Indexed Tree](./047-fenwick-tree/)
+- [048 Sparse Table](./048-sparse-table/)
 
-สถานะ: **45 / 170 chapters**
+สถานะ: **48 / 170 chapters**
 
 Next:
 
-**046 Persistent Segment Tree → 047 Fenwick Tree / Binary Indexed Tree → 048 Sparse Table**
+**049 Interval Tree → 050 Interval Heap → 051 Range Tree**
 
 ## Build
 

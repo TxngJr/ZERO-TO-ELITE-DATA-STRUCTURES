@@ -144,3 +144,12 @@
 - Lazy Tag — metadata ที่แทน update ซึ่งสะท้อนใน aggregate ของ node แล้วแต่ยังอาจไม่ถูก push ลง children
 - Dynamic Segment Tree — sparse pointer-based Segment Tree ที่สร้างเฉพาะ nodes บน coordinate paths ที่ถูกใช้งาน
 - Coordinate Universe — ช่วงค่าพิกัดทั้งหมดที่ structure รองรับ แม้ตำแหน่งส่วนใหญ่จะไม่ถูก materialize
+
+- Persistent Data Structure — structure ที่เก็บ historical versions ให้ query ได้หลังจากมี updates ใหม่
+- Structural Sharing — การให้หลาย versions ใช้ immutable substructures เดียวกันแทนการ copy ทั้งหมด
+- Path Copying — persistence technique ที่ clone เฉพาะ nodes บน update path แล้ว share ส่วนที่ไม่เปลี่ยน
+- Fenwick Tree / Binary Indexed Tree — compact prefix-sum structure ที่ใช้ lowbit blocks เพื่อทำ point update และ prefix/range query แบบ logarithmic
+- lowbit — least-significant set bit ของ positive index; ใช้กำหนด block size และ navigation ใน Fenwick Tree
+- Sparse Table — static range-query structure ที่ preprocess power-of-two blocks เพื่อ query idempotent operations ได้เร็วมาก
+- Idempotent Operation — operation f ที่มี f(x,x)=x เช่น min/max/gcd ทำให้ overlapping Sparse Table blocks ปลอดภัย
+- Range Minimum Query (RMQ) — การหาค่าต่ำสุดในช่วง index ที่กำหนด
