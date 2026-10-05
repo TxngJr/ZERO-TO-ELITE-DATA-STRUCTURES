@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install toolchain
-        run: dnf -y install gcc gcc-c++ cmake make
+        run: dnf -y install gcc gcc-c++ cmake make libasan libubsan
       - name: Configure
         run: cmake -S . -B build -DDS_ENABLE_SANITIZERS=ON
       - name: Build
