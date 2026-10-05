@@ -61,7 +61,7 @@ Complexity:
 ## Testing Review
 
 - CMS: 50,000 weighted nonnegative updates with exact model and no-underestimate checks
-- Count Sketch: 50,000 signed turnstile updates with exact model and bounded deterministic absolute error
+- Count Sketch: 50,000 signed turnstile updates with exact model; first CI exposed a legitimate 3-of-5-row collision at width=4096, demonstrating that one fixed sketch has no deterministic per-key error bound. The correctness regression uses width=16384 while the chapter retains the probabilistic guarantee discussion.
 - Reservoir: invariants, deterministic reproducibility and repeated uniformity experiment
 - CI retains warnings, ASan/UBSan and 60-second per-test watchdog
 

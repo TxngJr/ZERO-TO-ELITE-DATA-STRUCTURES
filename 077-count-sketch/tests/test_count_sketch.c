@@ -10,7 +10,7 @@ static uint64_t absdiff(int64_t a,int64_t b){return a>=b?(uint64_t)(a-b):(uint64
 int main(void){
     assert(u64_count_sketch_create(100,4)==NULL);
     enum { KEYS=256, OPS=50000 };
-    U64CountSketch *s=u64_count_sketch_create(4096,5);assert(s);
+    U64CountSketch *s=u64_count_sketch_create(16384,5);assert(s);
     int64_t exact[KEYS]={0};uint32_t rng=0x77A12345u;
 
     for(int i=0;i<OPS;++i){
