@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 27
+Current Batch: 28
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -84,46 +84,49 @@ Completed Chapters:
 - 079 Linked Hash Map
 - 080 Ordered Map / Ordered Set
 - 081 Multiset / Multimap
+- 082 Circular Buffer / Ring Buffer
+- 083 Gap Buffer
+- 084 Rope
 
-Current Chapter: 081
+Current Chapter: 084
 
-Next Chapter: 082 Circular Buffer / Ring Buffer
+Next Chapter: 085 Piece Table
 
 Concepts Covered:
-- all prior Chapters 001–078
-- hash lookup combined with independent iteration order
-- insertion-order linked maps and order-preserving rehash
-- sorted associative container semantics
-- lower-bound binary search
-- contiguous sorted-array trade-offs
-- multiset multiplicity vs distinct cardinality
-- multimap equal-key ranges and stable-within-key insertion
+- all prior Chapters 001–081
+- bounded FIFO circular storage
+- wrap-around index mapping
+- explicit full/empty semantics
+- edit locality via movable gaps
+- prefix/gap/suffix physical-vs-logical text model
+- geometric gap growth
+- tree-based sequence representation
+- subtree length/weight navigation
+- split/merge editing with implicit randomized treaps
+- byte-level vs Unicode-aware editing boundaries
 
 Structures Implemented:
 - all previous structures
-- U64LinkedHashMap
-- U64OrderedMap
-- U64OrderedSet
-- U64Multiset
-- U64Multimap
+- U64RingBuffer
+- GapBuffer
+- ByteRope
 
 Tests Added:
-- Linked Hash Map 1,000 inserts, overwrite-order preservation, alternating removals and structural validation
-- Ordered Map/Set 1,000 descending inserts with ascending-order verification and removals
-- Multiset multiplicity and transactional over-removal checks
-- Multimap repeated-key stable order, remove-one and remove-all checks
+- Ring Buffer: 50,000 randomized push/pop/get operations against an array queue model
+- Gap Buffer: 20,000 randomized insert/erase/get operations against a byte-array text model
+- Rope: 20,000 randomized insert/erase/get operations against a byte-array text model
 
 Benchmarks Added:
-- Linked Hash Map 200k inserts
-- Ordered Map 50k descending inserts
-- Multiset 100k updates over 1,000 distinct keys
+- Ring Buffer 10M bounded FIFO updates
+- Gap Buffer 500k local insertions
+- Rope 100k sequential byte insertions plus indexed reads
 
 Known Dependencies:
-- 082 introduces Circular/Ring Buffer bounded FIFO storage
-- 083 introduces Gap Buffer editing locality
-- 084 introduces Rope tree-based large-text editing
+- 085 introduces Piece Table editor storage
+- 086 introduces Inverted Index term-to-document mappings
+- 087 introduces Posting List compression/intersection foundations
 
 Open Problems:
-- none if Batch 27 CI passes
+- none if Batch 28 CI passes
 
-Coverage: 81 / 170 chapters
+Coverage: 84 / 170 chapters

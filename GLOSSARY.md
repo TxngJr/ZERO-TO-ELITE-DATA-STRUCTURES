@@ -260,3 +260,12 @@
 - Multiplicity — number of occurrences of one key in a multiset
 - Multimap — associative container allowing multiple values for one key
 - Equal-Key Range — contiguous range of multimap entries sharing the same key
+
+- Circular Buffer / Ring Buffer — fixed-capacity array whose logical sequence wraps around the physical end
+- Head Index — physical location of the first logical element in a ring buffer
+- Gap Buffer — contiguous text buffer containing an unused gap positioned near the edit cursor
+- Gap — physical unused interval excluded from the logical text sequence
+- Rope — tree-based sequence representation using subtree lengths/weights for positional navigation and editing
+- Rope Weight — logical length represented by a subtree or left branch
+- Implicit Treap — randomized balanced sequence tree where in-order position acts as the implicit key
+- Split / Merge — sequence-tree primitives that divide by logical position or concatenate ordered subsequences

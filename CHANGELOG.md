@@ -1,5 +1,25 @@
 # Changelog
 
+## Batch 28 — Chapters 082–084
+
+Added:
+- fixed-capacity uint64 Circular/Ring Buffer with reject-on-full FIFO semantics
+- wrap-around logical-to-physical index mapping without shifting queue contents
+- push/pop/front/back/get/clear operations and structural validator
+- 50,000-operation randomized Ring Buffer differential test
+- byte-oriented Gap Buffer with movable contiguous gap
+- geometric gap growth preserving prefix/suffix layout
+- insert/erase/get/copy operations with 20,000 randomized edits against a contiguous reference model
+- explicit byte-vs-Unicode boundary discussion
+- Rope teaching implementation using an implicit randomized treap
+- subtree-length positional navigation
+- split/merge based insertion and deletion
+- transactional insert allocation: temporary treap is built before existing root mutation
+- 20,000 randomized Rope edits against a byte-array reference model
+- overflow-safe Rope subtree-length validation
+- explicit explanation that one-byte leaves are pedagogical and production ropes normally use chunks
+- Batch 28 negative review
+
 ## Batch 27 — Chapters 079–081
 
 Added:

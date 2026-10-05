@@ -1356,3 +1356,55 @@ add_test(NAME ch081_multi_tests COMMAND ch081_multi_tests)
 
 add_executable(ch081_multi_benchmark 081-multiset-multimap/benchmarks/multi_benchmark.c)
 target_link_libraries(ch081_multi_benchmark PRIVATE ch081_multi)
+
+
+# Chapter 082
+add_library(ch082_ring_buffer
+    082-circular-buffer-ring-buffer/src/u64_ring_buffer.c
+)
+target_include_directories(ch082_ring_buffer PUBLIC 082-circular-buffer-ring-buffer/src)
+
+add_executable(ch082_ring_buffer_demo 082-circular-buffer-ring-buffer/examples/ring_buffer_demo.c)
+target_link_libraries(ch082_ring_buffer_demo PRIVATE ch082_ring_buffer)
+add_test(NAME ch082_ring_buffer_demo_smoke COMMAND ch082_ring_buffer_demo)
+
+add_executable(ch082_ring_buffer_tests 082-circular-buffer-ring-buffer/tests/test_ring_buffer.c)
+target_link_libraries(ch082_ring_buffer_tests PRIVATE ch082_ring_buffer)
+add_test(NAME ch082_ring_buffer_tests COMMAND ch082_ring_buffer_tests)
+
+add_executable(ch082_ring_buffer_benchmark 082-circular-buffer-ring-buffer/benchmarks/ring_buffer_benchmark.c)
+target_link_libraries(ch082_ring_buffer_benchmark PRIVATE ch082_ring_buffer)
+
+# Chapter 083
+add_library(ch083_gap_buffer
+    083-gap-buffer/src/gap_buffer.c
+)
+target_include_directories(ch083_gap_buffer PUBLIC 083-gap-buffer/src)
+
+add_executable(ch083_gap_buffer_demo 083-gap-buffer/examples/gap_buffer_demo.c)
+target_link_libraries(ch083_gap_buffer_demo PRIVATE ch083_gap_buffer)
+add_test(NAME ch083_gap_buffer_demo_smoke COMMAND ch083_gap_buffer_demo)
+
+add_executable(ch083_gap_buffer_tests 083-gap-buffer/tests/test_gap_buffer.c)
+target_link_libraries(ch083_gap_buffer_tests PRIVATE ch083_gap_buffer)
+add_test(NAME ch083_gap_buffer_tests COMMAND ch083_gap_buffer_tests)
+
+add_executable(ch083_gap_buffer_benchmark 083-gap-buffer/benchmarks/gap_buffer_benchmark.c)
+target_link_libraries(ch083_gap_buffer_benchmark PRIVATE ch083_gap_buffer)
+
+# Chapter 084
+add_library(ch084_rope
+    084-rope/src/byte_rope.c
+)
+target_include_directories(ch084_rope PUBLIC 084-rope/src)
+
+add_executable(ch084_rope_demo 084-rope/examples/rope_demo.c)
+target_link_libraries(ch084_rope_demo PRIVATE ch084_rope)
+add_test(NAME ch084_rope_demo_smoke COMMAND ch084_rope_demo)
+
+add_executable(ch084_rope_tests 084-rope/tests/test_rope.c)
+target_link_libraries(ch084_rope_tests PRIVATE ch084_rope)
+add_test(NAME ch084_rope_tests COMMAND ch084_rope_tests)
+
+add_executable(ch084_rope_benchmark 084-rope/benchmarks/rope_benchmark.c)
+target_link_libraries(ch084_rope_benchmark PRIVATE ch084_rope)

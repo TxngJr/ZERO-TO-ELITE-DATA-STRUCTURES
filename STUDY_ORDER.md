@@ -28,10 +28,11 @@
 - Batch 24: 070–072
 - Batch 25: 073–075
 - Batch 26: 076–078
-- Batch 27: 079 Linked Hash Map, 080 Ordered Map / Ordered Set, 081 Multiset / Multimap
+- Batch 27: 079–081
+- Batch 28: 082 Circular Buffer / Ring Buffer, 083 Gap Buffer, 084 Rope
 
-## Batch 28 — Next
+## Batch 29 — Next
 
-082 Circular Buffer / Ring Buffer
-083 Gap Buffer
-084 Rope
+085 Piece Table
+086 Inverted Index
+087 Posting List

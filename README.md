@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 27 — Chapters 079–081 complete**
+**Batch 28 — Chapters 082–084 complete**
 
 ล่าสุด:
-- [079 Linked Hash Map](./079-linked-hash-map/)
-- [080 Ordered Map / Ordered Set](./080-ordered-map-ordered-set/)
-- [081 Multiset / Multimap](./081-multiset-multimap/)
+- [082 Circular Buffer / Ring Buffer](./082-circular-buffer-ring-buffer/)
+- [083 Gap Buffer](./083-gap-buffer/)
+- [084 Rope](./084-rope/)
 
-สถานะ: **81 / 170 chapters**
+สถานะ: **84 / 170 chapters**
 
 Next:
 
-**082 Circular Buffer / Ring Buffer → 083 Gap Buffer → 084 Rope**
+**085 Piece Table → 086 Inverted Index → 087 Posting List**
 
 ## Build
 
