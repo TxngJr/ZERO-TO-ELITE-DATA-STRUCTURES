@@ -22,6 +22,9 @@ Legend: ✅ complete, ➡ planned, N/A not meaningful.
 | 016 | Trees Fundamentals | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 017 | Binary Tree | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 018 | Tree Traversal | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 019 | Binary Search Tree | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 020 | Balanced BST | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 021 | AVL Tree | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 019 | Binary Search Tree | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 020 | Balanced BST | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 021 | AVL Tree | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 022 | Red-Black Tree | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 023 | Splay Tree | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 024 | Treap | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |

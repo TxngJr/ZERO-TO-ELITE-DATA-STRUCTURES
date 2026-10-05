@@ -260,3 +260,55 @@ add_test(NAME ch018_tree_traversal_tests COMMAND ch018_tree_traversal_tests)
 
 add_executable(ch018_traversal_benchmark 018-tree-traversal/benchmarks/traversal_benchmark.c)
 target_link_libraries(ch018_traversal_benchmark PRIVATE ch018_tree_traversal)
+
+
+# Chapter 019
+add_library(ch019_bst
+    019-binary-search-tree/src/int_bst.c
+)
+target_include_directories(ch019_bst PUBLIC 019-binary-search-tree/src)
+
+add_executable(ch019_bst_demo 019-binary-search-tree/examples/bst_demo.c)
+target_link_libraries(ch019_bst_demo PRIVATE ch019_bst)
+add_test(NAME ch019_bst_demo_smoke COMMAND ch019_bst_demo)
+
+add_executable(ch019_bst_tests 019-binary-search-tree/tests/test_bst.c)
+target_link_libraries(ch019_bst_tests PRIVATE ch019_bst)
+add_test(NAME ch019_bst_tests COMMAND ch019_bst_tests)
+
+add_executable(ch019_bst_shape_benchmark 019-binary-search-tree/benchmarks/bst_shape_benchmark.c)
+target_link_libraries(ch019_bst_shape_benchmark PRIVATE ch019_bst)
+
+# Chapter 020
+add_library(ch020_rot_bst
+    020-balanced-bst/src/rot_bst.c
+)
+target_include_directories(ch020_rot_bst PUBLIC 020-balanced-bst/src)
+
+add_executable(ch020_rotation_demo 020-balanced-bst/examples/rotation_demo.c)
+target_link_libraries(ch020_rotation_demo PRIVATE ch020_rot_bst)
+add_test(NAME ch020_rotation_demo_smoke COMMAND ch020_rotation_demo)
+
+add_executable(ch020_rotation_tests 020-balanced-bst/tests/test_rotations.c)
+target_link_libraries(ch020_rotation_tests PRIVATE ch020_rot_bst)
+add_test(NAME ch020_rotation_tests COMMAND ch020_rotation_tests)
+
+add_executable(ch020_rotation_height_demo 020-balanced-bst/benchmarks/rotation_height_demo.c)
+target_link_libraries(ch020_rotation_height_demo PRIVATE ch020_rot_bst)
+
+# Chapter 021
+add_library(ch021_avl
+    021-avl-tree/src/int_avl.c
+)
+target_include_directories(ch021_avl PUBLIC 021-avl-tree/src)
+
+add_executable(ch021_avl_demo 021-avl-tree/examples/avl_demo.c)
+target_link_libraries(ch021_avl_demo PRIVATE ch021_avl)
+add_test(NAME ch021_avl_demo_smoke COMMAND ch021_avl_demo)
+
+add_executable(ch021_avl_tests 021-avl-tree/tests/test_avl.c)
+target_link_libraries(ch021_avl_tests PRIVATE ch021_avl)
+add_test(NAME ch021_avl_tests COMMAND ch021_avl_tests)
+
+add_executable(ch021_avl_vs_bst 021-avl-tree/benchmarks/avl_vs_bst.c)
+target_link_libraries(ch021_avl_vs_bst PRIVATE ch021_avl ch019_bst)

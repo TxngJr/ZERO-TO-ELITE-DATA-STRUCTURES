@@ -1,5 +1,21 @@
 # Changelog
 
+## Batch 07 — Chapters 019–021
+
+Added:
+- Binary Search Tree with strict unique-key ordering
+- search/insert/delete including 0/1/2-child cases
+- min/max, predecessor/successor and transplant
+- 30,000-operation randomized BST differential test
+- explicit rotation teaching tree with left/right and LR/RL tests
+- proof-oriented rotation/inorder preservation material
+- full AVL Tree with stored height metadata
+- LL/RR/LR/RL automatic rebalancing
+- AVL deletion rebalancing
+- 40,000-operation randomized AVL differential test
+- plain-BST vs AVL sorted-input benchmark
+- Batch 07 negative review
+
 ## Batch 06 — Chapters 016–018
 
 Added:

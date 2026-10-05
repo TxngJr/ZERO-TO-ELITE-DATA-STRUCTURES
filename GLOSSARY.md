@@ -72,3 +72,10 @@
 - Structural Induction — proof technique ที่พิสูจน์ base tree และ combine จาก subtrees
 - Subtree — node หนึ่งพร้อม descendants ทั้งหมด
 - Tree Width — จำนวน nodes ใน level หนึ่ง; maximum width คือค่าสูงสุดทุก level
+
+- AVL Tree — self-balancing BST ที่รักษาความต่าง subtree heights ไม่เกิน 1 ทุก node
+- Balance Factor — ใน course นี้คือ height(left) - height(right)
+- Binary Search Tree (BST) — Binary Tree ที่รักษา ordering invariant ของ keys
+- Inorder Successor — key ถัดไปตาม sorted inorder order
+- Rotation — local pointer transformation ที่เปลี่ยน tree shape แต่รักษา inorder/BST ordering
+- Transplant — BST helper ที่แทน subtree หนึ่งด้วยอีก subtree ณ ตำแหน่งเดิม

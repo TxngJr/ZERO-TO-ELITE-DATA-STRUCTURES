@@ -4,30 +4,33 @@
 
 ## Current Progress
 
-**Batch 06 — Chapters 016–018 complete**
+**Batch 07 — Chapters 019–021 complete**
 
-1. [001 Programming Foundations](./001-programming-foundations/)
-2. [002 Memory Fundamentals](./002-memory-fundamentals/)
-3. [003 Abstract Data Type](./003-abstract-data-type/)
-4. [004 Complexity Analysis](./004-complexity-analysis/)
-5. [005 Recursion & Iteration](./005-recursion-iteration/)
-6. [006 Arrays](./006-arrays/)
-7. [007 Strings](./007-strings/)
-8. [008 Linked Lists](./008-linked-lists/)
-9. [009 Stack](./009-stack/)
-10. [010 Queue](./010-queue/)
-11. [011 Deque](./011-deque/)
-12. [012 Priority Queue](./012-priority-queue/)
-13. [013 Hashing Fundamentals](./013-hashing-fundamentals/)
-14. [014 Hash Table](./014-hash-table/)
-15. [015 Hash Set / Hash Map](./015-hash-set-hash-map/)
-16. [016 Trees Fundamentals](./016-trees-fundamentals/)
-17. [017 Binary Tree](./017-binary-tree/)
-18. [018 Tree Traversal](./018-tree-traversal/)
+1. 001 Programming Foundations
+2. 002 Memory Fundamentals
+3. 003 Abstract Data Type
+4. 004 Complexity Analysis
+5. 005 Recursion & Iteration
+6. 006 Arrays
+7. 007 Strings
+8. 008 Linked Lists
+9. 009 Stack
+10. 010 Queue
+11. 011 Deque
+12. 012 Priority Queue
+13. 013 Hashing Fundamentals
+14. 014 Hash Table
+15. 015 Hash Set / Hash Map
+16. 016 Trees Fundamentals
+17. 017 Binary Tree
+18. 018 Tree Traversal
+19. [019 Binary Search Tree](./019-binary-search-tree/)
+20. [020 Balanced BST](./020-balanced-bst/)
+21. [021 AVL Tree](./021-avl-tree/)
 
-สถานะ: **18 / 170 chapters**
+สถานะ: **21 / 170 chapters**
 
-Next: **019 Binary Search Tree → 020 Balanced BST → 021 AVL Tree**
+Next: **022 Red-Black Tree → 023 Splay Tree → 024 Treap**
 
 ## Build
 
@@ -41,4 +44,4 @@ Sanitizers:
     cmake --build build-asan
     ctest --test-dir build-asan --output-on-failure
 
-ดู [ROADMAP.md](./ROADMAP.md), [COURSE_STATE.md](./COURSE_STATE.md), [COVERAGE_MATRIX.md](./COVERAGE_MATRIX.md) และ [GLOSSARY.md](./GLOSSARY.md) สำหรับภาพรวมหลักสูตร.
+ดู ROADMAP.md, COURSE_STATE.md, COVERAGE_MATRIX.md และ GLOSSARY.md สำหรับภาพรวม.
