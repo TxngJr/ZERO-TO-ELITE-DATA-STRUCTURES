@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 18 — Chapters 052–054 complete**
+**Batch 19 — Chapters 055–057 complete**
 
 ล่าสุด:
-- [052 Order Statistic Tree](./052-order-statistic-tree/)
-- [053 Cartesian Tree](./053-cartesian-tree/)
-- [054 KD-Tree](./054-kd-tree/)
+- [055 Quadtree](./055-quadtree/)
+- [056 Octree](./056-octree/)
+- [057 R-Tree](./057-r-tree/)
 
-สถานะ: **54 / 170 chapters**
+สถานะ: **57 / 170 chapters**
 
 Next:
 
-**055 Quadtree → 056 Octree → 057 R-Tree**
+**058 Spatial Hashing → 059 Suffix Array → 060 Suffix Tree**
 
 ## Build
 

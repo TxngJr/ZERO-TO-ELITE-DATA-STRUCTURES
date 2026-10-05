@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 18
+Current Batch: 19
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -57,54 +57,55 @@ Completed Chapters:
 - 052 Order Statistic Tree
 - 053 Cartesian Tree
 - 054 KD-Tree
+- 055 Quadtree
+- 056 Octree
+- 057 R-Tree
 
-Current Chapter: 054
+Current Chapter: 057
 
-Next Chapter: 055 Quadtree
+Next Chapter: 058 Spatial Hashing
 
 Concepts Covered:
-- all prior Chapters 001–051
-- subtree cardinality augmentation in balanced BSTs
-- O(log n) rank/select and rank-difference range counting
-- metadata repair through AVL rotations/deletion
-- Cartesian Tree sequence-order + heap-order dual invariant
-- linear monotonic-stack Cartesian construction
-- stable duplicate tie policy and original-index node identity
-- direct RMQ through Cartesian topology and its O(height) limitation
-- RMQ/LCA connection
-- alternating-axis KD partitioning
-- median-by-count static balancing
-- subtree spatial bounding boxes
-- rectangle pruning/full-cover subtree counting
-- nearest-neighbor branch-and-bound
-- point-to-box distance lower bounds
-- safe widened coordinate distance arithmetic
-- Range Tree vs KD-Tree time/space trade-offs
+- all prior Chapters 001–054
+- fixed 2D quadrant subdivision
+- bucketed Quadtree leaves
+- max-depth and unsplittable-cell termination
+- 3D octant subdivision and 2^d branching intuition
+- subtree spatial bounds and full-cover count pruning
+- dynamic R-Tree bounding hierarchy
+- Minimum Bounding Rectangles
+- least-area-enlargement subtree selection
+- quadratic split seed/distribution heuristics
+- minimum node occupancy
+- split propagation and root height growth
+- balanced leaf-depth invariant
+- spatial overlap vs fixed-partition trade-offs
 
 Structures Implemented:
 - all previous structures
-- IntOrderStatTree
-- IntCartesianTree
-- IntKDTree
+- IntQuadtree
+- IntOctree
+- IntRTree
 
 Tests Added:
-- Order Statistic Tree randomized differential workload: 40,000 operations
-- Cartesian Tree randomized RMQ: 50,000 queries
-- Cartesian duplicate and monotonic height-chain tests
-- KD-Tree randomized rectangle/nearest queries: 12,000
-- KD duplicate-coordinate and sizes 1..129 validation
+- Quadtree randomized range queries: 12,000 over 5,000 points
+- Quadtree coincident-coordinate stress test
+- Octree randomized box queries: 8,000 over 3,000 points
+- Octree coincident-coordinate stress test
+- R-Tree randomized overlap queries: 12,000 over 5,000 rectangles
+- R-Tree validation after repeated early splits
 
 Benchmarks Added:
-- Order Statistic rank/select scaling
-- Cartesian shape/build benchmark
-- KD build and mixed nearest/range-query benchmark
+- Quadtree spatial count benchmark
+- Octree 3D box count benchmark
+- R-Tree dynamic insert/query benchmark
 
 Known Dependencies:
-- 055 introduces hierarchical 2D quadrant subdivision
-- 056 extends spatial subdivision to 3D octants
-- 057 introduces bounding-rectangle hierarchy with R-Tree
+- 058 introduces grid-based spatial hashing
+- 059 starts suffix indexing with Suffix Array
+- 060 introduces explicit Suffix Tree structure
 
 Open Problems:
-- none if Batch 18 CI passes
+- none if Batch 19 CI passes
 
-Coverage: 54 / 170 chapters
+Coverage: 57 / 170 chapters

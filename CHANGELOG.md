@@ -1,5 +1,30 @@
 # Changelog
 
+## Batch 19 — Chapters 055–057
+
+Added:
+- dynamic bucketed 2D point-region Quadtree
+- half-open quadrant partitioning with overflow-safe integer midpoint
+- duplicate-coordinate handling with max-depth / unsplittable-cell fallback
+- exact subtree_size and node-count validation
+- transactional pre-reservation before Quadtree bucket redistribution
+- 12,000 randomized Quadtree range queries over 5,000 points
+- dynamic 3D Octree with 8-bit octant routing
+- bucketed leaf splitting and coincident-point protection
+- exact 3D box pruning and subtree full-cover counting
+- transactional pre-reservation before Octree redistribution
+- 8,000 randomized Octree box queries over 3,000 points
+- dynamic 2D R-Tree with fixed M=4, m=2 teaching capacity
+- least-area-enlargement subtree selection
+- quadratic node split with minimum-fill enforcement
+- propagated splits and automatic root growth
+- preallocated full-parent/root split nodes to avoid half-propagated structural publication
+- half-open rectangle overlap count/report
+- validator for exact child MBRs, occupancy, balanced leaf depth, size and node count
+- 12,000 randomized R-Tree overlap queries over 5,000 rectangles
+- spatial scaling benchmarks for all three structures
+- Batch 19 negative review
+
 ## Batch 18 — Chapters 052–054
 
 Added:

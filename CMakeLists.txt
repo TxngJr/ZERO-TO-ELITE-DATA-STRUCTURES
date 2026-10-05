@@ -887,3 +887,55 @@ add_test(NAME ch054_kd_tree_tests COMMAND ch054_kd_tree_tests)
 
 add_executable(ch054_kd_query_benchmark 054-kd-tree/benchmarks/kd_query_benchmark.c)
 target_link_libraries(ch054_kd_query_benchmark PRIVATE ch054_kd_tree)
+
+
+# Chapter 055
+add_library(ch055_quadtree
+    055-quadtree/src/int_quadtree.c
+)
+target_include_directories(ch055_quadtree PUBLIC 055-quadtree/src)
+
+add_executable(ch055_quadtree_demo 055-quadtree/examples/quadtree_demo.c)
+target_link_libraries(ch055_quadtree_demo PRIVATE ch055_quadtree)
+add_test(NAME ch055_quadtree_demo_smoke COMMAND ch055_quadtree_demo)
+
+add_executable(ch055_quadtree_tests 055-quadtree/tests/test_quadtree.c)
+target_link_libraries(ch055_quadtree_tests PRIVATE ch055_quadtree)
+add_test(NAME ch055_quadtree_tests COMMAND ch055_quadtree_tests)
+
+add_executable(ch055_quadtree_benchmark 055-quadtree/benchmarks/quadtree_benchmark.c)
+target_link_libraries(ch055_quadtree_benchmark PRIVATE ch055_quadtree)
+
+# Chapter 056
+add_library(ch056_octree
+    056-octree/src/int_octree.c
+)
+target_include_directories(ch056_octree PUBLIC 056-octree/src)
+
+add_executable(ch056_octree_demo 056-octree/examples/octree_demo.c)
+target_link_libraries(ch056_octree_demo PRIVATE ch056_octree)
+add_test(NAME ch056_octree_demo_smoke COMMAND ch056_octree_demo)
+
+add_executable(ch056_octree_tests 056-octree/tests/test_octree.c)
+target_link_libraries(ch056_octree_tests PRIVATE ch056_octree)
+add_test(NAME ch056_octree_tests COMMAND ch056_octree_tests)
+
+add_executable(ch056_octree_benchmark 056-octree/benchmarks/octree_benchmark.c)
+target_link_libraries(ch056_octree_benchmark PRIVATE ch056_octree)
+
+# Chapter 057
+add_library(ch057_r_tree
+    057-r-tree/src/int_r_tree.c
+)
+target_include_directories(ch057_r_tree PUBLIC 057-r-tree/src)
+
+add_executable(ch057_r_tree_demo 057-r-tree/examples/r_tree_demo.c)
+target_link_libraries(ch057_r_tree_demo PRIVATE ch057_r_tree)
+add_test(NAME ch057_r_tree_demo_smoke COMMAND ch057_r_tree_demo)
+
+add_executable(ch057_r_tree_tests 057-r-tree/tests/test_r_tree.c)
+target_link_libraries(ch057_r_tree_tests PRIVATE ch057_r_tree)
+add_test(NAME ch057_r_tree_tests COMMAND ch057_r_tree_tests)
+
+add_executable(ch057_r_tree_benchmark 057-r-tree/benchmarks/r_tree_benchmark.c)
+target_link_libraries(ch057_r_tree_benchmark PRIVATE ch057_r_tree)

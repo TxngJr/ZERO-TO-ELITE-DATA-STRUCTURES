@@ -171,3 +171,12 @@
 - Bounding Box — axis-aligned coordinate bounds ที่สรุป spatial extent ของ subtree เพื่อใช้ pruning
 - Nearest-Neighbor Search — การค้นหาจุดที่มีระยะน้อยที่สุดจาก query point
 - Branch and Bound — การใช้ lower bound เพื่อตัด search regions ที่ไม่สามารถปรับคำตอบปัจจุบันได้
+
+- Quadtree — hierarchical 2D spatial subdivision ที่แบ่ง rectangle เป็น 4 quadrants ซ้ำ ๆ
+- Octree — 3D spatial subdivision ที่แบ่ง box เป็น 8 octants
+- Bucketed Leaf — leaf ที่เก็บหลาย records ก่อน split เพื่อลด node overhead และรองรับ coincident coordinates
+- Octant — หนึ่งใน 8 subregions จากการแบ่ง 3D box ด้วย 3 midpoint planes
+- R-Tree — balanced spatial index ที่จัดกลุ่ม rectangles ด้วย Minimum Bounding Rectangles
+- Minimum Bounding Rectangle (MBR) — rectangle เล็กที่สุดที่ครอบ entries หรือ child subtree ทั้งหมด
+- Area Enlargement — พื้นที่ MBR ที่เพิ่มขึ้นเมื่อรวม rectangle ใหม่ ใช้เป็น choose-subtree heuristic ใน R-Tree
+- Quadratic Split — R-Tree split heuristic ที่เลือก seed pair จาก dead-space สูง แล้วกระจาย entries ด้วย enlargement preference
