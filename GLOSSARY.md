@@ -190,3 +190,13 @@
 - Suffix Tree — compressed trie ของ suffix ทั้งหมดใน text
 - Unique Sentinel — symbol พิเศษที่ไม่อยู่ใน alphabet ใช้บังคับให้ทุก suffix จบเป็น explicit leaf
 - Pattern Locus — จุดบน node หรือกลาง edge ที่ pattern traversal จบใน suffix tree
+
+- Suffix Automaton (SAM) — minimal DFA ที่ recognize substring language ของ text หนึ่งตัว โดย states แทน end-position equivalence classes
+- Clone State — SAM state ที่ copy transitions/link เพื่อ split equivalence class ระหว่าง online extension
+- Endpos — set ของตำแหน่งจบที่ substring ปรากฏใน text
+- Aho-Corasick Automaton — trie หลาย pattern ที่เสริม failure/output links เพื่อ multi-pattern matching ใน text pass เดียว
+- Failure Link — link ไป longest proper suffix state ที่ยังเป็น trie prefix
+- Output Link — link ไป suffix state ที่ใกล้ที่สุดซึ่งมี terminal pattern outputs
+- Rolling Hash — fingerprint ของ sequence/substrings ที่ update/extract ได้ด้วย polynomial prefix arithmetic
+- Rabin-Karp — string-search method ที่ใช้ rolling hash กรอง candidate windows ก่อน exact verification
+- Hash Collision — กรณีข้อมูลต่างกันให้ hash เท่ากัน จึงห้ามถือ hash equality เป็น proof ของ equality

@@ -991,3 +991,55 @@ add_test(NAME ch060_suffix_tree_tests COMMAND ch060_suffix_tree_tests)
 
 add_executable(ch060_suffix_tree_benchmark 060-suffix-tree/benchmarks/suffix_tree_benchmark.c)
 target_link_libraries(ch060_suffix_tree_benchmark PRIVATE ch060_suffix_tree)
+
+
+# Chapter 061
+add_library(ch061_suffix_automaton
+    061-suffix-automaton/src/byte_suffix_automaton.c
+)
+target_include_directories(ch061_suffix_automaton PUBLIC 061-suffix-automaton/src)
+
+add_executable(ch061_suffix_automaton_demo 061-suffix-automaton/examples/suffix_automaton_demo.c)
+target_link_libraries(ch061_suffix_automaton_demo PRIVATE ch061_suffix_automaton)
+add_test(NAME ch061_suffix_automaton_demo_smoke COMMAND ch061_suffix_automaton_demo)
+
+add_executable(ch061_suffix_automaton_tests 061-suffix-automaton/tests/test_suffix_automaton.c)
+target_link_libraries(ch061_suffix_automaton_tests PRIVATE ch061_suffix_automaton)
+add_test(NAME ch061_suffix_automaton_tests COMMAND ch061_suffix_automaton_tests)
+
+add_executable(ch061_suffix_automaton_benchmark 061-suffix-automaton/benchmarks/suffix_automaton_benchmark.c)
+target_link_libraries(ch061_suffix_automaton_benchmark PRIVATE ch061_suffix_automaton)
+
+# Chapter 062
+add_library(ch062_aho_corasick
+    062-aho-corasick-automaton/src/byte_aho_corasick.c
+)
+target_include_directories(ch062_aho_corasick PUBLIC 062-aho-corasick-automaton/src)
+
+add_executable(ch062_aho_corasick_demo 062-aho-corasick-automaton/examples/aho_corasick_demo.c)
+target_link_libraries(ch062_aho_corasick_demo PRIVATE ch062_aho_corasick)
+add_test(NAME ch062_aho_corasick_demo_smoke COMMAND ch062_aho_corasick_demo)
+
+add_executable(ch062_aho_corasick_tests 062-aho-corasick-automaton/tests/test_aho_corasick.c)
+target_link_libraries(ch062_aho_corasick_tests PRIVATE ch062_aho_corasick)
+add_test(NAME ch062_aho_corasick_tests COMMAND ch062_aho_corasick_tests)
+
+add_executable(ch062_aho_corasick_benchmark 062-aho-corasick-automaton/benchmarks/aho_corasick_benchmark.c)
+target_link_libraries(ch062_aho_corasick_benchmark PRIVATE ch062_aho_corasick)
+
+# Chapter 063
+add_library(ch063_rolling_hash
+    063-rolling-hash-structures/src/byte_rolling_hash.c
+)
+target_include_directories(ch063_rolling_hash PUBLIC 063-rolling-hash-structures/src)
+
+add_executable(ch063_rolling_hash_demo 063-rolling-hash-structures/examples/rolling_hash_demo.c)
+target_link_libraries(ch063_rolling_hash_demo PRIVATE ch063_rolling_hash)
+add_test(NAME ch063_rolling_hash_demo_smoke COMMAND ch063_rolling_hash_demo)
+
+add_executable(ch063_rolling_hash_tests 063-rolling-hash-structures/tests/test_rolling_hash.c)
+target_link_libraries(ch063_rolling_hash_tests PRIVATE ch063_rolling_hash)
+add_test(NAME ch063_rolling_hash_tests COMMAND ch063_rolling_hash_tests)
+
+add_executable(ch063_rolling_hash_benchmark 063-rolling-hash-structures/benchmarks/rolling_hash_benchmark.c)
+target_link_libraries(ch063_rolling_hash_benchmark PRIVATE ch063_rolling_hash)

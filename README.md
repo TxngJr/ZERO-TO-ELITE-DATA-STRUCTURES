@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 20 — Chapters 058–060 complete**
+**Batch 21 — Chapters 061–063 complete**
 
 ล่าสุด:
-- [058 Spatial Hashing](./058-spatial-hashing/)
-- [059 Suffix Array](./059-suffix-array/)
-- [060 Suffix Tree](./060-suffix-tree/)
+- [061 Suffix Automaton](./061-suffix-automaton/)
+- [062 Aho-Corasick Automaton](./062-aho-corasick-automaton/)
+- [063 Rolling Hash Structures](./063-rolling-hash-structures/)
 
-สถานะ: **60 / 170 chapters**
+สถานะ: **63 / 170 chapters**
 
 Next:
 
-**061 Suffix Automaton → 062 Aho-Corasick Automaton → 063 Rolling Hash Structures**
+**064 Bitset → 065 Bitmap → 066 Bit Vector**
 
 ## Build
 

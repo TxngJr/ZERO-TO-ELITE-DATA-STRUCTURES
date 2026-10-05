@@ -1,5 +1,27 @@
 # Changelog
 
+## Batch 21 — Chapters 061–063
+
+Added:
+- byte-oriented sparse-transition Suffix Automaton
+- online SAM extension with clone states and suffix-link redirection
+- occurrence propagation by descending max_len order
+- substring contains/count, distinct-substring count and longest-repeated-substring length
+- overflow-safe theoretical 2n-1 state-bound validation
+- randomized SAM pattern/count/distinct/repetition comparisons against naive logic
+- sparse byte Aho-Corasick trie with BFS failure-link construction
+- output-link chains instead of copying inherited outputs
+- duplicate pattern bytes with independent pattern IDs
+- binary-safe match counting/reporting with end-position metadata
+- randomized multi-pattern AC matching against naive per-pattern scans
+- static double polynomial Rolling Hash with two prime moduli
+- O(1) raw substring-hash extraction from prefix/power tables
+- collision-aware exact substring equality using memcmp verification after double-hash match
+- verified Rabin-Karp contains/count/report
+- exact LCP API using hash probes plus authoritative byte verification
+- randomized rolling-hash equality/LCP/search comparisons against naive byte logic
+- Batch 21 negative review
+
 ## Batch 20 — Chapters 058–060
 
 Added:

@@ -21,10 +21,11 @@
 - Batch 17: 049–051
 - Batch 18: 052–054
 - Batch 19: 055–057
-- Batch 20: 058 Spatial Hashing, 059 Suffix Array, 060 Suffix Tree
+- Batch 20: 058–060
+- Batch 21: 061 Suffix Automaton, 062 Aho-Corasick Automaton, 063 Rolling Hash Structures
 
-## Batch 21 — Next
+## Batch 22 — Next
 
-061 Suffix Automaton
-062 Aho-Corasick Automaton
-063 Rolling Hash Structures
+064 Bitset
+065 Bitmap
+066 Bit Vector

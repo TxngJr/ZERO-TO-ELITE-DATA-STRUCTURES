@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 20
+Current Batch: 21
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -63,51 +63,52 @@ Completed Chapters:
 - 058 Spatial Hashing
 - 059 Suffix Array
 - 060 Suffix Tree
+- 061 Suffix Automaton
+- 062 Aho-Corasick Automaton
+- 063 Rolling Hash Structures
 
-Current Chapter: 060
+Current Chapter: 063
 
-Next Chapter: 061 Suffix Automaton
+Next Chapter: 064 Bitset
 
 Concepts Covered:
-- all prior Chapters 001–057
-- sparse uniform-grid spatial hashing
-- correct floor division for negative grid coordinates
-- separate-chaining cell hashing and rehashing
-- cell-size trade-offs and candidate filtering
-- suffix lexicographic indexing
-- prefix-doubling suffix-array construction
-- inverse suffix ranks
-- Kasai LCP construction
-- binary-search pattern ranges over suffix arrays
-- compressed suffix tries
-- unique terminator/sentinel outside byte alphabet
-- compressed edge labels as source ranges
-- pattern locus and descendant suffix leaves
-- explicit distinction between naive O(n^2) suffix-tree build and Ukkonen O(n)
+- all prior Chapters 001–060
+- substring language represented by suffix automaton states
+- end-position equivalence and suffix links
+- clone-state online SAM construction
+- occurrence propagation and distinct-substring formula
+- multi-pattern trie matching
+- Aho-Corasick failure/output links
+- duplicate pattern IDs and binary-safe match reporting
+- polynomial prefix hashing
+- double hash pairs and collision risk
+- O(1) raw substring-hash extraction
+- verified Rabin-Karp matching
+- exact substring equality with hash rejection + byte verification
+- hash-assisted LCP
 
 Structures Implemented:
 - all previous structures
-- IntSpatialHash
-- ByteSuffixArray
-- ByteSuffixTree
+- ByteSuffixAutomaton
+- ByteAhoCorasick
+- ByteRollingHash
 
 Tests Added:
-- Spatial Hash randomized differential queries: 15,000 over 6,000 points
-- negative-grid boundary tests
-- Suffix Array banana/binary/randomized naive-order comparison
-- Suffix Tree banana/binary/repeated/randomized occurrence comparisons
+- SAM randomized pattern-count comparisons and naive distinct/repetition checks
+- Aho-Corasick randomized multi-pattern matching against naive scans
+- Rolling Hash randomized equality/LCP/pattern-search comparisons
 
 Benchmarks Added:
-- Spatial Hash cell-size comparison benchmark
-- Suffix Array build scaling benchmark
-- naive compressed Suffix Tree build scaling benchmark
+- Suffix Automaton build/state-count scaling
+- Aho-Corasick dictionary build + million-byte scan
+- Rolling Hash million-byte build + 500,000 range-hash probes
 
 Known Dependencies:
-- 061 introduces Suffix Automaton states, suffix links and substring language
-- 062 introduces Aho-Corasick failure links for multi-pattern matching
-- 063 studies polynomial/rolling hash substring structures
+- 064 begins compact bit containers with Bitset
+- 065 distinguishes bitmap use cases/representations
+- 066 develops rank/select-capable Bit Vector foundations
 
 Open Problems:
-- none if Batch 20 CI passes
+- none if Batch 21 CI passes
 
-Coverage: 60 / 170 chapters
+Coverage: 63 / 170 chapters
