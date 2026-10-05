@@ -9,6 +9,20 @@ static uint32_t next_rng(uint32_t *state) {
     return *state;
 }
 
+static size_t random_vertex(
+    uint32_t *state,
+    size_t vertex_count
+) {
+    /*
+     * Use upper LCG bits for bounded sampling.
+     * Consecutive low bits of this LCG are strongly correlated;
+     * with %96 they previously produced only a small repeating
+     * subset of directed pairs and the edge-generation loop
+     * could never reach TARGET_EDGES.
+     */
+    return (size_t)(next_rng(state) >> 8) % vertex_count;
+}
+
 static GraphRepr *build_graph(
     GraphReprKind kind,
     bool directed
@@ -132,9 +146,13 @@ static void test_random_cross_representation(void) {
 
     uint32_t rng=0x40A55123u;
 
+    size_t attempts=0;
+
     while(graph_repr_edge_count(graphs[0])<TARGET_EDGES) {
-        const size_t u=next_rng(&rng)%V;
-        const size_t v=next_rng(&rng)%V;
+        assert(attempts++ < TARGET_EDGES * 1000U);
+
+        const size_t u=random_vertex(&rng,V);
+        const size_t v=random_vertex(&rng,V);
 
         if(u==v)continue;
 
@@ -148,7 +166,7 @@ static void test_random_cross_representation(void) {
     }
 
     for(int round=0;round<ROUNDS;++round) {
-        const size_t source=next_rng(&rng)%V;
+        const size_t source=random_vertex(&rng,V);
 
         for(size_t k=0;k<3;++k) {
             assert(graph_traversal_bfs(
