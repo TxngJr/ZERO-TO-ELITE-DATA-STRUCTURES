@@ -4,19 +4,18 @@
 
 ## Current Progress
 
-**Batch 08 — Chapters 022–024 complete**
+**Batch 09 — Chapters 025–027 complete**
 
-Completed through:
-- 019 Binary Search Tree
-- 020 Balanced BST
-- 021 AVL Tree
-- [022 Red-Black Tree](./022-red-black-tree/)
-- [023 Splay Tree](./023-splay-tree/)
-- [024 Treap](./024-treap/)
+ล่าสุด:
+- [025 Heap](./025-heap/)
+- [026 D-ary Heap](./026-d-ary-heap/)
+- [027 Binomial Heap](./027-binomial-heap/)
 
-สถานะ: **24 / 170 chapters**
+สถานะ: **27 / 170 chapters**
 
-Next: **025 Heap → 026 D-ary Heap → 027 Binomial Heap**
+Next:
+
+**028 Fibonacci Heap → 029 Trie / Prefix Tree → 030 Radix Tree / Patricia Trie**
 
 ## Build
 

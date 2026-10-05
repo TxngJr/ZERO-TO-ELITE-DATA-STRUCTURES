@@ -87,3 +87,10 @@
 - Zig — single splay rotation เมื่อ node มี parent แต่ไม่มี grandparent
 - Zig-Zig — splay case ที่ node และ parent อยู่ด้านเดียวกันของ grandparent
 - Zig-Zag — splay case ที่ node และ parent อยู่คนละทิศเมื่อเทียบกับ grandparent
+
+- Binomial Heap — meldable heap ที่เก็บ forest ของ Binomial Trees โดยมี root degree ไม่ซ้ำ
+- Binomial Tree — tree family B_k ที่มี 2^k nodes และ root degree k
+- BUILD-HEAP — bottom-up heap construction ที่ใช้เวลารวม Theta(n) สำหรับ array heap
+- D-ary Heap — complete heap ที่แต่ละ node มีได้สูงสุด d children
+- Heapify — กระบวนการคืน heap-order invariant ให้ subtree/array
+- Meld — การรวม heap สองก้อนให้เป็น heap เดียวโดยรักษา invariants

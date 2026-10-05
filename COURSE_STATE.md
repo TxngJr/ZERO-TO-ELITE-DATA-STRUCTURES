@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 08
+Current Batch: 09
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -27,61 +27,66 @@ Completed Chapters:
 - 022 Red-Black Tree
 - 023 Splay Tree
 - 024 Treap
+- 025 Heap
+- 026 D-ary Heap
+- 027 Binomial Heap
 
-Current Chapter: 024
+Current Chapter: 027
 
-Next Chapter: 025 Heap
+Next Chapter: 028 Fibonacci Heap
 
 Concepts Covered:
-- previous Chapters 001–021
-- Red-Black color and black-height invariants
-- insert recoloring and rotations
-- delete extra-black/sibling-case fix-up
-- deterministic logarithmic Red-Black height
-- self-adjusting Splay Trees
-- Zig / Zig-Zig / Zig-Zag
-- representation-mutating search
-- worst-case vs amortized complexity
-- Treap dual BST/heap invariants
-- random-priority expected balance
-- deterministic priority tie-breaking
-- merge-based Treap deletion
-- deterministic invariants vs probabilistic complexity assumptions
+- all prior Chapters 001–024
+- complete-tree heap representation
+- Min-Heap implementation
+- bottom-up BUILD-HEAP Theta(n)
+- in-place Heap Sort
+- arbitrary heap replacement
+- D-ary index formulas and branching-factor trade-offs
+- O(log_d n) upward paths
+- O(d log_d n) downward extraction
+- Binomial Tree B_k structure
+- binary-counter analogy for root degrees
+- root-list merge and consolidation
+- destructive meld
+- extract-min child reversal
+- handle-based decrease-key/delete semantics
+- pointer-forest vs array-heap trade-offs
 
 Structures Implemented:
 - all previous structures
-- IntRedBlackTree
-- IntSplayTree
-- IntTreap
+- IntMinHeap
+- in-place integer Heap Sort
+- IntDaryHeap
+- IntBinomialHeap
 
 Tests Added:
-- Red-Black deterministic insert/delete sequences
-- 40,000-step randomized Red-Black differential test
-- Red-Black sorted-input height test
-- Splay root-after-access behavior
-- 30,000-step randomized Splay differential test
-- Treap explicit-priority/tie-break tests
-- Treap sorted-random-priority height test
-- 35,000-step randomized Treap differential test
+- Heap randomized test: 30,000 operations
+- Heap Sort differential check against qsort
+- D-ary randomized tests: 20,000 operations each for d=2,3,4,8,16
+- Binomial meld/decrease/delete deterministic tests
+- duplicate-key Binomial Heap tests
+- foreign-handle deletion rejection
+- Binomial randomized test: 25,000 operations
 
 Benchmarks Added:
-- Red-Black vs AVL vs plain BST
-- Splay hot-key access workload
-- Treap vs plain BST on sorted keys
+- bottom-up BUILD-HEAP vs repeated push
+- d=2/4/8/16 mixed push/pop benchmark
+- Binomial meld vs Binary Heap incremental pop/push merge
 
 Known Dependencies:
-- Chapter 025 revisits heap as a full structure rather than only Priority Queue
-- Chapter 026 generalizes to D-ary Heap
-- Chapter 027 introduces meldable Binomial Heap
+- 028 Fibonacci Heap builds on meldable-heap concepts and lazy consolidation
+- 029 Trie begins prefix/string indexing structures
+- 030 Radix/Patricia Trie compresses unary paths
 
 Open Problems:
-- none if Batch 08 CI passes
+- none if Batch 09 CI passes
 
 Cross References:
-- 020 rotations → Red-Black and Splay mechanics
-- 021 AVL → deterministic balance comparison
-- 004 amortized analysis → Splay guarantees
-- 012 heap invariant → Treap priority order
-- 132 Randomized Structures later formalizes randomized guarantees
+- 012 Priority Queue → heap as implementation
+- 016 Complete Binary Tree → array heap shape
+- 025 Heap → 026 branching generalization
+- 025 array heap → 027 pointer/meld trade-off
+- 027 Binomial Heap → 028 Fibonacci Heap
 
-Coverage: 24 / 170 chapters
+Coverage: 27 / 170 chapters

@@ -9,12 +9,13 @@
 - Batch 05: 013–015
 - Batch 06: 016–018
 - Batch 07: 019–021
-- Batch 08: 022 Red-Black Tree, 023 Splay Tree, 024 Treap
+- Batch 08: 022–024
+- Batch 09: 025 Heap, 026 D-ary Heap, 027 Binomial Heap
 
-## Batch 09 — Next
+## Batch 10 — Next
 
-025 Heap
-026 D-ary Heap
-027 Binomial Heap
+028 Fibonacci Heap
+029 Trie / Prefix Tree
+030 Radix Tree / Patricia Trie
 
 เดินหน้าครั้งละ 3 chapters ตาม ROADMAP.md.

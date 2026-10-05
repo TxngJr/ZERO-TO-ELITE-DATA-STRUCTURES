@@ -1,5 +1,28 @@
 # Changelog
 
+## Batch 09 — Chapters 025–027
+
+Added:
+- Heap deep dive beyond Priority Queue
+- Integer Min-Heap with bottom-up BUILD-HEAP
+- in-place Heap Sort
+- 30,000-operation randomized heap test
+- bottom-up heapify vs repeated-push benchmark
+- runtime D-ary Min-Heap with overflow-safe child indexing
+- d=2/3/4/8/16 randomized validation
+- branching-factor performance benchmark
+- Binomial Heap forest representation
+- root-list merge and degree consolidation
+- destructive meld/union
+- extract-min with child-list reversal
+- decrease-key and delete by live node handle
+- structural B_k validator
+- 25,000-operation randomized Binomial Heap test
+- Binomial meld vs incremental Binary Heap merge benchmark
+- Batch 09 negative review
+
+# Changelog
+
 ## Batch 08 — Chapters 022–024
 
 Added:

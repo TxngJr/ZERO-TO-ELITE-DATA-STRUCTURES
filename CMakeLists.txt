@@ -364,3 +364,56 @@ add_test(NAME ch024_treap_tests COMMAND ch024_treap_tests)
 
 add_executable(ch024_treap_vs_bst 024-treap/benchmarks/treap_vs_bst.c)
 target_link_libraries(ch024_treap_vs_bst PRIVATE ch024_treap ch019_bst)
+
+
+# Chapter 025
+add_library(ch025_heap
+    025-heap/src/int_min_heap.c
+    025-heap/src/heap_sort.c
+)
+target_include_directories(ch025_heap PUBLIC 025-heap/src)
+
+add_executable(ch025_heap_demo 025-heap/examples/heap_demo.c)
+target_link_libraries(ch025_heap_demo PRIVATE ch025_heap)
+add_test(NAME ch025_heap_demo_smoke COMMAND ch025_heap_demo)
+
+add_executable(ch025_heap_tests 025-heap/tests/test_heap.c)
+target_link_libraries(ch025_heap_tests PRIVATE ch025_heap)
+add_test(NAME ch025_heap_tests COMMAND ch025_heap_tests)
+
+add_executable(ch025_build_heap_benchmark 025-heap/benchmarks/build_heap_benchmark.c)
+target_link_libraries(ch025_build_heap_benchmark PRIVATE ch025_heap)
+
+# Chapter 026
+add_library(ch026_dary_heap
+    026-d-ary-heap/src/int_dary_heap.c
+)
+target_include_directories(ch026_dary_heap PUBLIC 026-d-ary-heap/src)
+
+add_executable(ch026_dary_heap_demo 026-d-ary-heap/examples/dary_heap_demo.c)
+target_link_libraries(ch026_dary_heap_demo PRIVATE ch026_dary_heap)
+add_test(NAME ch026_dary_heap_demo_smoke COMMAND ch026_dary_heap_demo)
+
+add_executable(ch026_dary_heap_tests 026-d-ary-heap/tests/test_dary_heap.c)
+target_link_libraries(ch026_dary_heap_tests PRIVATE ch026_dary_heap)
+add_test(NAME ch026_dary_heap_tests COMMAND ch026_dary_heap_tests)
+
+add_executable(ch026_dary_benchmark 026-d-ary-heap/benchmarks/dary_benchmark.c)
+target_link_libraries(ch026_dary_benchmark PRIVATE ch026_dary_heap)
+
+# Chapter 027
+add_library(ch027_binomial_heap
+    027-binomial-heap/src/int_binomial_heap.c
+)
+target_include_directories(ch027_binomial_heap PUBLIC 027-binomial-heap/src)
+
+add_executable(ch027_binomial_heap_demo 027-binomial-heap/examples/binomial_heap_demo.c)
+target_link_libraries(ch027_binomial_heap_demo PRIVATE ch027_binomial_heap)
+add_test(NAME ch027_binomial_heap_demo_smoke COMMAND ch027_binomial_heap_demo)
+
+add_executable(ch027_binomial_heap_tests 027-binomial-heap/tests/test_binomial_heap.c)
+target_link_libraries(ch027_binomial_heap_tests PRIVATE ch027_binomial_heap)
+add_test(NAME ch027_binomial_heap_tests COMMAND ch027_binomial_heap_tests)
+
+add_executable(ch027_meld_benchmark 027-binomial-heap/benchmarks/meld_benchmark.c)
+target_link_libraries(ch027_meld_benchmark PRIVATE ch027_binomial_heap ch025_heap)
