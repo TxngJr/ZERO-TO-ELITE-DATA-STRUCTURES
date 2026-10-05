@@ -137,3 +137,10 @@
 - Hysteresis — การใช้ threshold ขึ้น/ลงคนละค่าเพื่อลดการสลับ state ถี่ ๆ ใกล้ boundary
 - Topological Order — ลำดับ vertices ของ DAG ที่ทุก edge u→v มี u อยู่ก่อน v
 - Traversal Parent — vertex ที่ค้นพบ child เป็นครั้งแรกและสร้าง traversal-tree edge
+
+- Segment Tree — hierarchical interval structure ที่ cache associative aggregates เพื่อรองรับ point update และ range query แบบ logarithmic
+- Monoid — associative combine operation พร้อม identity; มุมมองทั่วไปที่อธิบาย range aggregates หลายชนิดใน Segment Tree
+- Lazy Propagation — เทคนิคเก็บ deferred update tag ที่ node เพื่อเลื่อนงานลง descendants จนกว่าจะจำเป็น
+- Lazy Tag — metadata ที่แทน update ซึ่งสะท้อนใน aggregate ของ node แล้วแต่ยังอาจไม่ถูก push ลง children
+- Dynamic Segment Tree — sparse pointer-based Segment Tree ที่สร้างเฉพาะ nodes บน coordinate paths ที่ถูกใช้งาน
+- Coordinate Universe — ช่วงค่าพิกัดทั้งหมดที่ structure รองรับ แม้ตำแหน่งส่วนใหญ่จะไม่ถูก materialize

@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 14 — Chapters 040–042 complete**
+**Batch 15 — Chapters 043–045 complete**
 
 ล่าสุด:
-- [040 Graph Traversal Structures](./040-graph-traversal-structures/)
-- [041 DAG Data Structures](./041-dag-data-structures/)
-- [042 Sparse vs Dense Graph Representation](./042-sparse-vs-dense-graph-representation/)
+- [043 Segment Tree](./043-segment-tree/)
+- [044 Lazy Propagation Segment Tree](./044-lazy-propagation-segment-tree/)
+- [045 Dynamic Segment Tree](./045-dynamic-segment-tree/)
 
-สถานะ: **42 / 170 chapters**
+สถานะ: **45 / 170 chapters**
 
 Next:
 
-**043 Segment Tree → 044 Lazy Propagation Segment Tree → 045 Dynamic Segment Tree**
+**046 Persistent Segment Tree → 047 Fenwick Tree / Binary Indexed Tree → 048 Sparse Table**
 
 ## Build
 

@@ -15,10 +15,11 @@
 - Batch 11: 031–033
 - Batch 12: 034–036
 - Batch 13: 037–039
-- Batch 14: 040 Graph Traversal Structures, 041 DAG Data Structures, 042 Sparse vs Dense Graph Representation
+- Batch 14: 040–042
+- Batch 15: 043 Segment Tree, 044 Lazy Propagation Segment Tree, 045 Dynamic Segment Tree
 
-## Batch 15 — Next
+## Batch 16 — Next
 
-043 Segment Tree
-044 Lazy Propagation Segment Tree
-045 Dynamic Segment Tree
+046 Persistent Segment Tree
+047 Fenwick Tree / Binary Indexed Tree
+048 Sparse Table

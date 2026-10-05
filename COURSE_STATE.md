@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 14
+Current Batch: 15
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -45,57 +45,57 @@ Completed Chapters:
 - 040 Graph Traversal Structures
 - 041 DAG Data Structures
 - 042 Sparse vs Dense Graph Representation
+- 043 Segment Tree
+- 044 Lazy Propagation Segment Tree
+- 045 Dynamic Segment Tree
 
-Current Chapter: 042
+Current Chapter: 045
 
-Next Chapter: 043 Segment Tree
+Next Chapter: 046 Persistent Segment Tree
 
 Concepts Covered:
-- all prior Chapters 001–039
-- traversal state separated from graph storage
-- visited/frontier/parent/depth/order workspaces
-- BFS FIFO frontier and shortest unweighted distances
-- iterative DFS explicit stack
-- path reconstruction through traversal parents
-- representation-sensitive traversal complexity
-- DAG acyclic invariant
-- sorted outgoing dependency vectors
-- cached indegree metadata
-- cycle-safe dynamic edge insertion
-- sources, sinks and Kahn topological order
-- density as E/max_possible_edges
-- sparse vs dense workload trade-offs
-- adaptive Adj List / Matrix backends
-- hysteresis with separate promote/demote thresholds
-- transactional semantic-preserving representation conversion
-- conversion latency and peak-memory trade-offs
+- all prior Chapters 001–042
+- interval hierarchy and half-open range contract
+- canonical interval decomposition
+- associative aggregate / monoid viewpoint
+- simultaneous sum and minimum caching
+- Theta(n) Segment Tree construction
+- O(log n) point updates and range queries
+- lazy range-add tags
+- push, pull and deferred-update invariants
+- const query via accumulated lazy carry
+- sparse coordinate universes
+- dynamic pointer-based interval materialization
+- NULL subtree as all-zero interval
+- overflow-safe uint64 midpoint
+- path sharing, zero-path pruning and sparse node counts
+- allocation-failure rollback for dynamic update paths
 
 Structures Implemented:
 - all previous structures
-- GraphTraversal
-- IntDAG
-- AdaptiveGraph
+- IntSegmentTree
+- LazySegmentTree
+- DynamicSegmentTree
 
 Tests Added:
-- deterministic BFS shortest-depth/path tests
-- deterministic DFS reachability tests
-- randomized cross-representation traversal comparison over 60 sources
-- DAG deterministic dependency/cycle-rejection tests
-- DAG randomized differential workload: 15,000 operations
-- AdaptiveGraph threshold switch + edge-weight preservation tests
-- AdaptiveGraph randomized differential: 20,000 operations each for directed and undirected modes
+- Segment Tree deterministic sum/min/update tests
+- Segment Tree randomized differential workload: 30,000 operations
+- Lazy Segment Tree overlapping range-add/query tests
+- Lazy randomized differential workload: 15,000 operations
+- Dynamic Segment Tree huge-domain/pruning tests
+- Dynamic randomized differential workload: 20,000 operations
 
 Benchmarks Added:
-- BFS across Edge List / Matrix / Adj List on sparse and dense-ish graphs
-- Kahn topological sort scaling
-- adaptive sparse -> dense -> sparse backend transition benchmark
+- mixed Segment Tree point-update/range-query scaling
+- Lazy Segment Tree range updates vs naive array
+- Dynamic Segment Tree on sparse [0,10^18) coordinate universe
 
 Known Dependencies:
-- 043 Segment Tree begins range-query data structures
-- 044 adds lazy propagation for range updates
-- 045 moves to dynamically allocated sparse segment trees
+- 046 introduces structural sharing and immutable historical Segment Tree versions
+- 047 introduces Fenwick Tree for compact prefix-aggregate workloads
+- 048 introduces Sparse Table for static idempotent range queries
 
 Open Problems:
-- none if Batch 14 CI passes
+- none if Batch 15 CI passes
 
-Coverage: 42 / 170 chapters
+Coverage: 45 / 170 chapters

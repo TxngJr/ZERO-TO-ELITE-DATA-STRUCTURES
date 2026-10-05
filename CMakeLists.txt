@@ -679,3 +679,55 @@ add_test(NAME ch042_adaptive_graph_tests COMMAND ch042_adaptive_graph_tests)
 
 add_executable(ch042_adaptive_density_benchmark 042-sparse-vs-dense-graph-representation/benchmarks/adaptive_density_benchmark.c)
 target_link_libraries(ch042_adaptive_density_benchmark PRIVATE ch042_adaptive_graph)
+
+
+# Chapter 043
+add_library(ch043_segment_tree
+    043-segment-tree/src/int_segment_tree.c
+)
+target_include_directories(ch043_segment_tree PUBLIC 043-segment-tree/src)
+
+add_executable(ch043_segment_tree_demo 043-segment-tree/examples/segment_tree_demo.c)
+target_link_libraries(ch043_segment_tree_demo PRIVATE ch043_segment_tree)
+add_test(NAME ch043_segment_tree_demo_smoke COMMAND ch043_segment_tree_demo)
+
+add_executable(ch043_segment_tree_tests 043-segment-tree/tests/test_segment_tree.c)
+target_link_libraries(ch043_segment_tree_tests PRIVATE ch043_segment_tree)
+add_test(NAME ch043_segment_tree_tests COMMAND ch043_segment_tree_tests)
+
+add_executable(ch043_segment_tree_benchmark 043-segment-tree/benchmarks/segment_tree_benchmark.c)
+target_link_libraries(ch043_segment_tree_benchmark PRIVATE ch043_segment_tree)
+
+# Chapter 044
+add_library(ch044_lazy_segment_tree
+    044-lazy-propagation-segment-tree/src/lazy_segment_tree.c
+)
+target_include_directories(ch044_lazy_segment_tree PUBLIC 044-lazy-propagation-segment-tree/src)
+
+add_executable(ch044_lazy_demo 044-lazy-propagation-segment-tree/examples/lazy_demo.c)
+target_link_libraries(ch044_lazy_demo PRIVATE ch044_lazy_segment_tree)
+add_test(NAME ch044_lazy_demo_smoke COMMAND ch044_lazy_demo)
+
+add_executable(ch044_lazy_segment_tree_tests 044-lazy-propagation-segment-tree/tests/test_lazy_segment_tree.c)
+target_link_libraries(ch044_lazy_segment_tree_tests PRIVATE ch044_lazy_segment_tree)
+add_test(NAME ch044_lazy_segment_tree_tests COMMAND ch044_lazy_segment_tree_tests)
+
+add_executable(ch044_lazy_vs_naive 044-lazy-propagation-segment-tree/benchmarks/lazy_vs_naive.c)
+target_link_libraries(ch044_lazy_vs_naive PRIVATE ch044_lazy_segment_tree)
+
+# Chapter 045
+add_library(ch045_dynamic_segment_tree
+    045-dynamic-segment-tree/src/dynamic_segment_tree.c
+)
+target_include_directories(ch045_dynamic_segment_tree PUBLIC 045-dynamic-segment-tree/src)
+
+add_executable(ch045_dynamic_demo 045-dynamic-segment-tree/examples/dynamic_demo.c)
+target_link_libraries(ch045_dynamic_demo PRIVATE ch045_dynamic_segment_tree)
+add_test(NAME ch045_dynamic_demo_smoke COMMAND ch045_dynamic_demo)
+
+add_executable(ch045_dynamic_segment_tree_tests 045-dynamic-segment-tree/tests/test_dynamic_segment_tree.c)
+target_link_libraries(ch045_dynamic_segment_tree_tests PRIVATE ch045_dynamic_segment_tree)
+add_test(NAME ch045_dynamic_segment_tree_tests COMMAND ch045_dynamic_segment_tree_tests)
+
+add_executable(ch045_sparse_universe_benchmark 045-dynamic-segment-tree/benchmarks/sparse_universe_benchmark.c)
+target_link_libraries(ch045_sparse_universe_benchmark PRIVATE ch045_dynamic_segment_tree)

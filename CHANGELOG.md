@@ -1,5 +1,26 @@
 # Changelog
 
+## Batch 15 — Chapters 043–045
+
+Added:
+- static int64 Segment Tree with half-open interval contract
+- simultaneous range-sum and range-min aggregates
+- Theta(n) recursive build, point-set and O(log n) range queries
+- 30,000-operation randomized Segment Tree differential test
+- Segment Tree mixed update/query scaling benchmark
+- Lazy Segment Tree with range-add tags
+- const range queries using accumulated ancestor lazy carry
+- exact deferred-tag structural validator
+- 15,000-operation randomized lazy-propagation differential test
+- lazy range-update vs naive-array benchmark
+- Dynamic Segment Tree over uint64_t coordinate domains
+- NULL-as-all-zero sparse subtree semantics
+- overflow-safe midpoint, sparse point-add allocation and zero-path pruning
+- allocation-failure rollback guard and node-count validation
+- 20,000-operation randomized Dynamic Segment Tree differential test
+- [0,10^18) sparse-universe benchmark
+- Batch 15 negative review
+
 ## Batch 14 — Chapters 040–042
 
 Added:
