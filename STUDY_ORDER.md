@@ -18,10 +18,11 @@
 - Batch 14: 040–042
 - Batch 15: 043–045
 - Batch 16: 046–048
-- Batch 17: 049 Interval Tree, 050 Interval Heap, 051 Range Tree
+- Batch 17: 049–051
+- Batch 18: 052 Order Statistic Tree, 053 Cartesian Tree, 054 KD-Tree
 
-## Batch 18 — Next
+## Batch 19 — Next
 
-052 Order Statistic Tree
-053 Cartesian Tree
-054 KD-Tree
+055 Quadtree
+056 Octree
+057 R-Tree

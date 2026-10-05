@@ -1,5 +1,27 @@
 # Changelog
 
+## Batch 18 — Chapters 052–054
+
+Added:
+- AVL Order Statistic Tree augmented with exact subtree_size metadata
+- O(log n) rank, select and half-open rank-difference range counting
+- 40,000-operation randomized rank/select/mutation differential test
+- rank/select scaling benchmark
+- static min Cartesian Tree using original sequence indices as node identities
+- Theta(n) monotonic-stack construction with stable earlier-index duplicate tie policy
+- direct O(height) RMQ plus explicit worst-case chain analysis
+- 50,000 randomized Cartesian RMQ comparisons and monotonic-shape tests
+- Cartesian build/height benchmark contrasting ascending and pseudo-random inputs
+- static balanced 2D KD-Tree with alternating x/y median splits
+- exact subtree bounding boxes and subtree_size summaries
+- half-open rectangle count/report with bounding-box pruning
+- nearest-neighbor branch-and-bound using long-double squared distances
+- deterministic equal-distance tie rule by x/y/id
+- 12,000 randomized KD range/nearest queries against naive scans
+- duplicate-coordinate and sizes 1..129 KD validation
+- KD build/query scaling benchmark
+- Batch 18 negative review
+
 ## Batch 17 — Chapters 049–051
 
 Added:

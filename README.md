@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 17 — Chapters 049–051 complete**
+**Batch 18 — Chapters 052–054 complete**
 
 ล่าสุด:
-- [049 Interval Tree](./049-interval-tree/)
-- [050 Interval Heap](./050-interval-heap/)
-- [051 Range Tree](./051-range-tree/)
+- [052 Order Statistic Tree](./052-order-statistic-tree/)
+- [053 Cartesian Tree](./053-cartesian-tree/)
+- [054 KD-Tree](./054-kd-tree/)
 
-สถานะ: **51 / 170 chapters**
+สถานะ: **54 / 170 chapters**
 
 Next:
 
-**052 Order Statistic Tree → 053 Cartesian Tree → 054 KD-Tree**
+**055 Quadtree → 056 Octree → 057 R-Tree**
 
 ## Build
 

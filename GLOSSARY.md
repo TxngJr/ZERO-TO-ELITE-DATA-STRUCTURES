@@ -161,3 +161,13 @@
 - Range Tree — multidimensional orthogonal range-search structure ที่ใช้ primary search tree ร่วมกับ associated structures ของมิติถัดไป
 - Orthogonal Range Query — query ที่ขอบเขตขนานกับแกน เช่น rectangle [x1,x2) × [y1,y2)
 - Canonical Subtree — subtree ที่ถูกเลือกทั้งก้อนเพราะช่วง coordinate ของมันอยู่ภายใน query อย่างสมบูรณ์
+
+- Order Statistic Tree — balanced search tree augmented with subtree cardinality เพื่อรองรับ rank/select แบบ logarithmic
+- Rank — จำนวน keys ที่อยู่ก่อนค่าหนึ่งใน sorted order; ใน Chapter 052 คือจำนวน keys ที่ strictly less than key
+- Select — การเลือก key จากตำแหน่ง rank ที่กำหนดใน sorted order
+- Cartesian Tree — binary tree ที่รักษา sequence order ด้วย inorder พร้อม heap order บน values/priorities
+- Monotonic Stack — stack ที่รักษาลำดับ monotonic เพื่อประมวลผล next/previous extrema หรือสร้าง Cartesian Tree แบบเชิงเส้น
+- KD-Tree — k-dimensional spatial partition tree ที่สลับ split axis ตามระดับ
+- Bounding Box — axis-aligned coordinate bounds ที่สรุป spatial extent ของ subtree เพื่อใช้ pruning
+- Nearest-Neighbor Search — การค้นหาจุดที่มีระยะน้อยที่สุดจาก query point
+- Branch and Bound — การใช้ lower bound เพื่อตัด search regions ที่ไม่สามารถปรับคำตอบปัจจุบันได้

@@ -835,3 +835,55 @@ add_test(NAME ch051_range_tree_tests COMMAND ch051_range_tree_tests)
 
 add_executable(ch051_range_query_benchmark 051-range-tree/benchmarks/range_query_benchmark.c)
 target_link_libraries(ch051_range_query_benchmark PRIVATE ch051_range_tree)
+
+
+# Chapter 052
+add_library(ch052_order_stat_tree
+    052-order-statistic-tree/src/int_order_stat_tree.c
+)
+target_include_directories(ch052_order_stat_tree PUBLIC 052-order-statistic-tree/src)
+
+add_executable(ch052_order_stat_demo 052-order-statistic-tree/examples/order_stat_demo.c)
+target_link_libraries(ch052_order_stat_demo PRIVATE ch052_order_stat_tree)
+add_test(NAME ch052_order_stat_demo_smoke COMMAND ch052_order_stat_demo)
+
+add_executable(ch052_order_stat_tree_tests 052-order-statistic-tree/tests/test_order_stat_tree.c)
+target_link_libraries(ch052_order_stat_tree_tests PRIVATE ch052_order_stat_tree)
+add_test(NAME ch052_order_stat_tree_tests COMMAND ch052_order_stat_tree_tests)
+
+add_executable(ch052_rank_select_benchmark 052-order-statistic-tree/benchmarks/rank_select_benchmark.c)
+target_link_libraries(ch052_rank_select_benchmark PRIVATE ch052_order_stat_tree)
+
+# Chapter 053
+add_library(ch053_cartesian_tree
+    053-cartesian-tree/src/int_cartesian_tree.c
+)
+target_include_directories(ch053_cartesian_tree PUBLIC 053-cartesian-tree/src)
+
+add_executable(ch053_cartesian_demo 053-cartesian-tree/examples/cartesian_demo.c)
+target_link_libraries(ch053_cartesian_demo PRIVATE ch053_cartesian_tree)
+add_test(NAME ch053_cartesian_demo_smoke COMMAND ch053_cartesian_demo)
+
+add_executable(ch053_cartesian_tree_tests 053-cartesian-tree/tests/test_cartesian_tree.c)
+target_link_libraries(ch053_cartesian_tree_tests PRIVATE ch053_cartesian_tree)
+add_test(NAME ch053_cartesian_tree_tests COMMAND ch053_cartesian_tree_tests)
+
+add_executable(ch053_cartesian_shape_benchmark 053-cartesian-tree/benchmarks/cartesian_shape_benchmark.c)
+target_link_libraries(ch053_cartesian_shape_benchmark PRIVATE ch053_cartesian_tree)
+
+# Chapter 054
+add_library(ch054_kd_tree
+    054-kd-tree/src/int_kd_tree.c
+)
+target_include_directories(ch054_kd_tree PUBLIC 054-kd-tree/src)
+
+add_executable(ch054_kd_tree_demo 054-kd-tree/examples/kd_tree_demo.c)
+target_link_libraries(ch054_kd_tree_demo PRIVATE ch054_kd_tree)
+add_test(NAME ch054_kd_tree_demo_smoke COMMAND ch054_kd_tree_demo)
+
+add_executable(ch054_kd_tree_tests 054-kd-tree/tests/test_kd_tree.c)
+target_link_libraries(ch054_kd_tree_tests PRIVATE ch054_kd_tree)
+add_test(NAME ch054_kd_tree_tests COMMAND ch054_kd_tree_tests)
+
+add_executable(ch054_kd_query_benchmark 054-kd-tree/benchmarks/kd_query_benchmark.c)
+target_link_libraries(ch054_kd_query_benchmark PRIVATE ch054_kd_tree)

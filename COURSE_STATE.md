@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 17
+Current Batch: 18
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -54,52 +54,57 @@ Completed Chapters:
 - 049 Interval Tree
 - 050 Interval Heap
 - 051 Range Tree
+- 052 Order Statistic Tree
+- 053 Cartesian Tree
+- 054 KD-Tree
 
-Current Chapter: 051
+Current Chapter: 054
 
-Next Chapter: 052 Order Statistic Tree
+Next Chapter: 055 Quadtree
 
 Concepts Covered:
-- all prior Chapters 001–048
-- half-open interval overlap semantics
-- AVL interval ordering by (low,high)
-- subtree max_high augmentation and pruning
-- exact interval mutation plus any/all overlap search
-- double-ended priority queues
-- interval-heap containment invariant
-- embedded min heap on low endpoints
-- embedded max heap on high endpoints
-- singleton final interval node and two-sided deletion repair
-- 2D orthogonal range searching
-- median-balanced x primary search tree
-- y-sorted associated arrays at every Range Tree node
-- canonical x-subtrees and y binary search
-- O(log^2 n) static rectangle counting
-- O(log^2 n + k) reporting and Theta(n log n) storage trade-off
+- all prior Chapters 001–051
+- subtree cardinality augmentation in balanced BSTs
+- O(log n) rank/select and rank-difference range counting
+- metadata repair through AVL rotations/deletion
+- Cartesian Tree sequence-order + heap-order dual invariant
+- linear monotonic-stack Cartesian construction
+- stable duplicate tie policy and original-index node identity
+- direct RMQ through Cartesian topology and its O(height) limitation
+- RMQ/LCA connection
+- alternating-axis KD partitioning
+- median-by-count static balancing
+- subtree spatial bounding boxes
+- rectangle pruning/full-cover subtree counting
+- nearest-neighbor branch-and-bound
+- point-to-box distance lower bounds
+- safe widened coordinate distance arithmetic
+- Range Tree vs KD-Tree time/space trade-offs
 
 Structures Implemented:
 - all previous structures
-- IntIntervalTree
-- IntIntervalHeap
-- IntRangeTree
+- IntOrderStatTree
+- IntCartesianTree
+- IntKDTree
 
 Tests Added:
-- Interval Tree randomized differential workload: 30,000 operations
-- Interval Heap randomized multiset/DEPQ workload: 40,000 operations
-- Range Tree randomized rectangle queries: 30,000
-- Range Tree duplicate-coordinate and sizes 1..129 validation
+- Order Statistic Tree randomized differential workload: 40,000 operations
+- Cartesian Tree randomized RMQ: 50,000 queries
+- Cartesian duplicate and monotonic height-chain tests
+- KD-Tree randomized rectangle/nearest queries: 12,000
+- KD duplicate-coordinate and sizes 1..129 validation
 
 Benchmarks Added:
-- Interval Tree any-overlap lookup scaling
-- Interval Heap mixed insert/pop-min/pop-max benchmark
-- Range Tree static rectangle-count scaling
+- Order Statistic rank/select scaling
+- Cartesian shape/build benchmark
+- KD build and mixed nearest/range-query benchmark
 
 Known Dependencies:
-- 052 augments a balanced BST with subtree sizes for rank/select
-- 053 studies Cartesian Tree ordering by sequence position and heap priority
-- 054 begins spatial partitioning with KD-Tree
+- 055 introduces hierarchical 2D quadrant subdivision
+- 056 extends spatial subdivision to 3D octants
+- 057 introduces bounding-rectangle hierarchy with R-Tree
 
 Open Problems:
-- none if Batch 17 CI passes
+- none if Batch 18 CI passes
 
-Coverage: 51 / 170 chapters
+Coverage: 54 / 170 chapters
