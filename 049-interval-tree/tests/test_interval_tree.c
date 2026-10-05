@@ -104,13 +104,14 @@ static void test_basic(void) {
 }
 
 static void test_randomized(void) {
-    enum { CAPACITY=4096, STEPS=30000 };
+    enum { STEPS=30000 };
 
     IntIntervalTree *tree=int_interval_tree_create();
     assert(tree!=NULL);
 
-    RefInterval ref[CAPACITY];
-    memset(ref,0,sizeof ref);
+    const size_t capacity=(size_t)STEPS+1U;
+    RefInterval *ref=calloc(capacity,sizeof *ref);
+    assert(ref!=NULL);
 
     size_t used=0;
     uint32_t rng=0x49A12345u;
@@ -134,7 +135,7 @@ static void test_randomized(void) {
             assert(actual==!existed);
 
             if(actual) {
-                size_t slot=CAPACITY;
+                size_t slot=capacity;
 
                 for(size_t i=0;i<used;++i) {
                     if(!ref[i].present) {
@@ -143,8 +144,8 @@ static void test_randomized(void) {
                     }
                 }
 
-                if(slot==CAPACITY) {
-                    assert(used<CAPACITY);
+                if(slot==capacity) {
+                    assert(used<capacity);
                     slot=used++;
                 }
 
@@ -208,6 +209,7 @@ static void test_randomized(void) {
     }
 
     assert(int_interval_tree_validate(tree));
+    free(ref);
     int_interval_tree_free(tree);
 }
 
