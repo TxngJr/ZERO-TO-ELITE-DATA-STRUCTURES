@@ -1199,3 +1199,56 @@ add_test(NAME ch072_perfect_hashing_tests COMMAND ch072_perfect_hashing_tests)
 
 add_executable(ch072_perfect_hashing_benchmark 072-perfect-hashing/benchmarks/perfect_hashing_benchmark.c)
 target_link_libraries(ch072_perfect_hashing_benchmark PRIVATE ch072_perfect_hashing)
+
+
+# Chapter 073
+add_library(ch073_consistent_hashing
+    073-consistent-hashing/src/consistent_hash_ring.c
+)
+target_include_directories(ch073_consistent_hashing PUBLIC 073-consistent-hashing/src)
+
+add_executable(ch073_consistent_hashing_demo 073-consistent-hashing/examples/consistent_hashing_demo.c)
+target_link_libraries(ch073_consistent_hashing_demo PRIVATE ch073_consistent_hashing)
+add_test(NAME ch073_consistent_hashing_demo_smoke COMMAND ch073_consistent_hashing_demo)
+
+add_executable(ch073_consistent_hashing_tests 073-consistent-hashing/tests/test_consistent_hashing.c)
+target_link_libraries(ch073_consistent_hashing_tests PRIVATE ch073_consistent_hashing)
+add_test(NAME ch073_consistent_hashing_tests COMMAND ch073_consistent_hashing_tests)
+
+add_executable(ch073_consistent_hashing_benchmark 073-consistent-hashing/benchmarks/consistent_hashing_benchmark.c)
+target_link_libraries(ch073_consistent_hashing_benchmark PRIVATE ch073_consistent_hashing)
+
+# Chapter 074
+add_library(ch074_kmv
+    074-probabilistic-data-structures/src/u64_kmv_sketch.c
+)
+target_include_directories(ch074_kmv PUBLIC 074-probabilistic-data-structures/src)
+
+add_executable(ch074_kmv_demo 074-probabilistic-data-structures/examples/kmv_demo.c)
+target_link_libraries(ch074_kmv_demo PRIVATE ch074_kmv)
+add_test(NAME ch074_kmv_demo_smoke COMMAND ch074_kmv_demo)
+
+add_executable(ch074_probabilistic_tests 074-probabilistic-data-structures/tests/test_probabilistic_structures.c)
+target_link_libraries(ch074_probabilistic_tests PRIVATE ch074_kmv m)
+add_test(NAME ch074_probabilistic_tests COMMAND ch074_probabilistic_tests)
+
+add_executable(ch074_kmv_benchmark 074-probabilistic-data-structures/benchmarks/kmv_benchmark.c)
+target_link_libraries(ch074_kmv_benchmark PRIVATE ch074_kmv)
+
+# Chapter 075
+add_library(ch075_hyperloglog
+    075-hyperloglog/src/u64_hyperloglog.c
+)
+target_include_directories(ch075_hyperloglog PUBLIC 075-hyperloglog/src)
+target_link_libraries(ch075_hyperloglog PUBLIC m)
+
+add_executable(ch075_hyperloglog_demo 075-hyperloglog/examples/hyperloglog_demo.c)
+target_link_libraries(ch075_hyperloglog_demo PRIVATE ch075_hyperloglog)
+add_test(NAME ch075_hyperloglog_demo_smoke COMMAND ch075_hyperloglog_demo)
+
+add_executable(ch075_hyperloglog_tests 075-hyperloglog/tests/test_hyperloglog.c)
+target_link_libraries(ch075_hyperloglog_tests PRIVATE ch075_hyperloglog)
+add_test(NAME ch075_hyperloglog_tests COMMAND ch075_hyperloglog_tests)
+
+add_executable(ch075_hyperloglog_benchmark 075-hyperloglog/benchmarks/hyperloglog_benchmark.c)
+target_link_libraries(ch075_hyperloglog_benchmark PRIVATE ch075_hyperloglog)

@@ -25,10 +25,11 @@
 - Batch 21: 061–063
 - Batch 22: 064–066
 - Batch 23: 067–069
-- Batch 24: 070 Cuckoo Filter, 071 Cuckoo Hashing, 072 Perfect Hashing
+- Batch 24: 070–072
+- Batch 25: 073 Consistent Hashing, 074 Probabilistic Data Structures, 075 HyperLogLog
 
-## Batch 25 — Next
+## Batch 26 — Next
 
-073 Consistent Hashing
-074 Probabilistic Data Structures
-075 HyperLogLog
+076 Count-Min Sketch
+077 Count Sketch
+078 Reservoir Sampling Structures

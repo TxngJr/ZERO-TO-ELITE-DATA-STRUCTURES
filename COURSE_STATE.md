@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 24
+Current Batch: 25
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -75,45 +75,52 @@ Completed Chapters:
 - 070 Cuckoo Filter
 - 071 Cuckoo Hashing
 - 072 Perfect Hashing
+- 073 Consistent Hashing
+- 074 Probabilistic Data Structures
+- 075 HyperLogLog
 
-Current Chapter: 072
+Current Chapter: 075
 
-Next Chapter: 073 Consistent Hashing
+Next Chapter: 076 Count-Min Sketch
 
 Concepts Covered:
-- all prior Chapters 001–069
-- fingerprint-based cuckoo membership
-- alternate-bucket involution
-- bounded relocation and transactional rollback
-- exact-key two-table cuckoo hashing
-- rehash/resize after insertion cycles
-- static collision-free hashing
-- FKS-style top/secondary decomposition
-- quadratic secondary sizing by bucket cardinality
-- exact O(1) perfect-hash lookup after construction
+- all prior Chapters 001–072
+- circular token spaces and clockwise ownership
+- virtual-node consistent hashing
+- limited remapping under node membership changes
+- probabilistic error contracts
+- one-sided vs two-sided error categories
+- memory/accuracy trade-offs
+- KMV cardinality order-statistic estimation
+- duplicate-insensitive sketch updates
+- mergeable sketch state
+- HyperLogLog registers and leading-zero ranks
+- precision/register trade-offs
+- HLL raw estimator and small-range correction
+- register-wise-max distributed merge
 
 Structures Implemented:
 - all previous structures
-- ByteCuckooFilter
-- U64CuckooSet
-- U64PerfectSet
+- ConsistentHashRing
+- U64KmvSketch
+- U64HyperLogLog
 
 Tests Added:
-- Cuckoo Filter insertion/query/delete coverage over 8,000 keys
-- Cuckoo Hashing exact-key build/removal and randomized mutation validation
-- Perfect Hashing build over 12,000 unique keys plus duplicate inputs and 10,000 absent probes
+- Consistent Hashing 50,000-key distribution/remapping/restoration checks
+- KMV exact duplicate handling and 50,000-cardinality accuracy/merge checks
+- HLL empty/small/100,000-cardinality accuracy and exact merge-state equivalence
 
 Benchmarks Added:
-- Cuckoo Filter load/insertion benchmark
-- Cuckoo Hashing 300k-key build benchmark
-- Perfect Hashing 100k-key static build/lookup benchmark
+- Consistent Hashing 100 nodes / 12,800 ring points / 1M lookups
+- KMV 1M updates at k=2048
+- HLL 1M updates at p=14
 
 Known Dependencies:
-- 073 introduces Consistent Hashing and virtual-node rings
-- 074 surveys probabilistic data-structure design principles
-- 075 implements HyperLogLog cardinality estimation
+- 076 implements Count-Min Sketch for one-sided frequency estimates
+- 077 implements Count Sketch for signed/unbiased-style frequency estimation
+- 078 introduces Reservoir Sampling structures for bounded-memory streaming samples
 
 Open Problems:
-- none if Batch 24 CI passes
+- none if Batch 25 CI passes
 
-Coverage: 72 / 170 chapters
+Coverage: 75 / 170 chapters

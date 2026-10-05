@@ -229,3 +229,15 @@
 - Perfect Hashing — static hashing arrangement with no collisions among the stored key set
 - FKS Perfect Hashing — two-level static perfect hashing using top buckets and quadratic-size secondary tables
 - Minimal Perfect Hashing — perfect hashing that maps n stored keys to exactly n distinct outputs; not the same as this chapter's FKS-style layout
+
+- Consistent Hashing — mapping keys/nodes onto a circular hash space to limit remapping when membership changes
+- Virtual Node — multiple logical ring points representing one physical node to improve ownership distribution
+- Hash Ring — ordered circular token space used by consistent hashing
+- Probabilistic Data Structure — structure that trades exactness for memory, speed, streaming or mergeability under an explicit error model
+- KMV Sketch — K-Minimum Values cardinality estimator retaining the k smallest distinct hashes
+- Order Statistic — ranked sample value such as the kth-smallest hash used by KMV estimation
+- Mergeable Sketch — summary structure whose states can be combined without replaying original data
+- HyperLogLog (HLL) — probabilistic distinct-cardinality estimator using register maxima of leading-zero ranks
+- HLL Precision — parameter p defining m=2^p registers
+- Linear Counting Correction — small-cardinality correction using the number of zero HLL registers
+- Relative Standard Error (RSE) — standard deviation relative to true magnitude; classical HLL is approximately 1.04/sqrt(m)

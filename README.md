@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 24 — Chapters 070–072 complete**
+**Batch 25 — Chapters 073–075 complete**
 
 ล่าสุด:
-- [070 Cuckoo Filter](./070-cuckoo-filter/)
-- [071 Cuckoo Hashing](./071-cuckoo-hashing/)
-- [072 Perfect Hashing](./072-perfect-hashing/)
+- [073 Consistent Hashing](./073-consistent-hashing/)
+- [074 Probabilistic Data Structures](./074-probabilistic-data-structures/)
+- [075 HyperLogLog](./075-hyperloglog/)
 
-สถานะ: **72 / 170 chapters**
+สถานะ: **75 / 170 chapters**
 
 Next:
 
-**073 Consistent Hashing → 074 Probabilistic Data Structures → 075 HyperLogLog**
+**076 Count-Min Sketch → 077 Count Sketch → 078 Reservoir Sampling Structures**
 
 ## Build
 

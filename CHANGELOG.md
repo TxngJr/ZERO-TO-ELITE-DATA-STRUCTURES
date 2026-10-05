@@ -1,5 +1,24 @@
 # Changelog
 
+## Batch 25 — Chapters 073–075
+
+Added:
+- virtual-node Consistent Hash Ring
+- deterministic sorted ring points with token/node/replica tie-breaking
+- binary-search clockwise lookup with wrap-around
+- node add/remove and 50,000-key remapping/distribution tests
+- explicit teaching complexity for qsort-based ring rebuild behavior
+- Probabilistic Data Structures survey chapter with working KMV cardinality sketch
+- KMV duplicate suppression, exact mode below k, approximate order-statistic estimator above k
+- KMV merge by unioning retained hashes without rehashing
+- memory–accuracy/error-model/mergeability discussion
+- HyperLogLog with precision p=4..18
+- fixed-seed mixed 64-bit hashing, register index and leading-zero rank updates
+- harmonic raw estimator, small-range linear-counting correction and large-range correction
+- component-wise-max sketch merge
+- deterministic accuracy checks at small and 100k cardinalities
+- Batch 25 negative review
+
 ## Batch 24 — Chapters 070–072
 
 Added:
