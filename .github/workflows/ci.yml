@@ -1,0 +1,21 @@
+name: course-ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    container: fedora:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install toolchain
+        run: dnf -y install gcc gcc-c++ cmake make
+      - name: Configure
+        run: cmake -S . -B build -DDS_ENABLE_SANITIZERS=ON
+      - name: Build
+        run: cmake --build build --parallel 2
+      - name: Test
+        run: ctest --test-dir build --output-on-failure
