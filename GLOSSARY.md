@@ -339,3 +339,14 @@
 - Slab — group/page of equal-sized slots managed together for one size class
 - Internal Fragmentation — bytes reserved inside an allocated slot but unused by the logical request
 - Slab Trimming — reclaiming completely empty slabs back to the underlying allocator
+
+- Free List — representation of currently free memory extents/blocks available for future allocation
+- First Fit — allocation policy selecting the first free extent large enough for a request
+- Coalescing — merging adjacent free extents into a larger free block
+- External Fragmentation — free capacity split across separated blocks so a large contiguous request may fail despite enough total free bytes
+- GC Root — reference treated as an entry point for tracing object reachability
+- Mark-Sweep — tracing collector that marks objects reachable from roots then reclaims unmarked objects
+- Generation Handle — handle containing slot identity plus generation so stale references can be rejected after slot reuse
+- Cache-Aware Data Structure — structure whose layout/algorithm explicitly uses a block/cache/tile parameter
+- Tiling / Blocking — partitioning data/work into blocks intended to improve locality and working-set reuse
+- Working Set — data actively reused during a phase and therefore relevant to cache-capacity behavior

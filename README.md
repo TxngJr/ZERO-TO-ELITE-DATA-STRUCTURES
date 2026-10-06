@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 35 — Chapters 103–105 complete**
+**Batch 36 — Chapters 106–108 complete**
 
 ล่าสุด:
-- [103 Memory Pool / Object Pool](./103-memory-pool-object-pool/)
-- [104 Arena Allocator](./104-arena-allocator/)
-- [105 Slab Allocator Concepts](./105-slab-allocator-concepts/)
+- [106 Free List](./106-free-list/)
+- [107 Garbage-Collected Data Structures](./107-garbage-collected-data-structures/)
+- [108 Cache-Aware Data Structures](./108-cache-aware-data-structures/)
 
-สถานะ: **105 / 170 chapters**
+สถานะ: **108 / 170 chapters**
 
 Next:
 
-**106 Free List → 107 Garbage-Collected Data Structures → 108 Cache-Aware Data Structures**
+**109 Cache-Oblivious Data Structures → 110 External-Memory Data Structures → 111 Disk-Based Data Structures**
 
 ## Build
 
@@ -29,4 +29,4 @@ ASan/UBSan:
     cmake --build build-asan
     ctest --test-dir build-asan --output-on-failure --timeout 60
 
-ThreadSanitizer remains scoped to concurrent Chapters 096–102 because Chapters 103–105 intentionally expose non-thread-safe allocator contracts.
+ThreadSanitizer remains scoped to concurrent Chapters 096–102. Chapters 103–108 currently document single-threaded contracts.

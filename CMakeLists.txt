@@ -1794,3 +1794,55 @@ add_test(NAME ch105_slab_tests COMMAND ch105_slab_tests)
 
 add_executable(ch105_slab_benchmark 105-slab-allocator-concepts/benchmarks/slab_allocator_benchmark.c)
 target_link_libraries(ch105_slab_benchmark PRIVATE ch105_slab)
+
+
+# Chapter 106
+add_library(ch106_free_list
+    106-free-list/src/free_list_allocator.c
+)
+target_include_directories(ch106_free_list PUBLIC 106-free-list/src)
+
+add_executable(ch106_free_list_demo 106-free-list/examples/free_list_demo.c)
+target_link_libraries(ch106_free_list_demo PRIVATE ch106_free_list)
+add_test(NAME ch106_free_list_demo_smoke COMMAND ch106_free_list_demo)
+
+add_executable(ch106_free_list_tests 106-free-list/tests/test_free_list_allocator.c)
+target_link_libraries(ch106_free_list_tests PRIVATE ch106_free_list)
+add_test(NAME ch106_free_list_tests COMMAND ch106_free_list_tests)
+
+add_executable(ch106_free_list_benchmark 106-free-list/benchmarks/free_list_benchmark.c)
+target_link_libraries(ch106_free_list_benchmark PRIVATE ch106_free_list)
+
+# Chapter 107
+add_library(ch107_gc_graph
+    107-garbage-collected-data-structures/src/gc_graph.c
+)
+target_include_directories(ch107_gc_graph PUBLIC 107-garbage-collected-data-structures/src)
+
+add_executable(ch107_gc_graph_demo 107-garbage-collected-data-structures/examples/gc_graph_demo.c)
+target_link_libraries(ch107_gc_graph_demo PRIVATE ch107_gc_graph)
+add_test(NAME ch107_gc_graph_demo_smoke COMMAND ch107_gc_graph_demo)
+
+add_executable(ch107_gc_graph_tests 107-garbage-collected-data-structures/tests/test_gc_graph.c)
+target_link_libraries(ch107_gc_graph_tests PRIVATE ch107_gc_graph)
+add_test(NAME ch107_gc_graph_tests COMMAND ch107_gc_graph_tests)
+
+add_executable(ch107_gc_graph_benchmark 107-garbage-collected-data-structures/benchmarks/gc_graph_benchmark.c)
+target_link_libraries(ch107_gc_graph_benchmark PRIVATE ch107_gc_graph)
+
+# Chapter 108
+add_library(ch108_cache_aware
+    108-cache-aware-data-structures/src/cache_aware_matrix.c
+)
+target_include_directories(ch108_cache_aware PUBLIC 108-cache-aware-data-structures/src)
+
+add_executable(ch108_cache_aware_demo 108-cache-aware-data-structures/examples/cache_aware_matrix_demo.c)
+target_link_libraries(ch108_cache_aware_demo PRIVATE ch108_cache_aware)
+add_test(NAME ch108_cache_aware_demo_smoke COMMAND ch108_cache_aware_demo)
+
+add_executable(ch108_cache_aware_tests 108-cache-aware-data-structures/tests/test_cache_aware_matrix.c)
+target_link_libraries(ch108_cache_aware_tests PRIVATE ch108_cache_aware)
+add_test(NAME ch108_cache_aware_tests COMMAND ch108_cache_aware_tests)
+
+add_executable(ch108_cache_aware_benchmark 108-cache-aware-data-structures/benchmarks/cache_aware_matrix_benchmark.c)
+target_link_libraries(ch108_cache_aware_benchmark PRIVATE ch108_cache_aware)

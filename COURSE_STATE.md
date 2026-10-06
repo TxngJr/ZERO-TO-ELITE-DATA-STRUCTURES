@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 35
+Current Batch: 36
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -108,55 +108,58 @@ Completed Chapters:
 - 103 Memory Pool / Object Pool
 - 104 Arena Allocator
 - 105 Slab Allocator Concepts
+- 106 Free List
+- 107 Garbage-Collected Data Structures
+- 108 Cache-Aware Data Structures
 
-Current Chapter: 105
+Current Chapter: 108
 
-Next Chapter: 106 Free List
+Next Chapter: 109 Cache-Oblivious Data Structures
 
 Concepts Covered:
-- all prior Chapters 001–102
-- fixed-size memory/object pools
-- free-slot stacks and slot ownership validation
-- stride/alignment padding and fixed-capacity reuse
-- bump/region allocation
-- growable arena blocks
-- power-of-two alignment up to 4096
-- arena marks, bulk reset and stale-marker invalidation
-- slab size classes 16/32/64/128/256
-- per-slab free stacks and slot metadata
-- live internal-fragmentation accounting
-- empty-slab retention and trimming
-- allocator overflow/failure-path invariants
+- all prior Chapters 001–105
+- variable-size first-fit free lists
+- aligned extent splitting into prefix/allocation/suffix
+- address-sorted free extents and immediate coalescing
+- external-fragmentation metrics
+- tracing garbage collection
+- explicit roots and iterative mark-sweep
+- unreachable-cycle reclamation
+- generation handles with permanent slot retirement at UINT64_MAX
+- cache-aware/tiled data layout
+- explicit tile-size parameters
+- row-order vs tile-order locality
+- edge-tile padding invariants
+- cache-aware benchmark interpretation discipline
 
 Structures Implemented:
 - all previous structures
-- ObjectPool
-- Arena
-- SlabAllocator
+- FreeListAllocator
+- GcHeap / GcHandle object graph
+- CacheAwareMatrix
 
 Tests Added:
-- Object Pool: 100,000 randomized allocate/free operations at capacity 1,024
-- Arena: 50,000 allocations with sizes 1..97 and alignments 1..4096 plus mark/reset checks
-- Slab: 80,000 randomized allocations/frees across five size classes and 4,096 active slots
-- double-free/foreign-pointer/stale-mark checks
-- ASan/UBSan + LeakSanitizer local verification
+- Free List: 50,000 randomized allocations/frees in a 1 MiB region with final full coalescing
+- GC Graph: 3,000-node graph, independent reachability differential check and unreachable-cycle collection
+- Cache-Aware Matrix: 100,000 random updates against dense 257×193 reference plus exact transpose
+- ASan/UBSan local verification
 
 Benchmarks Added:
-- Object Pool: approximately 2,000,000 allocation/release operations
-- Arena: 1,000,000 allocations plus bulk reset
-- Slab: approximately 1,000,000 allocation/release operations across five classes
+- Free List: about 2,048,000 allocation/release operations
+- GC: 100,000-object rooted chain collection then full reclaim
+- Cache-Aware Matrix: repeated row-order/tile-order traversal and tiled transpose
 
 Known Dependencies:
-- 106 isolates Free List design as its own chapter
-- 107 introduces Garbage-Collected Data Structures
-- 108 begins Cache-Aware Data Structures
+- 109 contrasts cache-aware explicit tiling with cache-oblivious recursive layout/algorithms
+- 110 introduces external-memory/I/O models
+- 111 specializes disk-based structures
 
 Open Problems:
-- none if Batch 35 full Fedora ASan/UBSan CI passes
+- none if Batch 36 full Fedora ASan/UBSan CI passes and existing TSan 096–102 remains green
 
 Cross References:
-- 103 specializes reusable fixed-size allocation
-- 104 changes reclamation granularity from per-object to per-region
-- 105 generalizes fixed pools into multiple size classes/slabs
+- 106 extends allocator concepts from 103–105 to variable-size extents
+- 107 combines free-slot reuse with reachability-based lifetime
+- 108 begins Hardware / Storage-Aware Structures and revisits Chapter 089 layout from a locality perspective
 
-Coverage: 105 / 170 chapters
+Coverage: 108 / 170 chapters

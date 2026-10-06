@@ -1,5 +1,22 @@
 # Changelog
 
+## Batch 36 — Chapters 106–108
+
+Added:
+- variable-size first-fit FreeListAllocator over a fixed managed region
+- alignment-aware prefix/suffix splitting with metadata allocation before representation mutation
+- address-sorted free extents, immediate predecessor/successor coalescing and fragmentation metrics
+- 50,000-operation randomized free-list workload with final one-block restoration
+- exact tracing GcHeap with explicit roots and two-edge object graph
+- iterative preallocated mark stack and mark-sweep collection
+- generation handles and slot retirement at UINT64_MAX rather than generation wrap
+- explicit unreachable-cycle reclamation and independent reachability differential test
+- CacheAwareMatrix with explicit tiled physical layout
+- overflow-safe tile-count/element calculations and zero-padding invariants
+- 100,000 randomized matrix updates against dense 257×193 reference
+- row-order/tile-order traversals and tiled transpose benchmark
+- Batch 36 negative review
+
 ## Batch 35 — Chapters 103–105
 
 Added:
