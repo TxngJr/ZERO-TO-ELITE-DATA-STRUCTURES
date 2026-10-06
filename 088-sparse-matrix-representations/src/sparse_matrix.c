@@ -1,4 +1,5 @@
 #include "sparse_matrix.h"
+#include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
 typedef struct{size_t row,col;double value;}Entry;

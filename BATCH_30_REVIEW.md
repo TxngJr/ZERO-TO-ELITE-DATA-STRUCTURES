@@ -22,6 +22,7 @@ Checked:
 - CSR/CSC point lookup uses binary search inside the relevant segment
 - SpMV checks vector dimensions and touches only stored entries
 - randomized test compares every sparse cell and SpMV output to dense reference
+- first CI build caught a missing <stdint.h> include for SIZE_MAX; the source was patched before test execution
 
 Complexity:
 - COO append amortized O(1)
