@@ -20,6 +20,7 @@ Checked:
 - add-buffer capacity may grow before final commit, but add_size/document contents remain unchanged if the later operation fails
 - sum of piece lengths equals logical size
 - randomized differential edits compare full reconstructed bytes after every operation
+- first CI run exposed an ASan heap-buffer-overflow in erase: deleting a range strictly inside one piece can split that single descriptor into two, so the temporary output needs piece_count+1 capacity; the implementation was patched accordingly
 - byte offsets are explicitly not presented as Unicode character offsets
 
 Complexity:
@@ -55,6 +56,7 @@ Checked:
 - first encoded value is the absolute first doc ID
 - later values are nonnegative gaps from the previous ID
 - encoder precomputes required byte count before writing
+- size-query mode explicitly supports out=NULL with capacity=0; first CI run caught the original API-contract mismatch
 - varint decoder rejects truncated inputs
 - fifth byte rejects values wider than uint32
 - cumulative gap addition checks UINT32 overflow
