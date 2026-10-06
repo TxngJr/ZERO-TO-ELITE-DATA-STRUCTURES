@@ -292,3 +292,9 @@
 - Compressed Data Structure — representation reducing storage while preserving selected operations without full decompression
 - Block Checkpoint — absolute value/byte offset metadata allowing local decoding inside compressed sequences
 - Delta Encoding — storing differences between adjacent monotonic values
+
+- Succinct Data Structure — structure ที่ใช้พื้นที่ใกล้ information-theoretic lower bound พร้อมรองรับ operations สำคัญโดยไม่ต้องขยาย representation ทั้งหมด
+- Rank — operation บน sequence/bit vector ที่นับ occurrences ใน prefix ที่กำหนด
+- Select — operation ที่แปลงลำดับ occurrence กลับเป็นตำแหน่งของ symbol/bit เป้าหมาย
+- Immutability — property ที่ observable state ของ value/object ไม่เปลี่ยนหลัง construction ตาม contract
+- Frozen Set — static build-once/read-many set ที่ไม่มี mutation API หลังสร้าง

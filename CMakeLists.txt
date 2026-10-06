@@ -1512,3 +1512,55 @@ add_test(NAME ch090_compressed_seq_tests COMMAND ch090_compressed_seq_tests)
 
 add_executable(ch090_compressed_seq_benchmark 090-compressed-data-structures/benchmarks/compressed_seq_benchmark.c)
 target_link_libraries(ch090_compressed_seq_benchmark PRIVATE ch090_compressed_seq)
+
+
+# Chapter 091
+add_library(ch091_succinct
+    091-succinct-data-structures/src/succinct_bit_vector.c
+)
+target_include_directories(ch091_succinct PUBLIC 091-succinct-data-structures/src)
+
+add_executable(ch091_succinct_demo 091-succinct-data-structures/examples/succinct_bit_vector_demo.c)
+target_link_libraries(ch091_succinct_demo PRIVATE ch091_succinct)
+add_test(NAME ch091_succinct_demo_smoke COMMAND ch091_succinct_demo)
+
+add_executable(ch091_succinct_tests 091-succinct-data-structures/tests/test_succinct_bit_vector.c)
+target_link_libraries(ch091_succinct_tests PRIVATE ch091_succinct)
+add_test(NAME ch091_succinct_tests COMMAND ch091_succinct_tests)
+
+add_executable(ch091_succinct_benchmark 091-succinct-data-structures/benchmarks/succinct_bit_vector_benchmark.c)
+target_link_libraries(ch091_succinct_benchmark PRIVATE ch091_succinct)
+
+# Chapter 092
+add_library(ch092_persistent
+    092-persistent-data-structures/src/persistent_int_set.c
+)
+target_include_directories(ch092_persistent PUBLIC 092-persistent-data-structures/src)
+
+add_executable(ch092_persistent_demo 092-persistent-data-structures/examples/persistent_int_set_demo.c)
+target_link_libraries(ch092_persistent_demo PRIVATE ch092_persistent)
+add_test(NAME ch092_persistent_demo_smoke COMMAND ch092_persistent_demo)
+
+add_executable(ch092_persistent_tests 092-persistent-data-structures/tests/test_persistent_int_set.c)
+target_link_libraries(ch092_persistent_tests PRIVATE ch092_persistent)
+add_test(NAME ch092_persistent_tests COMMAND ch092_persistent_tests)
+
+add_executable(ch092_persistent_benchmark 092-persistent-data-structures/benchmarks/persistent_int_set_benchmark.c)
+target_link_libraries(ch092_persistent_benchmark PRIVATE ch092_persistent)
+
+# Chapter 093
+add_library(ch093_immutable
+    093-immutable-data-structures/src/frozen_int_set.c
+)
+target_include_directories(ch093_immutable PUBLIC 093-immutable-data-structures/src)
+
+add_executable(ch093_immutable_demo 093-immutable-data-structures/examples/frozen_int_set_demo.c)
+target_link_libraries(ch093_immutable_demo PRIVATE ch093_immutable)
+add_test(NAME ch093_immutable_demo_smoke COMMAND ch093_immutable_demo)
+
+add_executable(ch093_immutable_tests 093-immutable-data-structures/tests/test_frozen_int_set.c)
+target_link_libraries(ch093_immutable_tests PRIVATE ch093_immutable)
+add_test(NAME ch093_immutable_tests COMMAND ch093_immutable_tests)
+
+add_executable(ch093_immutable_benchmark 093-immutable-data-structures/benchmarks/frozen_int_set_benchmark.c)
+target_link_libraries(ch093_immutable_benchmark PRIVATE ch093_immutable)

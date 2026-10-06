@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 30 — Chapters 088–090 complete**
+**Batch 31 — Chapters 091–093 complete**
 
 ล่าสุด:
-- [088 Sparse Matrix Representations](./088-sparse-matrix-representations/)
-- [089 Matrix/Tensor Storage Layout](./089-matrix-tensor-storage-layout/)
-- [090 Compressed Data Structures](./090-compressed-data-structures/)
+- [091 Succinct Data Structures](./091-succinct-data-structures/)
+- [092 Persistent Data Structures](./092-persistent-data-structures/)
+- [093 Immutable Data Structures](./093-immutable-data-structures/)
 
-สถานะ: **90 / 170 chapters**
+สถานะ: **93 / 170 chapters**
 
 Next:
 
-**091 Succinct Data Structures → 092 Persistent Data Structures → 093 Immutable Data Structures**
+**094 Functional Data Structures → 095 Copy-on-Write Structures → 096 Concurrent Data Structures**
 
 ## Build
 

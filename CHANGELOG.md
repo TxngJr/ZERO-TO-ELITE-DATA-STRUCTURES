@@ -1,5 +1,22 @@
 # Changelog
 
+## Batch 31 — Chapters 091–093
+
+Added:
+- static packed SuccinctBitVector with access, rank1/rank0 and select1/select0
+- 512-bit rank checkpoints with explicit payload-vs-directory memory accounting
+- final-word padding masking and randomized/boundary rank-select differential tests
+- explicit distinction between practical fixed-block indexing and strict n+o(n) succinct theory
+- PersistentIntSet using immutable BST nodes, path copying and structural sharing
+- stable-address block arena with transactional mark/rollback on allocation failure
+- branching historical versions with retained-snapshot randomized verification
+- explicit O(h) update/query analysis and documented unbalanced-BST worst case
+- FrozenIntSet build-once immutable open-addressing table
+- duplicate coalescing, no-tombstone read-only representation and power-of-two capacity invariant
+- INT_MIN/INT_MAX coverage and randomized membership differential tests
+- immutable vs persistent vs copy-on-write conceptual separation
+- Batch 31 negative review
+
 ## Batch 30 — Chapters 088–090
 
 Added:

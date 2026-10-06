@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 30
+Current Batch: 31
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -93,47 +93,53 @@ Completed Chapters:
 - 088 Sparse Matrix Representations
 - 089 Matrix/Tensor Storage Layout
 - 090 Compressed Data Structures
+- 091 Succinct Data Structures
+- 092 Persistent Data Structures
+- 093 Immutable Data Structures
 
-Current Chapter: 090
+Current Chapter: 093
 
-Next Chapter: 091 Succinct Data Structures
+Next Chapter: 094 Functional Data Structures
 
 Concepts Covered:
-- all prior Chapters 001–087
-- COO/CSR/CSC sparse representations
-- sparse duplicate canonicalization and zero elimination
-- CSR SpMV and sparse access-pattern trade-offs
-- tensor shape/stride/offset storage model
-- row-major vs column-major layout
-- metadata-only permutation and slicing
-- contiguous vs strided views
-- compressed monotonic sequences
-- block checkpoints and local decoding
-- delta + varint coding trade-offs
-- compression payload vs metadata accounting
+- all prior Chapters 001–090
+- succinct vs compressed/compact representations
+- packed static bit vectors with rank/select
+- rank directory metadata and padding correctness
+- persistence taxonomy and version branching
+- path copying and structural sharing
+- stable-address arena lifetime and transactional allocation rollback
+- immutable build-once/read-many structures
+- frozen open-addressing hash sets without tombstones
+- immutability vs persistence vs copy-on-write
 
 Structures Implemented:
 - all previous structures
-- CooMatrix / CsrMatrix / CscMatrix
-- TensorLayout
-- U64CompressedSeq
+- SuccinctBitVector
+- PersistentIntSet with PSetArena
+- FrozenIntSet
 
 Tests Added:
-- Sparse Matrix: 5,000 random COO updates canonicalized and compared against a dense 37x29 reference plus SpMV
-- Tensor Layout: row/column-major offset, transpose permutation, stepped slice and invalid-view checks
-- Compressed Sequence: 100k monotonic values with random-access and lower_bound differential checks
+- Succinct Bit Vector: boundary sizes around 64/512-bit packing plus randomized 200,000-bit rank/select differential checks
+- Persistent Set: 1,200 randomized insert/erase operations with retained historical snapshots and repeated old-version verification
+- Immutable Set: 100,000-value randomized build/dedup plus exhaustive 50,000-domain membership checks and 20,000 guaranteed misses
 
 Benchmarks Added:
-- Sparse Matrix 5,000x5,000 matrix with 8 generated entries per row and 100 SpMV runs
-- Tensor Layout row-major vs column-oriented traversal over 2048x2048 storage
-- Compressed Sequence 1M monotonic values with block_size=128 and sampled random-access reads
+- Succinct Bit Vector: 4,000,000 bits and 200,000 rank queries with payload vs total-structure byte accounting
+- Persistent Set: 20,000 retained versions with final height, arena-node and block-growth reporting
+- Immutable Set: 200,000 unique keys and 1,000,000 membership queries with capacity/load/storage reporting
 
 Known Dependencies:
-- 091 introduces Succinct Data Structures
-- 092 revisits Persistent Data Structures as a general design family
-- 093 studies Immutable Data Structures
+- 094 introduces Functional Data Structures
+- 095 studies Copy-on-Write Structures
+- 096 begins Concurrent Data Structures
 
 Open Problems:
-- none if Batch 30 CI passes
+- none if Batch 31 CI passes
 
-Coverage: 90 / 170 chapters
+Cross References:
+- 091 builds on Chapters 064, 066 and 090
+- 092 generalizes persistence beyond Chapter 046
+- 093 contrasts immutable snapshots with persistent versioned updates
+
+Coverage: 93 / 170 chapters

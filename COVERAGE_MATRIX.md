@@ -8,6 +8,9 @@ Legend: ✅ complete, ➡ planned, N/A not meaningful.
 | 088 | Sparse Matrix Representations | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 089 | Matrix/Tensor Storage Layout | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 090 | Compressed Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 091 | Succinct Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 092 | Persistent Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 093 | Immutable Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 091 | Succinct Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 092 | Persistent Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 093 | Immutable Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 094 | Functional Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 095 | Copy-on-Write Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 096 | Concurrent Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
