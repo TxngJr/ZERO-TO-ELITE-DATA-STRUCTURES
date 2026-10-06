@@ -1688,3 +1688,57 @@ add_test(NAME ch099_wait_free_tests COMMAND ch099_wait_free_tests)
 
 add_executable(ch099_wait_free_benchmark 099-wait-free-data-structures/benchmarks/wait_free_spsc_benchmark.c)
 target_link_libraries(ch099_wait_free_benchmark PRIVATE ch099_wait_free)
+
+
+# Chapter 100
+add_library(ch100_atomic
+    100-atomic-data-structures-cas/src/atomic_structures.c
+)
+target_include_directories(ch100_atomic PUBLIC 100-atomic-data-structures-cas/src)
+
+add_executable(ch100_atomic_demo 100-atomic-data-structures-cas/examples/atomic_structures_demo.c)
+target_link_libraries(ch100_atomic_demo PRIVATE ch100_atomic)
+add_test(NAME ch100_atomic_demo_smoke COMMAND ch100_atomic_demo)
+
+add_executable(ch100_atomic_tests 100-atomic-data-structures-cas/tests/test_atomic_structures.c)
+target_link_libraries(ch100_atomic_tests PRIVATE ch100_atomic Threads::Threads)
+add_test(NAME ch100_atomic_tests COMMAND ch100_atomic_tests)
+
+add_executable(ch100_atomic_benchmark 100-atomic-data-structures-cas/benchmarks/atomic_structures_benchmark.c)
+target_link_libraries(ch100_atomic_benchmark PRIVATE ch100_atomic Threads::Threads)
+
+# Chapter 101
+add_library(ch101_concurrent_hash_map
+    101-concurrent-hash-map/src/concurrent_hash_map.c
+)
+target_include_directories(ch101_concurrent_hash_map PUBLIC 101-concurrent-hash-map/src)
+target_link_libraries(ch101_concurrent_hash_map PUBLIC Threads::Threads)
+
+add_executable(ch101_concurrent_hash_map_demo 101-concurrent-hash-map/examples/concurrent_hash_map_demo.c)
+target_link_libraries(ch101_concurrent_hash_map_demo PRIVATE ch101_concurrent_hash_map)
+add_test(NAME ch101_concurrent_hash_map_demo_smoke COMMAND ch101_concurrent_hash_map_demo)
+
+add_executable(ch101_concurrent_hash_map_tests 101-concurrent-hash-map/tests/test_concurrent_hash_map.c)
+target_link_libraries(ch101_concurrent_hash_map_tests PRIVATE ch101_concurrent_hash_map)
+add_test(NAME ch101_concurrent_hash_map_tests COMMAND ch101_concurrent_hash_map_tests)
+
+add_executable(ch101_concurrent_hash_map_benchmark 101-concurrent-hash-map/benchmarks/concurrent_hash_map_benchmark.c)
+target_link_libraries(ch101_concurrent_hash_map_benchmark PRIVATE ch101_concurrent_hash_map)
+
+# Chapter 102
+add_library(ch102_concurrent_ring
+    102-concurrent-queue-ring-buffer/src/concurrent_mpmc_ring.c
+)
+target_include_directories(ch102_concurrent_ring PUBLIC 102-concurrent-queue-ring-buffer/src)
+target_link_libraries(ch102_concurrent_ring PUBLIC Threads::Threads)
+
+add_executable(ch102_concurrent_ring_demo 102-concurrent-queue-ring-buffer/examples/concurrent_mpmc_ring_demo.c)
+target_link_libraries(ch102_concurrent_ring_demo PRIVATE ch102_concurrent_ring)
+add_test(NAME ch102_concurrent_ring_demo_smoke COMMAND ch102_concurrent_ring_demo)
+
+add_executable(ch102_concurrent_ring_tests 102-concurrent-queue-ring-buffer/tests/test_concurrent_mpmc_ring.c)
+target_link_libraries(ch102_concurrent_ring_tests PRIVATE ch102_concurrent_ring)
+add_test(NAME ch102_concurrent_ring_tests COMMAND ch102_concurrent_ring_tests)
+
+add_executable(ch102_concurrent_ring_benchmark 102-concurrent-queue-ring-buffer/benchmarks/concurrent_mpmc_ring_benchmark.c)
+target_link_libraries(ch102_concurrent_ring_benchmark PRIVATE ch102_concurrent_ring)

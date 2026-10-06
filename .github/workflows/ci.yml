@@ -30,6 +30,6 @@ jobs:
       - name: Configure TSan
         run: cmake -S . -B build-tsan -DDS_ENABLE_THREAD_SANITIZER=ON
       - name: Build concurrent chapters
-        run: cmake --build build-tsan --parallel 2 --target ch096_concurrent_demo ch096_concurrent_tests ch096_atomic_publication ch097_thread_safe_demo ch097_thread_safe_tests ch098_lock_free_demo ch098_lock_free_tests ch099_wait_free_demo ch099_wait_free_tests
+        run: cmake --build build-tsan --parallel 2 --target ch096_concurrent_demo ch096_concurrent_tests ch096_atomic_publication ch097_thread_safe_demo ch097_thread_safe_tests ch098_lock_free_demo ch098_lock_free_tests ch099_wait_free_demo ch099_wait_free_tests ch100_atomic_demo ch100_atomic_tests ch101_concurrent_hash_map_demo ch101_concurrent_hash_map_tests ch102_concurrent_ring_demo ch102_concurrent_ring_tests
       - name: Test concurrent chapters with TSan
-        run: ctest --test-dir build-tsan -R "^ch09[6-9]_" --output-on-failure --timeout 60
+        run: ctest --test-dir build-tsan -R "^ch(09[6-9]|10[0-2])_" --output-on-failure --timeout 60

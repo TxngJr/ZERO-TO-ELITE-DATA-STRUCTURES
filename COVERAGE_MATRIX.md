@@ -17,6 +17,9 @@ Legend: ✅ complete, ➡ planned, N/A not meaningful.
 | 097 | Thread-Safe Queue / Map | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 098 | Lock-Free Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 099 | Wait-Free Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 100 | Atomic Data Structures / CAS | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 101 | Concurrent Hash Map | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 102 | Concurrent Queue / Ring Buffer | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 100 | Atomic Data Structures / CAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 101 | Concurrent Hash Map | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 102 | Concurrent Queue / Ring Buffer | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 103 | Memory Pool / Object Pool | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 104 | Arena Allocator | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 105 | Slab Allocator Concepts | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |

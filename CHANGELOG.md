@@ -1,5 +1,22 @@
 # Changelog
 
+## Batch 34 — Chapters 100–102
+
+Added:
+- AtomicBitset with atomic test/set/clear/toggle and whole-word compare-exchange
+- final-word padding preservation for atomic bitset CAS
+- AtomicTaggedValue packing uint32 value + uint32 version into one 64-bit CAS state
+- explicit A→B→A stale-tag rejection test and 8-thread CAS increment contention stress
+- resizable ConcurrentHashMap using table-level pthread RW-lock plus per-bucket mutexes
+- power-of-two bucket arrays, atomic size/resize metrics and best-effort concurrent resize
+- 8-thread 40,000-key insert/update/remove verification across repeated rehashes
+- bounded MPMC sequence-number ring buffer
+- per-cell acquire/release generation protocol with CAS enqueue/dequeue positions
+- explicit no-counter-wrap teaching contract and quiescent-only size semantics
+- 4-producer/4-consumer exactly-once transfer test
+- ThreadSanitizer CI expanded from Chapters 096 through 102
+- Batch 34 negative review
+
 ## Batch 33 — Chapters 097–099
 
 Added:

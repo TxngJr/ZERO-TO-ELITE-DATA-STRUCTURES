@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 33
+Current Batch: 34
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -102,56 +102,59 @@ Completed Chapters:
 - 097 Thread-Safe Queue / Map
 - 098 Lock-Free Data Structures
 - 099 Wait-Free Data Structures
+- 100 Atomic Data Structures / CAS
+- 101 Concurrent Hash Map
+- 102 Concurrent Queue / Ring Buffer
 
-Current Chapter: 099
+Current Chapter: 102
 
-Next Chapter: 100 Atomic Data Structures / CAS
+Next Chapter: 103 Memory Pool / Object Pool
 
 Concepts Covered:
-- all prior Chapters 001–096
-- bounded MPMC queue with mutex + condition variables
-- queue close/drain semantics and predicate-based condition waiting
-- striped thread-safe integer map
-- compound-operation atomicity boundaries
-- lock-free progress via CAS retry loops
-- Treiber-style stack with bounded lifetime node pool
-- ABA/reclamation boundary and no-reuse teaching design
-- platform atomic lock-free verification
-- wait-free per-operation reasoning
-- SPSC ring with release/acquire head/tail publication
-- distinction between wait-free try operation and caller retry loop
+- all prior Chapters 001–099
+- atomic read/modify/write operations
+- strong/weak CAS semantics and contention retries
+- tagged value+version CAS for ABA mitigation
+- atomic packed bitset operations
+- runtime lock-free atomic verification
+- resizable concurrent hash map
+- table RW-lock + per-bucket mutex protocol
+- concurrent rehash publication and old-table lifetime
+- bounded MPMC sequence-number ring buffer
+- per-slot generation/sequence ownership
+- release/acquire payload publication
+- distinction between atomic/non-blocking APIs and formal lock-free guarantees
 
 Structures Implemented:
 - all previous structures
-- ThreadSafeQueue
-- ThreadSafeIntMap
-- LockFreeStack
-- WaitFreeSpscRing
+- AtomicBitset
+- AtomicTaggedValue
+- ConcurrentHashMap
+- ConcurrentMpmcRing
 
 Tests Added:
-- Thread-Safe Queue: 4 producers + 4 consumers transferring 20,000 unique values exactly once
-- Thread-Safe Map: 8-thread insertion/removal with exact odd-key verification
-- Lock-Free Stack: 8-thread 40,000-value push/pop plus mixed 4-producer/4-consumer stress
-- Wait-Free SPSC Ring: 500,000 ordered transfers with exact FIFO verification
-- TSan now covers Chapters 096–099
+- Atomic Structures: 8-thread 8,192-bit set plus 8×10,000 tagged CAS increments and explicit ABA-tag test
+- Concurrent Hash Map: 8-thread 40,000-key insert/update/remove workload with repeated concurrent resizing
+- Concurrent Ring: 4 producers + 4 consumers transferring 100,000 unique values exactly once
+- TSan now covers Chapters 096–102
 
 Benchmarks Added:
-- Thread-Safe Queue: 4 producers + 4 consumers transferring 400,000 items
-- Lock-Free Stack: 8 threads × 100,000 pushes with CAS-failure reporting
-- Wait-Free SPSC Ring: 2,000,000 ordered transfers
+- Tagged CAS: 8 threads × 100,000 increments with retry count
+- Concurrent Hash Map: 8 threads × 50,000 inserts with resize/bucket metrics
+- Concurrent Ring: 4 producers + 4 consumers transferring 1,000,000 items
 
 Known Dependencies:
-- 100 deepens atomic data structures and CAS
-- 101 builds a production-oriented Concurrent Hash Map
-- 102 specializes concurrent Queue / Ring Buffer
 - 103 begins Memory Pool / Object Pool
+- 104 formalizes Arena Allocator design
+- 105 introduces Slab Allocator Concepts
+- later memory-management chapters connect back to safe reclamation from concurrent structures
 
 Open Problems:
-- none if Batch 33 full ASan/UBSan CI and concurrent TSan CI both pass
+- none if Batch 34 full ASan/UBSan CI and TSan 096–102 CI both pass
 
 Cross References:
-- 097 specializes lock-based structures from Chapter 096
-- 098 relies on Chapter 096 memory-order/CAS foundations
-- 099 contrasts bounded wait-free SPSC operations with Chapter 098 lock-free retry loops
+- 100 deepens the CAS/memory-order foundation from Chapters 096–099
+- 101 extends Chapter 097 fixed striped map with synchronized resizing
+- 102 generalizes Chapter 099 SPSC ring to MPMC coordination without overclaiming progress guarantees
 
-Coverage: 99 / 170 chapters
+Coverage: 102 / 170 chapters

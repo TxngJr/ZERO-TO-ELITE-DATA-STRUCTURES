@@ -1,7 +1,7 @@
 # Zero to Elite Data Structures — 170 Chapter Roadmap
 
-Current Progress: **99 / 170 chapters complete**
-Next Batch: **100 Atomic Data Structures / CAS → 101 Concurrent Hash Map → 102 Concurrent Queue / Ring Buffer**
+Current Progress: **102 / 170 chapters complete**
+Next Batch: **103 Memory Pool / Object Pool → 104 Arena Allocator → 105 Slab Allocator Concepts**
 
 ## Foundations
 001 Programming Foundations

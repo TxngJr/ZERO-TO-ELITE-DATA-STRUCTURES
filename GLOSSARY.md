@@ -320,3 +320,12 @@
 - Safe Memory Reclamation — protocol ensuring removed concurrent nodes are not freed/reused while another thread may still reference them
 - SPSC — Single Producer / Single Consumer concurrency contract
 - Wait-Free Try Operation — bounded-step operation that completes with success/failure such as full/empty without internal retry loop
+
+- Atomic Read-Modify-Write (RMW) — atomic operation that reads old state and publishes a transformed state as one atomic primitive
+- Strong CAS — compare-exchange that does not permit spurious failure when current equals expected
+- Weak CAS — compare-exchange that may fail spuriously and is normally used inside retry loops
+- Tagged CAS — CAS over a value plus version/tag so equal raw values from different generations can be distinguished
+- Concurrent Resizing — changing hash-table shape while concurrent operations continue under a protocol that protects old/new table identity and lifetime
+- RW-Lock — synchronization primitive allowing multiple readers or one exclusive writer
+- Per-Slot Sequence Number — generation metadata attached to a ring-buffer cell to coordinate reuse across logical positions
+- MPMC — Multiple Producer / Multiple Consumer concurrency contract
