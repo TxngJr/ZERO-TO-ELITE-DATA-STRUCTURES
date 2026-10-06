@@ -1408,3 +1408,55 @@ add_test(NAME ch084_rope_tests COMMAND ch084_rope_tests)
 
 add_executable(ch084_rope_benchmark 084-rope/benchmarks/rope_benchmark.c)
 target_link_libraries(ch084_rope_benchmark PRIVATE ch084_rope)
+
+
+# Chapter 085
+add_library(ch085_piece_table
+    085-piece-table/src/piece_table.c
+)
+target_include_directories(ch085_piece_table PUBLIC 085-piece-table/src)
+
+add_executable(ch085_piece_table_demo 085-piece-table/examples/piece_table_demo.c)
+target_link_libraries(ch085_piece_table_demo PRIVATE ch085_piece_table)
+add_test(NAME ch085_piece_table_demo_smoke COMMAND ch085_piece_table_demo)
+
+add_executable(ch085_piece_table_tests 085-piece-table/tests/test_piece_table.c)
+target_link_libraries(ch085_piece_table_tests PRIVATE ch085_piece_table)
+add_test(NAME ch085_piece_table_tests COMMAND ch085_piece_table_tests)
+
+add_executable(ch085_piece_table_benchmark 085-piece-table/benchmarks/piece_table_benchmark.c)
+target_link_libraries(ch085_piece_table_benchmark PRIVATE ch085_piece_table)
+
+# Chapter 086
+add_library(ch086_inverted_index
+    086-inverted-index/src/inverted_index.c
+)
+target_include_directories(ch086_inverted_index PUBLIC 086-inverted-index/src)
+
+add_executable(ch086_inverted_index_demo 086-inverted-index/examples/inverted_index_demo.c)
+target_link_libraries(ch086_inverted_index_demo PRIVATE ch086_inverted_index)
+add_test(NAME ch086_inverted_index_demo_smoke COMMAND ch086_inverted_index_demo)
+
+add_executable(ch086_inverted_index_tests 086-inverted-index/tests/test_inverted_index.c)
+target_link_libraries(ch086_inverted_index_tests PRIVATE ch086_inverted_index)
+add_test(NAME ch086_inverted_index_tests COMMAND ch086_inverted_index_tests)
+
+add_executable(ch086_inverted_index_benchmark 086-inverted-index/benchmarks/inverted_index_benchmark.c)
+target_link_libraries(ch086_inverted_index_benchmark PRIVATE ch086_inverted_index)
+
+# Chapter 087
+add_library(ch087_posting_list
+    087-posting-list/src/posting_list.c
+)
+target_include_directories(ch087_posting_list PUBLIC 087-posting-list/src)
+
+add_executable(ch087_posting_list_demo 087-posting-list/examples/posting_list_demo.c)
+target_link_libraries(ch087_posting_list_demo PRIVATE ch087_posting_list)
+add_test(NAME ch087_posting_list_demo_smoke COMMAND ch087_posting_list_demo)
+
+add_executable(ch087_posting_list_tests 087-posting-list/tests/test_posting_list.c)
+target_link_libraries(ch087_posting_list_tests PRIVATE ch087_posting_list)
+add_test(NAME ch087_posting_list_tests COMMAND ch087_posting_list_tests)
+
+add_executable(ch087_posting_list_benchmark 087-posting-list/benchmarks/posting_list_benchmark.c)
+target_link_libraries(ch087_posting_list_benchmark PRIVATE ch087_posting_list)

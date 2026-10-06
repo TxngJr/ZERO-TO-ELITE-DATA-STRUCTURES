@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 28 — Chapters 082–084 complete**
+**Batch 29 — Chapters 085–087 complete**
 
 ล่าสุด:
-- [082 Circular Buffer / Ring Buffer](./082-circular-buffer-ring-buffer/)
-- [083 Gap Buffer](./083-gap-buffer/)
-- [084 Rope](./084-rope/)
+- [085 Piece Table](./085-piece-table/)
+- [086 Inverted Index](./086-inverted-index/)
+- [087 Posting List](./087-posting-list/)
 
-สถานะ: **84 / 170 chapters**
+สถานะ: **87 / 170 chapters**
 
 Next:
 
-**085 Piece Table → 086 Inverted Index → 087 Posting List**
+**088 Sparse Matrix Representations → 089 Matrix/Tensor Storage Layout → 090 Compressed Data Structures**
 
 ## Build
 

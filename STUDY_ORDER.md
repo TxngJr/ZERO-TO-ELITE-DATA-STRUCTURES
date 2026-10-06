@@ -29,10 +29,11 @@
 - Batch 25: 073–075
 - Batch 26: 076–078
 - Batch 27: 079–081
-- Batch 28: 082 Circular Buffer / Ring Buffer, 083 Gap Buffer, 084 Rope
+- Batch 28: 082–084
+- Batch 29: 085 Piece Table, 086 Inverted Index, 087 Posting List
 
-## Batch 29 — Next
+## Batch 30 — Next
 
-085 Piece Table
-086 Inverted Index
-087 Posting List
+088 Sparse Matrix Representations
+089 Matrix/Tensor Storage Layout
+090 Compressed Data Structures

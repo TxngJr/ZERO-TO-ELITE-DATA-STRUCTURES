@@ -1,5 +1,24 @@
 # Changelog
 
+## Batch 29 — Chapters 085–087
+
+Added:
+- byte-oriented Piece Table with immutable original buffer
+- append-only add buffer and piece descriptors referencing source/start/length
+- transactional piece-layout rebuild for insert/erase
+- adjacent contiguous piece coalescing
+- randomized 20,000-operation Piece Table differential editing test
+- ASCII-alphanumeric Inverted Index tokenizer with explicit lowercase normalization
+- chained term hash table with overflow-safe rehash threshold
+- sorted unique per-term document-ID lists
+- document frequency lookup and Boolean AND intersection
+- Posting List with sorted unique uint32 document IDs
+- binary-search membership and two-pointer intersection
+- delta/gap encoding plus unsigned base-128 varints
+- safe varint decoder with truncation, width and cumulative-overflow rejection
+- Posting List round-trip compression tests and malformed-stream checks
+- Batch 29 negative review
+
 ## Batch 28 — Chapters 082–084
 
 Added:

@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 28
+Current Batch: 29
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -87,46 +87,47 @@ Completed Chapters:
 - 082 Circular Buffer / Ring Buffer
 - 083 Gap Buffer
 - 084 Rope
+- 085 Piece Table
+- 086 Inverted Index
+- 087 Posting List
 
-Current Chapter: 084
+Current Chapter: 087
 
-Next Chapter: 085 Piece Table
+Next Chapter: 088 Sparse Matrix Representations
 
 Concepts Covered:
-- all prior Chapters 001–081
-- bounded FIFO circular storage
-- wrap-around index mapping
-- explicit full/empty semantics
-- edit locality via movable gaps
-- prefix/gap/suffix physical-vs-logical text model
-- geometric gap growth
-- tree-based sequence representation
-- subtree length/weight navigation
-- split/merge editing with implicit randomized treaps
-- byte-level vs Unicode-aware editing boundaries
+- all prior Chapters 001–084
+- immutable-original plus append-only editing storage
+- piece splitting/coalescing and logical reconstruction
+- term normalization and term-to-document indexing
+- document frequency vs repeated token frequency
+- sorted posting IDs and Boolean intersection
+- delta/gap coding
+- variable-byte integer encoding/decoding
+- compression safety checks and decode validation
 
 Structures Implemented:
 - all previous structures
-- U64RingBuffer
-- GapBuffer
-- ByteRope
+- PieceTable
+- InvertedIndex
+- PostingList
 
 Tests Added:
-- Ring Buffer: 50,000 randomized push/pop/get operations against an array queue model
-- Gap Buffer: 20,000 randomized insert/erase/get operations against a byte-array text model
-- Rope: 20,000 randomized insert/erase/get operations against a byte-array text model
+- Piece Table: 20,000 randomized insert/erase/get operations against a byte-array text model
+- Inverted Index: normalization, sorted document frequency, AND intersection and 1,000 additional indexed documents
+- Posting List: 5,000/3,334-doc lists, exact intersection, varint round-trip and malformed-stream rejection
 
 Benchmarks Added:
-- Ring Buffer 10M bounded FIFO updates
-- Gap Buffer 500k local insertions
-- Rope 100k sequential byte insertions plus indexed reads
+- Piece Table 100k append edits
+- Inverted Index 50k synthetic documents
+- Posting List 200k-ID list intersection and encoded-size measurement
 
 Known Dependencies:
-- 085 introduces Piece Table editor storage
-- 086 introduces Inverted Index term-to-document mappings
-- 087 introduces Posting List compression/intersection foundations
+- 088 introduces Sparse Matrix Representations
+- 089 studies Matrix/Tensor Storage Layout
+- 090 introduces Compressed Data Structures
 
 Open Problems:
-- none if Batch 28 CI passes
+- none if Batch 29 CI passes
 
-Coverage: 84 / 170 chapters
+Coverage: 87 / 170 chapters

@@ -269,3 +269,13 @@
 - Rope Weight — logical length represented by a subtree or left branch
 - Implicit Treap — randomized balanced sequence tree where in-order position acts as the implicit key
 - Split / Merge — sequence-tree primitives that divide by logical position or concatenate ordered subsequences
+
+- Piece Table — text-storage structure representing the current document as references into immutable original and append-only add buffers
+- Piece — descriptor containing source buffer, start offset and length
+- Add Buffer — append-only backing store for inserted text in a Piece Table
+- Inverted Index — mapping from normalized terms to documents containing those terms
+- Document Frequency — number of distinct documents containing a term
+- Posting List — sorted list of document IDs associated with one indexed term
+- Gap / Delta Encoding — storing differences between consecutive sorted IDs instead of absolute IDs
+- Variable-Byte / Varint Encoding — integer encoding using continuation bits so smaller values consume fewer bytes
+- Boolean Intersection — finding document IDs shared by two sorted posting lists
