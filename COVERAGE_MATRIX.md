@@ -11,6 +11,9 @@ Legend: ✅ complete, ➡ planned, N/A not meaningful.
 | 091 | Succinct Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 092 | Persistent Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 093 | Immutable Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 094 | Functional Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 095 | Copy-on-Write Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 096 | Concurrent Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 094 | Functional Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 095 | Copy-on-Write Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 096 | Concurrent Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 097 | Thread-Safe Queue / Map | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 098 | Lock-Free Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 099 | Wait-Free Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |

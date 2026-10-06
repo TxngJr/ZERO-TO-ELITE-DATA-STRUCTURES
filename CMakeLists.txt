@@ -7,6 +7,11 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(DS_ENABLE_SANITIZERS "Enable AddressSanitizer and UndefinedBehaviorSanitizer" OFF)
+option(DS_ENABLE_THREAD_SANITIZER "Enable ThreadSanitizer" OFF)
+
+if(DS_ENABLE_SANITIZERS AND DS_ENABLE_THREAD_SANITIZER)
+    message(FATAL_ERROR "Address/Undefined sanitizers and ThreadSanitizer must use separate builds")
+endif()
 
 if(CMAKE_C_COMPILER_ID MATCHES "GNU|Clang")
     add_compile_options(-Wall -Wextra -Wpedantic)
@@ -15,6 +20,11 @@ endif()
 if(DS_ENABLE_SANITIZERS AND CMAKE_C_COMPILER_ID MATCHES "GNU|Clang")
     add_compile_options(-fsanitize=address,undefined -fno-omit-frame-pointer)
     add_link_options(-fsanitize=address,undefined)
+endif()
+
+if(DS_ENABLE_THREAD_SANITIZER AND CMAKE_C_COMPILER_ID MATCHES "GNU|Clang")
+    add_compile_options(-fsanitize=thread -fno-omit-frame-pointer)
+    add_link_options(-fsanitize=thread)
 endif()
 
 enable_testing()
@@ -1564,3 +1574,62 @@ add_test(NAME ch093_immutable_tests COMMAND ch093_immutable_tests)
 
 add_executable(ch093_immutable_benchmark 093-immutable-data-structures/benchmarks/frozen_int_set_benchmark.c)
 target_link_libraries(ch093_immutable_benchmark PRIVATE ch093_immutable)
+
+
+# Chapter 094
+add_library(ch094_functional
+    094-functional-data-structures/src/functional_queue.c
+)
+target_include_directories(ch094_functional PUBLIC 094-functional-data-structures/src)
+
+add_executable(ch094_functional_demo 094-functional-data-structures/examples/functional_queue_demo.c)
+target_link_libraries(ch094_functional_demo PRIVATE ch094_functional)
+add_test(NAME ch094_functional_demo_smoke COMMAND ch094_functional_demo)
+
+add_executable(ch094_functional_tests 094-functional-data-structures/tests/test_functional_queue.c)
+target_link_libraries(ch094_functional_tests PRIVATE ch094_functional)
+add_test(NAME ch094_functional_tests COMMAND ch094_functional_tests)
+
+add_executable(ch094_functional_benchmark 094-functional-data-structures/benchmarks/functional_queue_benchmark.c)
+target_link_libraries(ch094_functional_benchmark PRIVATE ch094_functional)
+
+# Chapter 095
+add_library(ch095_cow
+    095-copy-on-write-structures/src/cow_int_vector.c
+)
+target_include_directories(ch095_cow PUBLIC 095-copy-on-write-structures/src)
+
+add_executable(ch095_cow_demo 095-copy-on-write-structures/examples/cow_int_vector_demo.c)
+target_link_libraries(ch095_cow_demo PRIVATE ch095_cow)
+add_test(NAME ch095_cow_demo_smoke COMMAND ch095_cow_demo)
+
+add_executable(ch095_cow_tests 095-copy-on-write-structures/tests/test_cow_int_vector.c)
+target_link_libraries(ch095_cow_tests PRIVATE ch095_cow)
+add_test(NAME ch095_cow_tests COMMAND ch095_cow_tests)
+
+add_executable(ch095_cow_benchmark 095-copy-on-write-structures/benchmarks/cow_int_vector_benchmark.c)
+target_link_libraries(ch095_cow_benchmark PRIVATE ch095_cow)
+
+# Chapter 096
+find_package(Threads REQUIRED)
+
+add_library(ch096_concurrent
+    096-concurrent-data-structures/src/concurrent_int_set.c
+)
+target_include_directories(ch096_concurrent PUBLIC 096-concurrent-data-structures/src)
+target_link_libraries(ch096_concurrent PUBLIC Threads::Threads)
+
+add_executable(ch096_concurrent_demo 096-concurrent-data-structures/examples/concurrent_int_set_demo.c)
+target_link_libraries(ch096_concurrent_demo PRIVATE ch096_concurrent)
+add_test(NAME ch096_concurrent_demo_smoke COMMAND ch096_concurrent_demo)
+
+add_executable(ch096_concurrent_tests 096-concurrent-data-structures/tests/test_concurrent_int_set.c)
+target_link_libraries(ch096_concurrent_tests PRIVATE ch096_concurrent)
+add_test(NAME ch096_concurrent_tests COMMAND ch096_concurrent_tests)
+
+add_executable(ch096_atomic_publication 096-concurrent-data-structures/examples/atomic_publication_demo.c)
+target_link_libraries(ch096_atomic_publication PRIVATE Threads::Threads)
+add_test(NAME ch096_atomic_publication COMMAND ch096_atomic_publication)
+
+add_executable(ch096_concurrent_benchmark 096-concurrent-data-structures/benchmarks/concurrent_int_set_benchmark.c)
+target_link_libraries(ch096_concurrent_benchmark PRIVATE ch096_concurrent)

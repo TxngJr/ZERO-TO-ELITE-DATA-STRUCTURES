@@ -1,5 +1,23 @@
 # Changelog
 
+## Batch 32 — Chapters 094–096
+
+Added:
+- purely functional two-list queue with immutable node sharing
+- front/rear normalization with transactional arena rollback
+- explicit linear-history amortized analysis and branching caveat
+- separation of shallow operation checks from O(n) full validator
+- ref-counted CowIntVector with O(1) clone
+- detach-on-write for set/pop and growth-aware push
+- strong allocation-failure behavior and exact refs-to-zero storage reclamation
+- LeakSanitizer-driven fix for detached backing-store leak
+- mutex-protected sorted ConcurrentIntSet
+- multi-thread insert/remove/duplicate stress and consistent snapshots
+- C11 release/acquire atomic-publication example
+- foundations for data races, memory ordering, linearizability, CAS, ABA, lock-free and wait-free progress
+- separate ThreadSanitizer CMake mode and CI job for Chapter 096
+- Batch 32 negative review
+
 ## Batch 31 — Chapters 091–093
 
 Added:

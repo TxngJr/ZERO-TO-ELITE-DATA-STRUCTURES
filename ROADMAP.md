@@ -1,7 +1,7 @@
 # Zero to Elite Data Structures — 170 Chapter Roadmap
 
-Current Progress: **93 / 170 chapters complete**
-Next Batch: **094 Functional Data Structures → 095 Copy-on-Write Structures → 096 Concurrent Data Structures**
+Current Progress: **96 / 170 chapters complete**
+Next Batch: **097 Thread-Safe Queue / Map → 098 Lock-Free Data Structures → 099 Wait-Free Data Structures**
 
 ## Foundations
 001 Programming Foundations

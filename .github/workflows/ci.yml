@@ -19,3 +19,17 @@ jobs:
         run: cmake --build build --parallel 2
       - name: Test
         run: ctest --test-dir build --output-on-failure --timeout 60
+
+  thread-sanitizer:
+    runs-on: ubuntu-latest
+    container: fedora:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ThreadSanitizer toolchain
+        run: dnf -y install gcc gcc-c++ cmake make libtsan
+      - name: Configure TSan
+        run: cmake -S . -B build-tsan -DDS_ENABLE_THREAD_SANITIZER=ON
+      - name: Build concurrent chapter
+        run: cmake --build build-tsan --parallel 2 --target ch096_concurrent_demo ch096_concurrent_tests ch096_atomic_publication
+      - name: Test concurrent chapter with TSan
+        run: ctest --test-dir build-tsan -R "^ch096_" --output-on-failure --timeout 60

@@ -298,3 +298,16 @@
 - Select — operation ที่แปลงลำดับ occurrence กลับเป็นตำแหน่งของ symbol/bit เป้าหมาย
 - Immutability — property ที่ observable state ของ value/object ไม่เปลี่ยนหลัง construction ตาม contract
 - Frozen Set — static build-once/read-many set ที่ไม่มี mutation API หลังสร้าง
+
+- Functional Data Structure — structure ที่ operations คืน value/structure ใหม่โดยหลีกเลี่ยงการ mutate input และมักใช้ immutable links + structural sharing
+- Referential Transparency — property ที่ expression ภายใต้ input เดิมสามารถแทนด้วยผลลัพธ์เดิมได้โดยไม่เปลี่ยน observable meaning
+- Copy-on-Write (COW) — optimization ที่ share backing storage จนกระทั่งมี write จึง detach/copy ก่อน mutate
+- Detach-on-Write — ขั้นตอนแยก backing storage ออกจาก sharers ก่อนทำ mutation
+- Data Race — conflicting concurrent memory accesses ที่ไม่มี synchronization/happens-before เพียงพอตาม language memory model
+- Critical Section — ช่วง code ที่เข้าถึง shared invariant และต้อง synchronize ตาม protocol
+- Linearizability — concurrent-object correctness condition ที่ history สามารถมองเป็น sequential operations ณ linearization points โดยเคารพ real-time order
+- Memory Ordering — constraints ต่อการสังเกตลำดับ memory operations ระหว่าง threads
+- Compare-and-Swap (CAS) — atomic read-modify-write primitive ที่เปลี่ยนค่าก็ต่อเมื่อ current value ตรง expected
+- ABA Problem — hazard ที่ค่าเปลี่ยน A→B→A ทำให้ equality/CAS check อาจพลาดว่ามี intermediate change
+- Lock-Free — progress guarantee ที่ระบบโดยรวมต้องมี operation คืบหน้าแม้ individual thread อาจ starve
+- Wait-Free — progress guarantee ที่ทุก operation ของทุก thread มี finite completion bound ตาม model

@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 31
+Current Batch: 32
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -96,50 +96,57 @@ Completed Chapters:
 - 091 Succinct Data Structures
 - 092 Persistent Data Structures
 - 093 Immutable Data Structures
+- 094 Functional Data Structures
+- 095 Copy-on-Write Structures
+- 096 Concurrent Data Structures
 
-Current Chapter: 093
+Current Chapter: 096
 
-Next Chapter: 094 Functional Data Structures
+Next Chapter: 097 Thread-Safe Queue / Map
 
 Concepts Covered:
-- all prior Chapters 001–090
-- succinct vs compressed/compact representations
-- packed static bit vectors with rank/select
-- rank directory metadata and padding correctness
-- persistence taxonomy and version branching
-- path copying and structural sharing
-- stable-address arena lifetime and transactional allocation rollback
-- immutable build-once/read-many structures
-- frozen open-addressing hash sets without tombstones
-- immutability vs persistence vs copy-on-write
+- all prior Chapters 001–093
+- pure transformations and referential transparency
+- two-list functional queue representation
+- structural sharing and linear-history amortized reasoning
+- copy-on-write sharing, refcounts and detach-on-write
+- first-write latency and strong allocation-failure behavior
+- thread/shared-state mental model
+- race condition vs C data race
+- mutex-protected representation invariants
+- atomicity, visibility and memory ordering
+- release/acquire publication
+- linearizability, CAS, ABA, lock-free and wait-free foundations
 
 Structures Implemented:
 - all previous structures
-- SuccinctBitVector
-- PersistentIntSet with PSetArena
-- FrozenIntSet
+- FunctionalQueue with immutable front/rear lists and arena-backed nodes
+- CowIntVector with shared ref-counted backing storage
+- ConcurrentIntSet with mutex-protected sorted dynamic storage
 
 Tests Added:
-- Succinct Bit Vector: boundary sizes around 64/512-bit packing plus randomized 200,000-bit rank/select differential checks
-- Persistent Set: 1,200 randomized insert/erase operations with retained historical snapshots and repeated old-version verification
-- Immutable Set: 100,000-value randomized build/dedup plus exhaustive 50,000-domain membership checks and 20,000 guaranteed misses
+- Functional Queue: 20,000 randomized operations, invariant checks and retained historical snapshots
+- Copy-on-Write Vector: 256 clones, detach isolation, growth/pop checks and LeakSanitizer validation
+- Concurrent Set: 8-thread disjoint inserts, concurrent even removals, duplicate insertion stress, exact membership and snapshot checks
+- Atomic publication: release/acquire producer-consumer smoke test
 
 Benchmarks Added:
-- Succinct Bit Vector: 4,000,000 bits and 200,000 rank queries with payload vs total-structure byte accounting
-- Persistent Set: 20,000 retained versions with final height, arena-node and block-growth reporting
-- Immutable Set: 200,000 unique keys and 1,000,000 membership queries with capacity/load/storage reporting
+- Functional Queue: 200,000 enqueue + dequeue operations
+- Copy-on-Write Vector: 1,000,000-element payload, 2,000 clones and 100 detach writes
+- Concurrent Set: 8 threads × 10,000 inserts with throughput reporting
 
 Known Dependencies:
-- 094 introduces Functional Data Structures
-- 095 studies Copy-on-Write Structures
-- 096 begins Concurrent Data Structures
+- 097 specializes thread-safe Queue / Map
+- 098 introduces Lock-Free Data Structures
+- 099 introduces Wait-Free Data Structures
+- 100 deepens Atomic Data Structures / CAS
 
 Open Problems:
-- none if Batch 31 CI passes
+- none if Batch 32 ASan/UBSan full-suite CI and Chapter 096 TSan CI both pass
 
 Cross References:
-- 091 builds on Chapters 064, 066 and 090
-- 092 generalizes persistence beyond Chapter 046
-- 093 contrasts immutable snapshots with persistent versioned updates
+- 094 builds on Chapters 010, 092 and 093
+- 095 connects mutable arrays with sharing from Chapters 092–093
+- 096 follows the required concurrency foundation before Chapters 097–102
 
-Coverage: 93 / 170 chapters
+Coverage: 96 / 170 chapters
