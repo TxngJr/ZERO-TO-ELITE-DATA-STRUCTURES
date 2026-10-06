@@ -350,3 +350,13 @@
 - Cache-Aware Data Structure — structure whose layout/algorithm explicitly uses a block/cache/tile parameter
 - Tiling / Blocking — partitioning data/work into blocks intended to improve locality and working-set reuse
 - Working Set — data actively reused during a phase and therefore relevant to cache-capacity behavior
+
+- Cache-Oblivious Data Structure — structure/layout designed for multiscale locality without receiving explicit cache/block-size parameters
+- Morton / Z-Order — space-filling ordering produced by interleaving coordinate bits so recursive spatial neighborhoods are clustered in memory
+- External-Memory Model — complexity model emphasizing transfers between fast memory and larger/slower storage
+- Block Transfer / I/O — movement of one modeled block between storage levels
+- RAM-Resident Directory — small metadata index assumed to remain in fast memory while data blocks are modeled externally
+- Persistent File Format — serialized representation with defined bytes, metadata and compatibility rules across program lifetimes
+- File Magic — fixed byte signature used to identify/validate a file format
+- Random Seek — repositioning file access to a non-sequential offset
+- Sequential Range Scan — reading consecutive records after locating the range start

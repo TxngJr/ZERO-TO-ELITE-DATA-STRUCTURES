@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 36 — Chapters 106–108 complete**
+**Batch 37 — Chapters 109–111 complete**
 
 ล่าสุด:
-- [106 Free List](./106-free-list/)
-- [107 Garbage-Collected Data Structures](./107-garbage-collected-data-structures/)
-- [108 Cache-Aware Data Structures](./108-cache-aware-data-structures/)
+- [109 Cache-Oblivious Data Structures](./109-cache-oblivious-data-structures/)
+- [110 External-Memory Data Structures](./110-external-memory-data-structures/)
+- [111 Disk-Based Data Structures](./111-disk-based-data-structures/)
 
-สถานะ: **108 / 170 chapters**
+สถานะ: **111 / 170 chapters**
 
 Next:
 
-**109 Cache-Oblivious Data Structures → 110 External-Memory Data Structures → 111 Disk-Based Data Structures**
+**112 Database Index Structures → 113 File-System Data Structures → 114 Compiler Data Structures**
 
 ## Build
 
@@ -29,4 +29,4 @@ ASan/UBSan:
     cmake --build build-asan
     ctest --test-dir build-asan --output-on-failure --timeout 60
 
-ThreadSanitizer remains scoped to concurrent Chapters 096–102. Chapters 103–108 currently document single-threaded contracts.
+ThreadSanitizer remains scoped to concurrent Chapters 096–102. Chapters 103–111 currently document single-threaded contracts.

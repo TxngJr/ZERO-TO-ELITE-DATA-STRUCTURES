@@ -1,7 +1,7 @@
 # Zero to Elite Data Structures — 170 Chapter Roadmap
 
-Current Progress: **108 / 170 chapters complete**
-Next Batch: **109 Cache-Oblivious Data Structures → 110 External-Memory Data Structures → 111 Disk-Based Data Structures**
+Current Progress: **111 / 170 chapters complete**
+Next Batch: **112 Database Index Structures → 113 File-System Data Structures → 114 Compiler Data Structures**
 
 ## Foundations
 001 Programming Foundations

@@ -1,5 +1,20 @@
 # Changelog
 
+## Batch 37 — Chapters 109–111
+
+Added:
+- CacheObliviousMatrix using Morton/Z-order layout with no explicit tile/cache-size parameter
+- power-of-two padded square representation, O(1)-style bit-interleaved logical mapping and zero-padding invariant
+- 100,000-update dense differential test and exact transpose check
+- ExternalMemorySet with fixed logical block capacity and RAM-resident block directory
+- explicit logical block-read/write counters, one-data-block point queries and sequential overlapping-block range scans
+- 100,000-key / 20,000-query I/O-model differential test
+- persistent DiskSortedIndex with 64-byte versioned header and fixed 16-byte records
+- canonical little-endian uint64/int64 encoding independent of C struct padding
+- create/close/reopen lifecycle, binary-search random seeks and lower_bound + sequential range scan
+- file-length/header/key-order validation and corrupt-header rejection
+- Batch 37 negative review
+
 ## Batch 36 — Chapters 106–108
 
 Added:

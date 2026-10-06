@@ -1846,3 +1846,55 @@ add_test(NAME ch108_cache_aware_tests COMMAND ch108_cache_aware_tests)
 
 add_executable(ch108_cache_aware_benchmark 108-cache-aware-data-structures/benchmarks/cache_aware_matrix_benchmark.c)
 target_link_libraries(ch108_cache_aware_benchmark PRIVATE ch108_cache_aware)
+
+
+# Chapter 109
+add_library(ch109_cache_oblivious
+    109-cache-oblivious-data-structures/src/cache_oblivious_matrix.c
+)
+target_include_directories(ch109_cache_oblivious PUBLIC 109-cache-oblivious-data-structures/src)
+
+add_executable(ch109_cache_oblivious_demo 109-cache-oblivious-data-structures/examples/cache_oblivious_matrix_demo.c)
+target_link_libraries(ch109_cache_oblivious_demo PRIVATE ch109_cache_oblivious)
+add_test(NAME ch109_cache_oblivious_demo_smoke COMMAND ch109_cache_oblivious_demo)
+
+add_executable(ch109_cache_oblivious_tests 109-cache-oblivious-data-structures/tests/test_cache_oblivious_matrix.c)
+target_link_libraries(ch109_cache_oblivious_tests PRIVATE ch109_cache_oblivious)
+add_test(NAME ch109_cache_oblivious_tests COMMAND ch109_cache_oblivious_tests)
+
+add_executable(ch109_cache_oblivious_benchmark 109-cache-oblivious-data-structures/benchmarks/cache_oblivious_matrix_benchmark.c)
+target_link_libraries(ch109_cache_oblivious_benchmark PRIVATE ch109_cache_oblivious)
+
+# Chapter 110
+add_library(ch110_external_memory
+    110-external-memory-data-structures/src/external_memory_set.c
+)
+target_include_directories(ch110_external_memory PUBLIC 110-external-memory-data-structures/src)
+
+add_executable(ch110_external_memory_demo 110-external-memory-data-structures/examples/external_memory_set_demo.c)
+target_link_libraries(ch110_external_memory_demo PRIVATE ch110_external_memory)
+add_test(NAME ch110_external_memory_demo_smoke COMMAND ch110_external_memory_demo)
+
+add_executable(ch110_external_memory_tests 110-external-memory-data-structures/tests/test_external_memory_set.c)
+target_link_libraries(ch110_external_memory_tests PRIVATE ch110_external_memory)
+add_test(NAME ch110_external_memory_tests COMMAND ch110_external_memory_tests)
+
+add_executable(ch110_external_memory_benchmark 110-external-memory-data-structures/benchmarks/external_memory_set_benchmark.c)
+target_link_libraries(ch110_external_memory_benchmark PRIVATE ch110_external_memory)
+
+# Chapter 111
+add_library(ch111_disk_index
+    111-disk-based-data-structures/src/disk_sorted_index.c
+)
+target_include_directories(ch111_disk_index PUBLIC 111-disk-based-data-structures/src)
+
+add_executable(ch111_disk_index_demo 111-disk-based-data-structures/examples/disk_sorted_index_demo.c)
+target_link_libraries(ch111_disk_index_demo PRIVATE ch111_disk_index)
+add_test(NAME ch111_disk_index_demo_smoke COMMAND ch111_disk_index_demo)
+
+add_executable(ch111_disk_index_tests 111-disk-based-data-structures/tests/test_disk_sorted_index.c)
+target_link_libraries(ch111_disk_index_tests PRIVATE ch111_disk_index)
+add_test(NAME ch111_disk_index_tests COMMAND ch111_disk_index_tests)
+
+add_executable(ch111_disk_index_benchmark 111-disk-based-data-structures/benchmarks/disk_sorted_index_benchmark.c)
+target_link_libraries(ch111_disk_index_benchmark PRIVATE ch111_disk_index)
