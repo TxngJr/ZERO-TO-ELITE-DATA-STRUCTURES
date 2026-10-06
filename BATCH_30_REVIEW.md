@@ -45,6 +45,7 @@ Checked:
 - views do not own or move storage
 - strides are explicitly measured in elements, not bytes
 - audit corrected the stepped-slice test expected physical offset from 54 to 59 before commit
+- second CI build caught the same missing <stdint.h> dependency for SIZE_MAX in tensor_layout.c; it was patched before tests
 
 Complexity:
 - offset/permute O(ndim)

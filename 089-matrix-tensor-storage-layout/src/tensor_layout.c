@@ -1,4 +1,5 @@
 #include "tensor_layout.h"
+#include <stdint.h>
 #include <string.h>
 static bool valid_shape(const size_t*shape,size_t ndim){if(!shape||ndim==0||ndim>TENSOR_LAYOUT_MAX_DIMS)return false;for(size_t i=0;i<ndim;++i)if(shape[i]==0)return false;return true;}
 bool tensor_layout_row_major(TensorLayout*out,const size_t*shape,size_t ndim){if(!out||!valid_shape(shape,ndim))return false;memset(out,0,sizeof*out);out->ndim=ndim;for(size_t i=0;i<ndim;++i)out->shape[i]=shape[i];size_t s=1;for(size_t i=ndim;i-->0;){out->stride[i]=s;if(shape[i]>SIZE_MAX/s)return false;s*=shape[i];}return true;}
