@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 32
+Current Batch: 33
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -99,54 +99,59 @@ Completed Chapters:
 - 094 Functional Data Structures
 - 095 Copy-on-Write Structures
 - 096 Concurrent Data Structures
+- 097 Thread-Safe Queue / Map
+- 098 Lock-Free Data Structures
+- 099 Wait-Free Data Structures
 
-Current Chapter: 096
+Current Chapter: 099
 
-Next Chapter: 097 Thread-Safe Queue / Map
+Next Chapter: 100 Atomic Data Structures / CAS
 
 Concepts Covered:
-- all prior Chapters 001–093
-- pure transformations and referential transparency
-- two-list functional queue representation
-- structural sharing and linear-history amortized reasoning
-- copy-on-write sharing, refcounts and detach-on-write
-- first-write latency and strong allocation-failure behavior
-- thread/shared-state mental model
-- race condition vs C data race
-- mutex-protected representation invariants
-- atomicity, visibility and memory ordering
-- release/acquire publication
-- linearizability, CAS, ABA, lock-free and wait-free foundations
+- all prior Chapters 001–096
+- bounded MPMC queue with mutex + condition variables
+- queue close/drain semantics and predicate-based condition waiting
+- striped thread-safe integer map
+- compound-operation atomicity boundaries
+- lock-free progress via CAS retry loops
+- Treiber-style stack with bounded lifetime node pool
+- ABA/reclamation boundary and no-reuse teaching design
+- platform atomic lock-free verification
+- wait-free per-operation reasoning
+- SPSC ring with release/acquire head/tail publication
+- distinction between wait-free try operation and caller retry loop
 
 Structures Implemented:
 - all previous structures
-- FunctionalQueue with immutable front/rear lists and arena-backed nodes
-- CowIntVector with shared ref-counted backing storage
-- ConcurrentIntSet with mutex-protected sorted dynamic storage
+- ThreadSafeQueue
+- ThreadSafeIntMap
+- LockFreeStack
+- WaitFreeSpscRing
 
 Tests Added:
-- Functional Queue: 20,000 randomized operations, invariant checks and retained historical snapshots
-- Copy-on-Write Vector: 256 clones, detach isolation, growth/pop checks and LeakSanitizer validation
-- Concurrent Set: 8-thread disjoint inserts, concurrent even removals, duplicate insertion stress, exact membership and snapshot checks
-- Atomic publication: release/acquire producer-consumer smoke test
+- Thread-Safe Queue: 4 producers + 4 consumers transferring 20,000 unique values exactly once
+- Thread-Safe Map: 8-thread insertion/removal with exact odd-key verification
+- Lock-Free Stack: 8-thread 40,000-value push/pop plus mixed 4-producer/4-consumer stress
+- Wait-Free SPSC Ring: 500,000 ordered transfers with exact FIFO verification
+- TSan now covers Chapters 096–099
 
 Benchmarks Added:
-- Functional Queue: 200,000 enqueue + dequeue operations
-- Copy-on-Write Vector: 1,000,000-element payload, 2,000 clones and 100 detach writes
-- Concurrent Set: 8 threads × 10,000 inserts with throughput reporting
+- Thread-Safe Queue: 4 producers + 4 consumers transferring 400,000 items
+- Lock-Free Stack: 8 threads × 100,000 pushes with CAS-failure reporting
+- Wait-Free SPSC Ring: 2,000,000 ordered transfers
 
 Known Dependencies:
-- 097 specializes thread-safe Queue / Map
-- 098 introduces Lock-Free Data Structures
-- 099 introduces Wait-Free Data Structures
-- 100 deepens Atomic Data Structures / CAS
+- 100 deepens atomic data structures and CAS
+- 101 builds a production-oriented Concurrent Hash Map
+- 102 specializes concurrent Queue / Ring Buffer
+- 103 begins Memory Pool / Object Pool
 
 Open Problems:
-- none if Batch 32 ASan/UBSan full-suite CI and Chapter 096 TSan CI both pass
+- none if Batch 33 full ASan/UBSan CI and concurrent TSan CI both pass
 
 Cross References:
-- 094 builds on Chapters 010, 092 and 093
-- 095 connects mutable arrays with sharing from Chapters 092–093
-- 096 follows the required concurrency foundation before Chapters 097–102
+- 097 specializes lock-based structures from Chapter 096
+- 098 relies on Chapter 096 memory-order/CAS foundations
+- 099 contrasts bounded wait-free SPSC operations with Chapter 098 lock-free retry loops
 
-Coverage: 96 / 170 chapters
+Coverage: 99 / 170 chapters

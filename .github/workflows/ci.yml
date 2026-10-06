@@ -29,7 +29,7 @@ jobs:
         run: dnf -y install gcc gcc-c++ cmake make libtsan
       - name: Configure TSan
         run: cmake -S . -B build-tsan -DDS_ENABLE_THREAD_SANITIZER=ON
-      - name: Build concurrent chapter
-        run: cmake --build build-tsan --parallel 2 --target ch096_concurrent_demo ch096_concurrent_tests ch096_atomic_publication
-      - name: Test concurrent chapter with TSan
-        run: ctest --test-dir build-tsan -R "^ch096_" --output-on-failure --timeout 60
+      - name: Build concurrent chapters
+        run: cmake --build build-tsan --parallel 2 --target ch096_concurrent_demo ch096_concurrent_tests ch096_atomic_publication ch097_thread_safe_demo ch097_thread_safe_tests ch098_lock_free_demo ch098_lock_free_tests ch099_wait_free_demo ch099_wait_free_tests
+      - name: Test concurrent chapters with TSan
+        run: ctest --test-dir build-tsan -R "^ch09[6-9]_" --output-on-failure --timeout 60

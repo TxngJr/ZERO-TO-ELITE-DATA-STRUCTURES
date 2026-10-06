@@ -1,5 +1,21 @@
 # Changelog
 
+## Batch 33 — Chapters 097–099
+
+Added:
+- bounded MPMC ThreadSafeQueue with mutex, not-empty/not-full condition variables and close/drain semantics
+- striped ThreadSafeIntMap with one mutex per bucket and separately synchronized size metadata
+- 4-producer/4-consumer exactly-once queue stress and 8-thread map mutation tests
+- Treiber-style bounded LockFreeStack using atomic head-index CAS
+- one-shot lifetime node slots with no reuse/reclamation to avoid hiding ABA before reclamation chapters
+- runtime atomic lock-free verification and CAS-failure instrumentation
+- mixed 4-producer/4-consumer lock-free stack stress
+- WaitFreeSpscRing with fixed-step try_push/try_pop and release/acquire publication
+- explicit distinction between wait-free individual operations and caller-level retry loops
+- 500,000-item exact FIFO SPSC stress and 2,000,000-transfer benchmark
+- ThreadSanitizer CI expanded from Chapter 096 through 099
+- Batch 33 negative review
+
 ## Batch 32 — Chapters 094–096
 
 Added:

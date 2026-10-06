@@ -311,3 +311,12 @@
 - ABA Problem — hazard ที่ค่าเปลี่ยน A→B→A ทำให้ equality/CAS check อาจพลาดว่ามี intermediate change
 - Lock-Free — progress guarantee ที่ระบบโดยรวมต้องมี operation คืบหน้าแม้ individual thread อาจ starve
 - Wait-Free — progress guarantee ที่ทุก operation ของทุก thread มี finite completion bound ตาม model
+
+- Thread-Safe Queue — queue whose documented operations preserve FIFO/invariants under allowed concurrent callers through a synchronization protocol
+- Condition Variable — waiting primitive used with a mutex and predicate; wake-up does not replace rechecking the predicate
+- Lock Striping — splitting a structure into independently locked regions to reduce global contention
+- Treiber Stack — classic CAS-based lock-free stack pattern using atomic head replacement
+- Progress Guarantee — property such as blocking, lock-free or wait-free describing how concurrent operations make progress
+- Safe Memory Reclamation — protocol ensuring removed concurrent nodes are not freed/reused while another thread may still reference them
+- SPSC — Single Producer / Single Consumer concurrency contract
+- Wait-Free Try Operation — bounded-step operation that completes with success/failure such as full/empty without internal retry loop

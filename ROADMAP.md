@@ -1,7 +1,7 @@
 # Zero to Elite Data Structures — 170 Chapter Roadmap
 
-Current Progress: **96 / 170 chapters complete**
-Next Batch: **097 Thread-Safe Queue / Map → 098 Lock-Free Data Structures → 099 Wait-Free Data Structures**
+Current Progress: **99 / 170 chapters complete**
+Next Batch: **100 Atomic Data Structures / CAS → 101 Concurrent Hash Map → 102 Concurrent Queue / Ring Buffer**
 
 ## Foundations
 001 Programming Foundations

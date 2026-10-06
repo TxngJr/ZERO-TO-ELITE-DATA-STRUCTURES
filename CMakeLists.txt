@@ -1633,3 +1633,58 @@ add_test(NAME ch096_atomic_publication COMMAND ch096_atomic_publication)
 
 add_executable(ch096_concurrent_benchmark 096-concurrent-data-structures/benchmarks/concurrent_int_set_benchmark.c)
 target_link_libraries(ch096_concurrent_benchmark PRIVATE ch096_concurrent)
+
+
+# Chapter 097
+add_library(ch097_thread_safe
+    097-thread-safe-queue-map/src/thread_safe_structures.c
+)
+target_include_directories(ch097_thread_safe PUBLIC 097-thread-safe-queue-map/src)
+target_link_libraries(ch097_thread_safe PUBLIC Threads::Threads)
+
+add_executable(ch097_thread_safe_demo 097-thread-safe-queue-map/examples/thread_safe_demo.c)
+target_link_libraries(ch097_thread_safe_demo PRIVATE ch097_thread_safe)
+add_test(NAME ch097_thread_safe_demo_smoke COMMAND ch097_thread_safe_demo)
+
+add_executable(ch097_thread_safe_tests 097-thread-safe-queue-map/tests/test_thread_safe_structures.c)
+target_link_libraries(ch097_thread_safe_tests PRIVATE ch097_thread_safe)
+add_test(NAME ch097_thread_safe_tests COMMAND ch097_thread_safe_tests)
+
+add_executable(ch097_thread_safe_benchmark 097-thread-safe-queue-map/benchmarks/thread_safe_benchmark.c)
+target_link_libraries(ch097_thread_safe_benchmark PRIVATE ch097_thread_safe)
+
+# Chapter 098
+add_library(ch098_lock_free
+    098-lock-free-data-structures/src/lock_free_stack.c
+)
+target_include_directories(ch098_lock_free PUBLIC 098-lock-free-data-structures/src)
+target_link_libraries(ch098_lock_free PUBLIC Threads::Threads)
+
+add_executable(ch098_lock_free_demo 098-lock-free-data-structures/examples/lock_free_stack_demo.c)
+target_link_libraries(ch098_lock_free_demo PRIVATE ch098_lock_free)
+add_test(NAME ch098_lock_free_demo_smoke COMMAND ch098_lock_free_demo)
+
+add_executable(ch098_lock_free_tests 098-lock-free-data-structures/tests/test_lock_free_stack.c)
+target_link_libraries(ch098_lock_free_tests PRIVATE ch098_lock_free)
+add_test(NAME ch098_lock_free_tests COMMAND ch098_lock_free_tests)
+
+add_executable(ch098_lock_free_benchmark 098-lock-free-data-structures/benchmarks/lock_free_stack_benchmark.c)
+target_link_libraries(ch098_lock_free_benchmark PRIVATE ch098_lock_free)
+
+# Chapter 099
+add_library(ch099_wait_free
+    099-wait-free-data-structures/src/wait_free_spsc_ring.c
+)
+target_include_directories(ch099_wait_free PUBLIC 099-wait-free-data-structures/src)
+target_link_libraries(ch099_wait_free PUBLIC Threads::Threads)
+
+add_executable(ch099_wait_free_demo 099-wait-free-data-structures/examples/wait_free_spsc_demo.c)
+target_link_libraries(ch099_wait_free_demo PRIVATE ch099_wait_free)
+add_test(NAME ch099_wait_free_demo_smoke COMMAND ch099_wait_free_demo)
+
+add_executable(ch099_wait_free_tests 099-wait-free-data-structures/tests/test_wait_free_spsc_ring.c)
+target_link_libraries(ch099_wait_free_tests PRIVATE ch099_wait_free)
+add_test(NAME ch099_wait_free_tests COMMAND ch099_wait_free_tests)
+
+add_executable(ch099_wait_free_benchmark 099-wait-free-data-structures/benchmarks/wait_free_spsc_benchmark.c)
+target_link_libraries(ch099_wait_free_benchmark PRIVATE ch099_wait_free)

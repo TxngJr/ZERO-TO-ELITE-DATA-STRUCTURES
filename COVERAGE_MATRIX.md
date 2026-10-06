@@ -14,6 +14,9 @@ Legend: ✅ complete, ➡ planned, N/A not meaningful.
 | 094 | Functional Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 095 | Copy-on-Write Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 096 | Concurrent Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 097 | Thread-Safe Queue / Map | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 098 | Lock-Free Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 099 | Wait-Free Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 097 | Thread-Safe Queue / Map | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 098 | Lock-Free Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 099 | Wait-Free Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 100 | Atomic Data Structures / CAS | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 101 | Concurrent Hash Map | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 102 | Concurrent Queue / Ring Buffer | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
