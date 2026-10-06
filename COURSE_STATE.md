@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 34
+Current Batch: 35
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -105,56 +105,58 @@ Completed Chapters:
 - 100 Atomic Data Structures / CAS
 - 101 Concurrent Hash Map
 - 102 Concurrent Queue / Ring Buffer
+- 103 Memory Pool / Object Pool
+- 104 Arena Allocator
+- 105 Slab Allocator Concepts
 
-Current Chapter: 102
+Current Chapter: 105
 
-Next Chapter: 103 Memory Pool / Object Pool
+Next Chapter: 106 Free List
 
 Concepts Covered:
-- all prior Chapters 001–099
-- atomic read/modify/write operations
-- strong/weak CAS semantics and contention retries
-- tagged value+version CAS for ABA mitigation
-- atomic packed bitset operations
-- runtime lock-free atomic verification
-- resizable concurrent hash map
-- table RW-lock + per-bucket mutex protocol
-- concurrent rehash publication and old-table lifetime
-- bounded MPMC sequence-number ring buffer
-- per-slot generation/sequence ownership
-- release/acquire payload publication
-- distinction between atomic/non-blocking APIs and formal lock-free guarantees
+- all prior Chapters 001–102
+- fixed-size memory/object pools
+- free-slot stacks and slot ownership validation
+- stride/alignment padding and fixed-capacity reuse
+- bump/region allocation
+- growable arena blocks
+- power-of-two alignment up to 4096
+- arena marks, bulk reset and stale-marker invalidation
+- slab size classes 16/32/64/128/256
+- per-slab free stacks and slot metadata
+- live internal-fragmentation accounting
+- empty-slab retention and trimming
+- allocator overflow/failure-path invariants
 
 Structures Implemented:
 - all previous structures
-- AtomicBitset
-- AtomicTaggedValue
-- ConcurrentHashMap
-- ConcurrentMpmcRing
+- ObjectPool
+- Arena
+- SlabAllocator
 
 Tests Added:
-- Atomic Structures: 8-thread 8,192-bit set plus 8×10,000 tagged CAS increments and explicit ABA-tag test
-- Concurrent Hash Map: 8-thread 40,000-key insert/update/remove workload with repeated concurrent resizing
-- Concurrent Ring: 4 producers + 4 consumers transferring 100,000 unique values exactly once
-- TSan now covers Chapters 096–102
+- Object Pool: 100,000 randomized allocate/free operations at capacity 1,024
+- Arena: 50,000 allocations with sizes 1..97 and alignments 1..4096 plus mark/reset checks
+- Slab: 80,000 randomized allocations/frees across five size classes and 4,096 active slots
+- double-free/foreign-pointer/stale-mark checks
+- ASan/UBSan + LeakSanitizer local verification
 
 Benchmarks Added:
-- Tagged CAS: 8 threads × 100,000 increments with retry count
-- Concurrent Hash Map: 8 threads × 50,000 inserts with resize/bucket metrics
-- Concurrent Ring: 4 producers + 4 consumers transferring 1,000,000 items
+- Object Pool: approximately 2,000,000 allocation/release operations
+- Arena: 1,000,000 allocations plus bulk reset
+- Slab: approximately 1,000,000 allocation/release operations across five classes
 
 Known Dependencies:
-- 103 begins Memory Pool / Object Pool
-- 104 formalizes Arena Allocator design
-- 105 introduces Slab Allocator Concepts
-- later memory-management chapters connect back to safe reclamation from concurrent structures
+- 106 isolates Free List design as its own chapter
+- 107 introduces Garbage-Collected Data Structures
+- 108 begins Cache-Aware Data Structures
 
 Open Problems:
-- none if Batch 34 full ASan/UBSan CI and TSan 096–102 CI both pass
+- none if Batch 35 full Fedora ASan/UBSan CI passes
 
 Cross References:
-- 100 deepens the CAS/memory-order foundation from Chapters 096–099
-- 101 extends Chapter 097 fixed striped map with synchronized resizing
-- 102 generalizes Chapter 099 SPSC ring to MPMC coordination without overclaiming progress guarantees
+- 103 specializes reusable fixed-size allocation
+- 104 changes reclamation granularity from per-object to per-region
+- 105 generalizes fixed pools into multiple size classes/slabs
 
-Coverage: 102 / 170 chapters
+Coverage: 105 / 170 chapters

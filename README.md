@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 34 — Chapters 100–102 complete**
+**Batch 35 — Chapters 103–105 complete**
 
 ล่าสุด:
-- [100 Atomic Data Structures / CAS](./100-atomic-data-structures-cas/)
-- [101 Concurrent Hash Map](./101-concurrent-hash-map/)
-- [102 Concurrent Queue / Ring Buffer](./102-concurrent-queue-ring-buffer/)
+- [103 Memory Pool / Object Pool](./103-memory-pool-object-pool/)
+- [104 Arena Allocator](./104-arena-allocator/)
+- [105 Slab Allocator Concepts](./105-slab-allocator-concepts/)
 
-สถานะ: **102 / 170 chapters**
+สถานะ: **105 / 170 chapters**
 
 Next:
 
-**103 Memory Pool / Object Pool → 104 Arena Allocator → 105 Slab Allocator Concepts**
+**106 Free List → 107 Garbage-Collected Data Structures → 108 Cache-Aware Data Structures**
 
 ## Build
 
@@ -29,8 +29,4 @@ ASan/UBSan:
     cmake --build build-asan
     ctest --test-dir build-asan --output-on-failure --timeout 60
 
-ThreadSanitizer for concurrent chapters 096–102:
-
-    cmake -S . -B build-tsan -DDS_ENABLE_THREAD_SANITIZER=ON
-    cmake --build build-tsan --parallel 2 --target ch096_concurrent_demo ch096_concurrent_tests ch096_atomic_publication ch097_thread_safe_demo ch097_thread_safe_tests ch098_lock_free_demo ch098_lock_free_tests ch099_wait_free_demo ch099_wait_free_tests ch100_atomic_demo ch100_atomic_tests ch101_concurrent_hash_map_demo ch101_concurrent_hash_map_tests ch102_concurrent_ring_demo ch102_concurrent_ring_tests
-    ctest --test-dir build-tsan -R "^ch(09[6-9]|10[0-2])_" --output-on-failure --timeout 60
+ThreadSanitizer remains scoped to concurrent Chapters 096–102 because Chapters 103–105 intentionally expose non-thread-safe allocator contracts.

@@ -1,7 +1,7 @@
 # Zero to Elite Data Structures — 170 Chapter Roadmap
 
-Current Progress: **102 / 170 chapters complete**
-Next Batch: **103 Memory Pool / Object Pool → 104 Arena Allocator → 105 Slab Allocator Concepts**
+Current Progress: **105 / 170 chapters complete**
+Next Batch: **106 Free List → 107 Garbage-Collected Data Structures → 108 Cache-Aware Data Structures**
 
 ## Foundations
 001 Programming Foundations

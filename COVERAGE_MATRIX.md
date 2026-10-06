@@ -4,22 +4,10 @@ Legend: ✅ complete, ➡ planned, N/A not meaningful.
 
 | Chapter | Topic | Theory | Code | Complexity | Invariant | Tests | Benchmark | Exercises | Status |
 |---:|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 001–087 | Foundations through Posting List | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 088 | Sparse Matrix Representations | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 089 | Matrix/Tensor Storage Layout | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 090 | Compressed Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 091 | Succinct Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 092 | Persistent Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 093 | Immutable Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 094 | Functional Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 095 | Copy-on-Write Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 096 | Concurrent Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 097 | Thread-Safe Queue / Map | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 098 | Lock-Free Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 099 | Wait-Free Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 100 | Atomic Data Structures / CAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 101 | Concurrent Hash Map | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 102 | Concurrent Queue / Ring Buffer | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 103 | Memory Pool / Object Pool | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 104 | Arena Allocator | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 105 | Slab Allocator Concepts | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 001–102 | Foundations through Concurrent Queue / Ring Buffer | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 103 | Memory Pool / Object Pool | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 104 | Arena Allocator | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 105 | Slab Allocator Concepts | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 106 | Free List | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 107 | Garbage-Collected Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 108 | Cache-Aware Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |

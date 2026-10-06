@@ -1,5 +1,24 @@
 # Changelog
 
+## Batch 35 — Chapters 103–105
+
+Added:
+- fixed-capacity ObjectPool with max_align_t stride alignment
+- separate free-index stack and in-use metadata instead of overwriting payload
+- O(1) allocate/release, pointer ownership validation and double-free rejection
+- 100,000-operation randomized ObjectPool model test
+- growable Arena allocator with 4096-byte-aligned block bases
+- power-of-two allocation alignment up to 4096 bytes
+- arena calloc, marks, reset-to-mark and full reset
+- generation-based stale-marker invalidation
+- rollback of newly added arena block on unexpected placement failure
+- five-class teaching SlabAllocator: 16/32/64/128/256 bytes
+- requested-size metadata for exact live internal-fragmentation accounting
+- empty-slab trimming and reserved/live byte metrics
+- 80,000-operation randomized Slab workload
+- strict -Werror cleanup and corrected O(S*K) slab-validator complexity statement
+- Batch 35 negative review
+
 ## Batch 34 — Chapters 100–102
 
 Added:

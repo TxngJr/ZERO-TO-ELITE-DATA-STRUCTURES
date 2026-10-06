@@ -329,3 +329,13 @@
 - RW-Lock — synchronization primitive allowing multiple readers or one exclusive writer
 - Per-Slot Sequence Number — generation metadata attached to a ring-buffer cell to coordinate reuse across logical positions
 - MPMC — Multiple Producer / Multiple Consumer concurrency contract
+
+- Object Pool — allocator that pre-reserves a fixed number of same-sized reusable object slots
+- Allocation Stride — physical byte distance between consecutive slots after alignment/padding
+- Arena Allocator — region allocator using bump allocation and bulk reclamation through reset/region lifetime
+- Arena Mark — snapshot of arena allocation state used as a rollback/reset boundary
+- Bump Pointer — monotonically advancing offset identifying the next free byte in a region
+- Size Class — allocator bucket grouping requests into one physical slot size
+- Slab — group/page of equal-sized slots managed together for one size class
+- Internal Fragmentation — bytes reserved inside an allocated slot but unused by the logical request
+- Slab Trimming — reclaiming completely empty slabs back to the underlying allocator

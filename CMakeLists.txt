@@ -1742,3 +1742,55 @@ add_test(NAME ch102_concurrent_ring_tests COMMAND ch102_concurrent_ring_tests)
 
 add_executable(ch102_concurrent_ring_benchmark 102-concurrent-queue-ring-buffer/benchmarks/concurrent_mpmc_ring_benchmark.c)
 target_link_libraries(ch102_concurrent_ring_benchmark PRIVATE ch102_concurrent_ring)
+
+
+# Chapter 103
+add_library(ch103_object_pool
+    103-memory-pool-object-pool/src/object_pool.c
+)
+target_include_directories(ch103_object_pool PUBLIC 103-memory-pool-object-pool/src)
+
+add_executable(ch103_object_pool_demo 103-memory-pool-object-pool/examples/object_pool_demo.c)
+target_link_libraries(ch103_object_pool_demo PRIVATE ch103_object_pool)
+add_test(NAME ch103_object_pool_demo_smoke COMMAND ch103_object_pool_demo)
+
+add_executable(ch103_object_pool_tests 103-memory-pool-object-pool/tests/test_object_pool.c)
+target_link_libraries(ch103_object_pool_tests PRIVATE ch103_object_pool)
+add_test(NAME ch103_object_pool_tests COMMAND ch103_object_pool_tests)
+
+add_executable(ch103_object_pool_benchmark 103-memory-pool-object-pool/benchmarks/object_pool_benchmark.c)
+target_link_libraries(ch103_object_pool_benchmark PRIVATE ch103_object_pool)
+
+# Chapter 104
+add_library(ch104_arena
+    104-arena-allocator/src/arena_allocator.c
+)
+target_include_directories(ch104_arena PUBLIC 104-arena-allocator/src)
+
+add_executable(ch104_arena_demo 104-arena-allocator/examples/arena_allocator_demo.c)
+target_link_libraries(ch104_arena_demo PRIVATE ch104_arena)
+add_test(NAME ch104_arena_demo_smoke COMMAND ch104_arena_demo)
+
+add_executable(ch104_arena_tests 104-arena-allocator/tests/test_arena_allocator.c)
+target_link_libraries(ch104_arena_tests PRIVATE ch104_arena)
+add_test(NAME ch104_arena_tests COMMAND ch104_arena_tests)
+
+add_executable(ch104_arena_benchmark 104-arena-allocator/benchmarks/arena_allocator_benchmark.c)
+target_link_libraries(ch104_arena_benchmark PRIVATE ch104_arena)
+
+# Chapter 105
+add_library(ch105_slab
+    105-slab-allocator-concepts/src/slab_allocator.c
+)
+target_include_directories(ch105_slab PUBLIC 105-slab-allocator-concepts/src)
+
+add_executable(ch105_slab_demo 105-slab-allocator-concepts/examples/slab_allocator_demo.c)
+target_link_libraries(ch105_slab_demo PRIVATE ch105_slab)
+add_test(NAME ch105_slab_demo_smoke COMMAND ch105_slab_demo)
+
+add_executable(ch105_slab_tests 105-slab-allocator-concepts/tests/test_slab_allocator.c)
+target_link_libraries(ch105_slab_tests PRIVATE ch105_slab)
+add_test(NAME ch105_slab_tests COMMAND ch105_slab_tests)
+
+add_executable(ch105_slab_benchmark 105-slab-allocator-concepts/benchmarks/slab_allocator_benchmark.c)
+target_link_libraries(ch105_slab_benchmark PRIVATE ch105_slab)
