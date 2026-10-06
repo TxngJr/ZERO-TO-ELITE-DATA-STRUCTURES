@@ -1460,3 +1460,55 @@ add_test(NAME ch087_posting_list_tests COMMAND ch087_posting_list_tests)
 
 add_executable(ch087_posting_list_benchmark 087-posting-list/benchmarks/posting_list_benchmark.c)
 target_link_libraries(ch087_posting_list_benchmark PRIVATE ch087_posting_list)
+
+
+# Chapter 088
+add_library(ch088_sparse_matrix
+    088-sparse-matrix-representations/src/sparse_matrix.c
+)
+target_include_directories(ch088_sparse_matrix PUBLIC 088-sparse-matrix-representations/src)
+
+add_executable(ch088_sparse_matrix_demo 088-sparse-matrix-representations/examples/sparse_matrix_demo.c)
+target_link_libraries(ch088_sparse_matrix_demo PRIVATE ch088_sparse_matrix)
+add_test(NAME ch088_sparse_matrix_demo_smoke COMMAND ch088_sparse_matrix_demo)
+
+add_executable(ch088_sparse_matrix_tests 088-sparse-matrix-representations/tests/test_sparse_matrix.c)
+target_link_libraries(ch088_sparse_matrix_tests PRIVATE ch088_sparse_matrix m)
+add_test(NAME ch088_sparse_matrix_tests COMMAND ch088_sparse_matrix_tests)
+
+add_executable(ch088_sparse_matrix_benchmark 088-sparse-matrix-representations/benchmarks/sparse_matrix_benchmark.c)
+target_link_libraries(ch088_sparse_matrix_benchmark PRIVATE ch088_sparse_matrix)
+
+# Chapter 089
+add_library(ch089_tensor_layout
+    089-matrix-tensor-storage-layout/src/tensor_layout.c
+)
+target_include_directories(ch089_tensor_layout PUBLIC 089-matrix-tensor-storage-layout/src)
+
+add_executable(ch089_tensor_layout_demo 089-matrix-tensor-storage-layout/examples/tensor_layout_demo.c)
+target_link_libraries(ch089_tensor_layout_demo PRIVATE ch089_tensor_layout)
+add_test(NAME ch089_tensor_layout_demo_smoke COMMAND ch089_tensor_layout_demo)
+
+add_executable(ch089_tensor_layout_tests 089-matrix-tensor-storage-layout/tests/test_tensor_layout.c)
+target_link_libraries(ch089_tensor_layout_tests PRIVATE ch089_tensor_layout)
+add_test(NAME ch089_tensor_layout_tests COMMAND ch089_tensor_layout_tests)
+
+add_executable(ch089_tensor_layout_benchmark 089-matrix-tensor-storage-layout/benchmarks/tensor_layout_benchmark.c)
+target_link_libraries(ch089_tensor_layout_benchmark PRIVATE ch089_tensor_layout)
+
+# Chapter 090
+add_library(ch090_compressed_seq
+    090-compressed-data-structures/src/u64_compressed_seq.c
+)
+target_include_directories(ch090_compressed_seq PUBLIC 090-compressed-data-structures/src)
+
+add_executable(ch090_compressed_seq_demo 090-compressed-data-structures/examples/compressed_seq_demo.c)
+target_link_libraries(ch090_compressed_seq_demo PRIVATE ch090_compressed_seq)
+add_test(NAME ch090_compressed_seq_demo_smoke COMMAND ch090_compressed_seq_demo)
+
+add_executable(ch090_compressed_seq_tests 090-compressed-data-structures/tests/test_compressed_seq.c)
+target_link_libraries(ch090_compressed_seq_tests PRIVATE ch090_compressed_seq)
+add_test(NAME ch090_compressed_seq_tests COMMAND ch090_compressed_seq_tests)
+
+add_executable(ch090_compressed_seq_benchmark 090-compressed-data-structures/benchmarks/compressed_seq_benchmark.c)
+target_link_libraries(ch090_compressed_seq_benchmark PRIVATE ch090_compressed_seq)

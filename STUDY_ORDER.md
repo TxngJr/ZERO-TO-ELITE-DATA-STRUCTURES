@@ -30,10 +30,11 @@
 - Batch 26: 076–078
 - Batch 27: 079–081
 - Batch 28: 082–084
-- Batch 29: 085 Piece Table, 086 Inverted Index, 087 Posting List
+- Batch 29: 085–087
+- Batch 30: 088 Sparse Matrix Representations, 089 Matrix/Tensor Storage Layout, 090 Compressed Data Structures
 
-## Batch 30 — Next
+## Batch 31 — Next
 
-088 Sparse Matrix Representations
-089 Matrix/Tensor Storage Layout
-090 Compressed Data Structures
+091 Succinct Data Structures
+092 Persistent Data Structures
+093 Immutable Data Structures

@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 29 — Chapters 085–087 complete**
+**Batch 30 — Chapters 088–090 complete**
 
 ล่าสุด:
-- [085 Piece Table](./085-piece-table/)
-- [086 Inverted Index](./086-inverted-index/)
-- [087 Posting List](./087-posting-list/)
+- [088 Sparse Matrix Representations](./088-sparse-matrix-representations/)
+- [089 Matrix/Tensor Storage Layout](./089-matrix-tensor-storage-layout/)
+- [090 Compressed Data Structures](./090-compressed-data-structures/)
 
-สถานะ: **87 / 170 chapters**
+สถานะ: **90 / 170 chapters**
 
 Next:
 
-**088 Sparse Matrix Representations → 089 Matrix/Tensor Storage Layout → 090 Compressed Data Structures**
+**091 Succinct Data Structures → 092 Persistent Data Structures → 093 Immutable Data Structures**
 
 ## Build
 

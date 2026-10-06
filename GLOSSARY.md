@@ -279,3 +279,16 @@
 - Gap / Delta Encoding — storing differences between consecutive sorted IDs instead of absolute IDs
 - Variable-Byte / Varint Encoding — integer encoding using continuation bits so smaller values consume fewer bytes
 - Boolean Intersection — finding document IDs shared by two sorted posting lists
+
+- Sparse Matrix — matrix where most logical entries are zero and only nonzero structure is stored
+- COO (Coordinate Format) — sparse representation storing explicit row, column and value triplets
+- CSR (Compressed Sparse Row) — sparse representation grouping values by row with row-pointer prefix offsets
+- CSC (Compressed Sparse Column) — sparse representation grouping values by column with column-pointer prefix offsets
+- SpMV — sparse matrix-vector multiplication
+- Tensor Stride — storage-element distance moved when one logical tensor index advances by one in a dimension
+- Row-Major Layout — contiguous layout where the last dimension changes fastest
+- Column-Major Layout — contiguous layout where the first dimension changes fastest
+- Tensor View — shape/stride/offset metadata describing logical access to shared underlying storage
+- Compressed Data Structure — representation reducing storage while preserving selected operations without full decompression
+- Block Checkpoint — absolute value/byte offset metadata allowing local decoding inside compressed sequences
+- Delta Encoding — storing differences between adjacent monotonic values

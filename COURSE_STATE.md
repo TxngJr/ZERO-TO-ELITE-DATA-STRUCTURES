@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 29
+Current Batch: 30
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -90,44 +90,50 @@ Completed Chapters:
 - 085 Piece Table
 - 086 Inverted Index
 - 087 Posting List
+- 088 Sparse Matrix Representations
+- 089 Matrix/Tensor Storage Layout
+- 090 Compressed Data Structures
 
-Current Chapter: 087
+Current Chapter: 090
 
-Next Chapter: 088 Sparse Matrix Representations
+Next Chapter: 091 Succinct Data Structures
 
 Concepts Covered:
-- all prior Chapters 001–084
-- immutable-original plus append-only editing storage
-- piece splitting/coalescing and logical reconstruction
-- term normalization and term-to-document indexing
-- document frequency vs repeated token frequency
-- sorted posting IDs and Boolean intersection
-- delta/gap coding
-- variable-byte integer encoding/decoding
-- compression safety checks and decode validation
+- all prior Chapters 001–087
+- COO/CSR/CSC sparse representations
+- sparse duplicate canonicalization and zero elimination
+- CSR SpMV and sparse access-pattern trade-offs
+- tensor shape/stride/offset storage model
+- row-major vs column-major layout
+- metadata-only permutation and slicing
+- contiguous vs strided views
+- compressed monotonic sequences
+- block checkpoints and local decoding
+- delta + varint coding trade-offs
+- compression payload vs metadata accounting
 
 Structures Implemented:
 - all previous structures
-- PieceTable
-- InvertedIndex
-- PostingList
+- CooMatrix / CsrMatrix / CscMatrix
+- TensorLayout
+- U64CompressedSeq
 
 Tests Added:
-- Piece Table: 20,000 randomized insert/erase/get operations against a byte-array text model
-- Inverted Index: normalization, sorted document frequency, AND intersection and 1,000 additional indexed documents
-- Posting List: 5,000/3,334-doc lists, exact intersection, varint round-trip and malformed-stream rejection
+- Sparse Matrix: 5,000 random COO updates canonicalized and compared against a dense 37x29 reference plus SpMV
+- Tensor Layout: row/column-major offset, transpose permutation, stepped slice and invalid-view checks
+- Compressed Sequence: 100k monotonic values with random-access and lower_bound differential checks
 
 Benchmarks Added:
-- Piece Table 100k append edits
-- Inverted Index 50k synthetic documents
-- Posting List 200k-ID list intersection and encoded-size measurement
+- Sparse Matrix 5,000x5,000 matrix with 8 generated entries per row and 100 SpMV runs
+- Tensor Layout row-major vs column-oriented traversal over 2048x2048 storage
+- Compressed Sequence 1M monotonic values with block_size=128 and sampled random-access reads
 
 Known Dependencies:
-- 088 introduces Sparse Matrix Representations
-- 089 studies Matrix/Tensor Storage Layout
-- 090 introduces Compressed Data Structures
+- 091 introduces Succinct Data Structures
+- 092 revisits Persistent Data Structures as a general design family
+- 093 studies Immutable Data Structures
 
 Open Problems:
-- none if Batch 29 CI passes
+- none if Batch 30 CI passes
 
-Coverage: 87 / 170 chapters
+Coverage: 90 / 170 chapters

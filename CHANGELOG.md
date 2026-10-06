@@ -1,5 +1,25 @@
 # Changelog
 
+## Batch 30 — Chapters 088–090
+
+Added:
+- COO sparse-matrix builder with duplicate coordinate support
+- canonical COO→CSR and COO→CSC conversion by sorting and duplicate summation
+- elimination of explicit entries whose duplicate sum becomes zero
+- binary-search CSR/CSC point lookup and CSR sparse matrix-vector multiplication
+- dense-reference randomized sparse-matrix correctness test
+- stride-based TensorLayout metadata for up to 8 dimensions
+- row-major and column-major contiguous stride construction
+- overflow-safe logical-index to physical-offset mapping
+- metadata-only axis permutation and positive-step slicing
+- row/column contiguous-layout detection and locality benchmark
+- block-indexed monotonic uint64 compressed sequence
+- per-block absolute checkpoints plus delta-varint payloads
+- random access bounded to one block and checkpoint-assisted lower_bound
+- 64-bit varint width, positive-gap and cumulative-overflow validation
+- 100k-value differential get/lower_bound tests
+- Batch 30 negative review
+
 ## Batch 29 — Chapters 085–087
 
 Added:
