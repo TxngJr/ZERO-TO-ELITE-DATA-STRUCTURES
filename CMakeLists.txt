@@ -1950,3 +1950,55 @@ add_test(NAME ch114_compiler_structures_tests COMMAND ch114_compiler_structures_
 
 add_executable(ch114_compiler_structures_benchmark 114-compiler-data-structures/benchmarks/compiler_structures_benchmark.c)
 target_link_libraries(ch114_compiler_structures_benchmark PRIVATE ch114_compiler_structures)
+
+
+# Chapter 115
+add_library(ch115_os_structures
+    115-operating-system-data-structures/src/os_structures.c
+)
+target_include_directories(ch115_os_structures PUBLIC 115-operating-system-data-structures/src)
+
+add_executable(ch115_os_structures_demo 115-operating-system-data-structures/examples/os_structures_demo.c)
+target_link_libraries(ch115_os_structures_demo PRIVATE ch115_os_structures)
+add_test(NAME ch115_os_structures_demo_smoke COMMAND ch115_os_structures_demo)
+
+add_executable(ch115_os_structures_tests 115-operating-system-data-structures/tests/test_os_structures.c)
+target_link_libraries(ch115_os_structures_tests PRIVATE ch115_os_structures)
+add_test(NAME ch115_os_structures_tests COMMAND ch115_os_structures_tests)
+
+add_executable(ch115_os_structures_benchmark 115-operating-system-data-structures/benchmarks/os_structures_benchmark.c)
+target_link_libraries(ch115_os_structures_benchmark PRIVATE ch115_os_structures)
+
+# Chapter 116
+add_library(ch116_network_structures
+    116-networking-data-structures/src/network_structures.c
+)
+target_include_directories(ch116_network_structures PUBLIC 116-networking-data-structures/src)
+
+add_executable(ch116_network_structures_demo 116-networking-data-structures/examples/network_structures_demo.c)
+target_link_libraries(ch116_network_structures_demo PRIVATE ch116_network_structures)
+add_test(NAME ch116_network_structures_demo_smoke COMMAND ch116_network_structures_demo)
+
+add_executable(ch116_network_structures_tests 116-networking-data-structures/tests/test_network_structures.c)
+target_link_libraries(ch116_network_structures_tests PRIVATE ch116_network_structures)
+add_test(NAME ch116_network_structures_tests COMMAND ch116_network_structures_tests)
+
+add_executable(ch116_network_structures_benchmark 116-networking-data-structures/benchmarks/network_structures_benchmark.c)
+target_link_libraries(ch116_network_structures_benchmark PRIVATE ch116_network_structures)
+
+# Chapter 117
+add_library(ch117_ml_structures
+    117-ai-ml-data-structures/src/ml_structures.c
+)
+target_include_directories(ch117_ml_structures PUBLIC 117-ai-ml-data-structures/src)
+
+add_executable(ch117_ml_structures_demo 117-ai-ml-data-structures/examples/ml_structures_demo.c)
+target_link_libraries(ch117_ml_structures_demo PRIVATE ch117_ml_structures)
+add_test(NAME ch117_ml_structures_demo_smoke COMMAND ch117_ml_structures_demo)
+
+add_executable(ch117_ml_structures_tests 117-ai-ml-data-structures/tests/test_ml_structures.c)
+target_link_libraries(ch117_ml_structures_tests PRIVATE ch117_ml_structures)
+add_test(NAME ch117_ml_structures_tests COMMAND ch117_ml_structures_tests)
+
+add_executable(ch117_ml_structures_benchmark 117-ai-ml-data-structures/benchmarks/ml_structures_benchmark.c)
+target_link_libraries(ch117_ml_structures_benchmark PRIVATE ch117_ml_structures)

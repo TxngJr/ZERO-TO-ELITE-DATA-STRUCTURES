@@ -373,3 +373,13 @@
 - Lexical Scope — nested source-language region controlling which declarations are visible
 - Binding Chain — links from the current declaration of one interned name to shadowed outer declarations
 - Def-Use Graph — adjacency representation mapping a value definition to the instructions/values that use it
+
+- Process Table — indexed kernel metadata table holding process identity, state and scheduling fields
+- Generation Handle — handle combining a slot/index with a generation counter so stale references fail after slot reuse
+- Run Queue — scheduler queue containing processes/threads eligible to execute
+- Longest-Prefix Match (LPM) — routing lookup selecting the matching network prefix with greatest prefix length
+- Flow Key — tuple identifying a network flow, commonly source/destination addresses, ports and protocol
+- Flow Table — associative structure storing per-flow networking state
+- Mini-Batch Plan — index sequence partitioned into batches without physically reordering the underlying dataset
+- Embedding Table — dense matrix mapping integer IDs to fixed-width learned vectors
+- Gather — indexed collection of rows/vectors into contiguous output storage

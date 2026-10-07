@@ -1,7 +1,7 @@
 # Zero to Elite Data Structures — 170 Chapter Roadmap
 
-Current Progress: **114 / 170 chapters complete**
-Next Batch: **115 Operating-System Data Structures → 116 Networking Data Structures → 117 AI/ML Data Structures**
+Current Progress: **117 / 170 chapters complete**
+Next Batch: **118 Vector Search Structures → 119 Game Data Structures → 120 Merkle Tree**
 
 ## Foundations
 001 Programming Foundations

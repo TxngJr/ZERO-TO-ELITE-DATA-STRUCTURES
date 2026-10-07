@@ -1,5 +1,21 @@
 # Changelog
 
+## Batch 39 — Chapters 115–117
+
+Added:
+- generation-safe fixed-capacity OS process table with four strict-priority FIFO run queues
+- READY/RUNNING/BLOCKED state transitions, dispatch/yield/block/wake/terminate and priority migration
+- stale PID rejection after slot reuse and full queue/free-stack invariant validation
+- IPv4 binary route trie with /0–/32 longest-prefix matching
+- dynamic index-based trie growth safe across realloc
+- five-tuple flow table with open addressing, linear probing, tombstones and rehashing
+- 4,096-route LPM verification and 50,000-flow insert/update/remove workload
+- contiguous MlDataset with initialized-row tracking
+- deterministic Fisher-Yates BatchPlan over row indices
+- exact one-epoch permutation verification for 50,000 rows
+- dense EmbeddingTable with indexed gather and 10,000-row differential verification
+- Batch 39 negative review
+
 ## Batch 38 — Chapters 112–114
 
 Added:

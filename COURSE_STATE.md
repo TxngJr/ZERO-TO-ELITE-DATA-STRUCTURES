@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 38
+Current Batch: 39
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -117,55 +117,59 @@ Completed Chapters:
 - 112 Database Index Structures
 - 113 File-System Data Structures
 - 114 Compiler Data Structures
+- 115 Operating-System Data Structures
+- 116 Networking Data Structures
+- 117 AI/ML Data Structures
 
-Current Chapter: 114
+Current Chapter: 117
 
-Next Chapter: 115 Operating-System Data Structures
+Next Chapter: 118 Vector Search Structures
 
 Concepts Covered:
-- all prior Chapters 001–111
-- database primary and secondary index semantics
-- unique primary keys and duplicate secondary keys
-- deterministic composite ordering by (secondary, primary)
-- secondary equality/range scans
-- inode tables and directory entries
-- physical block bitmaps
-- direct and single-indirect file block mapping
-- strong grow behavior through free-block preselection
-- filesystem metadata cross-reference validation
-- string interning with open addressing
-- lexical scope stacks and shadow binding chains
-- current-binding restoration on scope exit
-- compiler def-use adjacency lists
+- all prior Chapters 001–114
+- fixed-capacity process tables and free-slot stacks
+- generation-safe PID handles
+- single-CPU process state transitions
+- strict-priority FIFO run queues
+- IPv4 binary prefix tries and longest-prefix match
+- default routes and overlapping prefixes
+- five-tuple flow tables with open addressing
+- tombstones, linear probing and flow-table rehashing
+- contiguous dense ML datasets
+- shuffled index permutations and mini-batch plans
+- embedding tables and gather operations
+- overflow-safe tensor/dataset allocation sizing
 
 Structures Implemented:
 - all previous structures
-- DbIndex
-- MiniFs
-- CompilerTables
-- UseDefGraph
+- OsScheduler
+- RouteTrie
+- FlowTable
+- MlDataset
+- BatchPlan
+- EmbeddingTable
 
 Tests Added:
-- Database Index: 50,000 unsorted rows, 20,000 primary lookups, duplicate-secondary equality and range scans
-- Mini Filesystem: 10 directories + 1,000 files with direct/indirect mapping, lookup, shrink and bitmap validation
-- Compiler Structures: 10,000 root symbols, nested shadowing and 50,000 def-use edges with independent use counts
+- OS Structures: 10,000 processes across four priorities, 1,000 dispatch/yield/block transitions, wake and stale-PID reuse checks
+- Networking: 4,096 generated /24 routes plus 50,000 flow entries with updates/removals
+- AI/ML: 50,000×16 dataset one-epoch permutation verification and 20,000×32 embedding table with 10,000-row gather
 
 Benchmarks Added:
-- database index build + 100,000 primary lookups over 200,000 rows
-- mini filesystem creation/resizing of 5,000 files
-- compiler table lookup benchmark over 20,000 symbols and 200,000 queries
+- scheduler: 40,000 ready processes and 500,000 dispatch/yield cycles
+- networking: 200,000 route lookups + 100,000 flow insert/lookups
+- AI/ML: 200,000×32 dataset gather epoch + 200,000 embedding gathers
 
 Known Dependencies:
-- 115 moves into operating-system queues/tables/resource metadata
-- 116 covers networking lookup/buffer/flow structures
-- 117 introduces AI/ML-oriented tensor/vector/batch structures
+- 118 introduces Vector Search Structures over embedding/vector data
+- 119 covers game-oriented entity/spatial/state structures
+- 120 begins cryptographic/distributed structures with Merkle Tree
 
 Open Problems:
-- none if Batch 38 full Fedora ASan/UBSan CI passes and existing TSan 096–102 remains green
+- none if Batch 39 full Fedora ASan/UBSan CI passes and existing TSan 096–102 remains green
 
 Cross References:
-- 112 builds on B+ Tree, LSM and disk-index concepts without reimplementing a transactional database engine
-- 113 connects allocation bitmaps and indexed block mapping to filesystem metadata
-- 114 combines hashing, scope stacks and graph adjacency into compiler-specific structures
+- 115 combines queue/free-slot/handle concepts in an operating-system scheduling model
+- 116 combines trie longest-prefix routing with exact-key hash flow state
+- 117 builds on tensor layout/cache-aware storage while intentionally deferring nearest-neighbor indexing to 118
 
-Coverage: 114 / 170 chapters
+Coverage: 117 / 170 chapters
