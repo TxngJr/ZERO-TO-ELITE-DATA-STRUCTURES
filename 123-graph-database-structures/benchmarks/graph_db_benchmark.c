@@ -1,0 +1,5 @@
+#include "graph_db.h"
+#include <stdio.h>
+#include <time.h>
+enum{N=50000,EXTRA=200000,Q=10000};static double e(struct timespec a,struct timespec b){return(double)(b.tv_sec-a.tv_sec)+(double)(b.tv_nsec-a.tv_nsec)/1e9;}static uint64_t id(size_t i){return UINT64_C(5000000)+i*11U;}
+int main(void){GraphDb*g=gdb_create(N,260000);if(!g)return 1;for(size_t i=0;i<N;++i)if(!gdb_add_node(g,id(i),(uint32_t)(i%50U),(int64_t)i))return 2;for(size_t i=0;i+1U<N;++i)if(!gdb_add_edge(g,id(i),id(i+1U),1,1))return 3;for(size_t i=0;i<EXTRA;++i)if(!gdb_add_edge(g,id(i%N),id((i*97U+31U)%N),2,(int64_t)i))return 4;struct timespec a,b,c;timespec_get(&a,TIME_UTC);if(!gdb_build_indexes(g))return 5;timespec_get(&b,TIME_UTC);uint64_t out[64];size_t sum=0;for(size_t q=0;q<Q;++q){size_t n=0;if(!gdb_out_neighbors(g,id((q*37U)%N),2,out,64,&n))return 6;sum+=n;if(!gdb_nodes_with_label(g,(uint32_t)(q%50U),out,64,&n))return 7;sum+=n;}timespec_get(&c,TIME_UTC);printf("nodes=%d edges=%zu build_seconds=%.6f queries_seconds=%.6f checksum=%zu\n",N,gdb_edge_count(g),e(a,b),e(b,c),sum);gdb_free(g);return 0;}

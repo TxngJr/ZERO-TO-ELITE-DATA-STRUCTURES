@@ -1,5 +1,22 @@
 # Changelog
 
+## Batch 41 — Chapters 121–123
+
+Added:
+- authenticated radix-16 Patricia trie over fixed 256-bit keys
+- Leaf / Extension / 16-way Branch nodes with compressed nibble paths
+- deterministic SHA-256 canonical root independent of insertion order
+- 10,000-key cross-order root equivalence test and 1,000 value updates
+- canonical big-endian 32-byte blockchain transaction encoding
+- immutable block-owned transaction copies, transaction Merkle roots and previous-block hash links
+- full-chain recomputation and standalone transaction inclusion proofs
+- node-ID open-addressing index for property-graph records
+- rebuildable outgoing/incoming CSR edge indexes
+- deterministic sorted (label,id) secondary index
+- graph-version/index-version stale-query protection
+- typed neighbor queries and BFS shortest-hop traversal
+- Batch 41 negative review
+
 ## Batch 40 — Chapters 118–120
 
 Added:

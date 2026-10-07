@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 40
+Current Batch: 41
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -123,54 +123,62 @@ Completed Chapters:
 - 118 Vector Search Structures
 - 119 Game Data Structures
 - 120 Merkle Tree
+- 121 Merkle Patricia Trie
+- 122 Blockchain Data Structures
+- 123 Graph Database Structures
 
-Current Chapter: 120
+Current Chapter: 123
 
-Next Chapter: 121 Merkle Patricia Trie
+Next Chapter: 124 Knowledge Graph Representation
 
 Concepts Covered:
-- all prior Chapters 001–117
-- exact flat vector indexes
-- L2-squared and cosine distance
-- bounded max-heaps for deterministic top-k selection
-- generation-safe game entity handles
-- sparse-set position components and swap-remove
-- uniform spatial grids with stale-index version detection
-- SHA-256 hashing
-- Merkle leaf/internal domain separation
-- odd-node duplication
-- Merkle roots and inclusion proofs
-- proof verification from sibling hashes
+- all prior Chapters 001–120
+- fixed-width 256-bit nibble keys
+- radix-16 Patricia path compression
+- Leaf / Extension / Branch authenticated trie nodes
+- canonical SHA-256 MPT root independent of insertion order
+- canonical transaction serialization
+- transaction Merkle roots and block hash pointers
+- append-only immutable block ownership
+- transaction inclusion proofs
+- full-chain commitment validation
+- property-graph node/edge records
+- external node-ID hash index
+- outgoing and incoming CSR adjacency indexes
+- sorted graph label index
+- stale-index version detection
+- indexed BFS traversal
 
 Structures Implemented:
 - all previous structures
-- VectorIndex
-- GameWorld
-- SpatialGrid
-- MerkleTree
-- MerkleProof
+- Mpt
+- Blockchain
+- BcTxProof
+- GraphDb
+- outgoing/incoming CSR graph indexes
+- sorted label index
 
 Tests Added:
-- Vector Search: 20,000×8 vectors, 100 exact top-10 L2 queries against independent full-sort reference, cosine self-match
-- Game Structures: 50,000 entities/positions, stale-handle reuse, sparse-set validation and exact 1,250-result AABB query
-- Merkle Tree: SHA-256 known vector, 4,097 leaves, inclusion proofs every 37th leaf, tamper rejection and single-leaf proof
+- MPT: 10,000 256-bit keys inserted in two different orders with identical root, exact lookup and 1,000 value updates
+- Blockchain: 200 blocks × 64 transactions, full-chain validation and transaction proof/tamper checks
+- Graph DB: 20,000 nodes, 99,999 initial edges, exact label/neighbor queries, 999-hop traversal and stale-index rebuild
 
 Benchmarks Added:
-- vector index: 50,000×32 vectors and 200 exact top-10 queries
-- game structures: 100,000 entities, grid rebuild and 10,000 AABB queries
-- Merkle tree: 100,000×32-byte leaves and 10,000 proof verifications
+- MPT: 50,000 inserts + 200,000 lookups + root recomputation
+- Blockchain: 1,000 blocks × 32 transactions + validation + 1,000 proofs
+- Graph DB: 50,000 nodes + about 250,000 edges + index build + 10,000 query rounds
 
 Known Dependencies:
-- 121 extends authenticated-tree ideas into Merkle Patricia Trie
-- 122 covers blockchain-oriented block/transaction/state structures
-- 123 covers graph-database adjacency/index structures
+- 124 adds semantic Knowledge Graph representation on top of graph/index concepts
+- 125 begins explicit Data Structure Serialization
+- 126 covers Memory Alignment & Padding representation effects
 
 Open Problems:
-- none if Batch 40 full Fedora ASan/UBSan CI passes and existing TSan 096–102 remains green
+- none if Batch 41 full Fedora ASan/UBSan CI passes and existing TSan 096–102 remains green
 
 Cross References:
-- 118 turns Chapter 117 embeddings into an exact nearest-neighbor baseline
-- 119 combines generation handles, sparse sets and spatial partitioning for game-style world state
-- 120 begins cryptographic/distributed structures with SHA-256 authenticated trees
+- 121 combines Chapters 030 and 120 into a deterministic authenticated Patricia structure
+- 122 reuses Chapter 120 Merkle commitments inside hash-linked blocks
+- 123 combines graph representation, hashing and rebuildable secondary indexes
 
-Coverage: 120 / 170 chapters
+Coverage: 123 / 170 chapters

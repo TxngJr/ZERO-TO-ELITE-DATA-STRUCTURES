@@ -1,7 +1,7 @@
 # Zero to Elite Data Structures — 170 Chapter Roadmap
 
-Current Progress: **120 / 170 chapters complete**
-Next Batch: **121 Merkle Patricia Trie → 122 Blockchain Data Structures → 123 Graph Database Structures**
+Current Progress: **123 / 170 chapters complete**
+Next Batch: **124 Knowledge Graph Representation → 125 Data Structure Serialization → 126 Memory Alignment & Padding**
 
 ## Foundations
 001 Programming Foundations

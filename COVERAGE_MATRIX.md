@@ -4,10 +4,10 @@ Legend: ✅ complete, ➡ planned, N/A not meaningful.
 
 | Chapter | Topic | Theory | Code | Complexity | Invariant | Tests | Benchmark | Exercises | Status |
 |---:|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 001–117 | Foundations through AI/ML Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 118 | Vector Search Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 119 | Game Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 120 | Merkle Tree | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 121 | Merkle Patricia Trie | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 122 | Blockchain Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 123 | Graph Database Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 001–120 | Foundations through Merkle Tree | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 121 | Merkle Patricia Trie | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 122 | Blockchain Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 123 | Graph Database Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 124 | Knowledge Graph Representation | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 125 | Data Structure Serialization | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 126 | Memory Alignment & Padding | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |

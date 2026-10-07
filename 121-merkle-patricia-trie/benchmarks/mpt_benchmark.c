@@ -1,0 +1,5 @@
+#include "mpt.h"
+#include <stdio.h>
+#include <time.h>
+enum{N=50000,Q=200000};static double e(struct timespec a,struct timespec b){return(double)(b.tv_sec-a.tv_sec)+(double)(b.tv_nsec-a.tv_nsec)/1e9;}static void key_for(size_t i,unsigned char*k){for(size_t j=0;j<MPT_KEY_BYTES;++j)k[j]=(unsigned char)((i*73U+j*19U)&255U);k[0]=(unsigned char)(i>>16U);k[1]=(unsigned char)(i>>8U);k[2]=(unsigned char)i;}
+int main(void){Mpt*t=mpt_create();if(!t)return 1;unsigned char k[MPT_KEY_BYTES];struct timespec a,b,c;timespec_get(&a,TIME_UTC);for(size_t i=0;i<N;++i){key_for(i,k);bool ins;if(!mpt_put(t,k,i,&ins)||!ins)return 2;}timespec_get(&b,TIME_UTC);uint64_t sum=0;for(size_t q=0;q<Q;++q){size_t i=(q*7919U)%N;key_for(i,k);uint64_t v=0;bool found=false;if(!mpt_get(t,k,&v,&found)||!found)return 3;sum+=v;}unsigned char root[32];if(!mpt_root(t,root))return 4;timespec_get(&c,TIME_UTC);printf("keys=%d insert_seconds=%.6f lookup_root_seconds=%.6f checksum=%llu root=%02x%02x\n",N,e(a,b),e(b,c),(unsigned long long)sum,root[0],root[1]);mpt_free(t);return 0;}

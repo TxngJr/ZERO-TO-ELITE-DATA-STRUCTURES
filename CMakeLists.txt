@@ -2056,3 +2056,57 @@ add_test(NAME ch120_merkle_tree_tests COMMAND ch120_merkle_tree_tests)
 
 add_executable(ch120_merkle_tree_benchmark 120-merkle-tree/benchmarks/merkle_tree_benchmark.c)
 target_link_libraries(ch120_merkle_tree_benchmark PRIVATE ch120_merkle_tree)
+
+
+# Chapter 121
+add_library(ch121_mpt
+    121-merkle-patricia-trie/src/mpt.c
+)
+target_include_directories(ch121_mpt PUBLIC 121-merkle-patricia-trie/src)
+target_link_libraries(ch121_mpt PUBLIC ch120_merkle_tree)
+
+add_executable(ch121_mpt_demo 121-merkle-patricia-trie/examples/mpt_demo.c)
+target_link_libraries(ch121_mpt_demo PRIVATE ch121_mpt)
+add_test(NAME ch121_mpt_demo_smoke COMMAND ch121_mpt_demo)
+
+add_executable(ch121_mpt_tests 121-merkle-patricia-trie/tests/test_mpt.c)
+target_link_libraries(ch121_mpt_tests PRIVATE ch121_mpt)
+add_test(NAME ch121_mpt_tests COMMAND ch121_mpt_tests)
+
+add_executable(ch121_mpt_benchmark 121-merkle-patricia-trie/benchmarks/mpt_benchmark.c)
+target_link_libraries(ch121_mpt_benchmark PRIVATE ch121_mpt)
+
+# Chapter 122
+add_library(ch122_blockchain
+    122-blockchain-data-structures/src/blockchain.c
+)
+target_include_directories(ch122_blockchain PUBLIC 122-blockchain-data-structures/src)
+target_link_libraries(ch122_blockchain PUBLIC ch120_merkle_tree)
+
+add_executable(ch122_blockchain_demo 122-blockchain-data-structures/examples/blockchain_demo.c)
+target_link_libraries(ch122_blockchain_demo PRIVATE ch122_blockchain)
+add_test(NAME ch122_blockchain_demo_smoke COMMAND ch122_blockchain_demo)
+
+add_executable(ch122_blockchain_tests 122-blockchain-data-structures/tests/test_blockchain.c)
+target_link_libraries(ch122_blockchain_tests PRIVATE ch122_blockchain)
+add_test(NAME ch122_blockchain_tests COMMAND ch122_blockchain_tests)
+
+add_executable(ch122_blockchain_benchmark 122-blockchain-data-structures/benchmarks/blockchain_benchmark.c)
+target_link_libraries(ch122_blockchain_benchmark PRIVATE ch122_blockchain)
+
+# Chapter 123
+add_library(ch123_graph_db
+    123-graph-database-structures/src/graph_db.c
+)
+target_include_directories(ch123_graph_db PUBLIC 123-graph-database-structures/src)
+
+add_executable(ch123_graph_db_demo 123-graph-database-structures/examples/graph_db_demo.c)
+target_link_libraries(ch123_graph_db_demo PRIVATE ch123_graph_db)
+add_test(NAME ch123_graph_db_demo_smoke COMMAND ch123_graph_db_demo)
+
+add_executable(ch123_graph_db_tests 123-graph-database-structures/tests/test_graph_db.c)
+target_link_libraries(ch123_graph_db_tests PRIVATE ch123_graph_db)
+add_test(NAME ch123_graph_db_tests COMMAND ch123_graph_db_tests)
+
+add_executable(ch123_graph_db_benchmark 123-graph-database-structures/benchmarks/graph_db_benchmark.c)
+target_link_libraries(ch123_graph_db_benchmark PRIVATE ch123_graph_db)

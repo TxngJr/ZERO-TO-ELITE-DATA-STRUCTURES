@@ -394,3 +394,14 @@
 - Merkle Root — single top hash committing to the tree's leaves and internal structure
 - Inclusion Proof — sibling-hash path allowing one leaf to be verified against a trusted Merkle root
 - Domain Separation — distinct hash prefixes/encodings used to prevent different logical node types from sharing ambiguous hash input formats
+
+- Merkle Patricia Trie — authenticated radix trie combining Patricia path compression with cryptographic node hashes
+- Extension Node — Patricia-trie node storing a compressed shared path fragment and one child
+- Canonical Root — root commitment determined only by logical content/encoding rather than insertion order or memory addresses
+- Hash Pointer — reference relationship that stores/commits the cryptographic hash of previous content
+- Blockchain Data Structure — append-only sequence of blocks linked by previous hashes and authenticated per-block commitments
+- Canonical Serialization — deterministic byte encoding independent of host padding and endianness
+- Property Graph — graph model with explicit node/edge identity, labels/types and attached properties
+- Graph CSR Index — compressed sparse row style adjacency index mapping dense nodes to contiguous edge-ID ranges
+- Label Index — secondary index grouping/sorting graph nodes by label for filtered lookup
+- Index Version — generation/version metadata used to detect whether a derived query index matches authoritative records
