@@ -19,8 +19,10 @@ Checked:
 - insertion order is tested by building the same 10,000-key set in two different orders and comparing roots
 - updates change value commitments without increasing key count
 
-Audit finding fixed before commit:
-- Extension split failure handling originally allowed cleanup of a wrapper/direct arm to free an `old_child` still owned by the original trie if a later allocation failed. Rollback now detaches the shared old child before destroying temporary split structure.
+Audit findings:
+- Extension split failure handling originally allowed cleanup of a wrapper/direct arm to free an `old_child` still owned by the original trie if a later allocation failed.
+- First Fedora build then exposed a patch-placement error: the shared-child rollback call had also landed in the Leaf split branch, where `old_child` does not exist, causing a compile failure.
+- The MPT node representation was refactored to inline fixed 64-nibble Leaf/Extension paths. This removes path-allocation failure from split/merge normalization, keeps shared-child rollback only in Extension splits, and allows adjacent Extension nodes to merge without allocation so canonical Patricia shape is preserved.
 
 Claims kept narrow:
 - fixed-width 256-bit keys only
@@ -73,3 +75,13 @@ Batch 41 is complete only when:
 1. Fedora ASan/UBSan full repository suite through Chapter 123 passes.
 2. Existing Fedora TSan suite for Chapters 096–102 remains green.
 3. README, state, coverage, roadmap, glossary and changelog are updated.
+
+## CI Iteration Record
+
+Initial Batch 41 run:
+- Configure: PASS
+- TSan 096–102: PASS
+- Full Build: FAIL in Chapter 121 before tests
+- Cause: undeclared `old_child` referenced from Leaf split cleanup after an over-broad source patch
+
+Corrective commit keeps history intact and reruns the complete workflow. A pre-existing Chapter 119 `-Wmisleading-indentation` warning observed in the same build log was also cleaned up rather than ignored.

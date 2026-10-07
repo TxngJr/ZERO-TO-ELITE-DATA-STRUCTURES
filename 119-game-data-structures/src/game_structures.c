@@ -128,7 +128,8 @@ bool gw_remove_position(GameWorld*w,EntityId entity,bool*out_removed){
     size_t slot=0U;if(!decode(w,entity,&slot))return false;
     bool removed=remove_position_slot(w,slot);
     if(removed){++w->version;if(w->version==0U)++w->version;}
-    if(out_removed)*out_removed=removed;return true;
+    if(out_removed)*out_removed=removed;
+    return true;
 }
 
 size_t gw_entity_count(const GameWorld*w){return w?w->active_count:0U;}
