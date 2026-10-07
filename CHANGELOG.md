@@ -1,5 +1,21 @@
 # Changelog
 
+## Batch 38 — Chapters 112–114
+
+Added:
+- immutable DbIndex with independently sorted primary and secondary access paths
+- unique primary-key validation and duplicate-secondary support with deterministic (secondary, primary) ordering
+- 50,000-row differential lookup/range tests
+- MiniFs metadata model with inode table, directory entries and physical block bitmap
+- four direct data pointers plus one modeled single-indirect metadata block containing up to 64 data pointers
+- grow preselection so insufficient free blocks fail before bitmap/inode mutation
+- shrink logic that releases indirect metadata when crossing back to four direct blocks
+- full filesystem cross-reference validator for inode, namespace and physical block ownership
+- CompilerTables with open-addressed string interning and O(1)-expected current binding lookup
+- lexical scope stack with previous-binding restoration for shadowed identifiers
+- fixed-capacity UseDefGraph with O(1) edge insertion and per-definition use counts
+- Batch 38 negative review
+
 ## Batch 37 — Chapters 109–111
 
 Added:

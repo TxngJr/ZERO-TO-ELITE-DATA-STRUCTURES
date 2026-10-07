@@ -360,3 +360,16 @@
 - File Magic — fixed byte signature used to identify/validate a file format
 - Random Seek — repositioning file access to a non-sequential offset
 - Sequential Range Scan — reading consecutive records after locating the range start
+
+- Primary Index — index whose search key is the table's unique primary key
+- Secondary Index — auxiliary index ordered by a non-primary search key and usually mapping back to table rows/primary keys
+- Composite Index Order — deterministic lexicographic ordering across multiple key fields
+- Inode — filesystem metadata object describing one file/directory and its block mapping
+- Directory Entry — namespace mapping from a parent directory and name to an inode
+- Direct Block Pointer — inode pointer referring directly to a data block
+- Indirect Block — metadata block containing additional data-block addresses
+- Block Bitmap — bitmap recording which physical filesystem blocks are allocated
+- String Interner — table storing each distinct identifier string once and returning a compact stable ID
+- Lexical Scope — nested source-language region controlling which declarations are visible
+- Binding Chain — links from the current declaration of one interned name to shadowed outer declarations
+- Def-Use Graph — adjacency representation mapping a value definition to the instructions/values that use it

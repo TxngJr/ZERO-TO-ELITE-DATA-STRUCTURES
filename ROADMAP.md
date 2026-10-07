@@ -1,7 +1,7 @@
 # Zero to Elite Data Structures — 170 Chapter Roadmap
 
-Current Progress: **111 / 170 chapters complete**
-Next Batch: **112 Database Index Structures → 113 File-System Data Structures → 114 Compiler Data Structures**
+Current Progress: **114 / 170 chapters complete**
+Next Batch: **115 Operating-System Data Structures → 116 Networking Data Structures → 117 AI/ML Data Structures**
 
 ## Foundations
 001 Programming Foundations

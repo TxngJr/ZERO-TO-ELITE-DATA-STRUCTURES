@@ -1898,3 +1898,55 @@ add_test(NAME ch111_disk_index_tests COMMAND ch111_disk_index_tests)
 
 add_executable(ch111_disk_index_benchmark 111-disk-based-data-structures/benchmarks/disk_sorted_index_benchmark.c)
 target_link_libraries(ch111_disk_index_benchmark PRIVATE ch111_disk_index)
+
+
+# Chapter 112
+add_library(ch112_db_index
+    112-database-index-structures/src/db_index.c
+)
+target_include_directories(ch112_db_index PUBLIC 112-database-index-structures/src)
+
+add_executable(ch112_db_index_demo 112-database-index-structures/examples/db_index_demo.c)
+target_link_libraries(ch112_db_index_demo PRIVATE ch112_db_index)
+add_test(NAME ch112_db_index_demo_smoke COMMAND ch112_db_index_demo)
+
+add_executable(ch112_db_index_tests 112-database-index-structures/tests/test_db_index.c)
+target_link_libraries(ch112_db_index_tests PRIVATE ch112_db_index)
+add_test(NAME ch112_db_index_tests COMMAND ch112_db_index_tests)
+
+add_executable(ch112_db_index_benchmark 112-database-index-structures/benchmarks/db_index_benchmark.c)
+target_link_libraries(ch112_db_index_benchmark PRIVATE ch112_db_index)
+
+# Chapter 113
+add_library(ch113_mini_fs
+    113-file-system-data-structures/src/mini_fs.c
+)
+target_include_directories(ch113_mini_fs PUBLIC 113-file-system-data-structures/src)
+
+add_executable(ch113_mini_fs_demo 113-file-system-data-structures/examples/mini_fs_demo.c)
+target_link_libraries(ch113_mini_fs_demo PRIVATE ch113_mini_fs)
+add_test(NAME ch113_mini_fs_demo_smoke COMMAND ch113_mini_fs_demo)
+
+add_executable(ch113_mini_fs_tests 113-file-system-data-structures/tests/test_mini_fs.c)
+target_link_libraries(ch113_mini_fs_tests PRIVATE ch113_mini_fs)
+add_test(NAME ch113_mini_fs_tests COMMAND ch113_mini_fs_tests)
+
+add_executable(ch113_mini_fs_benchmark 113-file-system-data-structures/benchmarks/mini_fs_benchmark.c)
+target_link_libraries(ch113_mini_fs_benchmark PRIVATE ch113_mini_fs)
+
+# Chapter 114
+add_library(ch114_compiler_structures
+    114-compiler-data-structures/src/compiler_structures.c
+)
+target_include_directories(ch114_compiler_structures PUBLIC 114-compiler-data-structures/src)
+
+add_executable(ch114_compiler_structures_demo 114-compiler-data-structures/examples/compiler_structures_demo.c)
+target_link_libraries(ch114_compiler_structures_demo PRIVATE ch114_compiler_structures)
+add_test(NAME ch114_compiler_structures_demo_smoke COMMAND ch114_compiler_structures_demo)
+
+add_executable(ch114_compiler_structures_tests 114-compiler-data-structures/tests/test_compiler_structures.c)
+target_link_libraries(ch114_compiler_structures_tests PRIVATE ch114_compiler_structures)
+add_test(NAME ch114_compiler_structures_tests COMMAND ch114_compiler_structures_tests)
+
+add_executable(ch114_compiler_structures_benchmark 114-compiler-data-structures/benchmarks/compiler_structures_benchmark.c)
+target_link_libraries(ch114_compiler_structures_benchmark PRIVATE ch114_compiler_structures)
