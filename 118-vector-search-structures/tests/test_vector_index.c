@@ -11,7 +11,7 @@ static float dist(const float*a,const float*b){double s=0;for(int i=0;i<D;++i){d
 int main(void){
     VectorIndex*idx=vi_create(D,4);assert(idx);
     float v[D];
-    for(size_t i=0;i<N;++i){for(size_t d=0;d<D;++d)v[d]=(float)((i*17U+d*13U)%1009U)/100.0f+0.01f*(float)d;size_t id=SIZE_MAX;assert(vi_add(idx,v,&id)&&id==i);}
+    for(size_t i=0;i<N;++i){v[0]=1.0f+(float)i*0.001f;for(size_t d=1;d<D;++d)v[d]=(float)((i*17U+d*13U)%1009U)/100.0f+0.01f*(float)d;size_t id=SIZE_MAX;assert(vi_add(idx,v,&id)&&id==i);}
     assert(vi_size(idx)==N&&vi_dims(idx)==D&&vi_validate(idx));
     VectorSearchResult out[K];Ref*ref=malloc(N*sizeof(*ref));assert(ref);
     for(size_t q=0;q<QUERIES;++q){

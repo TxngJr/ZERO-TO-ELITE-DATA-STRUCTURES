@@ -22,7 +22,7 @@ Checked:
 Static findings fixed before commit:
 - `FLT_MAX` usage required explicit `<float.h>`
 - test use of `SIZE_MAX` required explicit integer-limit header
-- math functions are linked through libm in CMake
+- math functions are linked through libm in CMake\n- pre-CI audit caught periodic test vectors repeating every 1009 IDs, which made the cosine self-match assertion conflict with the documented smaller-ID tie-break; the test generator now encodes the ID in dimension 0 so the self-match case is unique
 
 Claims kept narrow:
 - this is exact flat search, not ANN
