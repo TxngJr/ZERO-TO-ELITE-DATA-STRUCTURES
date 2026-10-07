@@ -1,7 +1,7 @@
 # Zero to Elite Data Structures — 170 Chapter Roadmap
 
-Current Progress: **123 / 170 chapters complete**
-Next Batch: **124 Knowledge Graph Representation → 125 Data Structure Serialization → 126 Memory Alignment & Padding**
+Current Progress: **126 / 170 chapters complete**
+Next Batch: **127 Locality of Reference → 128 CPU Cache Effects → 129 False Sharing**
 
 ## Foundations
 001 Programming Foundations

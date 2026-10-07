@@ -1,5 +1,19 @@
 # Changelog
 
+## Batch 42 — Chapters 124–126
+
+Added:
+- interned-term knowledge graph triple store with ID 0 reserved for wildcard patterns
+- duplicate-triple hash set and rebuildable SPO/POS/OSP sorted index permutations
+- index-version stale-query protection and bound-prefix pattern querying
+- canonical 32-byte serialization header and fixed 20-byte record wire format
+- explicit big-endian encoding, version/size checks, exact blob-length validation and CRC32
+- bit-preserving signed int64 serialization without raw struct dumps
+- natural field-layout calculator with internal/tail padding accounting
+- overflow-safe power-of-two align-up
+- manually aligned strided array with retained raw allocation pointer
+- Batch 42 negative review
+
 ## Batch 41 — Chapters 121–123
 
 Added:

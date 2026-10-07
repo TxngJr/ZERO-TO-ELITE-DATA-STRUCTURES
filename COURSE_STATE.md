@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 41
+Current Batch: 42
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -126,59 +126,60 @@ Completed Chapters:
 - 121 Merkle Patricia Trie
 - 122 Blockchain Data Structures
 - 123 Graph Database Structures
+- 124 Knowledge Graph Representation
+- 125 Data Structure Serialization
+- 126 Memory Alignment & Padding
 
-Current Chapter: 123
+Current Chapter: 126
 
-Next Chapter: 124 Knowledge Graph Representation
+Next Chapter: 127 Locality of Reference
 
 Concepts Covered:
-- all prior Chapters 001–120
-- fixed-width 256-bit nibble keys
-- radix-16 Patricia path compression
-- Leaf / Extension / Branch authenticated trie nodes
-- canonical SHA-256 MPT root independent of insertion order
-- canonical transaction serialization
-- transaction Merkle roots and block hash pointers
-- append-only immutable block ownership
-- transaction inclusion proofs
-- full-chain commitment validation
-- property-graph node/edge records
-- external node-ID hash index
-- outgoing and incoming CSR adjacency indexes
-- sorted graph label index
-- stale-index version detection
-- indexed BFS traversal
+- all prior Chapters 001–123
+- knowledge-graph subject/predicate/object triples
+- stable term interning with ID 0 reserved as wildcard
+- SPO / POS / OSP permutation indexes
+- versioned triple-index publication and pattern queries
+- canonical portable binary serialization
+- explicit big-endian integer encoding
+- magic/version/header/record-size validation
+- payload CRC32 and exact-length validation
+- bit-preserving signed integer serialization
+- natural memory-layout calculation
+- internal and tail padding
+- overflow-safe power-of-two alignment
+- aligned strided arrays and over-alignment footprint trade-offs
 
 Structures Implemented:
 - all previous structures
-- Mpt
-- Blockchain
-- BcTxProof
-- GraphDb
-- outgoing/incoming CSR graph indexes
-- sorted label index
+- KnowledgeGraph triple store
+- term dictionary and duplicate-triple set
+- SPO / POS / OSP indexes
+- canonical DsRecord binary codec
+- MaLayout
+- MaAlignedArray
 
 Tests Added:
-- MPT: 10,000 256-bit keys inserted in two different orders with identical root, exact lookup and 1,000 value updates
-- Blockchain: 200 blocks × 64 transactions, full-chain validation and transaction proof/tamper checks
-- Graph DB: 20,000 nodes, 99,999 initial edges, exact label/neighbor queries, 999-hop traversal and stale-index rebuild
+- Knowledge Graph: 10,000 terms, 100,000 unique triples, duplicate rejection, pattern cardinalities, stale-index rejection/rebuild
+- Serialization: CRC32 known vector and 100,000-record deterministic round trip with corruption/truncation/header/trailing-byte negatives
+- Alignment: known field offsets/padding, overflow negatives, 10,000 64-byte-aligned elements and 80→128 stride case
 
 Benchmarks Added:
-- MPT: 50,000 inserts + 200,000 lookups + root recomputation
-- Blockchain: 1,000 blocks × 32 transactions + validation + 1,000 proofs
-- Graph DB: 50,000 nodes + about 250,000 edges + index build + 10,000 query rounds
+- Knowledge Graph: 50,000 terms + 500,000 triples + three-index build + 50,000 queries
+- Serialization: 1,000,000-record serialize/deserialize workload
+- Alignment: natural 24-byte stride versus 64-byte over-aligned stride footprint/access workload
 
 Known Dependencies:
-- 124 adds semantic Knowledge Graph representation on top of graph/index concepts
-- 125 begins explicit Data Structure Serialization
-- 126 covers Memory Alignment & Padding representation effects
+- 127 studies locality of reference
+- 128 studies CPU cache effects
+- 129 studies false sharing
 
 Open Problems:
-- none if Batch 41 full Fedora ASan/UBSan CI passes and existing TSan 096–102 remains green
+- none if Batch 42 full Fedora ASan/UBSan CI passes and existing TSan 096–102 remains green
 
 Cross References:
-- 121 combines Chapters 030 and 120 into a deterministic authenticated Patricia structure
-- 122 reuses Chapter 120 Merkle commitments inside hash-linked blocks
-- 123 combines graph representation, hashing and rebuildable secondary indexes
+- 124 extends Chapter 123 from property-graph storage to triple-store knowledge representation
+- 125 separates logical data from ABI-dependent in-memory layout
+- 126 explains the alignment/padding representation that Chapter 125 intentionally excludes from its wire format
 
-Coverage: 123 / 170 chapters
+Coverage: 126 / 170 chapters

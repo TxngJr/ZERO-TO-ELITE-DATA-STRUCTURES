@@ -1,0 +1,5 @@
+#include "knowledge_graph.h"
+#include <stdio.h>
+#include <time.h>
+enum{TERMS=50000,TRIPLES=500000,Q=50000};static double e(struct timespec a,struct timespec b){return(double)(b.tv_sec-a.tv_sec)+(double)(b.tv_nsec-a.tv_nsec)/1e9;}
+int main(void){KnowledgeGraph*g=kg_create(TERMS,TRIPLES);if(!g)return 1;KgTermId ids[TERMS];char s[32];for(size_t i=0;i<TERMS;++i){snprintf(s,sizeof(s),"t%zu",i);bool ins;if(!kg_intern(g,s,&ids[i],&ins))return 2;}for(size_t i=0;i<TRIPLES;++i){size_t s=i/1000U,p=i%1000U;KgTriple t={ids[s],ids[10000U+p],ids[20000U+((s*97U+p*31U)%30000U)]};bool ins;if(!kg_add_triple(g,t,&ins)||!ins)return 3;}struct timespec a,b,c;timespec_get(&a,TIME_UTC);if(!kg_build_indexes(g))return 4;timespec_get(&b,TIME_UTC);size_t sum=0;KgTriple out[64];for(size_t q=0;q<Q;++q){size_t n=0;if(!kg_query(g,(KgPattern){ids[q%500U],0,0},out,64,&n))return 5;sum+=n;}timespec_get(&c,TIME_UTC);printf("terms=%zu triples=%zu build_seconds=%.6f query_seconds=%.6f checksum=%zu\n",kg_term_count(g),kg_triple_count(g),e(a,b),e(b,c),sum);kg_free(g);return 0;}

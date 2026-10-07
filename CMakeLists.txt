@@ -2110,3 +2110,55 @@ add_test(NAME ch123_graph_db_tests COMMAND ch123_graph_db_tests)
 
 add_executable(ch123_graph_db_benchmark 123-graph-database-structures/benchmarks/graph_db_benchmark.c)
 target_link_libraries(ch123_graph_db_benchmark PRIVATE ch123_graph_db)
+
+
+# Chapter 124
+add_library(ch124_knowledge_graph
+    124-knowledge-graph-representation/src/knowledge_graph.c
+)
+target_include_directories(ch124_knowledge_graph PUBLIC 124-knowledge-graph-representation/src)
+
+add_executable(ch124_knowledge_graph_demo 124-knowledge-graph-representation/examples/knowledge_graph_demo.c)
+target_link_libraries(ch124_knowledge_graph_demo PRIVATE ch124_knowledge_graph)
+add_test(NAME ch124_knowledge_graph_demo_smoke COMMAND ch124_knowledge_graph_demo)
+
+add_executable(ch124_knowledge_graph_tests 124-knowledge-graph-representation/tests/test_knowledge_graph.c)
+target_link_libraries(ch124_knowledge_graph_tests PRIVATE ch124_knowledge_graph)
+add_test(NAME ch124_knowledge_graph_tests COMMAND ch124_knowledge_graph_tests)
+
+add_executable(ch124_knowledge_graph_benchmark 124-knowledge-graph-representation/benchmarks/knowledge_graph_benchmark.c)
+target_link_libraries(ch124_knowledge_graph_benchmark PRIVATE ch124_knowledge_graph)
+
+# Chapter 125
+add_library(ch125_ds_serialization
+    125-data-structure-serialization/src/ds_serialization.c
+)
+target_include_directories(ch125_ds_serialization PUBLIC 125-data-structure-serialization/src)
+
+add_executable(ch125_ds_serialization_demo 125-data-structure-serialization/examples/ds_serialization_demo.c)
+target_link_libraries(ch125_ds_serialization_demo PRIVATE ch125_ds_serialization)
+add_test(NAME ch125_ds_serialization_demo_smoke COMMAND ch125_ds_serialization_demo)
+
+add_executable(ch125_ds_serialization_tests 125-data-structure-serialization/tests/test_ds_serialization.c)
+target_link_libraries(ch125_ds_serialization_tests PRIVATE ch125_ds_serialization)
+add_test(NAME ch125_ds_serialization_tests COMMAND ch125_ds_serialization_tests)
+
+add_executable(ch125_ds_serialization_benchmark 125-data-structure-serialization/benchmarks/ds_serialization_benchmark.c)
+target_link_libraries(ch125_ds_serialization_benchmark PRIVATE ch125_ds_serialization)
+
+# Chapter 126
+add_library(ch126_memory_layout
+    126-memory-alignment-padding/src/memory_layout.c
+)
+target_include_directories(ch126_memory_layout PUBLIC 126-memory-alignment-padding/src)
+
+add_executable(ch126_memory_layout_demo 126-memory-alignment-padding/examples/memory_layout_demo.c)
+target_link_libraries(ch126_memory_layout_demo PRIVATE ch126_memory_layout)
+add_test(NAME ch126_memory_layout_demo_smoke COMMAND ch126_memory_layout_demo)
+
+add_executable(ch126_memory_layout_tests 126-memory-alignment-padding/tests/test_memory_layout.c)
+target_link_libraries(ch126_memory_layout_tests PRIVATE ch126_memory_layout)
+add_test(NAME ch126_memory_layout_tests COMMAND ch126_memory_layout_tests)
+
+add_executable(ch126_memory_layout_benchmark 126-memory-alignment-padding/benchmarks/memory_layout_benchmark.c)
+target_link_libraries(ch126_memory_layout_benchmark PRIVATE ch126_memory_layout)

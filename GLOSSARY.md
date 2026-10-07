@@ -405,3 +405,16 @@
 - Graph CSR Index — compressed sparse row style adjacency index mapping dense nodes to contiguous edge-ID ranges
 - Label Index — secondary index grouping/sorting graph nodes by label for filtered lookup
 - Index Version — generation/version metadata used to detect whether a derived query index matches authoritative records
+
+- Knowledge Graph Triple — subject/predicate/object fact represented as three compact term identifiers
+- Term Interning — mapping repeated lexical terms to stable compact IDs so triples do not duplicate strings
+- SPO/POS/OSP Index — sorted triple-ID permutations optimized for different bound query positions
+- Serialization — transformation from logical in-memory data to a defined byte representation
+- Wire Format — byte-level representation contract independent of a program's native object layout
+- Big-Endian Encoding — most-significant byte first canonical integer representation used by Chapter 125
+- CRC32 — non-cryptographic cyclic redundancy checksum used to detect accidental payload corruption
+- Alignment — address boundary requirement for an object or field
+- Internal Padding — unused bytes inserted between fields to satisfy alignment
+- Tail Padding — unused bytes at the end of a struct so the next array element begins correctly aligned
+- Stride — byte distance between consecutive elements in a regular memory layout
+- Over-Alignment — choosing an alignment stricter than the logical payload minimally requires

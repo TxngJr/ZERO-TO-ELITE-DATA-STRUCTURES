@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 41 — Chapters 121–123 complete**
+**Batch 42 — Chapters 124–126 complete**
 
 ล่าสุด:
-- [121 Merkle Patricia Trie](./121-merkle-patricia-trie/)
-- [122 Blockchain Data Structures](./122-blockchain-data-structures/)
-- [123 Graph Database Structures](./123-graph-database-structures/)
+- [124 Knowledge Graph Representation](./124-knowledge-graph-representation/)
+- [125 Data Structure Serialization](./125-data-structure-serialization/)
+- [126 Memory Alignment & Padding](./126-memory-alignment-padding/)
 
-สถานะ: **123 / 170 chapters**
+สถานะ: **126 / 170 chapters**
 
 Next:
 
-**124 Knowledge Graph Representation → 125 Data Structure Serialization → 126 Memory Alignment & Padding**
+**127 Locality of Reference → 128 CPU Cache Effects → 129 False Sharing**
 
 ## Build
 
@@ -29,4 +29,4 @@ ASan/UBSan:
     cmake --build build-asan
     ctest --test-dir build-asan --output-on-failure --timeout 60
 
-ThreadSanitizer remains scoped to concurrent Chapters 096–102. Chapters 103–123 currently document single-threaded contracts.
+ThreadSanitizer remains scoped to concurrent Chapters 096–102. Chapters 103–126 currently document single-threaded contracts.
