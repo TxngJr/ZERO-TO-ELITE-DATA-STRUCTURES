@@ -4,10 +4,10 @@ Legend: ✅ complete, ➡ planned, N/A not meaningful.
 
 | Chapter | Topic | Theory | Code | Complexity | Invariant | Tests | Benchmark | Exercises | Status |
 |---:|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 001–114 | Foundations through Compiler Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 115 | Operating-System Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 116 | Networking Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 117 | AI/ML Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 118 | Vector Search Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 119 | Game Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 120 | Merkle Tree | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 001–117 | Foundations through AI/ML Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 118 | Vector Search Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 119 | Game Data Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 120 | Merkle Tree | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 121 | Merkle Patricia Trie | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 122 | Blockchain Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 123 | Graph Database Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |

@@ -2002,3 +2002,57 @@ add_test(NAME ch117_ml_structures_tests COMMAND ch117_ml_structures_tests)
 
 add_executable(ch117_ml_structures_benchmark 117-ai-ml-data-structures/benchmarks/ml_structures_benchmark.c)
 target_link_libraries(ch117_ml_structures_benchmark PRIVATE ch117_ml_structures)
+
+
+# Chapter 118
+add_library(ch118_vector_index
+    118-vector-search-structures/src/vector_index.c
+)
+target_include_directories(ch118_vector_index PUBLIC 118-vector-search-structures/src)
+target_link_libraries(ch118_vector_index PUBLIC m)
+
+add_executable(ch118_vector_index_demo 118-vector-search-structures/examples/vector_index_demo.c)
+target_link_libraries(ch118_vector_index_demo PRIVATE ch118_vector_index)
+add_test(NAME ch118_vector_index_demo_smoke COMMAND ch118_vector_index_demo)
+
+add_executable(ch118_vector_index_tests 118-vector-search-structures/tests/test_vector_index.c)
+target_link_libraries(ch118_vector_index_tests PRIVATE ch118_vector_index)
+add_test(NAME ch118_vector_index_tests COMMAND ch118_vector_index_tests)
+
+add_executable(ch118_vector_index_benchmark 118-vector-search-structures/benchmarks/vector_index_benchmark.c)
+target_link_libraries(ch118_vector_index_benchmark PRIVATE ch118_vector_index)
+
+# Chapter 119
+add_library(ch119_game_structures
+    119-game-data-structures/src/game_structures.c
+)
+target_include_directories(ch119_game_structures PUBLIC 119-game-data-structures/src)
+target_link_libraries(ch119_game_structures PUBLIC m)
+
+add_executable(ch119_game_structures_demo 119-game-data-structures/examples/game_structures_demo.c)
+target_link_libraries(ch119_game_structures_demo PRIVATE ch119_game_structures)
+add_test(NAME ch119_game_structures_demo_smoke COMMAND ch119_game_structures_demo)
+
+add_executable(ch119_game_structures_tests 119-game-data-structures/tests/test_game_structures.c)
+target_link_libraries(ch119_game_structures_tests PRIVATE ch119_game_structures)
+add_test(NAME ch119_game_structures_tests COMMAND ch119_game_structures_tests)
+
+add_executable(ch119_game_structures_benchmark 119-game-data-structures/benchmarks/game_structures_benchmark.c)
+target_link_libraries(ch119_game_structures_benchmark PRIVATE ch119_game_structures)
+
+# Chapter 120
+add_library(ch120_merkle_tree
+    120-merkle-tree/src/merkle_tree.c
+)
+target_include_directories(ch120_merkle_tree PUBLIC 120-merkle-tree/src)
+
+add_executable(ch120_merkle_tree_demo 120-merkle-tree/examples/merkle_tree_demo.c)
+target_link_libraries(ch120_merkle_tree_demo PRIVATE ch120_merkle_tree)
+add_test(NAME ch120_merkle_tree_demo_smoke COMMAND ch120_merkle_tree_demo)
+
+add_executable(ch120_merkle_tree_tests 120-merkle-tree/tests/test_merkle_tree.c)
+target_link_libraries(ch120_merkle_tree_tests PRIVATE ch120_merkle_tree)
+add_test(NAME ch120_merkle_tree_tests COMMAND ch120_merkle_tree_tests)
+
+add_executable(ch120_merkle_tree_benchmark 120-merkle-tree/benchmarks/merkle_tree_benchmark.c)
+target_link_libraries(ch120_merkle_tree_benchmark PRIVATE ch120_merkle_tree)

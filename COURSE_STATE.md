@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 39
+Current Batch: 40
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -120,56 +120,57 @@ Completed Chapters:
 - 115 Operating-System Data Structures
 - 116 Networking Data Structures
 - 117 AI/ML Data Structures
+- 118 Vector Search Structures
+- 119 Game Data Structures
+- 120 Merkle Tree
 
-Current Chapter: 117
+Current Chapter: 120
 
-Next Chapter: 118 Vector Search Structures
+Next Chapter: 121 Merkle Patricia Trie
 
 Concepts Covered:
-- all prior Chapters 001–114
-- fixed-capacity process tables and free-slot stacks
-- generation-safe PID handles
-- single-CPU process state transitions
-- strict-priority FIFO run queues
-- IPv4 binary prefix tries and longest-prefix match
-- default routes and overlapping prefixes
-- five-tuple flow tables with open addressing
-- tombstones, linear probing and flow-table rehashing
-- contiguous dense ML datasets
-- shuffled index permutations and mini-batch plans
-- embedding tables and gather operations
-- overflow-safe tensor/dataset allocation sizing
+- all prior Chapters 001–117
+- exact flat vector indexes
+- L2-squared and cosine distance
+- bounded max-heaps for deterministic top-k selection
+- generation-safe game entity handles
+- sparse-set position components and swap-remove
+- uniform spatial grids with stale-index version detection
+- SHA-256 hashing
+- Merkle leaf/internal domain separation
+- odd-node duplication
+- Merkle roots and inclusion proofs
+- proof verification from sibling hashes
 
 Structures Implemented:
 - all previous structures
-- OsScheduler
-- RouteTrie
-- FlowTable
-- MlDataset
-- BatchPlan
-- EmbeddingTable
+- VectorIndex
+- GameWorld
+- SpatialGrid
+- MerkleTree
+- MerkleProof
 
 Tests Added:
-- OS Structures: 10,000 processes across four priorities, 1,000 dispatch/yield/block transitions, wake and stale-PID reuse checks
-- Networking: 4,096 generated /24 routes plus 50,000 flow entries with updates/removals
-- AI/ML: 50,000×16 dataset one-epoch permutation verification and 20,000×32 embedding table with 10,000-row gather
+- Vector Search: 20,000×8 vectors, 100 exact top-10 L2 queries against independent full-sort reference, cosine self-match
+- Game Structures: 50,000 entities/positions, stale-handle reuse, sparse-set validation and exact 1,250-result AABB query
+- Merkle Tree: SHA-256 known vector, 4,097 leaves, inclusion proofs every 37th leaf, tamper rejection and single-leaf proof
 
 Benchmarks Added:
-- scheduler: 40,000 ready processes and 500,000 dispatch/yield cycles
-- networking: 200,000 route lookups + 100,000 flow insert/lookups
-- AI/ML: 200,000×32 dataset gather epoch + 200,000 embedding gathers
+- vector index: 50,000×32 vectors and 200 exact top-10 queries
+- game structures: 100,000 entities, grid rebuild and 10,000 AABB queries
+- Merkle tree: 100,000×32-byte leaves and 10,000 proof verifications
 
 Known Dependencies:
-- 118 introduces Vector Search Structures over embedding/vector data
-- 119 covers game-oriented entity/spatial/state structures
-- 120 begins cryptographic/distributed structures with Merkle Tree
+- 121 extends authenticated-tree ideas into Merkle Patricia Trie
+- 122 covers blockchain-oriented block/transaction/state structures
+- 123 covers graph-database adjacency/index structures
 
 Open Problems:
-- none if Batch 39 full Fedora ASan/UBSan CI passes and existing TSan 096–102 remains green
+- none if Batch 40 full Fedora ASan/UBSan CI passes and existing TSan 096–102 remains green
 
 Cross References:
-- 115 combines queue/free-slot/handle concepts in an operating-system scheduling model
-- 116 combines trie longest-prefix routing with exact-key hash flow state
-- 117 builds on tensor layout/cache-aware storage while intentionally deferring nearest-neighbor indexing to 118
+- 118 turns Chapter 117 embeddings into an exact nearest-neighbor baseline
+- 119 combines generation handles, sparse sets and spatial partitioning for game-style world state
+- 120 begins cryptographic/distributed structures with SHA-256 authenticated trees
 
-Coverage: 117 / 170 chapters
+Coverage: 120 / 170 chapters

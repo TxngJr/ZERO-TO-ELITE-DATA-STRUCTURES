@@ -1,5 +1,22 @@
 # Changelog
 
+## Batch 40 — Chapters 118–120
+
+Added:
+- exact contiguous VectorIndex with stable append IDs and precomputed nonzero vector norms
+- exact L2-squared and cosine-distance search
+- bounded max-heap top-k selection with deterministic distance/ID tie ordering
+- 20,000-vector differential top-k tests against independent full-sort reference
+- generation-safe GameWorld entity pool
+- sparse-set Position component with O(1) lookup/add/swap-remove
+- world-versioned uniform SpatialGrid with exact AABB filtering and stale-grid rejection
+- 50,000-entity game-structure workload with exact 1,250-result spatial query
+- SHA-256 implementation checked against the standard "abc" digest
+- domain-separated SHA-256 Merkle tree with odd-node duplication
+- standalone inclusion proofs that retain sibling hashes and side metadata
+- 4,097-leaf proof/tamper/root-change validation
+- Batch 40 negative review
+
 ## Batch 39 — Chapters 115–117
 
 Added:

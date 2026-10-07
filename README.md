@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 39 — Chapters 115–117 complete**
+**Batch 40 — Chapters 118–120 complete**
 
 ล่าสุด:
-- [115 Operating-System Data Structures](./115-operating-system-data-structures/)
-- [116 Networking Data Structures](./116-networking-data-structures/)
-- [117 AI/ML Data Structures](./117-ai-ml-data-structures/)
+- [118 Vector Search Structures](./118-vector-search-structures/)
+- [119 Game Data Structures](./119-game-data-structures/)
+- [120 Merkle Tree](./120-merkle-tree/)
 
-สถานะ: **117 / 170 chapters**
+สถานะ: **120 / 170 chapters**
 
 Next:
 
-**118 Vector Search Structures → 119 Game Data Structures → 120 Merkle Tree**
+**121 Merkle Patricia Trie → 122 Blockchain Data Structures → 123 Graph Database Structures**
 
 ## Build
 
@@ -29,4 +29,4 @@ ASan/UBSan:
     cmake --build build-asan
     ctest --test-dir build-asan --output-on-failure --timeout 60
 
-ThreadSanitizer remains scoped to concurrent Chapters 096–102. Chapters 103–117 currently document single-threaded contracts.
+ThreadSanitizer remains scoped to concurrent Chapters 096–102. Chapters 103–120 currently document single-threaded contracts.

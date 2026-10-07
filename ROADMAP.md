@@ -1,7 +1,7 @@
 # Zero to Elite Data Structures — 170 Chapter Roadmap
 
-Current Progress: **117 / 170 chapters complete**
-Next Batch: **118 Vector Search Structures → 119 Game Data Structures → 120 Merkle Tree**
+Current Progress: **120 / 170 chapters complete**
+Next Batch: **121 Merkle Patricia Trie → 122 Blockchain Data Structures → 123 Graph Database Structures**
 
 ## Foundations
 001 Programming Foundations

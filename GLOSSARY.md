@@ -383,3 +383,14 @@
 - Mini-Batch Plan — index sequence partitioned into batches without physically reordering the underlying dataset
 - Embedding Table — dense matrix mapping integer IDs to fixed-width learned vectors
 - Gather — indexed collection of rows/vectors into contiguous output storage
+
+- Exact Vector Search — nearest-neighbor search that evaluates every stored vector under the chosen metric
+- Top-k Candidate Heap — bounded heap retaining only the best k search candidates seen so far
+- Cosine Distance — one minus cosine similarity between two nonzero vectors
+- Sparse Set — dense component storage plus sparse entity-to-dense-index mapping for O(1) membership and swap-remove
+- Entity Generation Handle — entity identifier combining slot and generation to reject stale references after reuse
+- Uniform Spatial Grid — spatial index dividing a bounded region into fixed-size cells
+- Merkle Tree — authenticated hash tree whose root commits to all leaves
+- Merkle Root — single top hash committing to the tree's leaves and internal structure
+- Inclusion Proof — sibling-hash path allowing one leaf to be verified against a trusted Merkle root
+- Domain Separation — distinct hash prefixes/encodings used to prevent different logical node types from sharing ambiguous hash input formats
