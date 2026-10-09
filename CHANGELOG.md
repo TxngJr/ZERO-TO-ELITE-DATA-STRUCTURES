@@ -1,5 +1,18 @@
 # Changelog
 
+## Batch 43 — Chapters 127–129
+
+Added:
+- deterministic locality trace analyzer with unique-line, temporal-reuse, same-line and transition metrics
+- sequential and coprime modular-stride trace generation
+- configurable set-associative cache simulator with exact per-set LRU ordering
+- deterministic hit/miss/eviction accounting and row-major versus column-major matrix tests
+- cache-line-aligned atomic counter arrays with configurable stride
+- false-sharing line occupancy/share-line queries
+- pthread relaxed-atomic parallel increment workload with exact final-count checks
+- ThreadSanitizer CI scope extended to Chapter 129
+- Batch 43 negative review
+
 ## Batch 42 — Chapters 124–126
 
 Added:

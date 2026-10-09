@@ -4,18 +4,18 @@
 
 ## Current Progress
 
-**Batch 42 — Chapters 124–126 complete**
+**Batch 43 — Chapters 127–129 complete**
 
 ล่าสุด:
-- [124 Knowledge Graph Representation](./124-knowledge-graph-representation/)
-- [125 Data Structure Serialization](./125-data-structure-serialization/)
-- [126 Memory Alignment & Padding](./126-memory-alignment-padding/)
+- [127 Locality of Reference](./127-locality-of-reference/)
+- [128 CPU Cache Effects](./128-cpu-cache-effects/)
+- [129 False Sharing](./129-false-sharing/)
 
-สถานะ: **126 / 170 chapters**
+สถานะ: **129 / 170 chapters**
 
 Next:
 
-**127 Locality of Reference → 128 CPU Cache Effects → 129 False Sharing**
+**130 Pointer Chasing → 131 Amortized Data Structures → 132 Randomized Data Structures**
 
 ## Build
 
@@ -29,4 +29,4 @@ ASan/UBSan:
     cmake --build build-asan
     ctest --test-dir build-asan --output-on-failure --timeout 60
 
-ThreadSanitizer remains scoped to concurrent Chapters 096–102. Chapters 103–126 currently document single-threaded contracts.
+ThreadSanitizer covers concurrent Chapters 096–102 plus Chapter 129's atomic false-sharing workload.

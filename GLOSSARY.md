@@ -418,3 +418,14 @@
 - Tail Padding — unused bytes at the end of a struct so the next array element begins correctly aligned
 - Stride — byte distance between consecutive elements in a regular memory layout
 - Over-Alignment — choosing an alignment stricter than the logical payload minimally requires
+
+- Spatial Locality — tendency for accesses close in time to target nearby memory addresses or the same cache line
+- Temporal Locality — tendency to reuse a previously accessed address or cache line
+- Access Trace — ordered sequence of logical or byte addresses used to analyze memory behavior
+- Cache Set — cache bucket selected from a line address; each set holds up to the associativity number of lines
+- Cache Tag — high-order line identifier stored inside a cache set to distinguish resident lines
+- Associativity — number of cache lines/ways that may reside in one cache set
+- LRU — least-recently-used replacement policy that evicts the least recently accessed resident line
+- False Sharing — coherence contention when threads update distinct variables located in the same cache line
+- True Sharing — multiple threads accessing the same logical memory location
+- Line Separation — layout strategy placing independently written objects on different modeled cache lines

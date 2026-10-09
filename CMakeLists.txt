@@ -2162,3 +2162,56 @@ add_test(NAME ch126_memory_layout_tests COMMAND ch126_memory_layout_tests)
 
 add_executable(ch126_memory_layout_benchmark 126-memory-alignment-padding/benchmarks/memory_layout_benchmark.c)
 target_link_libraries(ch126_memory_layout_benchmark PRIVATE ch126_memory_layout)
+
+
+# Chapter 127
+add_library(ch127_locality_trace
+    127-locality-of-reference/src/locality_trace.c
+)
+target_include_directories(ch127_locality_trace PUBLIC 127-locality-of-reference/src)
+
+add_executable(ch127_locality_trace_demo 127-locality-of-reference/examples/locality_trace_demo.c)
+target_link_libraries(ch127_locality_trace_demo PRIVATE ch127_locality_trace)
+add_test(NAME ch127_locality_trace_demo_smoke COMMAND ch127_locality_trace_demo)
+
+add_executable(ch127_locality_trace_tests 127-locality-of-reference/tests/test_locality_trace.c)
+target_link_libraries(ch127_locality_trace_tests PRIVATE ch127_locality_trace)
+add_test(NAME ch127_locality_trace_tests COMMAND ch127_locality_trace_tests)
+
+add_executable(ch127_locality_trace_benchmark 127-locality-of-reference/benchmarks/locality_trace_benchmark.c)
+target_link_libraries(ch127_locality_trace_benchmark PRIVATE ch127_locality_trace)
+
+# Chapter 128
+add_library(ch128_cache_sim
+    128-cpu-cache-effects/src/cache_sim.c
+)
+target_include_directories(ch128_cache_sim PUBLIC 128-cpu-cache-effects/src)
+
+add_executable(ch128_cache_sim_demo 128-cpu-cache-effects/examples/cache_sim_demo.c)
+target_link_libraries(ch128_cache_sim_demo PRIVATE ch128_cache_sim)
+add_test(NAME ch128_cache_sim_demo_smoke COMMAND ch128_cache_sim_demo)
+
+add_executable(ch128_cache_sim_tests 128-cpu-cache-effects/tests/test_cache_sim.c)
+target_link_libraries(ch128_cache_sim_tests PRIVATE ch128_cache_sim)
+add_test(NAME ch128_cache_sim_tests COMMAND ch128_cache_sim_tests)
+
+add_executable(ch128_cache_sim_benchmark 128-cpu-cache-effects/benchmarks/cache_sim_benchmark.c)
+target_link_libraries(ch128_cache_sim_benchmark PRIVATE ch128_cache_sim)
+
+# Chapter 129
+add_library(ch129_false_sharing
+    129-false-sharing/src/false_sharing.c
+)
+target_include_directories(ch129_false_sharing PUBLIC 129-false-sharing/src)
+target_link_libraries(ch129_false_sharing PUBLIC Threads::Threads)
+
+add_executable(ch129_false_sharing_demo 129-false-sharing/examples/false_sharing_demo.c)
+target_link_libraries(ch129_false_sharing_demo PRIVATE ch129_false_sharing)
+add_test(NAME ch129_false_sharing_demo_smoke COMMAND ch129_false_sharing_demo)
+
+add_executable(ch129_false_sharing_tests 129-false-sharing/tests/test_false_sharing.c)
+target_link_libraries(ch129_false_sharing_tests PRIVATE ch129_false_sharing)
+add_test(NAME ch129_false_sharing_tests COMMAND ch129_false_sharing_tests)
+
+add_executable(ch129_false_sharing_benchmark 129-false-sharing/benchmarks/false_sharing_benchmark.c)
+target_link_libraries(ch129_false_sharing_benchmark PRIVATE ch129_false_sharing)

@@ -4,10 +4,10 @@ Legend: ✅ complete, ➡ planned, N/A not meaningful.
 
 | Chapter | Topic | Theory | Code | Complexity | Invariant | Tests | Benchmark | Exercises | Status |
 |---:|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 001–123 | Foundations through Graph Database Structures | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 124 | Knowledge Graph Representation | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 125 | Data Structure Serialization | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 126 | Memory Alignment & Padding | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 127 | Locality of Reference | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 128 | CPU Cache Effects | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
-| 129 | False Sharing | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 001–126 | Foundations through Memory Alignment & Padding | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 127 | Locality of Reference | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 128 | CPU Cache Effects | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 129 | False Sharing | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 130 | Pointer Chasing | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 131 | Amortized Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |
+| 132 | Randomized Data Structures | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | ➡ | planned |

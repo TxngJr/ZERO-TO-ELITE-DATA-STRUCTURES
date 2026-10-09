@@ -1,7 +1,7 @@
 # Zero to Elite Data Structures — 170 Chapter Roadmap
 
-Current Progress: **126 / 170 chapters complete**
-Next Batch: **127 Locality of Reference → 128 CPU Cache Effects → 129 False Sharing**
+Current Progress: **129 / 170 chapters complete**
+Next Batch: **130 Pointer Chasing → 131 Amortized Data Structures → 132 Randomized Data Structures**
 
 ## Foundations
 001 Programming Foundations

@@ -1,6 +1,6 @@
 # Course State
 
-Current Batch: 42
+Current Batch: 43
 
 Completed Chapters:
 - 001 Programming Foundations
@@ -129,57 +129,58 @@ Completed Chapters:
 - 124 Knowledge Graph Representation
 - 125 Data Structure Serialization
 - 126 Memory Alignment & Padding
+- 127 Locality of Reference
+- 128 CPU Cache Effects
+- 129 False Sharing
 
-Current Chapter: 126
+Current Chapter: 129
 
-Next Chapter: 127 Locality of Reference
+Next Chapter: 130 Pointer Chasing
 
 Concepts Covered:
-- all prior Chapters 001–123
-- knowledge-graph subject/predicate/object triples
-- stable term interning with ID 0 reserved as wildcard
-- SPO / POS / OSP permutation indexes
-- versioned triple-index publication and pattern queries
-- canonical portable binary serialization
-- explicit big-endian integer encoding
-- magic/version/header/record-size validation
-- payload CRC32 and exact-length validation
-- bit-preserving signed integer serialization
-- natural memory-layout calculation
-- internal and tail padding
-- overflow-safe power-of-two alignment
-- aligned strided arrays and over-alignment footprint trade-offs
+- all prior Chapters 001–126
+- spatial and temporal locality from deterministic access traces
+- cache-line footprint, same-line adjacency and line transitions
+- overflow-safe index-to-address mapping
+- set-associative cache geometry
+- deterministic MRU→LRU per-set replacement
+- cache hits, misses and evictions
+- row-major versus column-major cache simulation
+- cache-line false sharing versus true data sharing
+- manually line-aligned atomic counter layouts
+- packed versus line-separated counter stride
+- relaxed atomic per-thread increments
+- ThreadSanitizer validation of Chapter 129
 
 Structures Implemented:
 - all previous structures
-- KnowledgeGraph triple store
-- term dictionary and duplicate-triple set
-- SPO / POS / OSP indexes
-- canonical DsRecord binary codec
-- MaLayout
-- MaAlignedArray
+- LocalityStats trace analyzer
+- sequential and coprime-stride trace generators
+- CacheSim set-associative LRU simulator
+- FsCounterArray line-layout model
+- pthread relaxed-atomic false-sharing workload
 
 Tests Added:
-- Knowledge Graph: 10,000 terms, 100,000 unique triples, duplicate rejection, pattern cardinalities, stale-index rejection/rebuild
-- Serialization: CRC32 known vector and 100,000-record deterministic round trip with corruption/truncation/header/trailing-byte negatives
-- Alignment: known field offsets/padding, overflow negatives, 10,000 64-byte-aligned elements and 80→128 stride case
+- Locality: exact 128-element sequential/stride/repeated-scan line metrics plus permutation validation and overflow negative
+- Cache: exact direct-mapped and 2-way LRU traces plus 64×64 row/column matrix miss comparison
+- False Sharing: packed 8-counter single-line layout, 64-byte separated layout and 4-thread × 100,000 atomic increments
 
 Benchmarks Added:
-- Knowledge Graph: 50,000 terms + 500,000 triples + three-index build + 50,000 queries
-- Serialization: 1,000,000-record serialize/deserialize workload
-- Alignment: natural 24-byte stride versus 64-byte over-aligned stride footprint/access workload
+- locality: 4,000,000-element sequential versus deterministic permutation traversal
+- cache simulator: 5,000,000 accesses across associativity 1/2/4/8
+- false sharing: 8 threads × 2,000,000 relaxed atomic increments for packed versus 64-byte-separated counters
 
 Known Dependencies:
-- 127 studies locality of reference
-- 128 studies CPU cache effects
-- 129 studies false sharing
+- 130 studies pointer chasing
+- 131 studies amortized data structures
+- 132 studies randomized data structures
 
 Open Problems:
-- none if Batch 42 full Fedora ASan/UBSan CI passes and existing TSan 096–102 remains green
+- none if Batch 43 full Fedora ASan/UBSan CI passes and expanded TSan suite including Chapter 129 remains green
 
 Cross References:
-- 124 extends Chapter 123 from property-graph storage to triple-store knowledge representation
-- 125 separates logical data from ABI-dependent in-memory layout
-- 126 explains the alignment/padding representation that Chapter 125 intentionally excludes from its wire format
+- 127 turns Chapter 126 layout choices into deterministic address-trace locality metrics
+- 128 adds capacity, set mapping, associativity and LRU replacement to Chapter 127 traces
+- 129 combines Chapters 126 and 128 with concurrent atomic writers and cache-line sharing
 
-Coverage: 126 / 170 chapters
+Coverage: 129 / 170 chapters
